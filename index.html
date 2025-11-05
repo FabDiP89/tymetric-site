@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tymetric - AI-Powered Shift Scheduling</title>
+    <meta name="description" content="Tymetric è un software di pianificazione turni basato su intelligenza artificiale per aziende e strutture sanitarie. Automatizza la gestione dei turni riducendo tempo ed errori.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#08979c',
+                        'primary-light': '#52d6cd',
+                        'primary-dark': '#006d75',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #08979c 0%, #52d6cd 100%);
+        }
+
+        .gradient-dark {
+            background: linear-gradient(135deg, #006d75 0%, #08979c 100%);
+        }
+
+        .hero-pattern {
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(82, 214, 205, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(8, 151, 156, 0.1) 0%, transparent 50%);
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(8, 151, 156, 0.15);
+        }
+
+        .screenshot-scroll {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screenshot-scroll > * {
+            scroll-snap-align: center;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">Tymetric</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+                    <a href="#solutions" class="text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                    <a href="#screenshots" class="text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                    <a href="#contact" class="px-6 py-2 gradient-primary text-white rounded-lg hover:shadow-lg transition-all">
+                        Richiedi Demo
+                    </a>
+                </div>
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#features" class="block text-gray-700 hover:text-primary transition-colors">Features</a>
+                <a href="#solutions" class="block text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                <a href="#screenshots" class="block text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                <a href="#contact" class="block px-6 py-2 gradient-primary text-white rounded-lg text-center">
+                    Richiedi Demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        La Piattaforma di Riferimento
+                        <span class="text-primary block mt-2">per la Gestione Turnistica</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Tymetric centralizza l'intera gestione dei turni in un'unica soluzione completa,
+                        con particolare focus sul comparto sanitario e conformità CCNL.
+                        Riduci il tempo di pianificazione del 90% con algoritmi intelligenti personalizzabili.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="px-8 py-4 gradient-primary text-white text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
+                            Richiedi una Demo Gratuita
+                        </a>
+                        <a href="#features" class="px-8 py-4 bg-white border-2 border-primary text-primary text-lg font-semibold rounded-lg hover:bg-primary hover:text-white transition-all">
+                            Scopri di Più
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-8 justify-center md:justify-start">
+                        <div>
+                            <div class="text-3xl font-bold text-primary">90%</div>
+                            <div class="text-sm text-gray-600">Tempo risparmiato</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-primary">GDPR</div>
+                            <div class="text-sm text-gray-600">Compliant</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-primary">Cloud</div>
+                            <div class="text-sm text-gray-600">AWS Hosted</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative hidden md:block">
+                    <div class="absolute inset-0 gradient-primary opacity-20 blur-3xl rounded-full"></div>
+                    <img src="im1.png" alt="Tymetric Dashboard" class="relative rounded-2xl shadow-2xl border-4 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Funzionalità Principali</h3>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Un ecosistema completo che accompagna l'intero ciclo di vita della turnazione,
+                    dalla configurazione iniziale alla pubblicazione finale
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-14 h-14 gradient-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Algoritmo Proprietario Personalizzabile</h4>
+                    <p class="text-gray-600">
+                        Il coordinatore configura l'algoritmo tramite interfaccia grafica, personalizzando le regole di schedulazione.
+                        Il sistema collabora continuamente per ottimizzare le assegnazioni.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-14 h-14 gradient-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gestione Competenze e Ruoli</h4>
+                    <p class="text-gray-600">
+                        Censisci l'intero patrimonio di competenze aziendali, configura i ruoli professionali e
+                        definisci gli elementi contrattuali per una schedulazione precisa e conforme.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-14 h-14 gradient-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sicurezza e Installazione On-Premise</h4>
+                    <p class="text-gray-600">
+                        Massima sicurezza con installazione on-premise completa, incluso l'algoritmo di schedulazione.
+                        Minimizza la dispersione di dati sensibili evitando applicazioni terze non presidiate.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-14 h-14 gradient-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Architettura a 3 Livelli</h4>
+                    <p class="text-gray-600">
+                        Sistema gerarchico con funzionalità dedicate per amministratore, coordinatore e operatore.
+                        Ogni ruolo accede solo alle informazioni e strumenti necessari.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-14 h-14 gradient-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Integrazione con Sistemi Esistenti</h4>
+                    <p class="text-gray-600">
+                        Connessione semplice con HR, ERP e sistemi gestionali aziendali.
+                        Export in PDF e Excel per massima flessibilità e compatibilità.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-14 h-14 gradient-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Cruscotto Statistico Integrato</h4>
+                    <p class="text-gray-600">
+                        Identifica criticità, monitora l'indice di stress del personale ed escludi violazioni contrattuali
+                        prima della pubblicazione definitiva dei turni.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Soluzioni per Ogni Settore</h3>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Tymetric si adatta alle tue esigenze specifiche
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Healthcare Solution -->
+                <div class="relative group">
+                    <div class="absolute inset-0 gradient-primary opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity"></div>
+                    <div class="relative p-10 border-2 border-gray-200 rounded-2xl hover:border-primary transition-all">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4">Healthcare</h4>
+                        <p class="text-gray-600 mb-6">
+                            Piattaforma progettata specificamente per il comparto sanitario, con particolare attenzione
+                            al rispetto dei CCNL e alla gestione delle complessità ospedaliere.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Rispetto automatico dei CCNL sanitari</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Gestione competenze cliniche e certificazioni</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Ottimizzazione per reparti, UO e sale operatorie</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Gestione reperibilità e pronto intervento</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Interfaccia doppia: coordinatori e personale sanitario</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Corporate Solution -->
+                <div class="relative group">
+                    <div class="absolute inset-0 gradient-primary opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity"></div>
+                    <div class="relative p-10 border-2 border-gray-200 rounded-2xl hover:border-primary transition-all">
+                        <div class="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4">Corporate</h4>
+                        <p class="text-gray-600 mb-6">
+                            Soluzione completa per aziende di ogni dimensione che necessitano di una gestione turnistica
+                            professionale, flessibile e integrata con i sistemi aziendali esistenti.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Automazione turni conforme ai contratti aziendali</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Integrazione semplice con HR e sistemi ERP</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Reportistica personalizzata (PDF e Excel)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Gestione richieste ferie e cambio turno</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Supporto rapido per modifiche e problemi</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="flex justify-center">
+                        <img src="smartphone.png" alt="Tymetric Mobile App" class="max-w-sm w-full shadow-2xl rounded-3xl">
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-4xl font-bold text-gray-900 mb-6">Sempre Con Te, Ovunque Sei</h3>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        L'interfaccia mobile di Tymetric permette agli operatori di consultare i propri turni,
+                        inviare richieste e gestire il calendario direttamente dallo smartphone.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-gray-900">Accesso immediato ai turni</span>
+                                <p class="text-gray-600">Visualizza il tuo calendario in tempo reale</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-gray-900">Gestione richieste in mobilità</span>
+                                <p class="text-gray-600">Invia richieste di cambio turno e ferie ovunque</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-gray-900">Notifiche in tempo reale</span>
+                                <p class="text-gray-600">Ricevi aggiornamenti su modifiche e approvazioni</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Overview Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-1 md:order-1">
+                    <h3 class="text-4xl font-bold text-gray-900 mb-6">Modulo di Schedulazione: il Cuore del Sistema</h3>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        L'ambiente di lavoro integrato per il coordinatore che riduce errori, tempistiche operative
+                        e anomalie, evidenziate tempestivamente dal sistema. Il cruscotto statistico permette il controllo
+                        totale e la prevenzione di violazioni contrattuali.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-gray-900">Funzionalità che guidano le assegnazioni</span>
+                                <p class="text-gray-600">Il modulo riduce errori e tempistiche operative, evidenziando anomalie in tempo reale</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-gray-900">Monitoraggio indice di stress</span>
+                                <p class="text-gray-600">Il cruscotto statistico identifica criticità e monitora il carico di lavoro del personale</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-gray-900">Visione d'insieme del reparto</span>
+                                <p class="text-gray-600">Zoom-out completo per analizzare la schedulazione e identificare pattern e anomalie</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            <div>
+                                <span class="font-semibold text-gray-900">Esclusione violazioni contrattuali</span>
+                                <p class="text-gray-600">Verifica automatica della conformità CCNL prima della pubblicazione definitiva</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="order-2 md:order-2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-light">
+                        <video
+                            class="w-full h-auto"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="Screenshot 2025-11-05 alle 12.00.10.png"
+                        >
+                            <source src="Registrazione schermo 2025-11-05 alle 16.59.29.mov" type="video/mp4">
+                            <source src="Registrazione schermo 2025-11-05 alle 16.59.29.mov" type="video/quicktime">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                        <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-3 py-1 rounded-full">
+                            🔍 Zoom-out dinamico reparto
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-4">Il Prodotto in Azione</h3>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Interfaccia moderna e intuitiva, disponibile in modalità chiara e scura
+                </p>
+            </div>
+
+            <!-- Screenshot Carousel -->
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Carousel Container -->
+                <div class="relative overflow-hidden rounded-2xl">
+                    <div id="carousel-track" class="flex transition-transform duration-500 ease-out">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide w-full flex-shrink-0 px-4">
+                            <img src="im2.png" alt="Gestione Operatori" class="rounded-xl shadow-2xl w-full border-4 border-primary-light">
+                            <p class="text-center mt-6 text-xl text-gray-300">Gestione Operatori e Team</p>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide w-full flex-shrink-0 px-4">
+                            <img src="im3.png" alt="Assegnazione Ruoli" class="rounded-xl shadow-2xl w-full border-4 border-primary-light">
+                            <p class="text-center mt-6 text-xl text-gray-300">Assegnazione Ruoli e Competenze</p>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide w-full flex-shrink-0 px-4">
+                            <img src="im4.png" alt="Gestione Unità Operative" class="rounded-xl shadow-2xl w-full border-4 border-primary-light">
+                            <p class="text-center mt-6 text-xl text-gray-300">Gestione Unità Operative</p>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide w-full flex-shrink-0 px-4">
+                            <img src="Screenshot 2025-11-05 alle 09.27.45.png" alt="Dashboard operatori" class="rounded-xl shadow-2xl w-full border-4 border-primary-light">
+                            <p class="text-center mt-6 text-xl text-gray-300">Dashboard Operatori - Modalità Chiara</p>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="carousel-slide w-full flex-shrink-0 px-4">
+                            <img src="Screenshot 2025-11-05 alle 09.23.29.png" alt="Vista griglia turni" class="rounded-xl shadow-2xl w-full border-4 border-primary-light">
+                            <p class="text-center mt-6 text-xl text-gray-300">Vista Griglia Turni con Dettagli Orari</p>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="carousel-slide w-full flex-shrink-0 px-4">
+                            <img src="Screenshot 2025-11-05 alle 09.39.35.png" alt="Gestione competenze" class="rounded-xl shadow-2xl w-full border-4 border-primary-light">
+                            <p class="text-center mt-6 text-xl text-gray-300">Gestione Competenze e Certificazioni</p>
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="carousel-slide w-full flex-shrink-0 px-4">
+                            <img src="Screenshot 2025-11-05 alle 12.00.10.png" alt="Dashboard dark mode" class="rounded-xl shadow-2xl w-full border-4 border-primary-light">
+                            <p class="text-center mt-6 text-xl text-gray-300">Dashboard Completa - Modalità Scura</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button onclick="previousSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 bg-primary rounded-full shadow-xl flex items-center justify-center hover:bg-primary-dark transition-all hover:scale-110">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 bg-primary rounded-full shadow-xl flex items-center justify-center hover:bg-primary-dark transition-all hover:scale-110">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Indicators -->
+                <div class="flex justify-center gap-3 mt-8">
+                    <button onclick="goToSlide(0)" class="carousel-indicator w-3 h-3 rounded-full bg-primary-light transition-all"></button>
+                    <button onclick="goToSlide(1)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-600 transition-all"></button>
+                    <button onclick="goToSlide(2)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-600 transition-all"></button>
+                    <button onclick="goToSlide(3)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-600 transition-all"></button>
+                    <button onclick="goToSlide(4)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-600 transition-all"></button>
+                    <button onclick="goToSlide(5)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-600 transition-all"></button>
+                    <button onclick="goToSlide(6)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-600 transition-all"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Perché Scegliere Tymetric</h3>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Un flusso informativo continuo dall'operatore all'amministrazione, centralizzando
+                    l'intera gestione turnistica in un'unica soluzione sicura
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-2">90%</h4>
+                    <p class="text-gray-600">Tempo risparmiato nella pianificazione</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-2">100%</h4>
+                    <p class="text-gray-600">Conformità ai vincoli normativi</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-2">+85%</h4>
+                    <p class="text-gray-600">Soddisfazione del personale</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-2">ROI</h4>
+                    <p class="text-gray-600">Ritorno investimento in 6 mesi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 gradient-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl font-bold text-white mb-6">Pronto a Centralizzare la Gestione dei Turni?</h3>
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                Richiedi una demo gratuita e scopri come Tymetric può diventare la piattaforma di riferimento
+                per la tua organizzazione turnistica
+            </p>
+
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl max-w-xl mx-auto">
+                <form class="space-y-6" onsubmit="handleSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="text-left">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nome *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Mario">
+                        </div>
+                        <div class="text-left">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Cognome *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Rossi">
+                        </div>
+                    </div>
+
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Aziendale *</label>
+                        <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="mario.rossi@azienda.it">
+                    </div>
+
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Telefono</label>
+                        <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="+39 123 456 7890">
+                    </div>
+
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Settore *</label>
+                        <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                            <option value="">Seleziona il tuo settore</option>
+                            <option value="healthcare">Healthcare (Ospedale/Clinica)</option>
+                            <option value="corporate">Corporate/Azienda</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                    </div>
+
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Messaggio</label>
+                        <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none" placeholder="Raccontaci le tue esigenze..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full px-8 py-4 gradient-dark text-white text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
+                        Richiedi Demo Gratuita
+                    </button>
+
+                    <p class="text-sm text-gray-500 mt-4">
+                        Inviando il form accetti la nostra <a href="#" class="text-primary hover:underline">Privacy Policy</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-2xl font-bold text-primary mb-4">Tymetric</h4>
+                    <p class="text-gray-400">
+                        La soluzione AI per la pianificazione intelligente dei turni di lavoro.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Prodotto</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="#solutions" class="hover:text-primary transition-colors">Soluzioni</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Casi d'uso</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Azienda</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Chi siamo</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Contatti</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Termini di servizio</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Contatti</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <a href="mailto:info@tymetric.com" class="hover:text-primary transition-colors">info@tymetric.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Tymetric. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            // Qui puoi aggiungere la logica per inviare i dati a un backend
+            // Per ora mostriamo solo un alert
+            alert('Grazie per il tuo interesse! Ti contatteremo presto.');
+
+            // Resetta il form
+            event.target.reset();
+        }
+
+        // Chiudi il menu mobile quando si clicca su un link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll per i link di navigazione
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 7;
+
+        function updateCarousel() {
+            const track = document.getElementById('carousel-track');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+
+            // Move carousel track
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlide) {
+                    indicator.classList.remove('bg-gray-600');
+                    indicator.classList.add('bg-primary-light');
+                } else {
+                    indicator.classList.remove('bg-primary-light');
+                    indicator.classList.add('bg-gray-600');
+                }
+            });
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Auto-play carousel (optional - ogni 5 secondi)
+        let autoplayInterval = setInterval(nextSlide, 5000);
+
+        // Pausa auto-play quando l'utente interagisce
+        const carouselButtons = document.querySelectorAll('button[onclick*="Slide"]');
+        carouselButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                clearInterval(autoplayInterval);
+                autoplayInterval = setInterval(nextSlide, 5000);
+            });
+        });
+    </script>
+</body>
+</html>

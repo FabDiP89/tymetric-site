@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turni Massacranti e Responsabilità Medica: Quando la Carenza di Organico Diventa la Tua Migliore Difesa - Tymetric Blog</title>
+    <meta name="description"
+        content="La giurisprudenza post Legge Gelli-Bianco sta tracciando una nuova linea: se l'errore è figlio della stanchezza imposta dal sistema, il colpevole potrebbe non essere chi indossa il camice.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tymetric.com/blog/turni-massacranti-responsabilita-medica.html">
+    <meta property="og:title" content="Turni Massacranti e Responsabilità Medica: Quando la Carenza di Organico Diventa la Tua Migliore Difesa">
+    <meta property="og:description"
+        content="La giurisprudenza post Legge Gelli-Bianco sta tracciando una nuova linea: se l'errore è figlio della stanchezza imposta dal sistema, il colpevole potrebbe non essere chi indossa il camice.">
+    <meta property="og:image" content="../im1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tymetric.com/blog/turni-massacranti-responsabilita-medica.html">
+    <meta property="twitter:title" content="Turni Massacranti e Responsabilità Medica">
+    <meta property="twitter:description"
+        content="La giurisprudenza post Legge Gelli-Bianco sta tracciando una nuova linea: se l'errore è figlio della stanchezza imposta dal sistema, il colpevole potrebbe non essere chi indossa il camice.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#08979c',
+                        'primary-light': '#52d6cd',
+                        'primary-dark': '#006d75',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #08979c 0%, #52d6cd 100%);
+        }
+
+        .gradient-dark {
+            background: linear-gradient(135deg, #006d75 0%, #08979c 100%);
+        }
+
+        .prose h2 {
+            color: #1f2937;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose h3 {
+            color: #374151;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose ul, .prose ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        .prose li {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #1f2937;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #08979c;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #6b7280;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center">
+                        <img src="../favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
+                        <h1 class="text-2xl font-bold text-primary">tymetric</h1>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+                    <a href="../index.html#solutions" class="text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                    <a href="../index.html#screenshots" class="text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                    <a href="../index.html#contact"
+                        class="px-6 py-2 gradient-primary text-white rounded-lg hover:shadow-lg transition-all">
+                        Richiedi Demo
+                    </a>
+                </div>
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu"
+            class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 space-y-3">
+                <a href="../index.html#features" class="block text-gray-700 hover:text-primary transition-colors">Features</a>
+                <a href="../index.html#solutions" class="block text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                <a href="../index.html#screenshots" class="block text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                <a href="../index.html#contact"
+                    class="block px-6 py-2 gradient-primary text-white rounded-lg text-center hover:shadow-lg transition-all">
+                    Richiedi Demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="mb-8">
+                <ol class="flex items-center space-x-2 text-sm text-gray-500">
+                    <li><a href="../index.html" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li><a href="../index.html#blog" class="hover:text-primary transition-colors">Blog</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li class="text-gray-900">Articolo</li>
+                </ol>
+            </nav>
+
+            <!-- Category Badge -->
+            <div class="mb-4">
+                <span class="inline-block bg-amber-100 text-amber-700 px-4 py-1 rounded-full text-sm font-semibold">
+                    DIRITTO SANITARIO
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Turni Massacranti e Responsabilità Medica: Quando la Carenza di Organico Diventa la Tua Migliore Difesa
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                Sei un medico o un infermiere e ti trovi spesso a coprire turni doppi per mancanza di colleghi? Oltre allo stress fisico e mentale, la paura più grande che accompagna queste maratone lavorative è l'errore clinico. Tuttavia, la giurisprudenza successiva alla Legge Gelli-Bianco sta tracciando una nuova, fondamentale linea di demarcazione.
+            </p>
+
+            <!-- Meta -->
+            <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500 border-t border-b border-gray-200 py-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    <span>26 Novembre 2025</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>7 min di lettura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose max-w-none">
+
+                <p class="text-lg">
+                    <strong>Se l'errore è "figlio" della stanchezza imposta dal sistema, il colpevole potrebbe non essere chi indossa il camice.</strong> In questo articolo analizziamo come i concetti di <em>inesigibilità</em> e <em>nesso causale</em> stiano diventando lo scudo più forte per i professionisti sanitari.
+                </p>
+
+                <h2>1. Il concetto di "Inesigibilità" della condotta</h2>
+
+                <p>
+                    Nel diritto penale moderno sta emergendo con forza il principio di <strong>inesigibilità</strong>. I giudici, sempre più spesso, riconoscono che non si può pretendere (o <em>esigere</em>, in termini giuridici) da un essere umano la stessa soglia di attenzione e lucidità dopo 12 o 24 ore di lavoro continuativo.
+                </p>
+
+                <p>
+                    Una recente ordinanza della Cassazione Lavoro (<strong>n. 17976/2022</strong>) ha segnato un punto di svolta, confermando che sottoporre i medici a turni massacranti viola l'<strong>art. 2087 del Codice Civile</strong>, norma che impone al datore di lavoro di tutelare l'integrità psicofisica del dipendente.
+                </p>
+
+                <div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-6 my-8">
+                    <h3 class="text-amber-800 mt-0 mb-3">Cosa significa in pratica?</h3>
+                    <p class="mb-0 text-amber-900">
+                        In sede penale, questo principio si traduce spesso in un'<strong>assoluzione per l'operatore sanitario</strong>. Se l'errore commesso è dovuto a un calo fisiologico di attenzione causato da turni illegali o disumani, viene a mancare l'elemento soggettivo della colpa. Non è negligenza del medico, ma un <strong>crollo inevitabile indotto dall'organizzazione</strong>.
+                    </p>
+                </div>
+
+                <h2>2. L'importanza del "Nesso Causale" e il Giudizio Controfattuale</h2>
+
+                <p>
+                    Un altro scudo fondamentale per la difesa del professionista è il cosiddetto <strong>giudizio controfattuale</strong>. In situazioni di grave carenza strutturale – come la mancanza di anestesisti, l'assenza di posti letto in terapia intensiva o sale operatorie occupate – la difesa può puntare a dimostrare l'<strong>interruzione del nesso di causa</strong>.
+                </p>
+
+                <blockquote>
+                    La tesi difensiva si basa su questa domanda: "Se anche il medico fosse stato tempestivo e perfetto nella sua azione, l'evento avverso si sarebbe verificato comunque?"
+                </blockquote>
+
+                <p>
+                    La Cassazione Penale (<strong>sentenza n. 50278/2023</strong>) ha ribadito che il nesso di causa va provato con un "alto grado di credibilità razionale". Se si dimostra che il sistema non funzionava e che la struttura non era in grado di gestire l'emergenza a prescindere dall'operato del singolo, <strong>il medico non può essere reso il capro espiatorio di inefficienze strutturali</strong>.
+                </p>
+
+                <h2>3. Tre Consigli Pratici per Tutelarsi</h2>
+
+                <p>
+                    Nonostante l'evoluzione giurisprudenziale favorevole, <strong>prevenire è sempre meglio che difendersi in tribunale</strong>. Ecco tre azioni concrete da attuare subito:
+                </p>
+
+                <div class="bg-gray-50 rounded-xl p-6 my-8">
+                    <h3 class="text-primary mt-0">1. Incident Reporting (Segnalazione del Rischio)</h3>
+                    <p class="mb-0">
+                        Segnalare <strong>sempre per iscritto</strong> le carenze di organico alla Direzione Sanitaria. Una segnalazione protocollata (Risk Management) che evidenzia, ad esempio, la copertura di un turno con un numero insufficiente di unità, costituisce una <strong>"prova d'oro"</strong> in un eventuale giudizio futuro. Dimostra che il medico aveva allertato l'azienda del pericolo.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 my-8">
+                    <h3 class="text-primary mt-0">2. Richiedere Ordini di Servizio</h3>
+                    <p class="mb-0">
+                        Se vi viene chiesto di coprire un turno extra o di saltare un riposo, chiedete un <strong>ordine di servizio scritto</strong>. Questo documento certifica che la vostra presenza in condizioni di stanchezza non è stata una scelta volontaria o imprudente, ma un adempimento a una richiesta gerarchica.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 my-8">
+                    <h3 class="text-primary mt-0">3. Conoscere la Legge (Art. 1218 c.c.)</h3>
+                    <p class="mb-0">
+                        Essere consapevoli che la <strong>Legge Gelli-Bianco</strong> sposta il rischio maggiore sulla struttura (responsabilità contrattuale ex art. 1218 c.c.) aiuta a vivere la professione con meno "ansia difensiva". L'ente ospedaliero risponde delle disfunzioni organizzative, <strong>manlevando spesso il professionista</strong>.
+                    </p>
+                </div>
+
+                <!-- References -->
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Fonti e Approfondimenti</h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Per chi volesse approfondire i riferimenti normativi e le sentenze citate, ecco i link diretti alle fonti ufficiali e alle analisi giuridiche:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-800 mb-2">Cassazione Lavoro n. 17976/2022 sui turni massacranti:</h4>
+                            <ul class="text-sm text-gray-600 space-y-1 list-disc pl-5">
+                                <li><a href="https://olympus.uniurb.it/index.php?option=com_content&view=article&id=28285:cassazione-civile,-sez-lav-,-03-giugno-2022,-n-17976-turni-massacranti-del-medico-e-reperibilit%C3%A0-365-giorni-all-anno-condanna-definitiva-per-l%E2%80%99azienda-sanitaria&catid=16&Itemid=138" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Testo e commento su Olympus (UniUrb)</a></li>
+                                <li><a href="https://www.anaao.it/content.php?cont=35416" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Approfondimento ANAAO</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-800 mb-2">Cassazione Penale n. 50278/2023 sul nesso causale e giudizio controfattuale:</h4>
+                            <ul class="text-sm text-gray-600 space-y-1 list-disc pl-5">
+                                <li><a href="https://olympus.uniurb.it/index.php?option=com_content&view=article&id=31171:cassazione-penale,-sez-4,-18-dicembre-2023,-n-50278-caduta-dall-alto-e-successiva-morte-in-ospedale-errore-medico-accertamento-del-nesso-causale-attraverso-il-giudizio-controfattuale&catid=17&Itemid=138" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Analisi su Olympus (UniUrb)</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-800 mb-2">Approfondimenti sulla Legge Gelli-Bianco e Colpa di Organizzazione:</h4>
+                            <ul class="text-sm text-gray-600 space-y-1 list-disc pl-5">
+                                <li><a href="https://archiviopenale.it/File/DownloadArticolo?codice=87a33852-e372-4a59-aea7-5f613fb0da58&idarticolo=15190" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">La colpa medica dopo la legge Gelli-Bianco (Archivio Penale)</a></li>
+                                <li><a href="https://www.iusmanagement.org/2019/07/25/il-direttore-sanitario-risponde-di-omicidio-da-colpa-di-organizzazione-se-non-attua-le-dovute-misure-organizzative/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Il direttore sanitario risponde di omicidio da colpa di organizzazione</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="gradient-primary rounded-2xl p-8 md:p-12 text-center text-white">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                    Vuoi eliminare i turni massacranti nella tua struttura?
+                </h3>
+                <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+                    Tymetric garantisce il rispetto automatico dei vincoli contrattuali e delle ore di riposo, proteggendo sia il personale che la direzione da rischi legali.
+                </p>
+                <a href="../index.html#contact"
+                    class="inline-block px-8 py-4 bg-white text-primary text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    Richiedi una Demo Gratuita
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8">Articoli Correlati</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Article 1 -->
+                <a href="stress-lavoro-correlato-cassazione.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="h-32 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-red-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-red-600 shadow-sm">
+                                LEGAL & COMPLIANCE
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                Stress lavoro-correlato: la Cassazione cambia le regole
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <!-- Article 3 -->
+                <a href="colpa-di-organizzazione-gestione-turni.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="h-32 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-purple-600 shadow-sm">
+                                RISK MANAGEMENT
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                La "Colpa di Organizzazione"
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <!-- Article 6 - Assenteismo -->
+                <a href="assenteismo-stress-turnazione.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="h-32 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-orange-600 shadow-sm">
+                                STRATEGIC RESEARCH
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                Assenteismo e Stress da Turnazione
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
+                        <h4 class="text-2xl font-bold text-primary">tymetric</h4>
+                    </div>
+                    <p class="text-gray-400">
+                        La soluzione AI per la pianificazione intelligente dei turni di lavoro.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Prodotto</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html#features" class="hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="../index.html#solutions" class="hover:text-primary transition-colors">Soluzioni</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Azienda</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer"
+                                class="hover:text-primary transition-colors">Chi siamo</a></li>
+                        <li><a href="../privacy-policy.html" class="hover:text-primary transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="../cookie-policy.html" class="hover:text-primary transition-colors">Cookie Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Contatti</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Corso Unione Sovietica 341<br>Torino (TO)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:info@tymetric.com"
+                                class="hover:text-primary transition-colors">info@tymetric.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 GDP Analytics s.r.l. - P.IVA 11975840015 - Corso Unione Sovietica 341, Torino (TO) - All
+                    Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('max-h-0')) {
+                menu.classList.remove('max-h-0', 'opacity-0');
+                menu.classList.add('max-h-96', 'opacity-100');
+            } else {
+                menu.classList.add('max-h-0', 'opacity-0');
+                menu.classList.remove('max-h-96', 'opacity-100');
+            }
+        }
+
+        // Chiudi il menu mobile quando si clicca su un link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.add('max-h-0', 'opacity-0');
+                menu.classList.remove('max-h-96', 'opacity-100');
+            });
+        });
+    </script>
+</body>
+
+</html>

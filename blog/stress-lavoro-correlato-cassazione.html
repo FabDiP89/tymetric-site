@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress lavoro-correlato: la Cassazione cambia le regole - Tymetric Blog</title>
+    <meta name="description"
+        content="Con l'Ordinanza n. 26923 del 7 ottobre 2025, la Corte di Cassazione ha riscritto i confini della responsabilità datoriale su turni e salute. Ecco cosa cambia.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tymetric.com/blog/stress-lavoro-correlato-cassazione.html">
+    <meta property="og:title" content="Stress lavoro-correlato: la Cassazione cambia le regole">
+    <meta property="og:description"
+        content="Con l'Ordinanza n. 26923 del 7 ottobre 2025, la Corte di Cassazione ha riscritto i confini della responsabilità datoriale su turni e salute.">
+    <meta property="og:image" content="../im1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tymetric.com/blog/stress-lavoro-correlato-cassazione.html">
+    <meta property="twitter:title" content="Stress lavoro-correlato: la Cassazione cambia le regole">
+    <meta property="twitter:description"
+        content="Con l'Ordinanza n. 26923 del 7 ottobre 2025, la Corte di Cassazione ha riscritto i confini della responsabilità datoriale su turni e salute.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#08979c',
+                        'primary-light': '#52d6cd',
+                        'primary-dark': '#006d75',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #08979c 0%, #52d6cd 100%);
+        }
+
+        .gradient-dark {
+            background: linear-gradient(135deg, #006d75 0%, #08979c 100%);
+        }
+
+        .prose h2 {
+            color: #1f2937;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose h3 {
+            color: #374151;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose ul {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        .prose li {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .prose strong {
+            color: #1f2937;
+        }
+
+        .prose blockquote {
+            border-left: 4px solid #08979c;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #6b7280;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center">
+                        <img src="../favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
+                        <h1 class="text-2xl font-bold text-primary">tymetric</h1>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+                    <a href="../index.html#solutions" class="text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                    <a href="../index.html#screenshots" class="text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                    <a href="../index.html#contact"
+                        class="px-6 py-2 gradient-primary text-white rounded-lg hover:shadow-lg transition-all">
+                        Richiedi Demo
+                    </a>
+                </div>
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu"
+            class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 space-y-3">
+                <a href="../index.html#features" class="block text-gray-700 hover:text-primary transition-colors">Features</a>
+                <a href="../index.html#solutions" class="block text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                <a href="../index.html#screenshots" class="block text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                <a href="../index.html#contact"
+                    class="block px-6 py-2 gradient-primary text-white rounded-lg text-center hover:shadow-lg transition-all">
+                    Richiedi Demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="mb-8">
+                <ol class="flex items-center space-x-2 text-sm text-gray-500">
+                    <li><a href="../index.html" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li><a href="../index.html#blog" class="hover:text-primary transition-colors">Blog</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li class="text-gray-900">Articolo</li>
+                </ol>
+            </nav>
+
+            <!-- Category Badge -->
+            <div class="mb-4">
+                <span class="inline-block bg-red-100 text-red-700 px-4 py-1 rounded-full text-sm font-semibold">
+                    LEGAL & COMPLIANCE
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Stress lavoro-correlato: la Cassazione cambia le regole. Perché il datore di lavoro ora rischia di più.
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                Il 7 ottobre 2025 segna uno spartiacque per la gestione del personale sanitario in Italia. Con l'Ordinanza n. 26923, la Corte di Cassazione ha riscritto i confini della responsabilità datoriale su turni e salute. Ecco cosa cambia e perché la pianificazione manuale dei turni non è più sostenibile.
+            </p>
+
+            <!-- Meta -->
+            <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500 border-t border-b border-gray-200 py-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    <span>22 Novembre 2025</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>6 min di lettura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose max-w-none">
+
+                <p class="text-lg">
+                    Per anni, la difesa delle aziende sanitarie di fronte ai casi di burnout o patologie stress-correlate (come infarti o ictus in corsia) si è basata su un principio solido: <strong>l'onere della prova spettava al dipendente</strong>. Toccava al medico o all'infermiere dimostrare non solo il danno subito, ma anche la specifica colpa dell'azienda nell'averlo causato.
+                </p>
+
+                <p class="text-lg">
+                    Tutto questo è cambiato poche settimane fa. Con una decisione storica, la Suprema Corte ha ribaltato il tavolo, stabilendo un principio di <strong>inversione dell'onere della prova</strong> che espone le Direzioni Generali e Sanitarie a rischi legali senza precedenti.
+                </p>
+
+                <h2>La Sentenza: Se il turno "rompe" il lavoratore, l'azienda paga (a meno che...)</h2>
+
+                <p>
+                    Il caso esaminato dalla Cassazione (Ordinanza n. 26923 del 07/10/2025) riguardava un medico anestesista deceduto per infarto dopo un turno di lavoro prolungato. La Corte ha stabilito che, una volta accertato il nesso tra il lavoro usurante e la patologia, <strong>spetta al datore di lavoro dimostrare di aver fatto tutto il possibile</strong> per evitare l'evento.
+                </p>
+
+                <p>
+                    Non basta più dimostrare di aver rispettato formalmente le 36 o 38 ore settimanali. L'azienda deve provare di aver adottato <strong>"tutte le cautele necessarie"</strong> per tutelare l'integrità psicofisica del lavoratore, prevenendo lo stress da turnazione eccessiva. Se l'azienda non può portare prove tangibili di questa attività di prevenzione (la cosiddetta "diligenza qualificata"), scatta automaticamente la responsabilità risarcitoria.
+                </p>
+
+                <h2>Perché il "file Excel" è diventato un boomerang legale</h2>
+
+                <p>
+                    In questo nuovo scenario giurisprudenziale, <strong>il metodo con cui vengono costruiti i turni diventa la prova regina in tribunale</strong>.
+                </p>
+
+                <p>
+                    La maggior parte dei reparti italiani pianifica ancora i turni su fogli di calcolo (Excel) o carta. Questi strumenti, per loro natura, sono "passivi":
+                </p>
+
+                <ul>
+                    <li><strong>Non impediscono</strong> l'inserimento di turni massacranti (es. doppi turni consecutivi).</li>
+                    <li><strong>Non segnalano automaticamente</strong> la violazione delle 11 ore di riposo (il famigerato "quick return").</li>
+                    <li><strong>Non lasciano traccia</strong> dei tentativi fatti per evitare il sovraccarico.</li>
+                </ul>
+
+                <p>
+                    Di fronte a un giudice, un file Excel pieno di correzioni manuali e deroghe non dimostra "diligenza qualificata". Al contrario, <strong>rischia di diventare la prova documentale della disorganizzazione</strong> e della mancata tutela, esponendo l'azienda a risarcimenti milionari e danni d'immagine incalcolabili.
+                </p>
+
+                <h2>La risposta tecnologica: l'IA come scudo legale</h2>
+
+                <p>
+                    È qui che l'adozione di un software di pianificazione basato su Intelligenza Artificiale, come <strong>Tymetric</strong>, cessa di essere una semplice scelta operativa e diventa uno <strong>strumento di Risk Management</strong>.
+                </p>
+
+                <p>
+                    A differenza della pianificazione manuale, un sistema come Tymetric agisce come <strong>garante oggettivo della normativa</strong>:
+                </p>
+
+                <div class="bg-gray-50 rounded-xl p-6 my-8">
+                    <h3 class="text-primary mt-0">Compliance Forzata (Hard Constraints)</h3>
+                    <p class="mb-0">
+                        L'algoritmo può essere impostato per <strong>bloccare fisicamente</strong> la creazione di turni illegali (es. mancato riposo di 11 ore, troppe notti consecutive). Questo dimostra in giudizio che l'azienda ha messo in atto "misure tecniche" per impedire il danno.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 my-8">
+                    <h3 class="text-primary mt-0">Equità Dimostrabile</h3>
+                    <p class="mb-0">
+                        L'IA distribuisce il carico di lavoro (notti, festivi, reperibilità) in modo <strong>matematicamente equo</strong> tra tutto il personale. In caso di controversia, l'azienda può mostrare dati oggettivi che provano l'assenza di accanimento o discriminazione verso il singolo dipendente.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 my-8">
+                    <h3 class="text-primary mt-0">Tracciabilità delle Eccezioni</h3>
+                    <p class="mb-0">
+                        Se un'emergenza costringe a forzare le regole (es. un doppio turno per malattia improvvisa di un collega), il sistema <strong>traccia l'evento come "eccezione"</strong>. Questo permette di dimostrare che il turno stressante è stato un evento imprevedibile e inevitabile (causa di forza maggiore), e non una prassi organizzativa colpevole.
+                    </p>
+                </div>
+
+                <h2>Conclusione: Proteggere chi cura, tutelare chi gestisce</h2>
+
+                <p>
+                    La sentenza 26923/2025 ci ricorda che <strong>la salute del personale sanitario non è una variabile sacrificabile</strong> sull'altare della carenza di organico. Per i Direttori Generali, il messaggio è chiaro: l'ignoranza organizzativa non è più una scusa.
+                </p>
+
+                <p>
+                    Passare dalla pianificazione manuale a quella intelligente non serve solo a risparmiare tempo ai caposala. Serve a costruire quella <strong>"prova di diligenza"</strong> che oggi è l'unico vero scudo contro il rischio legale. In un'epoca in cui il burnout è riconosciuto come rischio professionale, affidarsi all'IA per garantire turni umani è l'investimento assicurativo più sicuro che una struttura sanitaria possa fare.
+                </p>
+
+                <!-- References -->
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Riferimenti Normativi e Fonti</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>Corte di Cassazione, Sez. Lavoro, Ordinanza n. 26923 del 07/10/2025.</li>
+                        <li>Codice Civile, art. 2087 (Tutela delle condizioni di lavoro).</li>
+                        <li><a href="https://www.nursingup.it/comunicati/857-studio-nursing-up-allarme-salute-mentale-professionisti-sanitari-il-sindacato-mette-a-confronto-europa-e-italia-gli-infermieri-di-casa-nostra-tra-i-piu-esposti-a-burnout-violenza-e-turni-massacranti-alla-base-del-disagio-latente-serve-una-risposta-struttu.html" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Nursing Up, Studio su salute mentale professionisti sanitari: burnout, violenza e turni massacranti</a>.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="gradient-primary rounded-2xl p-8 md:p-12 text-center text-white">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                    Vuoi proteggere la tua struttura dai nuovi rischi legali?
+                </h3>
+                <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+                    Scopri come Tymetric può aiutarti a garantire la compliance normativa e costruire la "prova di diligenza" richiesta dalla nuova giurisprudenza.
+                </p>
+                <a href="../index.html#contact"
+                    class="inline-block px-8 py-4 bg-white text-primary text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    Richiedi una Demo Gratuita
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8">Articoli Correlati</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Article 2 -->
+                <a href="turni-massacranti-responsabilita-medica.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="h-32 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-amber-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-amber-600 shadow-sm">
+                                DIRITTO SANITARIO
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                Turni Massacranti e Responsabilità Medica
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <!-- Article 3 -->
+                <a href="colpa-di-organizzazione-gestione-turni.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="h-32 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-purple-600 shadow-sm">
+                                RISK MANAGEMENT
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                La "Colpa di Organizzazione"
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <!-- Article 6 - Assenteismo -->
+                <a href="assenteismo-stress-turnazione.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                        <div class="h-32 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-orange-600 shadow-sm">
+                                STRATEGIC RESEARCH
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                Assenteismo e Stress da Turnazione
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
+                        <h4 class="text-2xl font-bold text-primary">tymetric</h4>
+                    </div>
+                    <p class="text-gray-400">
+                        La soluzione AI per la pianificazione intelligente dei turni di lavoro.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Prodotto</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html#features" class="hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="../index.html#solutions" class="hover:text-primary transition-colors">Soluzioni</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Azienda</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer"
+                                class="hover:text-primary transition-colors">Chi siamo</a></li>
+                        <li><a href="../privacy-policy.html" class="hover:text-primary transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="../cookie-policy.html" class="hover:text-primary transition-colors">Cookie Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Contatti</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Corso Unione Sovietica 341<br>Torino (TO)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:info@tymetric.com"
+                                class="hover:text-primary transition-colors">info@tymetric.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 GDP Analytics s.r.l. - P.IVA 11975840015 - Corso Unione Sovietica 341, Torino (TO) - All
+                    Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('max-h-0')) {
+                menu.classList.remove('max-h-0', 'opacity-0');
+                menu.classList.add('max-h-96', 'opacity-100');
+            } else {
+                menu.classList.add('max-h-0', 'opacity-0');
+                menu.classList.remove('max-h-96', 'opacity-100');
+            }
+        }
+
+        // Chiudi il menu mobile quando si clicca su un link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.add('max-h-0', 'opacity-0');
+                menu.classList.remove('max-h-96', 'opacity-100');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Tymetric | Approfondimenti sulla Gestione Sanitaria</title>
+    <meta name="description"
+        content="Articoli, report di ricerca e approfondimenti sulla gestione dei turni sanitari, compliance normativa, risk management e ottimizzazione algoritmica.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tymetric.com/blog.html">
+    <meta property="og:title" content="Blog Tymetric - Approfondimenti sulla Gestione Sanitaria">
+    <meta property="og:description"
+        content="Articoli, report di ricerca e approfondimenti sulla gestione dei turni sanitari, compliance normativa e ottimizzazione algoritmica.">
+    <meta property="og:image" content="im1.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#08979c',
+                        'primary-light': '#52d6cd',
+                        'primary-dark': '#006d75',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #08979c 0%, #52d6cd 100%);
+        }
+
+        .gradient-dark {
+            background: linear-gradient(135deg, #006d75 0%, #08979c 100%);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
+                        <h1 class="text-2xl font-bold text-primary">tymetric</h1>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+                    <a href="index.html#solutions" class="text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                    <a href="index.html#screenshots" class="text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                    <a href="blog.html" class="text-primary font-semibold">Blog</a>
+                    <a href="index.html#contact"
+                        class="px-6 py-2 gradient-primary text-white rounded-lg hover:shadow-lg transition-all">
+                        Richiedi Demo
+                    </a>
+                </div>
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu"
+            class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html#features" class="block text-gray-700 hover:text-primary transition-colors">Features</a>
+                <a href="index.html#solutions" class="block text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                <a href="index.html#screenshots" class="block text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                <a href="blog.html" class="block text-primary font-semibold">Blog</a>
+                <a href="index.html#contact"
+                    class="block px-6 py-2 gradient-primary text-white rounded-lg text-center hover:shadow-lg transition-all">
+                    Richiedi Demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Blog</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Approfondimenti, report di ricerca e best practice dal mondo della gestione sanitaria
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="pb-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="blog/ottimizzazione-algoritmica-roi-voi.html" class="group block">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="h-64 md:h-80 bg-gray-200 relative overflow-hidden">
+                            <img src="blog/immagini/ottimizzazione-roi-voi.png" alt="ROI e VOI" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-700 opacity-20 group-hover:opacity-30 transition-all"></div>
+                            <div class="absolute bottom-6 left-6 bg-white px-4 py-1.5 rounded-full text-sm font-bold text-teal-600 shadow-sm">
+                                STRATEGIC RESEARCH
+                            </div>
+                            <div class="absolute top-6 left-6 bg-teal-600 px-3 py-1 rounded-full text-xs font-semibold text-white">
+                                IN EVIDENZA
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col justify-center">
+                            <div class="text-sm text-gray-500 mb-3">8 Dicembre 2025 · 15 min · Report di Ricerca</div>
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
+                                Ottimizzazione Algoritmica del Personale Sanitario: ROI e VOI
+                            </h2>
+                            <p class="text-gray-600 mb-6">
+                                Analisi dei benefici finanziari (ROI 4-6 mesi) e della sostenibilità organizzativa (VOI) dello scheduling algoritmico nel settore sanitario. 26 fonti scientifiche.
+                            </p>
+                            <span class="inline-flex items-center text-primary font-semibold group-hover:text-primary-dark transition-colors">
+                                Leggi il report completo
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- All Articles -->
+    <section class="py-12 bg-gray-50" id="blog">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Tutti gli Articoli</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Article 6 - Assenteismo -->
+                <a href="blog/assenteismo-stress-turnazione.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
+                        <div class="h-48 bg-gray-200 relative overflow-hidden">
+                            <img src="blog/immagini/assenteismo.png" alt="Assenteismo e Stress da Turnazione" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-orange-600 shadow-sm">
+                                STRATEGIC RESEARCH
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-sm text-gray-500 mb-2">6 Dicembre 2025 · 20 min</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                                Assenteismo e Stress da Turnazione nel Personale Sanitario
+                            </h3>
+                            <p class="text-gray-600 mb-4 flex-1">
+                                Analisi della correlazione tra stress da turnazione, architettura organizzativa e tassi di assenteismo nel SSN. 42 fonti scientifiche.
+                            </p>
+                            <span class="inline-flex items-center text-primary font-semibold">
+                                Leggi il report
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 4 - Credentialing -->
+                <a href="blog/costo-nascosto-incompetenza-credentialing.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
+                        <div class="h-48 bg-gray-200 relative overflow-hidden">
+                            <img src="blog/immagini/credentialing.png" alt="Credentialing" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-blue-600 shadow-sm">
+                                DIGITAL HEALTH
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-sm text-gray-500 mb-2">4 Dicembre 2025 · 5 min</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                                Il Costo Nascosto dell'Incompetenza: Perché il "Credentialing" non Basta Più
+                            </h3>
+                            <p class="text-gray-600 mb-4 flex-1">
+                                La maggior parte degli "errori umani" sono insufficienze organizzative latenti. Scopri perché il Competency Mapping è l'unica vera difesa.
+                            </p>
+                            <span class="inline-flex items-center text-primary font-semibold">
+                                Leggi l'articolo
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 3 - Colpa Organizzazione -->
+                <a href="blog/colpa-di-organizzazione-gestione-turni.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
+                        <div class="h-48 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-purple-600 shadow-sm">
+                                RISK MANAGEMENT
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-sm text-gray-500 mb-2">30 Novembre 2025 · 7 min</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                                La "Colpa di Organizzazione": il Rischio Più Alto per le Strutture Sanitarie
+                            </h3>
+                            <p class="text-gray-600 mb-4 flex-1">
+                                Con la Legge Gelli-Bianco, la gestione inefficiente delle risorse umane è diventata fonte diretta di responsabilità penale e civile per il management sanitario.
+                            </p>
+                            <span class="inline-flex items-center text-primary font-semibold">
+                                Leggi l'articolo
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 2 - Turni Massacranti -->
+                <a href="blog/turni-massacranti-responsabilita-medica.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
+                        <div class="h-48 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-amber-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-amber-600 shadow-sm">
+                                DIRITTO SANITARIO
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-sm text-gray-500 mb-2">26 Novembre 2025 · 7 min</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                                Turni Massacranti e Responsabilità Medica: la Carenza di Organico come Difesa
+                            </h3>
+                            <p class="text-gray-600 mb-4 flex-1">
+                                Se l'errore clinico è figlio della stanchezza imposta dal sistema, il colpevole potrebbe non essere chi indossa il camice.
+                            </p>
+                            <span class="inline-flex items-center text-primary font-semibold">
+                                Leggi l'articolo
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 1 - Stress Cassazione -->
+                <a href="blog/stress-lavoro-correlato-cassazione.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
+                        <div class="h-48 bg-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-red-700 opacity-10 group-hover:opacity-20 transition-all"></div>
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-red-600 shadow-sm">
+                                LEGAL & COMPLIANCE
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-sm text-gray-500 mb-2">22 Novembre 2025 · 6 min</div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                                Stress lavoro-correlato: la Cassazione cambia le regole
+                            </h3>
+                            <p class="text-gray-600 mb-4 flex-1">
+                                Con l'Ordinanza n. 26923, la Corte di Cassazione ha riscritto i confini della responsabilità datoriale su turni e salute.
+                            </p>
+                            <span class="inline-flex items-center text-primary font-semibold">
+                                Leggi l'articolo
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="gradient-primary rounded-2xl p-8 md:p-12 text-center text-white">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                    Vuoi saperne di più su Tymetric?
+                </h3>
+                <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+                    Scopri come la nostra piattaforma può ottimizzare la gestione dei turni nella tua struttura sanitaria, riducendo i costi e migliorando il benessere del personale.
+                </p>
+                <a href="index.html#contact"
+                    class="inline-block px-8 py-4 bg-white text-primary text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    Richiedi una Demo Gratuita
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
+                        <h4 class="text-2xl font-bold text-primary">tymetric</h4>
+                    </div>
+                    <p class="text-gray-400">
+                        La soluzione AI per la pianificazione intelligente dei turni di lavoro.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Prodotto</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#features" class="hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="index.html#solutions" class="hover:text-primary transition-colors">Soluzioni</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Azienda</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer"
+                                class="hover:text-primary transition-colors">Chi siamo</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html" class="hover:text-primary transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Contatti</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Corso Unione Sovietica 341<br>Torino (TO)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:info@tymetric.com"
+                                class="hover:text-primary transition-colors">info@tymetric.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 GDP Analytics s.r.l. - P.IVA 11975840015 - Corso Unione Sovietica 341, Torino (TO) - All
+                    Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('max-h-0')) {
+                menu.classList.remove('max-h-0', 'opacity-0');
+                menu.classList.add('max-h-96', 'opacity-100');
+            } else {
+                menu.classList.add('max-h-0', 'opacity-0');
+                menu.classList.remove('max-h-96', 'opacity-100');
+            }
+        }
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.add('max-h-0', 'opacity-0');
+                menu.classList.remove('max-h-96', 'opacity-100');
+            });
+        });
+    </script>
+</body>
+
+</html>

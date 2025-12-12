@@ -2,11 +2,23 @@
 <html lang="it">
 
 <head>
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYFCYZ4Z6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QFYFCYZ4Z6');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Tymetric | Approfondimenti sulla Gestione Sanitaria</title>
     <meta name="description"
         content="Articoli, report di ricerca e approfondimenti sulla gestione dei turni sanitari, compliance normativa, risk management e ottimizzazione algoritmica.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tymetric.com/blog.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,31 +31,14 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS (compilato) -->
+    <link href="css/styles.css" rel="stylesheet">
 
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#08979c',
-                        'primary-light': '#52d6cd',
-                        'primary-dark': '#006d75',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
 
     <style>
         html {
@@ -58,6 +53,63 @@
             background: linear-gradient(135deg, #006d75 0%, #08979c 100%);
         }
     </style>
+
+    <!-- Schema.org Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog Tymetric",
+        "description": "Articoli, report di ricerca e approfondimenti sulla gestione dei turni sanitari",
+        "url": "https://tymetric.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tymetric",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tymetric.com/favicon.png"
+            }
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Ottimizzazione Algoritmica del Personale Sanitario: ROI e VOI",
+                "url": "https://tymetric.com/blog/ottimizzazione-algoritmica-roi-voi.html",
+                "datePublished": "2025-12-08"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Assenteismo e Stress da Turnazione nel Personale Sanitario",
+                "url": "https://tymetric.com/blog/assenteismo-stress-turnazione.html",
+                "datePublished": "2025-12-06"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Il Costo Nascosto dell'Incompetenza: Perché il Credentialing non Basta Più",
+                "url": "https://tymetric.com/blog/costo-nascosto-incompetenza-credentialing.html",
+                "datePublished": "2025-12-04"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "La Colpa di Organizzazione: il Rischio Più Alto per le Strutture Sanitarie",
+                "url": "https://tymetric.com/blog/colpa-di-organizzazione-gestione-turni.html",
+                "datePublished": "2025-11-30"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Turni Massacranti e Responsabilità Medica: la Carenza di Organico come Difesa",
+                "url": "https://tymetric.com/blog/turni-massacranti-responsabilita-medica.html",
+                "datePublished": "2025-11-26"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Stress lavoro-correlato: la Cassazione cambia le regole",
+                "url": "https://tymetric.com/blog/stress-lavoro-correlato-cassazione.html",
+                "datePublished": "2025-11-22"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body class="font-sans antialiased bg-gray-50">
@@ -69,7 +121,7 @@
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center">
                         <img src="favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
-                        <h1 class="text-2xl font-bold text-primary">tymetric</h1>
+                        <span class="text-2xl font-bold text-primary">tymetric</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
@@ -126,7 +178,7 @@
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
                     <div class="grid md:grid-cols-2 gap-0">
                         <div class="h-64 md:h-80 bg-gray-200 relative overflow-hidden">
-                            <img src="blog/immagini/ottimizzazione-roi-voi.png" alt="ROI e VOI" class="absolute inset-0 w-full h-full object-cover">
+                            <img src="blog/immagini/ottimizzazione-roi-voi.webp" alt="ROI e VOI ottimizzazione algoritmica sanità" class="absolute inset-0 w-full h-full object-cover" width="1016" height="566" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-700 opacity-20 group-hover:opacity-30 transition-all"></div>
                             <div class="absolute bottom-6 left-6 bg-white px-4 py-1.5 rounded-full text-sm font-bold text-teal-600 shadow-sm">
                                 STRATEGIC RESEARCH
@@ -168,7 +220,7 @@
                 <a href="blog/assenteismo-stress-turnazione.html" class="group">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
                         <div class="h-48 bg-gray-200 relative overflow-hidden">
-                            <img src="blog/immagini/assenteismo.png" alt="Assenteismo e Stress da Turnazione" class="absolute inset-0 w-full h-full object-cover">
+                            <img src="blog/immagini/assenteismo.webp" alt="Assenteismo e stress da turnazione personale sanitario" class="absolute inset-0 w-full h-full object-cover" width="1024" height="1024" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 opacity-10 group-hover:opacity-20 transition-all"></div>
                             <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-orange-600 shadow-sm">
                                 STRATEGIC RESEARCH
@@ -196,7 +248,7 @@
                 <a href="blog/costo-nascosto-incompetenza-credentialing.html" class="group">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
                         <div class="h-48 bg-gray-200 relative overflow-hidden">
-                            <img src="blog/immagini/credentialing.png" alt="Credentialing" class="absolute inset-0 w-full h-full object-cover">
+                            <img src="blog/immagini/credentialing.webp" alt="Credentialing e competency mapping sanità" class="absolute inset-0 w-full h-full object-cover" width="1024" height="1024" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 opacity-10 group-hover:opacity-20 transition-all"></div>
                             <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-blue-600 shadow-sm">
                                 DIGITAL HEALTH
@@ -379,6 +431,30 @@
                                 class="hover:text-primary transition-colors">info@tymetric.com</a>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="border-t border-gray-800 pt-8 pb-6">
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <span class="text-sm font-medium">GDPR Compliant</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Made in Italy</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Conforme CCNL Sanità</span>
+                    </div>
                 </div>
             </div>
 

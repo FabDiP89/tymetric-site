@@ -1,0 +1,11 @@
+# Robots.txt per Tymetric
+# https://tymetric.com
+
+User-agent: *
+Allow: /
+
+# Pagine da non indicizzare
+Disallow: /download-report.html
+
+# Sitemap
+Sitemap: https://tymetric.com/sitemap.xml

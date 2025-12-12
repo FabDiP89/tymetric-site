@@ -1,0 +1,28 @@
+# Node modules (Tailwind build)
+node_modules/
+package.json
+package-lock.json
+
+# Tailwind source files
+src/
+tailwind.config.js
+
+# Documenti interni
+*.docx
+*.pptx
+*.py
+piano_*.md
+ISTRUZIONI_PERFORMANCE.md
+paths_files_inpiration.txt
+testo slide.txt
+
+# File temporanei
+.DS_Store
+*.mov
+
+# Vecchie immagini PNG (sostituite da WebP)
+carosello*.png
+
+# File di sviluppo
+home.png
+infografiche.html

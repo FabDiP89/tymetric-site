@@ -943,6 +943,10 @@ video {
   max-width: 36rem;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1390,6 +1394,10 @@ video {
 
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .from-amber-500 {
@@ -2247,6 +2255,11 @@ html {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:pb-16 {

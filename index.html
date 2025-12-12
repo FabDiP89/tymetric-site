@@ -205,52 +205,57 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden hero-pattern">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
-                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                        La Piattaforma di Riferimento
-                        <span class="text-primary block mt-2">per la Gestione Turnistica</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Tymetric centralizza l'intera gestione dei turni in un'unica soluzione completa,
-                        con particolare focus sul comparto sanitario e conformità CCNL.
-                        Riduci il tempo di pianificazione del 90% con algoritmi intelligenti personalizzabili.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#contact"
-                            class="px-8 py-4 gradient-primary text-white text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
-                            Richiedi una Demo Gratuita
-                        </a>
-                        <a href="#features"
-                            class="px-8 py-4 bg-white border-2 border-primary text-primary text-lg font-semibold rounded-lg hover:bg-primary hover:text-white transition-all">
-                            Scopri di Più
-                        </a>
-                    </div>
-                    <div class="mt-8 flex items-center gap-8 justify-center md:justify-start">
-                        <div>
-                            <div class="text-3xl font-bold text-primary">90%</div>
-                            <div class="text-sm text-gray-600">Tempo risparmiato</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-primary">GDPR</div>
-                            <div class="text-sm text-gray-600">Compliant</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-primary">Cloud</div>
-                            <div class="text-sm text-gray-600">AWS Hosted</div>
-                        </div>
-                    </div>
+    <section class="relative pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden hero-pattern">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                La Piattaforma di Riferimento
+                <span class="text-primary block mt-2">per la Gestione Turnistica</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Tymetric centralizza l'intera gestione dei turni in un'unica soluzione completa,
+                con particolare focus sul comparto sanitario e conformità CCNL.
+                Riduci il tempo di pianificazione del 90% con algoritmi intelligenti personalizzabili.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+                <a href="#contact"
+                    class="px-8 py-4 gradient-primary text-white text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    Richiedi una Demo Gratuita
+                </a>
+                <a href="#features"
+                    class="px-8 py-4 bg-white border-2 border-primary text-primary text-lg font-semibold rounded-lg hover:bg-primary hover:text-white transition-all">
+                    Scopri di Più
+                </a>
+            </div>
+            <div class="flex items-center gap-8 justify-center">
+                <div>
+                    <div class="text-3xl font-bold text-primary">90%</div>
+                    <div class="text-sm text-gray-600">Tempo risparmiato</div>
                 </div>
-
-                <div class="relative hidden md:block">
-                    <div class="absolute inset-0 gradient-primary opacity-20 blur-3xl rounded-full"></div>
-                    <img src="im1.webp" alt="Tymetric Dashboard - Vista calendario turni mensile"
-                        class="relative rounded-2xl shadow-2xl border-4 border-white"
-                        width="1730" height="1152">
+                <div>
+                    <div class="text-3xl font-bold text-primary">GDPR</div>
+                    <div class="text-sm text-gray-600">Compliant</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary">Cloud</div>
+                    <div class="text-sm text-gray-600">AWS Hosted</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                <video class="w-full h-auto" autoplay loop muted playsinline
+                    poster="carosello5.webp">
+                    <source src="demo-tymetric.mp4" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
+            <p class="text-center mt-6 text-gray-500 text-sm">
+                Pianificazione turni in tempo reale con validazione automatica CCNL
+            </p>
         </div>
     </section>
 
@@ -619,12 +624,11 @@
                 </div>
 
                 <div class="order-2 md:order-2">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-light">
-                        <video class="w-full h-auto" autoplay loop muted playsinline
-                            poster="carosello5.webp">
-                            <source src="demo-tymetric.mp4" type="video/mp4">
-                            Il tuo browser non supporta il tag video.
-                        </video>
+                    <div class="relative">
+                        <div class="absolute inset-0 gradient-primary opacity-10 blur-3xl rounded-full"></div>
+                        <img src="im1.webp" alt="Tymetric Dashboard - Vista calendario turni mensile"
+                            class="relative rounded-2xl shadow-2xl border-4 border-primary-light"
+                            width="1730" height="1152" loading="lazy">
                     </div>
                 </div>
             </div>

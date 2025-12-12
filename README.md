@@ -1,280 +1,162 @@
 # Tymetric Landing Page
 
-Sito web ufficiale per Tymetric - Software di pianificazione turni con AI per healthcare e corporate.
+Sito web ufficiale per Tymetric - Software di pianificazione turni con AI per il settore sanitario.
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 
 - **URL Produzione**: https://tymetric.com / https://www.tymetric.com
 - **URL GitHub Pages**: https://fabdip89.github.io/tymetric-site/
 - **Repository GitHub**: https://github.com/FabDiP89/tymetric-site
 - **Hosting**: GitHub Pages
 - **DNS**: Register.it
+- **Analytics**: Google Analytics GA4 (G-QFYFCYZ4Z6)
 
-## 🏗️ Stack Tecnologico
+## Stack Tecnologico
 
-- **HTML5** + **Tailwind CSS** (via CDN)
-- **JavaScript Vanilla** (carousel, mobile menu, smooth scroll)
+- **HTML5** + **Tailwind CSS** (compilato in `css/styles.css`)
+- **JavaScript Vanilla** (carousel, mobile menu, smooth scroll, cookie banner)
 - **Font**: Google Fonts - Inter
+- **Immagini**: WebP (ottimizzate da PNG)
+- **Video**: MP4 (convertito da MOV)
 - **Colori Brand**:
   - Primary: `#08979c` (cyan)
   - Primary Light: `#52d6cd`
   - Primary Dark: `#006d75`
 
-## 📁 Struttura File
+## Struttura File
 
 ```
-sito/
+tymetric-site/
 ├── index.html                          # Pagina principale
+├── blog.html                           # Lista articoli blog
+├── cookie-policy.html                  # Cookie Policy
+├── privacy-policy.html                 # Privacy Policy
 ├── CNAME                               # Configurazione dominio custom
-├── README.md                           # Questo file
-├── im1.png                            # Dashboard (hero section)
-├── im2.png                            # Gestione Operatori
-├── im3.png                            # Assegnazione Ruoli
-├── im4.png                            # Gestione Unità Operative
-├── smartphone.png                      # Mobile app preview
-├── Screenshot 2025-11-05 alle 09.23.29.png
-├── Screenshot 2025-11-05 alle 09.27.45.png
-├── Screenshot 2025-11-05 alle 09.39.35.png
-├── Screenshot 2025-11-05 alle 12.00.10.png
-└── Registrazione schermo 2025-11-05 alle 16.59.29.mov  # Video demo
+├── favicon.png                         # Favicon/Logo
+├── robots.txt                          # Direttive crawler
+├── sitemap.xml                         # Sitemap XML
+│
+├── css/
+│   └── styles.css                      # Tailwind CSS compilato
+│
+├── blog/
+│   ├── assenteismo-stress-turnazione.html
+│   ├── colpa-di-organizzazione-gestione-turni.html
+│   ├── costo-nascosto-incompetenza-credentialing.html
+│   ├── ottimizzazione-algoritmica-roi-voi.html
+│   ├── stress-lavoro-correlato-cassazione.html
+│   ├── turni-massacranti-responsabilita-medica.html
+│   └── immagini/                       # Immagini articoli (WebP)
+│
+├── im1.webp - im5.webp                 # Screenshot prodotto
+├── carosello1.webp - carosello7.webp   # Immagini carousel
+├── smartphone.webp                     # Mobile app preview
+└── demo-tymetric.mp4                   # Video demo
 ```
 
-## 🚀 Come Caricare Modifiche su GitHub
+## SEO e Analytics
 
-### 1. Modifiche Locali
-Apri e modifica `index.html` con il tuo editor preferito.
+### Implementato
+- Google Analytics GA4 su tutte le pagine
+- Schema.org Organization (index.html)
+- Schema.org FAQPage (index.html)
+- Schema.org BreadcrumbList (articoli blog)
+- Schema.org TechArticle (articoli blog)
+- Canonical URLs su tutte le pagine
+- Open Graph tags
+- sitemap.xml
+- robots.txt
+- Meta description ottimizzate
 
-### 2. Verificare Stato Git
-```bash
-git status
-```
+### Google Analytics
+- **ID**: G-QFYFCYZ4Z6
+- **Dashboard**: https://analytics.google.com
+- Tracciamento attivo su tutte le 10 pagine HTML
 
-### 3. Aggiungere File Modificati
-```bash
-# Aggiungere un file specifico
-git add index.html
+## Sezioni del Sito
 
-# Oppure aggiungere tutti i file modificati
-git add .
-```
+### Homepage (index.html)
+1. **Navigation** - Menu fisso con logo e link
+2. **Hero Section** - Titolo, CTA, statistiche
+3. **Video Demo** - Demo prodotto in autoplay
+4. **Features** - 6 funzionalità principali
+5. **Solutions** - Focus Healthcare
+6. **Mobile App** - Showcase interfaccia mobile
+7. **Department Overview** - Panoramica modulo schedulazione
+8. **Screenshots Carousel** - 7 immagini con navigazione
+9. **Benefits** - Statistiche chiave
+10. **Contact Form** - Form richiesta demo (FormSubmit)
+11. **Footer** - Link, contatti, Trust Badges
+12. **Sticky CTA Mobile** - Bottone fisso su mobile
+13. **Cookie Banner** - Consenso cookie
 
-### 4. Creare Commit
-```bash
-git commit -m "Descrizione chiara della modifica
+### Blog
+- 6 articoli tecnici sulla gestione turni sanitari
+- Immagini WebP ottimizzate
+- Schema.org TechArticle per SEO
+- Breadcrumb navigation
 
-Dettagli aggiuntivi se necessario
+## Form Contatti
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>"
-```
-
-### 5. Push su GitHub
-```bash
-git push
-```
-
-### 6. Verifica Deployment
-- Vai su: https://github.com/FabDiP89/tymetric-site/actions
-- Aspetta il check verde ✓ (1-2 minuti)
-- Il sito si aggiornerà automaticamente
-
-## 📧 Form Contatti - FormSubmit
-
-### Configurazione Attuale
 - **Servizio**: FormSubmit.co (gratuito)
 - **Email Destinazione**: dipriamo.fabrizio@gdpanalytics.com
 - **Oggetto Email**: "Nuova Richiesta Demo Tymetric"
-- **Template**: Tabella
 
-### Prima Compilazione
-**IMPORTANTE**: Alla prima compilazione del form, riceverai un'email da FormSubmit con oggetto "Confirm Form Submission". Devi cliccare sul link di conferma per attivare il servizio.
+## Performance
 
-### Cambiare Email Destinazione
-Nel file `index.html`, cerca:
-```html
-<form action="https://formsubmit.co/NUOVA-EMAIL@esempio.com" method="POST">
+- Tailwind CSS compilato (non CDN)
+- Immagini WebP (70-80% più leggere di PNG)
+- Video MP4 (compatibilità universale)
+- Lazy loading su immagini non critiche
+- Font preconnect ottimizzato
+- Dimensioni esplicite su immagini (no CLS)
+
+## Trust Badges (Footer)
+
+- GDPR Compliant
+- Made in Italy
+- Conforme CCNL Sanità
+
+## Comandi Git
+
+```bash
+# Verificare stato
+git status
+
+# Aggiungere modifiche
+git add .
+
+# Commit
+git commit -m "Descrizione modifica"
+
+# Push
+git push
 ```
 
-Dopo la modifica, ricorda che dovrai riconfermare la nuova email alla prima compilazione.
+## Configurazione DNS (Register.it)
 
-## 🌐 Configurazione DNS (Register.it)
-
-### Record A (per tymetric.com)
+### Record A
 ```
 Host: tymetric.com (o @)
-Tipo: A
-Valori:
-  - 185.199.108.153
-  - 185.199.109.153
-  - 185.199.110.153
-  - 185.199.111.153
-TTL: 900
+Valori: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
 ```
 
-### Record CNAME (per www)
+### Record CNAME
 ```
 Host: www.tymetric.com
-Tipo: CNAME
 Valore: fabdip89.github.io.
-TTL: 900
 ```
 
-### GitHub Pages Custom Domain
-1. Vai su: https://github.com/FabDiP89/tymetric-site/settings/pages
-2. In "Custom domain" scrivi: `tymetric.com`
-3. Attiva "Enforce HTTPS" ✓
+## Contatti
 
-## 🎨 Sezioni del Sito
-
-1. **Hero Section** - Presentazione principale con im1.png
-2. **Features** - 6 funzionalità principali con icone
-3. **Solutions** - Healthcare e Corporate
-4. **Mobile App** - Showcase con smartphone.png
-5. **Department Overview** - Video demo modulo schedulazione
-6. **Screenshots Carousel** - 7 immagini prodotto con navigazione
-7. **Benefits** - 4 statistiche chiave (90%, 100%, +85%, ROI)
-8. **Contact Form** - Form richiesta demo con FormSubmit
-9. **Footer** - Link e contatti
-
-## 🎠 Carousel Screenshots
-
-### Funzionalità
-- Auto-play ogni 5 secondi
-- Navigazione con frecce sinistra/destra
-- Indicatori cliccabili (7 pallini)
-- Transizioni fluide
-- Reset auto-play all'interazione manuale
-
-### Modificare Immagini Carousel
-Nel file `index.html`, cerca la sezione `<!-- Screenshots Section -->` e modifica i tag `<img src="...">`.
-
-### Cambiare Velocità Auto-play
-Cerca nel codice JavaScript:
-```javascript
-let autoplayInterval = setInterval(nextSlide, 5000); // 5000 = 5 secondi
-```
-
-## 🔧 Modifiche Comuni
-
-### Cambiare Colori Brand
-Nel `<head>` cerca:
-```javascript
-colors: {
-    primary: '#08979c',        // Colore principale
-    'primary-light': '#52d6cd', // Colore chiaro
-    'primary-dark': '#006d75',  // Colore scuro
-}
-```
-
-### Aggiungere/Rimuovere Feature
-Cerca la sezione `<!-- Features Section -->` e duplica/rimuovi un blocco:
-```html
-<div class="feature-card bg-white p-8 rounded-xl shadow-md">
-    <!-- Contenuto feature -->
-</div>
-```
-
-### Modificare Testi
-Tutti i testi sono direttamente nell'HTML. Cerca la sezione specifica e modifica il contenuto tra i tag.
-
-## 📱 Responsive Design
-
-Il sito è completamente responsive grazie a Tailwind CSS:
-- **Mobile**: Layout a colonna singola
-- **Tablet** (md): 768px+ - Layout a 2 colonne
-- **Desktop** (lg): 1024px+ - Layout a 3 colonne
-
-Classi Tailwind responsive: `md:`, `lg:`, `xl:`
-
-## ⚡ Performance
-
-- Tailwind CSS caricato via CDN
-- Font Google ottimizzato con `preconnect`
-- Immagini ottimizzate (PNG)
-- Video con poster per caricamento lazy
-- Smooth scroll nativo CSS
-
-## 🐛 Troubleshooting
-
-### Il sito non si aggiorna dopo push
-1. Verifica su GitHub Actions: https://github.com/FabDiP89/tymetric-site/actions
-2. Aspetta 2-3 minuti per il deployment
-3. Svuota cache browser (Ctrl+Shift+R o Cmd+Shift+R)
-
-### Video non funziona
-- Il video è in formato .mov (QuickTime)
-- Alcuni browser potrebbero non supportarlo
-- Considera conversione in .mp4 per compatibilità universale
-
-### Form non invia email
-1. Verifica di aver confermato l'email FormSubmit
-2. Controlla spam/promozioni nella tua casella email
-3. Verifica l'attributo `action` nel form tag
-
-### Carousel non scorre
-1. Verifica che il JavaScript sia presente prima di `</body>`
-2. Controlla la console del browser (F12) per errori
-3. Verifica che `totalSlides` corrisponda al numero di slide
-
-## 📊 SEO e Indicizzazione
-
-### Meta Tags Attuali
-- Title: "Tymetric - AI-Powered Shift Scheduling"
-- Description: SEO-friendly
-- Language: `it`
-- Viewport: Responsive
-
-### Da Fare (Opzionale)
-- [ ] Registrare su Google Search Console
-- [ ] Aggiungere sitemap.xml
-- [ ] Aggiungere robots.txt
-- [ ] Implementare Open Graph tags per social sharing
-- [ ] Aggiungere Structured Data (JSON-LD)
-
-### Google Search Console
-1. Vai su: https://search.google.com/search-console
-2. Aggiungi proprietà: `tymetric.com`
-3. Verifica tramite file HTML o DNS TXT record
-
-## 🔒 Sicurezza
-
-- ✅ HTTPS forzato (Enforce HTTPS attivo)
-- ✅ Certificato SSL automatico GitHub Pages
-- ✅ Form submission tramite POST
-- ✅ No dati sensibili nel repository
-
-## 📞 Contatti Email nel Sito
-
-- **Email visibile**: info@tymetric.com (nel footer)
-- **Email form**: dipriamo.fabrizio@gdpanalytics.com (FormSubmit backend)
-
-## 🎯 Checklist Prima di Ogni Modifica
-
-- [ ] Testa le modifiche localmente (apri index.html nel browser)
-- [ ] Verifica responsive (inspeziona > toggle device toolbar)
-- [ ] Controlla che i link funzionino
-- [ ] Commit con messaggio descrittivo
-- [ ] Push su GitHub
-- [ ] Verifica deployment su Actions
-- [ ] Testa su tymetric.com dopo deployment
-
-## 💡 Tips Utili
-
-1. **Preview locale**: Apri `index.html` direttamente nel browser per vedere le modifiche prima del push
-2. **Git stash**: Usa `git stash` per salvare modifiche temporanee senza commit
-3. **Git log**: Usa `git log --oneline` per vedere cronologia commit
-4. **Rollback**: `git revert <commit-hash>` per annullare un commit specifico
-5. **Branch**: Considera di usare branch per modifiche importanti: `git checkout -b nuova-feature`
-
-## 🆘 Supporto
-
-Per assistenza tecnica con Claude Code:
-- Condividi questo README nella chat
-- Specifica quale sezione vuoi modificare
-- Claude avrà tutte le informazioni necessarie
+- **Email pubblica**: info@tymetric.com
+- **Email form**: dipriamo.fabrizio@gdpanalytics.com
+- **Azienda**: GDP Analytics s.r.l.
+- **P.IVA**: 11975840015
+- **Sede**: Corso Unione Sovietica 341, Torino (TO)
 
 ---
 
-**Ultima modifica**: 2025-11-05
-**Versione**: 1.0
+**Ultima modifica**: 2025-12-12
+**Versione**: 2.0
 **Maintainer**: Fabrizio Di Priamo

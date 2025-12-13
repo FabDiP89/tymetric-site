@@ -1,75 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Home Page -->
   <url>
     <loc>https://tymetric.com/</loc>
-    <lastmod>2025-12-10</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Blog Index -->
   <url>
     <loc>https://tymetric.com/blog.html</loc>
-    <lastmod>2025-12-10</lastmod>
+    <lastmod>2025-12-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Blog Articles -->
   <url>
     <loc>https://tymetric.com/blog/ottimizzazione-algoritmica-roi-voi.html</loc>
     <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://tymetric.com/blog/assenteismo-stress-turnazione.html</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://tymetric.com/blog/costo-nascosto-incompetenza-credentialing.html</loc>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://tymetric.com/blog/turni-massacranti-responsabilita-medica.html</loc>
-    <lastmod>2025-12-01</lastmod>
+    <loc>https://tymetric.com/blog/colpa-di-organizzazione-gestione-turni.html</loc>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://tymetric.com/blog/stress-lavoro-correlato-cassazione.html</loc>
     <lastmod>2025-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://tymetric.com/blog/colpa-di-organizzazione-gestione-turni.html</loc>
+    <loc>https://tymetric.com/blog/turni-massacranti-responsabilita-medica.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Legal Pages -->
   <url>
     <loc>https://tymetric.com/privacy-policy.html</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://tymetric.com/cookie-policy.html</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

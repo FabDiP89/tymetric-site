@@ -2,13 +2,14 @@
 <html lang="it">
 
 <head>
-    <!-- Google Analytics GA4 -->
+    <!-- Google Analytics GA4 + Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYFCYZ4Z6"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-QFYFCYZ4Z6');
+        gtag('config', 'AW-17799873404');
     </script>
 
     <meta charset="UTF-8">
@@ -955,7 +956,7 @@
             </p>
 
             <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl max-w-xl mx-auto">
-                <form class="space-y-6" action="https://formspree.io/f/mblqjzop" method="POST">
+                <form id="contact-form" class="space-y-6" action="https://formspree.io/f/mblqjzop" method="POST">
                     <!-- Formspree Configuration -->
                     <input type="hidden" name="_subject" value="Nuova Richiesta Informazioni Tymetric">
 
@@ -1236,6 +1237,14 @@
                 autoplayInterval = setInterval(nextSlide, 5000);
             });
         });
+
+        // Google Ads Conversion Tracking
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function() {
+                gtag('event', 'conversion', {'send_to': 'AW-17799873404/DK6aCJr9jdEbEPyG0qdC'});
+            });
+        }
     </script>
 </body>
 

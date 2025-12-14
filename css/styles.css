@@ -2244,6 +2244,10 @@ html {
     gap: 2.5rem;
   }
 
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
   .md\:p-12 {
     padding: 3rem;
   }

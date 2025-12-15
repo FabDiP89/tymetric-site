@@ -98,9 +98,44 @@ tymetric-site/
 
 ## Form Contatti
 
-- **Servizio**: FormSubmit.co (gratuito)
-- **Email Destinazione**: dipriamo.fabrizio@gdpanalytics.com
-- **Oggetto Email**: "Nuova Richiesta Demo Tymetric"
+Il form di contatto utilizza **Google Apps Script** per gestire le richieste in modo autonomo, senza dipendenze da servizi esterni.
+
+### Configurazione
+
+| Componente | Dettaglio |
+|------------|-----------|
+| **Servizio** | Google Apps Script (custom) |
+| **Foglio Google** | [Richieste Tymetric](https://docs.google.com/spreadsheets/d/1398ShoHMWRCfM3-FXkZic0P_D7NIVwvvv9eXkvlhKPw/edit?gid=0#gid=0) |
+| **Email Notifiche** | dipriamo.fabrizio@gdpanalytics.com |
+| **Endpoint** | `https://script.google.com/macros/s/AKfycbzpx1FCJFgR7nd1_ZtCvjPnlGeiBWN1P7wF9tRAoPocJTidV-C1Q0KpiVw9GRIOWpzc/exec` |
+
+### Come Funziona
+
+1. L'utente compila il form su tymetric.com
+2. I dati vengono inviati via POST al Google Apps Script
+3. Lo script salva i dati nel foglio Google (storico completo)
+4. Viene inviata un'email di notifica automatica
+5. L'utente vede un messaggio di conferma
+
+### Campi Tracciati
+
+- Data e ora
+- Nome e Cognome
+- Email
+- Telefono (opzionale)
+- Settore
+- Messaggio (opzionale)
+
+### Modifica dello Script
+
+Per modificare lo script (es. cambiare email destinatario):
+
+1. Apri il [Foglio Google](https://docs.google.com/spreadsheets/d/1398ShoHMWRCfM3-FXkZic0P_D7NIVwvvv9eXkvlhKPw/edit)
+2. Vai su **Estensioni** → **Apps Script**
+3. Modifica il codice
+4. Clicca **Deploy** → **Gestisci deployment** → **Modifica** → **Nuova versione**
+
+> **Nota**: Dopo ogni modifica allo script, è necessario creare un nuovo deployment per renderla attiva.
 
 ## Performance
 
@@ -157,6 +192,6 @@ Valore: fabdip89.github.io.
 
 ---
 
-**Ultima modifica**: 2025-12-12
-**Versione**: 2.0
+**Ultima modifica**: 2025-12-15
+**Versione**: 2.1
 **Maintainer**: Fabrizio Di Priamo

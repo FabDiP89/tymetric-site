@@ -960,9 +960,7 @@
             </p>
 
             <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl max-w-xl mx-auto">
-                <form id="contact-form" class="space-y-6" action="https://formspree.io/f/mblqjzop" method="POST">
-                    <!-- Formspree Configuration -->
-                    <input type="hidden" name="_subject" value="Nuova Richiesta Informazioni Tymetric">
+                <form id="contact-form" class="space-y-6">
 
                     <div class="grid md:grid-cols-2 gap-4">
                         <div class="text-left">
@@ -1242,11 +1240,52 @@
             });
         });
 
-        // Google Ads Conversion Tracking
+        // Form submission handler
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
-            contactForm.addEventListener('submit', function() {
-                gtag('event', 'conversion', {'send_to': 'AW-17799873404/DK6aCJr9jdEbEPyG0qdC'});
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Invio in corso...';
+                submitBtn.disabled = true;
+
+                const formData = {
+                    nome: contactForm.querySelector('[name="nome"]').value,
+                    cognome: contactForm.querySelector('[name="cognome"]').value,
+                    email: contactForm.querySelector('[name="email"]').value,
+                    telefono: contactForm.querySelector('[name="telefono"]').value,
+                    settore: contactForm.querySelector('[name="settore"]').value,
+                    messaggio: contactForm.querySelector('[name="messaggio"]').value
+                };
+
+                try {
+                    await fetch('https://script.google.com/macros/s/AKfycbzpx1FCJFgR7nd1_ZtCvjPnlGeiBWN1P7wF9tRAoPocJTidV-C1Q0KpiVw9GRIOWpzc/exec', {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // Google Ads Conversion Tracking
+                    gtag('event', 'conversion', {'send_to': 'AW-17799873404/DK6aCJr9jdEbEPyG0qdC'});
+
+                    // Mostra messaggio di successo
+                    contactForm.innerHTML = `
+                        <div class="text-center py-8">
+                            <svg class="w-16 h-16 text-primary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <h4 class="text-2xl font-bold text-gray-900 mb-2">Richiesta Inviata!</h4>
+                            <p class="text-gray-600">Ti contatteremo al più presto.</p>
+                        </div>
+                    `;
+                } catch (error) {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    alert('Si è verificato un errore. Riprova o contattaci a info@tymetric.com');
+                }
             });
         }
     </script>

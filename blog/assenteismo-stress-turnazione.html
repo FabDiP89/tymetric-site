@@ -201,6 +201,19 @@
             font-weight: 600;
         }
 
+        sup a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        sup a:hover {
+            text-decoration: underline;
+        }
+
+        .prose ol li[id^="ref-"] {
+            scroll-margin-top: 6rem;
+        }
+
         .prose hr {
             border: none;
             border-top: 1px solid #e5e7eb;
@@ -340,7 +353,7 @@
 
                 <h3>1.1 Il Perimetro dell'Indagine: Definizioni e Ambito</h3>
 
-                <p>Nel contesto ospedaliero, l'assenteismo assume connotazioni peculiari. A differenza di altri settori, l'assenza del lavoratore sanitario ha ripercussioni immediate sulla sicurezza del paziente e sul carico di lavoro dei colleghi presenti, innescando un circolo vizioso di "understaffing" (carenza di personale) che alimenta ulteriore stress e ulteriori assenze.<sup>1</sup> La ricerca distingue tra assenze volontarie, legate a fattori motivazionali, e assenze involontarie, dovute a patologia accertata. Tuttavia, nel caso del personale turnista, questa dicotomia appare spesso artificiosa: lo stress cronico derivante da turni disergonomici induce alterazioni biologiche misurabili (immunosoppressione, disturbi metabolici) che rendono il lavoratore oggettivamente più suscettibile alla malattia.<sup>3</sup> Pertanto, l'aumento dei certificati di malattia nei reparti ad alta intensità non è necessariamente indice di opportunismo, ma spesso la manifestazione clinica di un esaurimento psicofisico sistemico.</p>
+                <p>Nel contesto ospedaliero, l'assenteismo assume connotazioni peculiari. A differenza di altri settori, l'assenza del lavoratore sanitario ha ripercussioni immediate sulla sicurezza del paziente e sul carico di lavoro dei colleghi presenti, innescando un circolo vizioso di "understaffing" (carenza di personale) che alimenta ulteriore stress e ulteriori assenze.<sup><a href="#ref-1" class="hover:underline">1</a></sup> La ricerca distingue tra assenze volontarie, legate a fattori motivazionali, e assenze involontarie, dovute a patologia accertata. Tuttavia, nel caso del personale turnista, questa dicotomia appare spesso artificiosa: lo stress cronico derivante da turni disergonomici induce alterazioni biologiche misurabili (immunosoppressione, disturbi metabolici) che rendono il lavoratore oggettivamente più suscettibile alla malattia.<sup><a href="#ref-3" class="hover:underline">3</a></sup> Pertanto, l'aumento dei certificati di malattia nei reparti ad alta intensità non è necessariamente indice di opportunismo, ma spesso la manifestazione clinica di un esaurimento psicofisico sistemico.</p>
 
                 <h3>1.2 Obiettivi del Rapporto</h3>
 
@@ -359,25 +372,25 @@
                 <!-- Sezione 2 -->
                 <h2>2. Fondamenti Fisiopatologici: Il Costo Biologico del Lavoro a Turni</h2>
 
-                <p>Per comprendere la radice dell'assenteismo tra i turnisti, è indispensabile analizzare l'impatto che l'alterazione dei ritmi biologici ha sulla salute umana. Il corpo umano è governato da ritmi circadiani orchestrati dal nucleo soprachiasmatico (SCN) dell'ipotalamo, che sincronizza le funzioni fisiologiche con il ciclo luce-buio. Il lavoro a turni, imponendo attività lavorativa e veglia in orari biologicamente destinati al riposo, forza una desincronizzazione cronica che ha conseguenze devastanti per l'omeostasi dell'organismo.<sup>3</sup></p>
+                <p>Per comprendere la radice dell'assenteismo tra i turnisti, è indispensabile analizzare l'impatto che l'alterazione dei ritmi biologici ha sulla salute umana. Il corpo umano è governato da ritmi circadiani orchestrati dal nucleo soprachiasmatico (SCN) dell'ipotalamo, che sincronizza le funzioni fisiologiche con il ciclo luce-buio. Il lavoro a turni, imponendo attività lavorativa e veglia in orari biologicamente destinati al riposo, forza una desincronizzazione cronica che ha conseguenze devastanti per l'omeostasi dell'organismo.<sup><a href="#ref-3" class="hover:underline">3</a></sup></p>
 
                 <h3>2.1 Disallineamento Circadiano e Disfunzione Immunitaria</h3>
 
-                <p>Uno dei meccanismi primari attraverso cui lo stress da turno si traduce in assenza per malattia è l'indebolimento del sistema immunitario. Durante la notte, in condizioni fisiologiche, il corpo produce melatonina e citochine che regolano la risposta infiammatoria e la difesa contro i patogeni. L'esposizione alla luce artificiale durante il turno notturno sopprime drasticamente la produzione di melatonina, privando l'organismo di un potente antiossidante endogeno.<sup>3</sup></p>
+                <p>Uno dei meccanismi primari attraverso cui lo stress da turno si traduce in assenza per malattia è l'indebolimento del sistema immunitario. Durante la notte, in condizioni fisiologiche, il corpo produce melatonina e citochine che regolano la risposta infiammatoria e la difesa contro i patogeni. L'esposizione alla luce artificiale durante il turno notturno sopprime drasticamente la produzione di melatonina, privando l'organismo di un potente antiossidante endogeno.<sup><a href="#ref-3" class="hover:underline">3</a></sup></p>
 
-                <p>Studi recenti hanno evidenziato che i lavoratori turnisti presentano perturbazioni significative nei livelli di ormoni steroidei sessuali e marcatori metabolomici, configurando uno stato infiammatorio di basso grado cronico.<sup>4</sup> Parallelamente, lo stress psicosociale e la privazione del sonno attivano l'asse ipotalamo-ipofisi-surrene (HPA), portando a una disregolazione del cortisolo. Se in fase acuta il cortisolo ha un effetto antinfiammatorio, la sua elevazione cronica (o l'esaurimento della risposta, noto come ipocortisolismo da burnout) conduce a una resistenza dei recettori dei glucocorticoidi. Il risultato clinico è una maggiore suscettibilità alle infezioni virali e batteriche.<sup>2</sup></p>
+                <p>Studi recenti hanno evidenziato che i lavoratori turnisti presentano perturbazioni significative nei livelli di ormoni steroidei sessuali e marcatori metabolomici, configurando uno stato infiammatorio di basso grado cronico.<sup><a href="#ref-4" class="hover:underline">4</a></sup> Parallelamente, lo stress psicosociale e la privazione del sonno attivano l'asse ipotalamo-ipofisi-surrene (HPA), portando a una disregolazione del cortisolo. Se in fase acuta il cortisolo ha un effetto antinfiammatorio, la sua elevazione cronica (o l'esaurimento della risposta, noto come ipocortisolismo da burnout) conduce a una resistenza dei recettori dei glucocorticoidi. Il risultato clinico è una maggiore suscettibilità alle infezioni virali e batteriche.<sup><a href="#ref-2" class="hover:underline">2</a></sup></p>
 
-                <p>Le evidenze epidemiologiche supportano questo meccanismo: sebbene alcune revisioni sistematiche riportino risultati misti sull'assenteismo generale, analisi più specifiche mostrano che i turnisti riportano un numero medio di episodi di infezioni respiratorie acute (ILI/ARI) superiore rispetto ai colleghi diurni (3.7 episodi contro 2.9).<sup>5</sup> Ancora più significativo è il dato sulla gravità: tra i lavoratori assenti, i turnisti accumulano il 51% di ore di malattia in più rispetto ai non turnisti, suggerendo che quando si ammalano, il loro recupero è più lento e difficoltoso a causa della ridotta riserva funzionale.<sup>5</sup></p>
+                <p>Le evidenze epidemiologiche supportano questo meccanismo: sebbene alcune revisioni sistematiche riportino risultati misti sull'assenteismo generale, analisi più specifiche mostrano che i turnisti riportano un numero medio di episodi di infezioni respiratorie acute (ILI/ARI) superiore rispetto ai colleghi diurni (3.7 episodi contro 2.9).<sup><a href="#ref-5" class="hover:underline">5</a></sup> Ancora più significativo è il dato sulla gravità: tra i lavoratori assenti, i turnisti accumulano il 51% di ore di malattia in più rispetto ai non turnisti, suggerendo che quando si ammalano, il loro recupero è più lento e difficoltoso a causa della ridotta riserva funzionale.<sup><a href="#ref-5" class="hover:underline">5</a></sup></p>
 
                 <h3>2.2 Il Disturbo del Sonno da Lavoro a Turni (SWSD) e la Fatica Cronica</h3>
 
-                <p>Il "Shift Work Sleep Disorder" (SWSD) è una patologia riconosciuta che colpisce una percentuale significativa di operatori sanitari, caratterizzata da insonnia eccessiva e sonnolenza durante le ore di veglia. La privazione del sonno non è semplicemente un disagio soggettivo, ma un fattore di rischio biologico. La mancanza di sonno REM e di sonno profondo riduce la capacità del cervello di eliminare le tossine metaboliche (via sistema glinfatico) e compromette la funzione cognitiva.<sup>3</sup></p>
+                <p>Il "Shift Work Sleep Disorder" (SWSD) è una patologia riconosciuta che colpisce una percentuale significativa di operatori sanitari, caratterizzata da insonnia eccessiva e sonnolenza durante le ore di veglia. La privazione del sonno non è semplicemente un disagio soggettivo, ma un fattore di rischio biologico. La mancanza di sonno REM e di sonno profondo riduce la capacità del cervello di eliminare le tossine metaboliche (via sistema glinfatico) e compromette la funzione cognitiva.<sup><a href="#ref-3" class="hover:underline">3</a></sup></p>
 
                 <p>Questa condizione è direttamente correlata all'assenteismo attraverso due vie:</p>
 
                 <ol>
-                    <li><strong>Assenze per Recupero:</strong> I lavoratori, esausti, utilizzano i giorni di malattia come "valvola di sfogo" per recuperare il debito di sonno accumulato, un comportamento spesso stigmatizzato ma biologicamente necessario per prevenire il collasso.<sup>6</sup></li>
-                    <li><strong>Infortuni e Incidenti:</strong> La fatica cronica riduce i tempi di reazione e l'attenzione, aumentando il rischio di infortuni sul lavoro (punture accidentali, traumi muscoloscheletrici durante la mobilizzazione pazienti) e incidenti in itinere (guida post-turno notturno), che generano lunghi periodi di inabilità.<sup>7</sup></li>
+                    <li><strong>Assenze per Recupero:</strong> I lavoratori, esausti, utilizzano i giorni di malattia come "valvola di sfogo" per recuperare il debito di sonno accumulato, un comportamento spesso stigmatizzato ma biologicamente necessario per prevenire il collasso.<sup><a href="#ref-6" class="hover:underline">6</a></sup></li>
+                    <li><strong>Infortuni e Incidenti:</strong> La fatica cronica riduce i tempi di reazione e l'attenzione, aumentando il rischio di infortuni sul lavoro (punture accidentali, traumi muscoloscheletrici durante la mobilizzazione pazienti) e incidenti in itinere (guida post-turno notturno), che generano lunghi periodi di inabilità.<sup><a href="#ref-7" class="hover:underline">7</a></sup></li>
                 </ol>
 
                 <h3>2.3 Patologie Croniche e Assenteismo a Lungo Termine</h3>
@@ -385,8 +398,8 @@
                 <p>L'esposizione cumulativa ai turni notturni (spesso definita in "anni-turno") è un predittore robusto di patologie croniche che causano assenze prolungate (Long-term Sickness Absence - LTSA).</p>
 
                 <ul>
-                    <li><strong>Malattie Cardiovascolari:</strong> Esiste una forte correlazione dose-risposta tra la durata dell'esposizione ai turni e il rischio di malattia coronarica (CHD). Il disallineamento circadiano influisce sulla pressione arteriosa, sulla variabilità della frequenza cardiaca e sul metabolismo lipidico. È stato osservato che il rischio cardiovascolare inizia a diminuire solo diversi anni dopo la cessazione del lavoro a turni, indicando un danno persistente.<sup>9</sup></li>
-                    <li><strong>Disturbi Metabolici e Gastrointestinali:</strong> L'assunzione di cibo durante la notte, quando il sistema digestivo dovrebbe essere a riposo, porta a disturbi gastrointestinali frequenti (dispepsia, gastrite) e aumenta il rischio di sindrome metabolica e diabete di tipo 2. Questi disturbi cronici richiedono frequenti accertamenti medici e periodi di riposo, alimentando le statistiche di assenza.<sup>10</sup></li>
+                    <li><strong>Malattie Cardiovascolari:</strong> Esiste una forte correlazione dose-risposta tra la durata dell'esposizione ai turni e il rischio di malattia coronarica (CHD). Il disallineamento circadiano influisce sulla pressione arteriosa, sulla variabilità della frequenza cardiaca e sul metabolismo lipidico. È stato osservato che il rischio cardiovascolare inizia a diminuire solo diversi anni dopo la cessazione del lavoro a turni, indicando un danno persistente.<sup><a href="#ref-9" class="hover:underline">9</a></sup></li>
+                    <li><strong>Disturbi Metabolici e Gastrointestinali:</strong> L'assunzione di cibo durante la notte, quando il sistema digestivo dovrebbe essere a riposo, porta a disturbi gastrointestinali frequenti (dispepsia, gastrite) e aumenta il rischio di sindrome metabolica e diabete di tipo 2. Questi disturbi cronici richiedono frequenti accertamenti medici e periodi di riposo, alimentando le statistiche di assenza.<sup><a href="#ref-10" class="hover:underline">10</a></sup></li>
                 </ul>
 
                 <hr>
@@ -403,29 +416,29 @@
                 <p>Studi longitudinali hanno dimostrato che lavorare turni di 12 ore o più è associato a un aumento significativo del rischio di malattia.</p>
 
                 <ul>
-                    <li><strong>Rischio Aumentato:</strong> Le probabilità di episodi di malattia a breve termine aumentano del 18% (OR = 1.18) e quelle di malattia a lungo termine del 37% (OR = 1.37) quando i turni superano le 12 ore rispetto ai turni standard di 8 ore.<sup>12</sup></li>
-                    <li><strong>Soglia di Tolleranza:</strong> Se un infermiere lavora più del 75% dei suoi turni su base 12 ore, l'odds ratio di assenza sale a 1.28. Questo suggerisce che esiste una soglia di tolleranza oltre la quale la fatica accumulata non è recuperabile nei giorni di riposo, portando al burnout fisico.<sup>12</sup></li>
-                    <li><strong>Qualità del Lavoro:</strong> I turni lunghi sono anche associati a una maggiore perdita di informazioni assistenziali durante le consegne (OR = 1.28) e a una ridotta opportunità di discutere i problemi dei pazienti con i colleghi, aumentando lo stress cognitivo e il senso di isolamento professionale.<sup>13</sup></li>
+                    <li><strong>Rischio Aumentato:</strong> Le probabilità di episodi di malattia a breve termine aumentano del 18% (OR = 1.18) e quelle di malattia a lungo termine del 37% (OR = 1.37) quando i turni superano le 12 ore rispetto ai turni standard di 8 ore.<sup><a href="#ref-12" class="hover:underline">12</a></sup></li>
+                    <li><strong>Soglia di Tolleranza:</strong> Se un infermiere lavora più del 75% dei suoi turni su base 12 ore, l'odds ratio di assenza sale a 1.28. Questo suggerisce che esiste una soglia di tolleranza oltre la quale la fatica accumulata non è recuperabile nei giorni di riposo, portando al burnout fisico.<sup><a href="#ref-12" class="hover:underline">12</a></sup></li>
+                    <li><strong>Qualità del Lavoro:</strong> I turni lunghi sono anche associati a una maggiore perdita di informazioni assistenziali durante le consegne (OR = 1.28) e a una ridotta opportunità di discutere i problemi dei pazienti con i colleghi, aumentando lo stress cognitivo e il senso di isolamento professionale.<sup><a href="#ref-13" class="hover:underline">13</a></sup></li>
                 </ul>
 
-                <p>Al contrario, i turni di 8 ore, pur richiedendo una presenza più frequente in ospedale, sembrano proteggere meglio dalla fatica estrema, distribuendo il carico su archi temporali più gestibili per la fisiologia umana.<sup>13</sup></p>
+                <p>Al contrario, i turni di 8 ore, pur richiedendo una presenza più frequente in ospedale, sembrano proteggere meglio dalla fatica estrema, distribuendo il carico su archi temporali più gestibili per la fisiologia umana.<sup><a href="#ref-13" class="hover:underline">13</a></sup></p>
 
                 <h3>3.2 Rotazione dei Turni: Direzione e Velocità</h3>
 
                 <p>La modalità con cui i turni si alternano è determinante. La letteratura ergonomica distingue tra rotazione in avanti (oraria) e all'indietro (antioraria).</p>
 
                 <ul>
-                    <li><strong>Rotazione in Avanti (Consigliata):</strong> Il ciclo Mattina → Pomeriggio → Notte segue la naturale tendenza del ritmo circadiano umano ad allungarsi (il ciclo endogeno è leggermente superiore alle 24 ore). Questa rotazione facilita l'adattamento e riduce i disturbi del sonno.<sup>15</sup></li>
-                    <li><strong>Rotazione all'Indietro (Dannosa):</strong> Il ciclo Notte → Pomeriggio → Mattina, o rotazioni caotiche, costringono l'organismo a un adattamento contro-natura. Studi su ampie coorti di lavoratori hanno dimostrato che la rotazione all'indietro è associata a una prevalenza significativamente maggiore di scarsa qualità del sonno (OR = 1.95) rispetto alla rotazione in avanti, un fattore che predice direttamente l'aumento dei giorni di malattia.<sup>16</sup></li>
+                    <li><strong>Rotazione in Avanti (Consigliata):</strong> Il ciclo Mattina → Pomeriggio → Notte segue la naturale tendenza del ritmo circadiano umano ad allungarsi (il ciclo endogeno è leggermente superiore alle 24 ore). Questa rotazione facilita l'adattamento e riduce i disturbi del sonno.<sup><a href="#ref-15" class="hover:underline">15</a></sup></li>
+                    <li><strong>Rotazione all'Indietro (Dannosa):</strong> Il ciclo Notte → Pomeriggio → Mattina, o rotazioni caotiche, costringono l'organismo a un adattamento contro-natura. Studi su ampie coorti di lavoratori hanno dimostrato che la rotazione all'indietro è associata a una prevalenza significativamente maggiore di scarsa qualità del sonno (OR = 1.95) rispetto alla rotazione in avanti, un fattore che predice direttamente l'aumento dei giorni di malattia.<sup><a href="#ref-16" class="hover:underline">16</a></sup></li>
                 </ul>
 
-                <p>Inoltre, la <strong>velocità di rotazione</strong> è cruciale. Le rotazioni molto rapide (cambiare turno ogni 1-2 giorni) sono spesso preferite per evitare l'accumulo di debito di sonno massiccio tipico di 4-5 notti consecutive, ma richiedono una gestione attenta dei riposi.<sup>15</sup></p>
+                <p>Inoltre, la <strong>velocità di rotazione</strong> è cruciale. Le rotazioni molto rapide (cambiare turno ogni 1-2 giorni) sono spesso preferite per evitare l'accumulo di debito di sonno massiccio tipico di 4-5 notti consecutive, ma richiedono una gestione attenta dei riposi.<sup><a href="#ref-15" class="hover:underline">15</a></sup></p>
 
                 <h3>3.3 Il Fenomeno del "Quick Return"</h3>
 
                 <p>Un fattore critico per l'assenteismo è il "quick return" (ritorno rapido), definito come un intervallo inferiore alle 11 ore tra la fine di un turno e l'inizio del successivo (es. finire il turno pomeridiano alle 22:00 e iniziare il turno mattutino alle 07:00).</p>
 
-                <p>Questo schema è devastante per il recupero: sottrae ore al sonno notturno e impedisce il distacco psicologico dal lavoro. Studi clinici randomizzati hanno dimostrato che l'eliminazione o la riduzione drastica dei quick return porta a una diminuzione misurabile dei giorni e degli episodi di assenza per malattia, generando anche un risparmio economico per le aziende sanitarie.<sup>17</sup> La persistenza di questa pratica in molti reparti italiani, spesso per coprire buchi di organico, è una delle cause primarie di assenteismo evitabile.</p>
+                <p>Questo schema è devastante per il recupero: sottrae ore al sonno notturno e impedisce il distacco psicologico dal lavoro. Studi clinici randomizzati hanno dimostrato che l'eliminazione o la riduzione drastica dei quick return porta a una diminuzione misurabile dei giorni e degli episodi di assenza per malattia, generando anche un risparmio economico per le aziende sanitarie.<sup><a href="#ref-17" class="hover:underline">17</a></sup> La persistenza di questa pratica in molti reparti italiani, spesso per coprire buchi di organico, è una delle cause primarie di assenteismo evitabile.</p>
 
                 <h3>3.4 Tabella Comparativa: Tipologie di Turno e Rischio Assenza</h3>
 
@@ -443,31 +456,31 @@
                             <td><strong>Turni > 12 ore</strong></td>
                             <td>Aumento Rischio (OR 1.18 - 1.37)</td>
                             <td>Fatica cumulativa, recupero insufficiente</td>
-                            <td><sup>12</sup></td>
+                            <td><sup><a href="#ref-12" class="hover:underline">12</a></sup></td>
                         </tr>
                         <tr>
                             <td><strong>Rotazione Rapida in Avanti</strong></td>
                             <td>Impatto Neutro/Positivo</td>
                             <td>Migliore adattamento circadiano</td>
-                            <td><sup>15</sup></td>
+                            <td><sup><a href="#ref-15" class="hover:underline">15</a></sup></td>
                         </tr>
                         <tr>
                             <td><strong>Rotazione all'Indietro</strong></td>
                             <td>Aumento Rischio (OR 1.95 per disturbi sonno)</td>
                             <td>Disallineamento circadiano severo</td>
-                            <td><sup>16</sup></td>
+                            <td><sup><a href="#ref-16" class="hover:underline">16</a></sup></td>
                         </tr>
                         <tr>
                             <td><strong>Quick Return (<11h)</strong></td>
                             <td>Aumento Rischio Significativo</td>
                             <td>Privazione acuta del sonno</td>
-                            <td><sup>17</sup></td>
+                            <td><sup><a href="#ref-17" class="hover:underline">17</a></sup></td>
                         </tr>
                         <tr>
                             <td><strong>Notte Fissa</strong></td>
                             <td>Aumento Rischio LTSA (aOR 1.31)</td>
                             <td>Isolamento sociale, "jet lag sociale" cronico</td>
-                            <td><sup>18</sup></td>
+                            <td><sup><a href="#ref-18" class="hover:underline">18</a></sup></td>
                         </tr>
                     </tbody>
                 </table>
@@ -497,24 +510,24 @@
                 <p>Il burnout è una sindrome occupazionale risultante da stress cronico non gestito, caratterizzata da tre dimensioni: esaurimento emotivo, depersonalizzazione (cinismo) e ridotta realizzazione personale. Le evidenze collegano in modo robusto il burnout all'assenteismo.</p>
 
                 <ul>
-                    <li><strong>Correlazione Statistica:</strong> Punteggi elevati di burnout, in particolare nella dimensione dell'esaurimento, sono associati a un aumento delle probabilità di assenza non pianificata. Un aumento di un punto nel livello di burnout incrementa del 2.9% la probabilità che un infermiere prenda almeno tre congedi per malattia all'anno.<sup>19</sup></li>
-                    <li><strong>Carico di Lavoro Eccessivo:</strong> La percezione di un carico di lavoro insostenibile ("working excessively") e la mancanza di controllo ("loss of control") sono i principali driver dell'esaurimento. Quando l'infermiere sente di non poter più garantire standard di cura adeguati a causa della pressione temporale, l'assenza diventa un meccanismo di coping difensivo per preservare la propria salute mentale.<sup>20</sup></li>
+                    <li><strong>Correlazione Statistica:</strong> Punteggi elevati di burnout, in particolare nella dimensione dell'esaurimento, sono associati a un aumento delle probabilità di assenza non pianificata. Un aumento di un punto nel livello di burnout incrementa del 2.9% la probabilità che un infermiere prenda almeno tre congedi per malattia all'anno.<sup><a href="#ref-19" class="hover:underline">19</a></sup></li>
+                    <li><strong>Carico di Lavoro Eccessivo:</strong> La percezione di un carico di lavoro insostenibile ("working excessively") e la mancanza di controllo ("loss of control") sono i principali driver dell'esaurimento. Quando l'infermiere sente di non poter più garantire standard di cura adeguati a causa della pressione temporale, l'assenza diventa un meccanismo di coping difensivo per preservare la propria salute mentale.<sup><a href="#ref-20" class="hover:underline">20</a></sup></li>
                 </ul>
 
                 <h3>4.2 Moral Injury: Oltre il Burnout</h3>
 
-                <p>Nel contesto post-pandemico, è emerso con forza il concetto di "Moral Injury" (danno morale). A differenza del burnout, che è un esaurimento delle risorse, il danno morale è una "ferita" alla coscienza dell'operatore, causata dal dover agire (o omettere di agire) in contrasto con i propri valori etici a causa di vincoli di sistema (es. carenza di personale, razionamento delle risorse).<sup>21</sup></p>
+                <p>Nel contesto post-pandemico, è emerso con forza il concetto di "Moral Injury" (danno morale). A differenza del burnout, che è un esaurimento delle risorse, il danno morale è una "ferita" alla coscienza dell'operatore, causata dal dover agire (o omettere di agire) in contrasto con i propri valori etici a causa di vincoli di sistema (es. carenza di personale, razionamento delle risorse).<sup><a href="#ref-21" class="hover:underline">21</a></sup></p>
 
                 <ul>
-                    <li><strong>Impatto sull'Assenza:</strong> Gli operatori che sperimentano eventi moralmente ingiuriosi (PMIEs), come il non poter assistere adeguatamente un paziente morente per mancanza di tempo, sviluppano sentimenti di colpa, vergogna e rabbia verso l'organizzazione. Questo porta a un distacco emotivo e fisico dal luogo di lavoro. Studi indicano che il danno morale è un predittore significativo dell'intenzione di lasciare il lavoro e dell'assenteismo, agendo come una forma di protesta silenziosa contro un sistema percepito come "traditore".<sup>22</sup></li>
-                    <li><strong>Sintomatologia Fisica:</strong> Il danno morale si somatizza frequentemente in disturbi fisici (cefalee, disturbi gastrointestinali, dolori muscolari), che giustificano l'assenza per malattia agli occhi del sistema previdenziale, mascherando la radice etica ed emotiva del problema.<sup>24</sup></li>
+                    <li><strong>Impatto sull'Assenza:</strong> Gli operatori che sperimentano eventi moralmente ingiuriosi (PMIEs), come il non poter assistere adeguatamente un paziente morente per mancanza di tempo, sviluppano sentimenti di colpa, vergogna e rabbia verso l'organizzazione. Questo porta a un distacco emotivo e fisico dal luogo di lavoro. Studi indicano che il danno morale è un predittore significativo dell'intenzione di lasciare il lavoro e dell'assenteismo, agendo come una forma di protesta silenziosa contro un sistema percepito come "traditore".<sup><a href="#ref-22" class="hover:underline">22</a></sup></li>
+                    <li><strong>Sintomatologia Fisica:</strong> Il danno morale si somatizza frequentemente in disturbi fisici (cefalee, disturbi gastrointestinali, dolori muscolari), che giustificano l'assenza per malattia agli occhi del sistema previdenziale, mascherando la radice etica ed emotiva del problema.<sup><a href="#ref-24" class="hover:underline">24</a></sup></li>
                 </ul>
 
                 <h3>4.3 Case Study: L'Ambiente Tossico e il Caso "Maria"</h3>
 
                 <p>Un esempio emblematico delle dinamiche psicosociali che conducono all'assenza è documentato dai report sindacali italiani, come il caso "Maria" citato da Nursing Up.</p>
 
-                <p>Maria, infermiera esperta, subisce un progressivo isolamento e mobbing da parte dei superiori dopo aver richiesto diritti contrattuali. Le vengono negati permessi, assegnati turni massacranti e cancellate ferie. Questo "ambiente tossico" la porta a sviluppare crisi d'ansia, insonnia e risvegli notturni. La conclusione non è una scelta volontaria di non lavorare, ma una diagnosi psichiatrica di "stress lavoro-correlato" che la costringe a un lungo periodo di malattia.<sup>25</sup></p>
+                <p>Maria, infermiera esperta, subisce un progressivo isolamento e mobbing da parte dei superiori dopo aver richiesto diritti contrattuali. Le vengono negati permessi, assegnati turni massacranti e cancellate ferie. Questo "ambiente tossico" la porta a sviluppare crisi d'ansia, insonnia e risvegli notturni. La conclusione non è una scelta volontaria di non lavorare, ma una diagnosi psichiatrica di "stress lavoro-correlato" che la costringe a un lungo periodo di malattia.<sup><a href="#ref-25" class="hover:underline">25</a></sup></p>
 
                 <p>Questo caso illustra come l'assenteismo sia spesso l'esito finale di una gestione delle risorse umane punitiva e disfunzionale, dove il lavoratore viene "rotto" dal sistema prima di assentarsi.</p>
 
@@ -530,14 +543,14 @@
                 <p>I dati ufficiali offrono una fotografia preoccupante dello stato di salute dei lavoratori della sanità in Italia.</p>
 
                 <ul>
-                    <li><strong>Esplosione delle Malattie Professionali:</strong> I dati INAIL del 2024 registrano un aumento del 18,7% delle denunce di malattia professionale rispetto all'anno precedente. Tra le patologie più denunciate figurano quelle del sistema osteo-muscolare (legate alla movimentazione manuale dei carichi, spesso effettuata da soli per carenza di personale) e quelle del sistema nervoso, che includono disturbi legati allo stress.<sup>7</sup></li>
-                    <li><strong>Tassi di Assenza nella PA:</strong> Secondo i dati del MEF e del Conto Annuale, il comparto sanità presenta tassi di assenza per malattia significativi. Tuttavia, contrariamente alla narrazione mediatica sui "furbetti", l'analisi approfondita rivela che la maggior parte di queste assenze sono legate a patologie reali in una popolazione lavorativa con un'età media spesso superiore ai 50 anni, più fragile biologicamente rispetto ai colleghi del privato.<sup>26</sup></li>
-                    <li><strong>Differenze di Genere:</strong> Il settore sanitario è a netta prevalenza femminile (circa 77-79%). I dati confermano che l'assenteismo è più elevato tra le donne, un dato che riflette non solo fattori biologici ma soprattutto il "doppio carico" lavoro-famiglia. In un Paese con servizi di welfare carenti, le assenze per malattia mascherano spesso la necessità di accudire figli o anziani, specialmente quando i turni rigidi non permettono alcuna flessibilità.<sup>1</sup></li>
+                    <li><strong>Esplosione delle Malattie Professionali:</strong> I dati INAIL del 2024 registrano un aumento del 18,7% delle denunce di malattia professionale rispetto all'anno precedente. Tra le patologie più denunciate figurano quelle del sistema osteo-muscolare (legate alla movimentazione manuale dei carichi, spesso effettuata da soli per carenza di personale) e quelle del sistema nervoso, che includono disturbi legati allo stress.<sup><a href="#ref-7" class="hover:underline">7</a></sup></li>
+                    <li><strong>Tassi di Assenza nella PA:</strong> Secondo i dati del MEF e del Conto Annuale, il comparto sanità presenta tassi di assenza per malattia significativi. Tuttavia, contrariamente alla narrazione mediatica sui "furbetti", l'analisi approfondita rivela che la maggior parte di queste assenze sono legate a patologie reali in una popolazione lavorativa con un'età media spesso superiore ai 50 anni, più fragile biologicamente rispetto ai colleghi del privato.<sup><a href="#ref-26" class="hover:underline">26</a></sup></li>
+                    <li><strong>Differenze di Genere:</strong> Il settore sanitario è a netta prevalenza femminile (circa 77-79%). I dati confermano che l'assenteismo è più elevato tra le donne, un dato che riflette non solo fattori biologici ma soprattutto il "doppio carico" lavoro-famiglia. In un Paese con servizi di welfare carenti, le assenze per malattia mascherano spesso la necessità di accudire figli o anziani, specialmente quando i turni rigidi non permettono alcuna flessibilità.<sup><a href="#ref-1" class="hover:underline">1</a></sup></li>
                 </ul>
 
                 <h3>5.2 La Carenza di Organico come Moltiplicatore di Stress</h3>
 
-                <p>Il rapporto GIMBE e il rapporto OASI 2024 evidenziano una carenza strutturale drammatica. L'Italia ha un rapporto infermieri/medici di 2,44, contro una media OCSE di 2,6 e standard europei ben superiori (Germania e Olanda sopra i 3,0).<sup>29</sup></p>
+                <p>Il rapporto GIMBE e il rapporto OASI 2024 evidenziano una carenza strutturale drammatica. L'Italia ha un rapporto infermieri/medici di 2,44, contro una media OCSE di 2,6 e standard europei ben superiori (Germania e Olanda sopra i 3,0).<sup><a href="#ref-29" class="hover:underline">29</a></sup></p>
 
                 <p>Questa carenza innesca un meccanismo perverso:</p>
 
@@ -545,19 +558,19 @@
                     <li><strong>Understaffing:</strong> Mancano infermieri per coprire i turni base.</li>
                     <li><strong>Sovraccarico:</strong> I presenti devono saltare i riposi, fare doppi turni e rinunciare alle ferie.</li>
                     <li><strong>Stress e Malattia:</strong> Il sovraccarico porta a esaurimento e malattia.</li>
-                    <li><strong>Collasso:</strong> L'assenza improvvisa aggrava ulteriormente la carenza, aumentando la pressione sui rimasti.<sup>30</sup></li>
+                    <li><strong>Collasso:</strong> L'assenza improvvisa aggrava ulteriormente la carenza, aumentando la pressione sui rimasti.<sup><a href="#ref-30" class="hover:underline">30</a></sup></li>
                 </ol>
 
-                <p>Lo studio italiano BENE (Benessere degli Infermieri) conferma questo quadro: il 59% degli infermieri è in stato di alto stress, e il 45,2% dichiara l'intenzione di lasciare l'ospedale entro un anno. La correlazione tra carenza di personale, stress e intenzione di turnover è fortissima.<sup>32</sup></p>
+                <p>Lo studio italiano BENE (Benessere degli Infermieri) conferma questo quadro: il 59% degli infermieri è in stato di alto stress, e il 45,2% dichiara l'intenzione di lasciare l'ospedale entro un anno. La correlazione tra carenza di personale, stress e intenzione di turnover è fortissima.<sup><a href="#ref-32" class="hover:underline">32</a></sup></p>
 
                 <h3>5.3 L'Impatto Economico dell'Assenteismo</h3>
 
                 <p>L'assenteismo ha un costo esorbitante per il bilancio pubblico.</p>
 
                 <ul>
-                    <li><strong>Costi Diretti:</strong> Si stimano in miliardi di euro i costi per pagare le giornate di malattia nel settore pubblico. A questi si aggiungono i costi per il lavoro straordinario e supplementare necessario per coprire i turni scoperti.<sup>26</sup></li>
+                    <li><strong>Costi Diretti:</strong> Si stimano in miliardi di euro i costi per pagare le giornate di malattia nel settore pubblico. A questi si aggiungono i costi per il lavoro straordinario e supplementare necessario per coprire i turni scoperti.<sup><a href="#ref-26" class="hover:underline">26</a></sup></li>
                     <li><strong>Produttività Persa:</strong> Ogni giornata di assenza riduce la capacità produttiva dell'ospedale (liste d'attesa che si allungano, interventi rimandati).</li>
-                    <li><strong>Costi Legali:</strong> L'aumento delle cause per riconoscimento di malattia professionale da stress (come sostenuto dai sindacati Nursing Up e CISL FP) sta spostando oneri significativi sui bilanci assicurativi e legali delle ASL.<sup>25</sup></li>
+                    <li><strong>Costi Legali:</strong> L'aumento delle cause per riconoscimento di malattia professionale da stress (come sostenuto dai sindacati Nursing Up e CISL FP) sta spostando oneri significativi sui bilanci assicurativi e legali delle ASL.<sup><a href="#ref-25" class="hover:underline">25</a></sup></li>
                 </ul>
 
                 <hr>
@@ -574,7 +587,7 @@
                 <ul>
                     <li><strong>Eliminazione delle Rotazioni all'Indietro:</strong> Passare rigorosamente alla rotazione Mattina-Pomeriggio-Notte.</li>
                     <li><strong>Rispetto dei Riposi:</strong> Garantire sempre almeno 11 ore tra i turni, eliminando i "quick returns" (mattina dopo pomeriggio/notte).</li>
-                    <li><strong>Limitazione delle Notti Consecutive:</strong> Limitare a massimo 2-3 notti consecutive per evitare la desincronizzazione profonda e l'accumulo di debito di sonno irrecuperabile.<sup>15</sup></li>
+                    <li><strong>Limitazione delle Notti Consecutive:</strong> Limitare a massimo 2-3 notti consecutive per evitare la desincronizzazione profonda e l'accumulo di debito di sonno irrecuperabile.<sup><a href="#ref-15" class="hover:underline">15</a></sup></li>
                 </ul>
 
                 <h3>6.2 Self-Scheduling e Prevedibilità</h3>
@@ -582,8 +595,8 @@
                 <p>Restituire il controllo ai lavoratori è fondamentale.</p>
 
                 <ul>
-                    <li><strong>Self-Scheduling (Auto-turnazione):</strong> Permettere ai dipendenti di scegliere i propri turni (entro regole definite) aumenta il senso di controllo (job control) e riduce il conflitto lavoro-vita privata. Studi dimostrano che il self-scheduling ben gestito riduce l'assenteismo, il burnout e migliora la soddisfazione lavorativa.<sup>36</sup></li>
-                    <li><strong>Prevedibilità:</strong> La certezza dei turni è un fattore protettivo. Sapere con 4 settimane di anticipo il proprio orario riduce l'ansia e permette di organizzare la vita familiare, riducendo le assenze "tattiche" dell'ultimo minuto. Al contrario, orari imprevedibili e cambi turno frequenti sono associati a stress elevato e scarsa salute mentale.<sup>38</sup></li>
+                    <li><strong>Self-Scheduling (Auto-turnazione):</strong> Permettere ai dipendenti di scegliere i propri turni (entro regole definite) aumenta il senso di controllo (job control) e riduce il conflitto lavoro-vita privata. Studi dimostrano che il self-scheduling ben gestito riduce l'assenteismo, il burnout e migliora la soddisfazione lavorativa.<sup><a href="#ref-36" class="hover:underline">36</a></sup></li>
+                    <li><strong>Prevedibilità:</strong> La certezza dei turni è un fattore protettivo. Sapere con 4 settimane di anticipo il proprio orario riduce l'ansia e permette di organizzare la vita familiare, riducendo le assenze "tattiche" dell'ultimo minuto. Al contrario, orari imprevedibili e cambi turno frequenti sono associati a stress elevato e scarsa salute mentale.<sup><a href="#ref-38" class="hover:underline">38</a></sup></li>
                 </ul>
 
                 <h3>6.3 Il Modello "Magnet Hospital"</h3>
@@ -598,7 +611,7 @@
                     <li>Adeguati rapporti numerici infermiere/paziente.</li>
                 </ul>
 
-                <p>I risultati sono evidenti: gli ospedali Magnet registrano tassi di burnout, insoddisfazione e turnover significativamente più bassi rispetto agli ospedali tradizionali, oltre a migliori outcome per i pazienti (riduzione mortalità del 14%).<sup>40</sup> Questo dimostra che investire nel benessere organizzativo non è un costo, ma una strategia di sostenibilità.</p>
+                <p>I risultati sono evidenti: gli ospedali Magnet registrano tassi di burnout, insoddisfazione e turnover significativamente più bassi rispetto agli ospedali tradizionali, oltre a migliori outcome per i pazienti (riduzione mortalità del 14%).<sup><a href="#ref-40" class="hover:underline">40</a></sup> Questo dimostra che investire nel benessere organizzativo non è un costo, ma una strategia di sostenibilità.</p>
 
                 <h3>6.4 Welfare Aziendale e Supporto</h3>
 
@@ -607,7 +620,7 @@
                 <ul>
                     <li><strong>Supporto alla Famiglia:</strong> Asili nido aziendali, convenzioni per l'assistenza agli anziani e flessibilità oraria per chi ha carichi di cura.</li>
                     <li><strong>Supporto Psicologico:</strong> Sportelli di ascolto per la gestione del trauma e del moral injury, essenziali dopo l'esperienza pandemica.</li>
-                    <li><strong>Incentivi al Benessere:</strong> Programmi di promozione della salute (palestre, nutrizione) e premi di risultato legati a obiettivi di squadra e non solo individuali.<sup>42</sup></li>
+                    <li><strong>Incentivi al Benessere:</strong> Programmi di promozione della salute (palestre, nutrizione) e premi di risultato legati a obiettivi di squadra e non solo individuali.<sup><a href="#ref-42" class="hover:underline">42</a></sup></li>
                 </ul>
 
                 <hr>
@@ -643,48 +656,48 @@
                 <div class="mt-12 pt-8 border-t border-gray-200">
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Riferimenti Bibliografici</h3>
                     <ol class="text-sm text-gray-600 space-y-2 list-decimal pl-5">
-                        <li>Absenteeism-disease in health care workers in a hospital context in southern Brazil - PMC</li>
-                        <li>The link between work stress, absenteeism, and sickness absence: The impact of burnout on healthcare workers - ResearchGate</li>
-                        <li>Shift Work and Sleep: Medical Implications and Management - PMC - NIH</li>
-                        <li>SS58-03 SHIFT WORK AND CHRONIC DISEASE RISK: BIOLOGICAL MECHANISMS AND ADAPTATION | Occupational Medicine | Oxford Academic</li>
-                        <li>Sickness absenteeism, work performance, and healthcare use due to respiratory infections for shift and non-shift workers - Taylor & Francis Online</li>
-                        <li>Influence of Shift Work on The Health of Nursing Professionals - PMC - NIH</li>
-                        <li>Relazione annuale Inail 2024 - Bollettino ADAPT</li>
-                        <li>INAIL, Comunicato 10 ottobre 2024 - Denunce di infortuni e malattie professionali</li>
-                        <li>Shiftwork Association with Cardiovascular Diseases and Cancers Among Healthcare Workers - PMC - NIH</li>
-                        <li>Negative Impacts of Shiftwork and Long Work Hours - PMC - NIH</li>
-                        <li>Working Time Society consensus statements: Evidence-based effects of shift work on physical and mental health - PubMed Central</li>
-                        <li>Are long nursing shifts on hospital wards associated with sickness absence? A longitudinal retrospective observational study - PMC - NIH</li>
-                        <li>12-hr shifts in nursing: Do they remove unproductive time and information loss or do they reduce education and discussion opportunities for nurses? - PMC - PubMed Central</li>
-                        <li>Association of 12 h shifts and nurses' job satisfaction, burnout and intention to leave - BMJ Open</li>
-                        <li>Rotational Shiftwork - CCOHS</li>
-                        <li>Impact of a change in rostering practices on absenteeism: An observational descriptive study - ResearchGate</li>
-                        <li>Shift Schedule With Fewer Short Daily Rest Periods and Sickness Absence Among Health Care Workers: A Cluster Randomized Clinical Trial - PMC - PubMed Central</li>
-                        <li>Shiftwork 2019 Night Work for Hospital Nurses and Sickness Absence - Oxford University Research Archive</li>
-                        <li>The association of burnout with work absenteeism and the frequency of thoughts in leaving their job in a cohort of healthcare workers during the COVID-19 pandemic - NIH</li>
-                        <li>Working Excessively and Burnout Among Nurses in the Context of Sick Leaves - Frontiers</li>
-                        <li>Moral Injuries in Healthcare Workers: What Causes Them and What to Do About Them? - PMC - NIH</li>
-                        <li>Exposure to moral stressors and associated outcomes in healthcare workers: prevalence, correlates, and impact on job attrition - PubMed Central</li>
-                        <li>Moral injury and mental health in healthcare workers are linked to organizational culture and modifiable workplace conditions - PLOS Mental Health</li>
-                        <li>Coronavirus: la ferita morale degli operatori sanitari - IPSICO, Firenze</li>
-                        <li>Osservatorio Nursing Up, L'editoriale: Quando l'ambiente di lavoro diventa tossico</li>
-                        <li>Statali: l'assenteismo ci costa 7 miliardi l'anno - Il Mio Giornale</li>
-                        <li>Amministrazione Trasparente - Tassi assenza/presenza - MEF</li>
-                        <li>Night shift work and sickness absence – many for the few or few for the many? - Oxford Academic</li>
-                        <li>7° Rapporto GIMBE sul Servizio Sanitario Nazionale - Salviamo il SSN</li>
-                        <li>Studio Anaao Assomed – 4 marzo 2024 L'INARRESTABILE MARCIA VERSO LA "PLETORA MEDICA"</li>
-                        <li>Nurse Staffing Configurations and Nurse Absence Due to Sickness - PMC - PubMed Central</li>
-                        <li>Studio BENE: in burnout 6 infermieri su 10. Qualità delle cure e... - FNOPI</li>
-                        <li>"Lavoro" Assenteismo: 6,8 milioni di giornate da recuperare - Filcams Cgil</li>
-                        <li>Decreto liste d'attesa. Cisl Fp: "Una misura incompleta che necessita di integrazioni" - Quotidiano Sanità</li>
-                        <li>Researchers have proposed these guidelines for designing work schedules - CDC</li>
-                        <li>Does self-scheduling increase nurses' job satisfaction? An integrative literature review - ResearchGate</li>
-                        <li>Systematic review: What is the impact of self-scheduling on the patient, nurse and organization? - ResearchGate</li>
-                        <li>Unpredictable schedules may drive absenteeism, turnover - HR Dive</li>
-                        <li>The Effects of Inconsistent Work Schedules on Employee Lateness and Absenteeism - Harvard Business School</li>
-                        <li>Ospedali magnete, come valorizzare l'assistenza infermieristica - Nurse24.it</li>
-                        <li>Nurse Outcomes in Magnet® and Non-Magnet Hospitals - PMC - NIH</li>
-                        <li>Laboratorio Fiaso sul "Benessere organizzativo" - Partita da Asl e Ospedali la lotta allo stress da lavoro - Aogoi</li>
+                        <li id="ref-1"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7934176/" target="_blank" rel="noopener" class="text-primary hover:underline">Absenteeism-disease in health care workers in a hospital context in southern Brazil - PMC</a></li>
+                        <li id="ref-2"><a href="https://www.researchgate.net/publication/393191318_The_link_between_work_stress_absenteeism_and_sickness_absence_The_impact_of_burnout_on_healthcare_workers" target="_blank" rel="noopener" class="text-primary hover:underline">The link between work stress, absenteeism, and sickness absence: The impact of burnout on healthcare workers - ResearchGate</a></li>
+                        <li id="ref-3"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5836745/" target="_blank" rel="noopener" class="text-primary hover:underline">Shift Work and Sleep: Medical Implications and Management - PMC - NIH</a></li>
+                        <li id="ref-4"><a href="https://academic.oup.com/occmed/article/74/Supplement_1/0/7706963" target="_blank" rel="noopener" class="text-primary hover:underline">SS58-03 SHIFT WORK AND CHRONIC DISEASE RISK: BIOLOGICAL MECHANISMS AND ADAPTATION | Occupational Medicine | Oxford Academic</a></li>
+                        <li id="ref-5"><a href="https://www.tandfonline.com/doi/full/10.1080/07420528.2020.1825468" target="_blank" rel="noopener" class="text-primary hover:underline">Sickness absenteeism, work performance, and healthcare use due to respiratory infections for shift and non-shift workers - Taylor &amp; Francis Online</a></li>
+                        <li id="ref-6"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10144026/" target="_blank" rel="noopener" class="text-primary hover:underline">Influence of Shift Work on The Health of Nursing Professionals - PMC - NIH</a></li>
+                        <li id="ref-7"><a href="https://www.bollettinoadapt.it/wp-content/uploads/2025/07/relazione-annuale-inail-2024.pdf" target="_blank" rel="noopener" class="text-primary hover:underline">Relazione annuale Inail 2024 - Bollettino ADAPT</a></li>
+                        <li id="ref-8"><a href="https://olympus.uniurb.it/index.php?option=com_content&amp;view=article&amp;id=32848:inail101012024&amp;catid=6&amp;Itemid=137" target="_blank" rel="noopener" class="text-primary hover:underline">INAIL, Comunicato 10 ottobre 2024 - Denunce di infortuni e malattie professionali</a></li>
+                        <li id="ref-9"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7433719/" target="_blank" rel="noopener" class="text-primary hover:underline">Shiftwork Association with Cardiovascular Diseases and Cancers Among Healthcare Workers - PMC - NIH</a></li>
+                        <li id="ref-10"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4629843/" target="_blank" rel="noopener" class="text-primary hover:underline">Negative Impacts of Shiftwork and Long Work Hours - PMC - NIH</a></li>
+                        <li id="ref-11"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6449637/" target="_blank" rel="noopener" class="text-primary hover:underline">Working Time Society consensus statements: Evidence-based effects of shift work on physical and mental health - PubMed Central</a></li>
+                        <li id="ref-12"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7328726/" target="_blank" rel="noopener" class="text-primary hover:underline">Are long nursing shifts on hospital wards associated with sickness absence? A longitudinal retrospective observational study - PMC - NIH</a></li>
+                        <li id="ref-13"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6916398/" target="_blank" rel="noopener" class="text-primary hover:underline">12-hr shifts in nursing: Do they remove unproductive time and information loss or do they reduce education and discussion opportunities for nurses? - PMC - PubMed Central</a></li>
+                        <li id="ref-14"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4577950/" target="_blank" rel="noopener" class="text-primary hover:underline">Association of 12 h shifts and nurses' job satisfaction, burnout and intention to leave - BMJ Open</a></li>
+                        <li id="ref-15"><a href="https://www.ccohs.ca/oshanswers/ergonomics/shiftwrk.html" target="_blank" rel="noopener" class="text-primary hover:underline">Rotational Shiftwork - CCOHS</a></li>
+                        <li id="ref-16"><a href="https://www.researchgate.net/publication/349316592_Impact_of_a_change_in_rostering_practices_on_absenteeism_An_observational_descriptive_study" target="_blank" rel="noopener" class="text-primary hover:underline">Impact of a change in rostering practices on absenteeism: An observational descriptive study - ResearchGate</a></li>
+                        <li id="ref-17"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12439055/" target="_blank" rel="noopener" class="text-primary hover:underline">Shift Schedule With Fewer Short Daily Rest Periods and Sickness Absence Among Health Care Workers: A Cluster Randomized Clinical Trial - PMC - PubMed Central</a></li>
+                        <li id="ref-18"><a href="https://pubmed.ncbi.nlm.nih.gov/32847414/" target="_blank" rel="noopener" class="text-primary hover:underline">Shiftwork 2019 Night Work for Hospital Nurses and Sickness Absence - Oxford University Research Archive</a></li>
+                        <li id="ref-19"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10716445/" target="_blank" rel="noopener" class="text-primary hover:underline">The association of burnout with work absenteeism and the frequency of thoughts in leaving their job in a cohort of healthcare workers during the COVID-19 pandemic - NIH</a></li>
+                        <li id="ref-20"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7052176/" target="_blank" rel="noopener" class="text-primary hover:underline">Working Excessively and Burnout Among Nurses in the Context of Sick Leaves - Frontiers</a></li>
+                        <li id="ref-21"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10440078/" target="_blank" rel="noopener" class="text-primary hover:underline">Moral Injuries in Healthcare Workers: What Causes Them and What to Do About Them? - PMC - NIH</a></li>
+                        <li id="ref-22"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10860421/" target="_blank" rel="noopener" class="text-primary hover:underline">Exposure to moral stressors and associated outcomes in healthcare workers: prevalence, correlates, and impact on job attrition - PubMed Central</a></li>
+                        <li id="ref-23"><a href="https://journals.plos.org/mentalhealth/article?id=10.1371/journal.pmen.0000085" target="_blank" rel="noopener" class="text-primary hover:underline">Moral injury and mental health in healthcare workers are linked to organizational culture and modifiable workplace conditions - PLOS Mental Health</a></li>
+                        <li id="ref-24"><a href="https://ipsico.it/news/coronavirus-la-ferita-morale-degli-operatori-sanitari/" target="_blank" rel="noopener" class="text-primary hover:underline">Coronavirus: la ferita morale degli operatori sanitari - IPSICO, Firenze</a></li>
+                        <li id="ref-25">Osservatorio Nursing Up, L'editoriale: Quando l'ambiente di lavoro diventa tossico</li>
+                        <li id="ref-26"><a href="https://quifinanza.it/soldi/assenteismo-certificati-di-malattia-e-permessi-104-costano-allo-stato-7-miliardi-di-euro/105433/" target="_blank" rel="noopener" class="text-primary hover:underline">Statali: l'assenteismo ci costa 7 miliardi l'anno - Il Mio Giornale</a></li>
+                        <li id="ref-27"><a href="https://www.mef.gov.it/operazione-trasparenza/personale/tassi-assenza/index.html" target="_blank" rel="noopener" class="text-primary hover:underline">Amministrazione Trasparente - Tassi assenza/presenza - MEF</a></li>
+                        <li id="ref-28"><a href="https://academic.oup.com/eurpub/article/33/Supplement_2/ckad160.1341/7327509" target="_blank" rel="noopener" class="text-primary hover:underline">Night shift work and sickness absence &ndash; many for the few or few for the many? - Oxford Academic</a></li>
+                        <li id="ref-29"><a href="https://www.salviamo-ssn.it/attivita/rapporto/7-rapporto-gimbe.it-IT.html" target="_blank" rel="noopener" class="text-primary hover:underline">7&deg; Rapporto GIMBE sul Servizio Sanitario Nazionale - Salviamo il SSN</a></li>
+                        <li id="ref-30"><a href="https://www.anaao.it/content.php?cont=39708" target="_blank" rel="noopener" class="text-primary hover:underline">Studio Anaao Assomed &ndash; 4 marzo 2024 L'INARRESTABILE MARCIA VERSO LA "PLETORA MEDICA"</a></li>
+                        <li id="ref-31"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12015667/" target="_blank" rel="noopener" class="text-primary hover:underline">Nurse Staffing Configurations and Nurse Absence Due to Sickness - PMC - PubMed Central</a></li>
+                        <li id="ref-32"><a href="https://www.fnopi.it/2023/12/13/studio-bene-burnout/" target="_blank" rel="noopener" class="text-primary hover:underline">Studio BENE: in burnout 6 infermieri su 10. Qualit&agrave; delle cure e... - FNOPI</a></li>
+                        <li id="ref-33"><a href="https://www.filcams.cgil.it/article/rassegna_stampa/_lavoro_assenteismo_6_8_milioni_di_giornate_da_recuperare_p_ichino_" target="_blank" rel="noopener" class="text-primary hover:underline">"Lavoro" Assenteismo: 6,8 milioni di giornate da recuperare - Filcams Cgil</a></li>
+                        <li id="ref-34"><a href="https://cislfp.it/2024/05/28/sanita-cisl-fp-decreto-liste-d-attesa-una-misura-incompleta-che-necessita-di-integrazioni/" target="_blank" rel="noopener" class="text-primary hover:underline">Decreto liste d'attesa. Cisl Fp: "Una misura incompleta che necessita di integrazioni" - Quotidiano Sanit&agrave;</a></li>
+                        <li id="ref-35"><a href="https://www.cdc.gov/niosh/work-hour-training-for-nurses/longhours/mod5/05.html" target="_blank" rel="noopener" class="text-primary hover:underline">Researchers have proposed these guidelines for designing work schedules - CDC</a></li>
+                        <li id="ref-36"><a href="https://www.researchgate.net/publication/266152014_Does_self-scheduling_increase_nurses'_job_satisfaction_An_integrative_literature_review" target="_blank" rel="noopener" class="text-primary hover:underline">Does self-scheduling increase nurses' job satisfaction? An integrative literature review - ResearchGate</a></li>
+                        <li id="ref-37"><a href="https://www.researchgate.net/publication/344900881_Systematic_review_What_is_the_impact_of_self-scheduling_on_the_patient_nurse_and_organization" target="_blank" rel="noopener" class="text-primary hover:underline">Systematic review: What is the impact of self-scheduling on the patient, nurse and organization? - ResearchGate</a></li>
+                        <li id="ref-38"><a href="https://www.hrdive.com/news/Predictable-scheduling-retention/750608/" target="_blank" rel="noopener" class="text-primary hover:underline">Unpredictable schedules may drive absenteeism, turnover - HR Dive</a></li>
+                        <li id="ref-39"><a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=65705" target="_blank" rel="noopener" class="text-primary hover:underline">The Effects of Inconsistent Work Schedules on Employee Lateness and Absenteeism - Harvard Business School</a></li>
+                        <li id="ref-40"><a href="https://www.nurse24.it/specializzazioni/management-universita-area-forense/ospedali-magnete-valorizzare-assistenza-infermieristica.html" target="_blank" rel="noopener" class="text-primary hover:underline">Ospedali magnete, come valorizzare l'assistenza infermieristica - Nurse24.it</a></li>
+                        <li id="ref-41"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3201819/" target="_blank" rel="noopener" class="text-primary hover:underline">Nurse Outcomes in Magnet&reg; and Non-Magnet Hospitals - PMC - NIH</a></li>
+                        <li id="ref-42"><a href="https://www.aogoi.it/media/2747/documento-fiaso-2012.pdf" target="_blank" rel="noopener" class="text-primary hover:underline">Laboratorio Fiaso sul "Benessere organizzativo" - Partita da Asl e Ospedali la lotta allo stress da lavoro - Aogoi</a></li>
                     </ol>
                 </div>
 

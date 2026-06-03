@@ -1,0 +1,237 @@
+[
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "Gravidanza e maternità: Come gestisco un medico o un'infermiera in gravidanza che non può fare turni notturni dopo il quinto mese? Il sistema blocca automaticamente certi turni?",
+    "risposta": "Per ogni operatore è disponibile una griglia che permette di \"accendere\" o \"spegnere\" la disponibilità per ogni singola combinazione tra le fasce orarie operative del reparto e i giorni della settimana. In questo caso basta disabilitare tutti i turni notturni. Lo stesso risultato si può raggiungere con il sistema di parametri personalizzabile in sede di pianificazione."
+  },
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "Allattamento: Una collega in allattamento ha diritto a 2 ore di permesso giornaliero. Come lo imposto nel sistema per evitare che venga assegnata a turni incompatibili?",
+    "risposta": "Per ogni operatore è disponibile una griglia che permette di \"accendere\" o \"spegnere\" la disponibilità per ogni singola combinazione tra le fasce orarie operative del reparto e i giorni della settimana. In questo caso basta disabilitare tutti i turni non compatibili. Se invece la compatibilità viene meno anche per certe unità operative (es: gestione emergenze reparto) si possono impostare dei vincoli personalizzabili in sede di pianificazione."
+  },
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "Limitazioni mediche: Ho un infermiere con problemi alla schiena certificati: non può sollevare pazienti. Come lo \"taggo\" per evitare assegnazioni in reparti ad alta mobilizzazione?",
+    "risposta": "Si risolve creando una competenza apposita e assegnandola agli infermieri che possono svolgere quel tipo di attività, in modo che non venga assegnata agli altri."
+  },
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "Personale senior/età: Un medico over 60 ha richiesto riduzione dei notturni per motivi di salute. Posso impostare un tetto massimo mensile di notti solo per lui?",
+    "risposta": "Tramite il sistema personalizzabile dei parametri è possibile limitare sia il numero di assegnazioni mensile (sia per fascia oraria che per unità operative) sia prevedere un minimo di giorni che devono intercorrere tra due assegnazioni consecutive all'attività che si vuole limitare (sia questa dipendente dalla fascia oraria, dall'unità operativa o da entrambe)."
+  },
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "Part-time personalizzati: Ho 3 infermiere part-time con percentuali diverse (50%, 60%, 80%). Il sistema calcola automaticamente il loro monte ore massimo mensile?",
+    "risposta": "Si deve inserire un \"monte orario specifico\" per ogni operatore, il sistema poi si preoccuperà di gestire le combinazioni con i suoi colleghi e mostrare eventuali straordinari nelle statistiche."
+  },
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "Come vengono gestiti i turni misti da 8 ore e 12 ore all'interno dello stesso reparto o tra unità diverse?",
+    "risposta": "Ci sono due modalità. Se i turni da 8h e 12h afferiscono a unità operative diverse (es. reparto a 12h e ambulatorio a 8h), si utilizza la matrice delle disponibilità per attivare le fasce orarie corrette sul profilo di ciascun professionista. Se invece lo stesso turno da 12h deve essere 'spezzato' (es. due da 6h, o un 8+4) a seconda delle preferenze, si creano turni distinti e si imposta un vincolo all'algoritmo che impone l'accoppiamento obbligatorio di quelle frazioni orarie per determinate persone."
+  },
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "È possibile impostare vincoli individuali permanenti (at personam) che deroghino o stringano i limiti del CCNL?",
+    "risposta": "Sì, è possibile applicare in maniera totalmente libera vincoli specifici sui singoli professionisti, sulle fasce orarie, sulle sale o sulla natura del turno (ordinario, pronta disponibilità, guardia). Ad esempio, se il CCNL consente fino a 7 pronte disponibilità mensili per il personale di comparto, si può imporre all'algoritmo un tetto massimo di 4 solo per un collega con esigenze familiari specifiche."
+  },
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "Abbiamo medici a partita IVA o consulenti esterni che lavorano presso altre strutture in giorni fissi della settimana: come gestisco il loro schema di disponibilità?",
+    "risposta": "Per ogni operatore è disponibile una griglia che permette di \"accendere\" o \"spegnere\" la disponibilità per ogni singola combinazione tra le fasce orarie operative del reparto e i giorni della settimana. In questo caso basta disabilitare le fasce orarie o i giorni in cui il collaboratore lavora esternamente per bloccare sul nascere assegnazioni incompatibili."
+  },
+  {
+    "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
+    "domanda": "Un operatore ha un permesso di studio o frequenta un master ogni venerdì per i próximos sei mesi: come evito che l'algoritmo lo inserisca in turno?",
+    "risposta": "Per ogni operatore è disponibile una griglia che permette di \"accendere\" o \"spegnere\" la disponibilità per ogni singola combinazione tra le fasce orarie operative del reparto e i giorni della settimana. In questo caso basta spegnere la disponibilità per tutti i venerdì dell'orario del semestre, oppure inserire una ricorrenza personalizzata nel sistema dei parametri."
+  },
+  {
+    "categoria": "ATTIVITÀ EXTRA-OSPEDALIERE",
+    "domanda": "Docenza universitaria: Un primario insegna all'università il martedì e giovedì mattina. Come blocco sistematicamente quelle fasce orarie?",
+    "risposta": "Sì, per ogni operatore è disponibile una griglia che permette di \"accendere\" o \"spegnere\" la disponibilità per ogni singola combinazione tra le fasce orarie operative del reparto e i giorni della settimana. In questo caso basta disabilitare tutti i turni incompatibili con l'attività di docenza."
+  },
+  {
+    "categoria": "ATTIVITÀ EXTRA-OSPEDALIERE",
+    "domanda": "Congressi e formazione: Quando un medico comunica un congresso con 2 mesi di anticipo, come lo inserisco? Il sistema lo esclude automaticamente dalla schedulazione di quei giorni?",
+    "risposta": "Assolutamente sì, non è necessario tanto preavviso, è sufficiente quello abituale con cui gli operatori comunicano con i rispettivi coordinatori. Qualora la comunicazione dovesse pervenire a pianificazione iniziata, il coordinatore riceverà la notifica direttamente nel tool di pianificazione e potrà gestirla in automatico."
+  },
+  {
+    "categoria": "ATTIVITÀ EXTRA-OSPEDALIERE",
+    "domanda": "Libera professione intramoenia: Alcuni medici hanno ambulatori privati il sabato mattina. Posso impostare questa ricorrenza come \"non disponibile\"?",
+    "risposta": "Sì, per ogni operatore è disponibile una griglia che permette di \"accendere\" o \"spegnere\" la disponibilità per ogni singola combinazione tra le fasce orarie operative del reparto e i giorni della settimana. In questo caso basta disabilitare tutti i turni incompatibili con l'attività privata."
+  },
+  {
+    "categoria": "ATTIVITÀ EXTRA-OSPEDALIERE",
+    "domanda": "Guardie mediche esterne: Ho infermieri che fanno guardie mediche fuori dall'ospedale. Come traccio queste attività per evitare violazioni dei riposi obbligatori (11 ore)?",
+    "risposta": "Tutte le unità operative dove il personale in turno può essere dislocato devono essere presenti nell'anagrafica, in questo caso usufruiranno dello stesso trattamento, compresi i controlli. Non è importante che l'unità operativa sia all'interno della struttura ospedaliera."
+  },
+  {
+    "categoria": "ATTIVITÀ EXTRA-OSPEDALIERE",
+    "domanda": "Specializzazioni multiple: Ho un medico con doppia specializzazione (Anestesia + Rianimazione). Come imposto questa doppia competenza per massimizzare la sua utilizzabilità?",
+    "risposta": "Tymetric gestisce in automatico. Dai titoli universitari inseriti vengono derivati in automatico i ruoli che poi a loro volta vengono gestiti nel pannello di pianificazione e dall'algoritmo."
+  },
+  {
+    "categoria": "ATTIVITÀ EXTRA-OSPEDALIERE",
+    "domanda": "Lingue straniere: In PS serve sempre qualcuno che parli inglese/arabo per pazienti stranieri. Come taggo questa competenza e garantisco copertura H24?",
+    "risposta": "Il sistema di competenze svincolato da titoli universitari e incarichi funzionali (che invece gestiscono i ruoli) serve proprio per coprire queste esigenze specifiche. La copertura H24 dipende dalla disponibilità del personale, il sistema può ricorrere a straordinario, ma non violare i vincoli del CCNL."
+  },
+  {
+    "categoria": "EQUITÀ E PREFERENZE",
+    "domanda": "Distribuzione equa fine settimana: Il sistema bilancia automaticamente i fine settimana lavorati? C'è un report che mi mostra chi ha fatto più/meno fine settimana negli ultimi 3 mesi?",
+    "risposta": "Il fine settimana è un concetto non presente nel CCNL, che invece differenzia tra domenica e sabato con riferimento al personale che lavora su 5 o su 6 giorni settimanali. Il sistema prevede un'impostazione che assegna solo un turno nel fine settimana (dal venerdì notte alla domenica notte), distribuendo in maniera equa il carico di lavoro; tuttavia, è un'impostazione da utilizzare con cautela dato che il numero di turni coperti scende sensibilmente, soprattutto nei reparti il cui carico di lavoro non è influenzato dal weekend o dai festivi. Le statistiche sui fine settimana, festivi e prefestivi sono sempre a disposizione del coordinatore durante l'attività di pianificazione. Per la visualizzazione invece delle statistiche riguardanti i turni passati, si può far riferimento all'apposito strumento per la visualizzazione e la gestione dei turni già pubblicati."
+  },
+  {
+    "categoria": "EQUITÀ E PREFERENZE",
+    "domanda": "Float pool e reperibilità: Quando nessuno è disponibile, come attivo il \"float pool\"? Il sistema chiama automaticamente il personale in ordine di priorità (chi ha fatto meno straordinari)?",
+    "risposta": "Tymetric accompagna nell'attività di pianificazione, mettendo anche le reperibilità quando previste, seguendo naturalmente le direttive del CCNL. Non gestisce le emergenze che non prevedono la pronta disponibilità."
+  },
+  {
+    "categoria": "EQUITÀ E PREFERENZE",
+    "domanda": "Scambio turni last-minute: Due colleghi vogliono scambiarsi il turno domani. Il sistema valida in tempo reale che lo scambio non crei violazioni CCNL?",
+    "risposta": "Sì, ma comunque prevede lo step di approvazione del coordinatore."
+  },
+  {
+    "categoria": "EQUITÀ E PREFERENZE",
+    "domanda": "Come vengono gestiti i desiderata e le preferenze dei professionisti? È possibile chiedere un turno specifico 'al positivo'?",
+    "risposta": "I desiderata sono gestiti nativamente tramite l'app del professionista 'al negativo' (espressi come fasce orarie o date in cui si richiede di NON lavorare), poiché è la modalità che garantisce una distribuzione più equa e la copertura dei vincoli e dei weekend. Di default, le preferenze 'al positivo' (es. richiedere la mattina in una data specifica) non sono active per evitare l'impossibilità di bilanciare i carichi di lavoro, ma la piaggaforma è flessibile e può essere configurata o personalizzata su richiesta della struttura."
+  },
+  {
+    "categoria": "COMPLIANCE E NORMATIVA",
+    "domanda": "Riposi compensativi: Se un infermiere fa un festivo infrasettimanale, il sistema traccia automaticamente che gli devo un riposo compensativo entro X giorni?",
+    "risposta": "I festivi infrasettimanali non sono riposi dovuti, al contrario quando si lavora di domenica il CCNL prevede il recupero del giorno di riposo entro la settimana successiva. L'algoritmo lo gestisce in automatico, qualora il coordinatore dovesse fare una scelta diversa vedrebbe la carenza di riposi nelle statistiche dell'operatore."
+  },
+  {
+    "categoria": "COMPLIANCE E NORMATIVA",
+    "domanda": "Tetto straordinari: Il CCNL prevede max 250h straordinari/anno. Il sistema mi blocca se cerco di assegnare turni che superano il tetto annuale? Posso eventualmente sbloccarlo?",
+    "risposta": "Tymetric è pensato come strumento ausiliario al coordinatore, che manualmente può fare tutto ciò che ritiene opportuno, andando o meno a visualizzare il sistema di alert e statistiche che mettiamo a disposizione. La responsabilità legale cade sempre sul coordinatore."
+  },
+  {
+    "categoria": "COMPLIANCE E NORMATIVA",
+    "domanda": "Notturni consecutivi: Quanti notturni consecutivi permette il sistema prima di bloccarmi? È configurabile (es. max 3 notti di fila)?",
+    "risposta": "Non solo è configurabile per tutte le fasce orarie e per tutte le unità operative, ma il caso dei turni notturni è previsto dal CCNL, quindi è già insito nel sistema, per quanto completamente personalizzabile."
+  },
+  {
+    "categoria": "COMPLIANCE E NORMATIVA",
+    "domanda": "Riposo 11 ore: Il sistema controlla che tra la fine di un turno e l'inizio del successivo ci siano SEMPRE 11 ore (anche considerando straordinari non pianificati)? E in caso di emergenza posso forzare questo blocco?",
+    "risposta": "Tymetric è pensato come strumento ausiliario al coordinatore, che manualmente può fare tutto ciò che ritiene opportuno, andando o meno a visualizzare il sistema di alert e statistiche che mettiamo a disposizione. La responsabilità legale cade sempre sul coordinatore. Tutto ciò che è previsto dal CCNL è già implementato sia nell'algoritmo che nel sistema di alert, anche le 11 ore di riposo."
+  },
+  {
+    "categoria": "ORGANIZZAZIONE E LOGICHE DELL'ALGORITMO",
+    "domanda": "Tymetric è un sistema plug-and-play? Quanto pianifica l'algoritmo rispetto al lavoro manuale del responsabile?",
+    "risposta": "No, Tymetric non è un sistema plug-and-play perché la complessità organizzativa dei reparti va mappata accuratamente in fase iniziale inserendo tutte le informazioni necessarie. L'algoritmo generativo è solo uno degli strumenti: tipicamente pianifica tra il 50% e il 70% dei turni effettivamente pubblicati. Il restante terzo viene gestito dal responsabile tramite richieste dei colleghi, assegnazioni massive o inserimenti manuali guidati."
+  },
+  {
+    "categoria": "ORGANIZZAZIONE E LOGICHE DELL'ALGORITMO",
+    "domanda": "Cosa sono le 'assegnazioni massive' e come supportano il coordinatore al di fuori dell'algoritmo?",
+    "risposta": "Le assegnazioni massive permettono di applicare regole di business a interi gruppi di professionisti con pochi click, senza passare dall'algoritmo. Un esempio tipico è: 'una volta riempite le sale, tutti i professionisti senza turno vengono assegnati alla ricerca dal lunedì al venerdì e messi a riposo nel weekend'. Questo consente di pianificare decine di turni contemporaneamente."
+  },
+  {
+    "categoria": "ORGANIZZAZIONE E LOGICHE DELL'ALGORITMO",
+    "domanda": "Se devo inserire un turno manualmente o forzare un blocco, il sistema mi supporta o ricalcola tutto?",
+    "risposta": "L'inserimento manuale richiede solo due click e offre un supporto visivo per non violare contratti o competenze. Se si deve forzare un'assegnazione 'scomoda' (es. uno smonto senza riposo o saltare un'assenza), un sistema interno di raccomandazione suggerisce i colleghi ordinati per un punteggio di 'fattibilità', indicando chiaramente quali vincoli si stanno violando. Inoltre, l'algoritmo opera in modo iterativo: tutti i turni fissati o modificati manualmente dal responsabile vengono bloccati e usati come input fisso per ottimizzare i turni rimanenti, senza essere ricalcolati."
+  },
+  {
+    "categoria": "ORGANIZZAZIONE E LOGICHE DELL'ALGORITMO",
+    "domanda": "Se modifico a mano un turno proposto dall'algoritmo, al prossimo ricalcolo o simulazione il sistema mi cancella la modifica?",
+    "risposta": "Assolutamente no. Tutte le modifiche e le implementazioni manuali del responsabile non sono ricalcolate dall’algoritmo. L'algoritmo opera in maniera iterativa, considerando i turni modificati o fissati manualmente dal responsabile come input vincolanti e intoccabili su cui ottimizzare e ricalcolare tutto il resto."
+  },
+  {
+    "categoria": "ORGANIZZAZIONE E LOGICHE DELL'ALGORITMO",
+    "domanda": "Il primario vuole pianificare da solo i suoi giorni di presenza o i suoi congressi prima che io lanci l'algoritmo for il resto del comparto. Come gestisco questa priorità?",
+    "risposta": "Il coordinatore può inserire o bloccare preventivamente i turni e le disponibilità del primario direttamente sul pannello operativo. L'algoritmo, lavorando in modalità iterativa, prenderà queste pianificazioni manuali come punti fermi e immodificabili, adattando automaticamente la turnazione dei colleghi rimanenti intorno a esse."
+  },
+  {
+    "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
+    "domanda": "Come gestisce il sistema il dimensionamento delle sale operatorie/ambulatori e l'assegnazione delle figure Senior?",
+    "risposta": "Per ciascuna sala è possibile definire nel dettaglio il fabbisogno di personale (ruolo, competenze richieste e livello di seniority) differenziandolo per ogni giorno della settimana e fascia oraria. Se una sala è chiusa o in manutenzione, il fabbisogno si azzera di default. Il sistema integra la figura del 'senior', permettendo di specificare non solo il numero di persone necessarie in una sala, ma quante di queste debbano obbligatoriamente possedere una seniority elevata."
+  },
+  {
+    "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
+    "domanda": "Il software supporta la gestione di personale che afferisce a più cliniche o strutture diverse?",
+    "risposta": "Sì, l'architettura del software è progettata per scalare fino alla gestione di intere ASL o reti di strutture. Gestisce nativamente le casistiche di personale condiviso tra più cliniche, coordinando le disponibilità ed evitando sovrapposizioni."
+  },
+  {
+    "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
+    "domanda": "Tymetric gestisce sia il personale dipendente strutturato sia i liberi professionisti (P.IVA)?",
+    "risposta": "Sì, la piattaforma gestisce nativamente e contemporaneamente sia il personale dipendente soggetto alle regole e ai controlli del CCNL Sanità, sia i professionisti in regime di Libera Professione (LP / P.IVA), adattando i vincoli e i calcoli delle ore in base alla natura giuridica del contratto."
+  },
+  {
+    "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
+    "domanda": "Un medico è abilitato alle procedure di sedazione cosciente in ambulatorio e altri no. Come modulo i turni per averne sempre almeno uno coperto?",
+    "risposta": "Si risolve assegnando il tag di competenza specifico per la sedazione cosciente all'anagrafica dei medici abilitati. Impostando poi il fabbisogno di quella specifica competenza nella sala ambulatoriale, l'algoritmo incastrerà i turni in modo da garantire la copertura richiesta ed evitare sinistri da mismatch organizzativo."
+  },
+  {
+    "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
+    "domanda": "Abbiamo introdotto una nuova tecnologia/macchinario e solo metà del personale ha completato l'addestramento. Come evito errori medico-legali di assegnazione?",
+    "risposta": "La mappatura dinamica delle competenze permette di creare un tag specifico per l'utilizzo del nuovo macchinario da associare unicamente al personale che ha terminato la formazione. Inserendo questa competenza come requisito obbligatorio per l'assegnazione al relativo turno, l'algoritmo o i controlli manuali escluderanno in tempo reale gli operatori non ancora abilitati."
+  },
+  {
+    "categoria": "COMMERCIALE, COSTI E PROGETTI PILOTA",
+    "domanda": "È possibile attivare un progetto pilota di prova? Come funziona la formazione iniziale?",
+    "risposta": "Sì, offriamo la possibilità di attivare un progetto pilota su una macchina dedicata in cloud per utilizzare il software in maniera totalmente gratuita per i primi 3 mesi. L'unico investimento richiesto in anticipo riguarda la sessione di formazione iniziale (della durata di circa 4-6 ore) indispensabile per allineare i dati del reparto e configurare le anagrafiche contrattuali."
+  },
+  {
+    "categoria": "COMMERCIALE, COSTI E PROGETTI PILOTA",
+    "domanda": "Quali sono i costi delle licenze e del canone per l'utilizzo di Tymetric?",
+    "risposta": "I primi 3 mesi di utilizzo sono completamente gratuiti in modalità progetto pilota. Per quanto riguarda le licenze e il canone successivo, il pricing dipendente da molteplici variabili della struttura (come il numero di professionisti, il tipo di personale medico o di comparto, la complessità delle unità operative e le integrazioni richieste). L'assistente virtuale non è autorizzato a fornire dettagli commerciali o preventivi economici; vi invitiamo a prendere appuntamento con un nostro consulente per una sessione dimostrativa e un'analisi dei costi su misura."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Indice di stress / Predizione Burnout: Come viene calcolato \"l'indice di stress\" del personale menzionato nel documento? Se un operatore sta accumulando troppo carico?",
+    "risposta": "Basato su diversi fattori: notti, fine settimana, numero di giorni consecutivi senza riposo, ecc. In ogni caso è personalizzabile in sede di installazione. Tra le statistiche mostriamo anche un indice di stress basato su questi fattori."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Analisi storiche: Posso vedere pattern storici tipo \"in PS il lunedì mattina servono +2 infermieri rispetto alla media\"? Il sistema usa questi dati per le proposte?",
+    "risposta": "Il sistema non traccia l'operatività del personale durante il turno di lavoro; tuttavia, registra il fabbisogno \"storico\" impostato dal coordinatore e le relative note, particolarmente utile in caso il nuovo coordinatore non conosca bene il reparto."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Trasferimenti temporanei / Riduzione orario: Devo \"prestare\" 2 infermieri alla Medicina per 1 mese (carenza loro). Come li rendo disponibili temporaneamente per un altro reparto? O se un infermiere chiede un part-time (80%) temporaneo per motivi familiari?",
+    "risposta": "L'amministrazione può spostare il reparto operativo della risorsa in qualunque momento. Nel caso di riduzione oraria, si interviene sul monte orario dell'operatore selezionato."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Gestione Specializzandi (Lezioni, Congressi, Rotazioni, Autonomia, Ore, Assunzioni): Come si gestiscono le ore obbligatorie di lezione, i congressi ECM, le rotazioni tra reparti, l'autonomia progressiva senza firma dimissioni, i contratti differenti e il mantenimento dello storico in caso di assunzione?",
+    "risposta": "Per le lezioni si disabilitano i turni tramite la griglia di disponibilità. I congressi sono trattati come causali di assenza specifiche e personalizzabili. Le rotazioni e i cambi di reparto sono gestiti dall'amministratore e visibili subito al coordinatore. I livelli di responsabilità si distinguono tramite il sistema delle competenze (affiancato ai ruoli). I limiti di ore e turni notturni/festivi si impostano per persona e non per ruolo. In caso di assunzione post-specializzazione, il sistema mantiene tutto lo storico (competenze, preferenze, performance)."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Programmazione Primario: Il primario ha una turnazione limitata in reparto dato che partecipa a congressi o insegna. Esiste un sistema per programmare la sua presenza?",
+    "risposta": "In caso di insegnamento si adattano le disponibilità all'orario del semestre; per i congressi si registra l'assenza dal tool di pianificazione. Se l'evento è last-minute si limita la presenza dalle sue disponibilità o, se già in turno, il primario può richiedere un cambio ai colleghi tramite app o una copertura al coordinatore tramite il tool delle modifiche, mantenendo tutto tracciato."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Turni di guardia faticosi (es. 12 ore): Anche se non previsto da CCNL, preferiamo non assegnarne 2 consecutivi e limitare il numero sul mese. È possibile prevederlo nell'algoritmo?",
+    "risposta": "Nel pannello impostazioni è possibile inserire i vincoli personalizzati: si può sia limitare il numero di assegnazioni sull'arco del mese, sia prevedere un certo numero di giorni che devono intercorrere tra un'assegnazione e l'altra. Questi vincoli possono essere impostati sia per il reparto che per la singola persona (per unità operativa, fascia oraria o entrambe)."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Sala in manutenzione: Ho una sala in manutenzione in un giorno specifico, come evito che venga messo personale in turno?",
+    "risposta": "Per ciascuna unità operativa è possibile determinare il fabbisogno di personale sia per ruolo che per competenze per ciascuna fascia oraria. Se il ciclo è settimanale, si inserisce il fabbisogno zero di default. Se fa riferimento a una data specifica, si modifica il fabbisogno direttamente nel tool di pianificazione lasciando una nota sul tesserino dedicato."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Conferma ricezione turni: Il medico che vede la programmazione settimanale mi deve confermare la presenza tramite app? Come capisco che ha recepito la programmazione?",
+    "risposta": "Il medico può inviare indicazioni prima della pubblicazione, dopodiché riceverà una notifica (app + e-mail). Una volta pubblicati, i turni si considerano accettati dagli operatori senza step intermedi di negoziazione. Le modifiche successive sono gestite e tracciate in un tool dedicato nella dashboard del coordinatore."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Visibilità tra reparti (Chirurgia#1 e Chirurgia#2): Sono di Chirurgia#1, posso vedere le turnazioni di Chirurgia#2 per capire se posso usare medici in emergenza?",
+    "risposta": "Tymetric è pensato a compartimenti stagni con un sistema autorizzativo. Se fanno capo allo stesso coordinatore, entrambi i team vedono i turni di tutti. Se i coordinatori sono diversi, nessuno può interferire con l'altro. L'autorizzazione alla visualizzazione dei turni è comunque configurabile sia sull'app operatore che coordinatore."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Tymetric vs Excel: Come capisco che il sistema Tymetric è più efficiente della mia programmazione Excel? Quali metriche devo considerare a 1, 3 mesi o un anno?",
+    "risposta": "L'unica metrica è l'efficienza della pianificazione: meno tempo speso per il processo e soluzioni che ottimizzano le risorse (meno straordinario e meno esternalizzazione). Tymetric è uno strumento al servizio del coordinatore che permette di inserire le propri regole come su Excel, ma col vantaggio di un sistema algoritmico, gestione anagrafiche, segnalazione anomalie, violazioni contrattuali e indici di stress."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Verifica idoneità chirurgo: Come capisco che il chirurgo è quello giusto per l'operazione prevista dato che non lo conosco? Dove vedo la sua specializzazione?",
+    "risposta": "Tymetric gestisce l'assegnazione del chirurgo in sede di pianificazione dei turni (reparto o guardia) e verifica in tempo reale disponibilità, ruolo e competenze richieste. Le competenze e i ruoli di ciascuno possono essere visualizzati in ogni momento sia dal coordinatore che dall'amministrazione."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Interazione turni medici e infermieri: Come interagisco con la turnazione degli infermieri, dato che viene fatta su mie indicazioni dal caposala in un altro Excel? Il caposala può programmare con me nello stesso reparto?",
+    "risposta": "Gli infermieri afferiscono al caposala, ma è possibile assegnare l'incarico di coordinatore (e relative autorizzazioni) anche a personale esterno come il primario. Dal menù dell'applicazione, il primario potrà passare dalla visualizzazione del personale medico a quello sanitario. Il caposala continuerà ad avere l'autorizzazione limitata al solo personale sanitario."
+  }
+]

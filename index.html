@@ -51,6 +51,9 @@
     <!-- Tailwind CSS (compilato) -->
     <link href="css/styles.css" rel="stylesheet">
 
+    <!-- n8n Chat Widget styles -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet">
+
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,6 +95,61 @@
 
         .screenshot-scroll>* {
             scroll-snap-align: center;
+        }
+
+        /* ===== Doppia CTA (appuntamento + assistente) ===== */
+        .ty-cta-actions { display: flex; flex-direction: column; gap: 1rem; }
+        @media (min-width: 640px) { .ty-cta-actions { flex-direction: row; } }
+        .ty-cta-btn { display: flex; align-items: center; justify-content: center; gap: .55rem; flex: 1; padding: 1rem 1.25rem; border-radius: .6rem; font-size: 1.02rem; font-weight: 600; line-height: 1.2; cursor: pointer; border: 0; transition: all .2s ease; }
+        .ty-cta-btn svg { width: 1.35rem; height: 1.35rem; flex: 0 0 auto; }
+        .ty-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(8, 151, 156, .18); }
+        .ty-cta-outline { background: #fff; color: #08979c; border: 2px solid #08979c; }
+        .ty-cta-outline:hover { background: #08979c; color: #fff; }
+        .ty-cta-note { color: #6b7280; font-size: .85rem; margin-top: 1.25rem; text-align: center; }
+        .ty-cta-note a { color: #08979c; text-decoration: underline; }
+        .ty-contact-details { margin-top: 1.25rem; border-top: 1px solid #e5e7eb; padding-top: 1rem; text-align: left; }
+        .ty-contact-details > summary { cursor: pointer; color: #08979c; font-weight: 600; font-size: .92rem; list-style: none; }
+        .ty-contact-details > summary::-webkit-details-marker { display: none; }
+        .ty-contact-details[open] > summary { margin-bottom: 1rem; }
+
+        /* ===== Sticky mobile doppia ===== */
+        .ty-sticky-actions { display: flex; gap: .5rem; }
+        .ty-sticky-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: .35rem; padding: .7rem .5rem; border-radius: .55rem; font-size: .92rem; font-weight: 600; border: 0; cursor: pointer; }
+
+        /* ===== Launcher chat fluttuante ===== */
+        .ty-chat-fab { position: fixed; right: 1.5rem; bottom: 1.5rem; z-index: 45; width: 3.75rem; height: 3.75rem; border-radius: 9999px; border: 0; cursor: pointer; color: #fff; background: linear-gradient(135deg, #006d75 0%, #08979c 100%); box-shadow: 0 12px 28px rgba(8, 151, 156, .45); display: flex; align-items: center; justify-content: center; transition: transform .2s ease; }
+        .ty-chat-fab:hover { transform: scale(1.07); }
+        .ty-chat-fab svg { width: 1.7rem; height: 1.7rem; }
+        @media (max-width: 767px) { .ty-chat-fab { display: none; } }
+
+        /* ===== Modale chat ===== */
+        .ty-chat-modal { position: fixed; inset: 0; z-index: 60; display: none; align-items: flex-end; justify-content: center; background: rgba(15, 23, 42, .55); }
+        .ty-chat-modal.open { display: flex; }
+        @media (min-width: 640px) { .ty-chat-modal { align-items: center; } }
+        .ty-chat-panel { position: relative; width: 100%; height: 90vh; max-width: 440px; max-height: 700px; background: #fff; overflow: hidden; box-shadow: 0 30px 60px rgba(0, 0, 0, .35); display: flex; flex-direction: column; border-radius: 1rem 1rem 0 0; }
+        @media (min-width: 640px) { .ty-chat-panel { height: 84vh; border-radius: 1rem; margin: 1rem; } }
+        .ty-chat-header { display: flex; align-items: center; justify-content: space-between; padding: .8rem 1rem; background: linear-gradient(135deg, #006d75 0%, #08979c 100%); color: #fff; flex: 0 0 auto; }
+        .ty-chat-header h4 { font-size: 1rem; font-weight: 700; margin: 0; }
+        .ty-chat-header p { font-size: .72rem; opacity: .88; margin: .1rem 0 0; }
+        .ty-chat-close { background: transparent; border: 0; color: #fff; cursor: pointer; padding: .3rem; border-radius: .4rem; line-height: 0; }
+        .ty-chat-close:hover { background: rgba(255, 255, 255, .18); }
+        .ty-chat-body { position: relative; flex: 1 1 auto; min-height: 0; }
+        #n8n-chat-container { position: absolute; inset: 0; }
+        #n8n-chat-container .chat-header { display: none; }
+
+        /* ===== Theming widget chat n8n ===== */
+        :root {
+            --chat--color-primary: #08979c;
+            --chat--color-primary-shade-50: #06868a;
+            --chat--color-primary-shade-100: #06777b;
+            --chat--color-secondary: #52d6cd;
+            --chat--color-secondary-shade-50: #3fc9bf;
+            --chat--header--background: #006d75;
+            --chat--header--color: #ffffff;
+            --chat--message--user--background: #08979c;
+            --chat--message--bot--background: #f1f5f9;
+            --chat--window--width: 100%;
+            --chat--window--height: 100%;
         }
     </style>
 
@@ -972,6 +1030,34 @@
             </p>
 
             <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl max-w-xl mx-auto">
+
+                <div class="ty-cta-actions">
+                    <button type="button" onclick="openBooking()" class="ty-cta-btn gradient-dark text-white"
+                        aria-label="Fissa un appuntamento con un consulente">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        Fissa un appuntamento
+                    </button>
+                    <button type="button" onclick="openChat()" class="ty-cta-btn ty-cta-outline"
+                        aria-label="Parla con l'assistente AI">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z">
+                            </path>
+                        </svg>
+                        Parla con l'assistente
+                    </button>
+                </div>
+
+                <p class="ty-cta-note">🔒 Conversazione riservata e coperta da segreto professionale. I dati che ti
+                    chiederemo in chat servono solo a inviarti l'NDA e una copia della conversazione. Consulta la <a
+                        href="privacy-policy.html">Privacy Policy</a>.</p>
+
+                <details class="ty-contact-details">
+                    <summary>Preferisci scriverci direttamente? Lascia un messaggio</summary>
                 <form id="contact-form" class="space-y-6">
 
                     <div class="grid md:grid-cols-2 gap-4">
@@ -1020,6 +1106,7 @@
                             class="text-primary hover:underline">Privacy Policy</a>
                     </p>
                 </form>
+                </details>
             </div>
         </div>
     </section>
@@ -1117,10 +1204,15 @@
     </footer>
 
     <!-- Sticky CTA Mobile -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg z-40">
-        <a href="#contact" class="block w-full px-6 py-3 gradient-primary text-white text-center font-semibold rounded-lg shadow-md">
-            Richiedi Informazioni
-        </a>
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
+        <div class="ty-sticky-actions">
+            <button type="button" onclick="openBooking()" class="ty-sticky-btn gradient-dark text-white">
+                📅 Appuntamento
+            </button>
+            <button type="button" onclick="openChat()" class="ty-sticky-btn ty-cta-outline">
+                💬 Assistente
+            </button>
+        </div>
     </div>
 
     <!-- Cookie Banner -->
@@ -1288,6 +1380,110 @@
                 }
             });
         }
+    </script>
+
+    <!-- Launcher chat fluttuante (assistente AI sempre disponibile su desktop) -->
+    <button type="button" class="ty-chat-fab" onclick="openChat()"
+        aria-label="Apri la chat con l'assistente Tymetric">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z">
+            </path>
+        </svg>
+    </button>
+
+    <!-- Modale chat -->
+    <div id="ty-chat-modal" class="ty-chat-modal" role="dialog" aria-modal="true"
+        aria-label="Chat con il consulente Tymetric">
+        <div class="ty-chat-panel">
+            <div class="ty-chat-header">
+                <div>
+                    <h4>Mya · Tymetric</h4>
+                    <p>Conversazione riservata · segreto professionale</p>
+                </div>
+                <button type="button" class="ty-chat-close" onclick="closeChat()" aria-label="Chiudi la chat">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="ty-chat-body">
+                <div id="n8n-chat-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Config + controlli doppia CTA -->
+    <script>
+        window.TYMETRIC_CONFIG = {
+            // Link pubblico di prenotazione (Google Calendar Appointment Schedule)
+            bookingUrl: 'https://calendar.app.google/irsQAKtc2qNvA4iZ8',
+            // URL di produzione del Chat Trigger n8n (richiede workflow ATTIVO + credenziale Anthropic collegata)
+            chatWebhookUrl: 'https://fabriziogdp.app.n8n.cloud/webhook/87ebbd6b-e725-4772-8b26-7114860ec6a8/chat'
+        };
+
+        function openBooking() {
+            var u = window.TYMETRIC_CONFIG.bookingUrl;
+            if (!u || u.indexOf('INSERISCI') !== -1) {
+                alert('Il link di prenotazione non è ancora configurato (aggiorna bookingUrl in index.html).');
+                return;
+            }
+            window.open(u, '_blank', 'noopener');
+        }
+
+        function openChat() {
+            document.getElementById('ty-chat-modal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+            if (window.__startTyChat) window.__startTyChat();
+        }
+
+        function closeChat() {
+            document.getElementById('ty-chat-modal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var modal = document.getElementById('ty-chat-modal');
+            if (modal) {
+                modal.addEventListener('click', function (e) { if (e.target === modal) closeChat(); });
+            }
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeChat();
+            });
+        });
+    </script>
+
+    <!-- Widget chat n8n (inizializzazione lazy alla prima apertura) -->
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+        var started = false;
+        window.__startTyChat = function () {
+            if (started) return;
+            started = true;
+            createChat({
+                webhookUrl: window.TYMETRIC_CONFIG.chatWebhookUrl,
+                target: '#n8n-chat-container',
+                mode: 'fullscreen',
+                loadPreviousSession: false,
+                showWelcomeScreen: false,
+                allowFileUploads: true,
+                allowedFilesMimeTypes: 'application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv',
+                initialMessages: [
+                    "Ciao, sono Mya 👋 l'assistente di Tymetric. Chiedimi pure quello che vuoi sulla pianificazione dei turni: quando vorrai, potremo vedere una demo sui tuoi dati o fissare una call. Senza fretta 😊"
+                ],
+                i18n: {
+                    en: {
+                        title: '',
+                        subtitle: '',
+                        footer: '',
+                        getStarted: 'Nuova conversazione',
+                        inputPlaceholder: 'Scrivi qui la tua domanda...',
+                        closeButtonTooltip: 'Chiudi'
+                    }
+                }
+            });
+        };
     </script>
 </body>
 

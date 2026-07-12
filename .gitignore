@@ -26,3 +26,23 @@ carosello*.png
 # File di sviluppo
 home.png
 infografiche.html
+
+# --- CONTENUTI INTERNI: NON pubblicare sul sito (repo pubblico GitHub Pages) ---
+# bot/docs è interno TRANNE le FAQ (servite pubblicamente al chatbot)
+bot/docs/*
+!bot/docs/FAQ.json
+
+# Documentazione / lavorazioni interne
+HANDOFF.md
+nuovo_articolo.md
+
+# Pacchetti di migrazione e materiali interni
+Migrazione/
+*.zip
+poster/
+
+# Presentazioni e ambienti locali
+Presentazione*
+*.key
+venv/
+*.code-workspace

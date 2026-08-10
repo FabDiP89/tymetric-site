@@ -8,9 +8,27 @@
   </url>
   <url>
     <loc>https://tymetric.com/blog.html</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tymetric.com/blog/carenza-medici-pronto-soccorso-agosto.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tymetric.com/blog/medici-gettonisti-bertolaso-fact-check.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tymetric.com/blog/burnout-ospedaliero-predittori-organizzativi.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://tymetric.com/blog/ottimizzazione-algoritmica-roi-voi.html</loc>

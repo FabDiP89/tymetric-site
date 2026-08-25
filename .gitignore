@@ -35,6 +35,7 @@ bot/docs/*
 # Documentazione / lavorazioni interne
 HANDOFF.md
 nuovo_articolo.md
+deep-research-*.md
 
 # Pacchetti di migrazione e materiali interni
 Migrazione/

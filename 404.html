@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PM6KM6HZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYFCYZ4Z6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QFYFCYZ4Z6');
+        // Traccia l'indirizzo sbagliato che ha portato qui, così è visibile in GA4
+        gtag('event', 'page_not_found', {
+            'attempted_path': window.location.pathname + window.location.search,
+            'referrer': document.referrer || '(diretto)'
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina non trovata (404) - Tymetric</title>
+    <meta name="description" content="La pagina che cercavi non esiste. Torna alla home di Tymetric o consulta gli approfondimenti sulla gestione dei turni in sanità.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- NOTA: questa pagina viene servita a QUALUNQUE profondità di URL (es. /blog/x/y).
+         Tutti i percorsi devono quindi restare ASSOLUTI, altrimenti CSS e immagini si rompono. -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-primary { background: linear-gradient(135deg, #08979c 0%, #52d6cd 100%); }
+        .gradient-dark { background: linear-gradient(135deg, #006d75 0%, #08979c 100%); }
+        .code-404 {
+            font-size: clamp(5rem, 18vw, 10rem);
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, #08979c 0%, #52d6cd 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -.04em;
+        }
+        .wrong-url {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: .9rem;
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: .5rem;
+            padding: .5rem .9rem;
+            color: #6b7280;
+            display: inline-block;
+            max-width: 100%;
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM6KM6HZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="/favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
+                        <span class="text-2xl font-bold text-primary">tymetric</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+                    <a href="/#solutions" class="text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
+                    <a href="/blog.html" class="text-gray-700 hover:text-primary transition-colors">Blog</a>
+                    <a href="/#contact" class="px-6 py-2 gradient-primary text-white rounded-lg hover:shadow-lg transition-all">
+                        Richiedi Informazioni
+                    </a>
+                </div>
+                <a href="/" class="md:hidden px-4 py-2 gradient-primary text-white rounded-lg text-sm">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="code-404 mb-2">404</div>
+
+            <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-5">
+                Questa pagina non esiste
+            </h1>
+
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                L'indirizzo che hai seguito non porta a nessuna pagina. Può succedere per un refuso,
+                un link non più valido o una pagina che abbiamo spostato.
+            </p>
+
+            <p class="mb-10"><span class="wrong-url" id="bad-url">&nbsp;</span></p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/" class="px-8 py-4 gradient-dark text-white text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    Torna alla home
+                </a>
+                <a href="/blog.html" class="px-8 py-4 bg-white border-2 border-primary text-primary text-lg font-semibold rounded-lg hover:shadow-lg transition-all">
+                    Vai al blog
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articoli utili -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2 text-center">Oppure riparti da qui</h2>
+            <p class="text-gray-600 mb-10 text-center">Gli approfondimenti più letti sulla gestione dei turni in sanità.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/blog/turni-ccnl-sanita-guida-riposi-notti-ore.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
+                        <div class="h-40 bg-gray-200 relative overflow-hidden">
+                            <img src="/blog/immagini/guida-ccnl-turni.webp" alt="Guida pratica ai turni e al CCNL Sanità" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-emerald-600 shadow-sm">GUIDA PRATICA</div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col">
+                            <h3 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                Turni e CCNL Sanità: riposi, notti e ore massime
+                            </h3>
+                            <p class="text-sm text-gray-600">Quale contratto si applica davvero e le regole articolo per articolo.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/lavoro-usurante-infermieri-notti-turni.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
+                        <div class="h-40 bg-gray-200 relative overflow-hidden">
+                            <img src="/blog/immagini/lavoro-notturno-infermieri.webp" alt="Lavoro gravoso e usurante per gli infermieri" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-purple-600 shadow-sm">NORMATIVA</div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col">
+                            <h3 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                Gravoso e usurante: contano le notti, non l'etichetta
+                            </h3>
+                            <p class="text-sm text-gray-600">Sugli usuranti la legge guarda quante notti hai davvero lavorato.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/medici-gettonisti-bertolaso-fact-check.html" class="group">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100 h-full flex flex-col">
+                        <div class="h-40 bg-gray-200 relative overflow-hidden">
+                            <img src="/blog/immagini/bertolaso-gettonisti.webp" alt="Medici gettonisti: il fact check" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-indigo-600 shadow-sm">POLICY &amp; SSN</div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col">
+                            <h3 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                Medici gettonisti: il fact check su numeri e contratti
+                            </h3>
+                            <p class="text-sm text-gray-600">Le dichiarazioni alla prova di tariffe, CCNL e dati ANAC.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="/favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
+                        <h4 class="text-2xl font-bold text-primary">tymetric</h4>
+                    </div>
+                    <p class="text-gray-400">La soluzione AI per la pianificazione intelligente dei turni di lavoro.</p>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Prodotto</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/#features" class="hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="/#solutions" class="hover:text-primary transition-colors">Soluzioni</a></li>
+                        <li><a href="/blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Azienda</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Chi siamo</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="/cookie-policy.html" class="hover:text-primary transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Contatti</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Corso Unione Sovietica 341<br>Torino (TO)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <a href="mailto:info@tymetric.com" class="hover:text-primary transition-colors">info@tymetric.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 GDP Analytics s.r.l. - P.IVA 11975840015 - Corso Unione Sovietica 341, Torino (TO) - All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mostra al visitatore l'indirizzo che ha tentato (aiuta a capire il refuso)
+        (function () {
+            var el = document.getElementById('bad-url');
+            if (el) el.textContent = window.location.pathname + window.location.search;
+        })();
+    </script>
+</body>
+
+</html>

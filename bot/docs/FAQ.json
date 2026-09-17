@@ -233,5 +233,10 @@
     "categoria": "VARIE",
     "domanda": "Interazione turni medici e infermieri: Come interagisco con la turnazione degli infermieri, dato che viene fatta su mie indicazioni dal caposala in un altro Excel? Il caposala può programmare con me nello stesso reparto?",
     "risposta": "Gli infermieri afferiscono al caposala, ma è possibile assegnare l'incarico di coordinatore (e relative autorizzazioni) anche a personale esterno come il primario. Dal menù dell'applicazione, il primario potrà passare dalla visualizzazione del personale medico a quello sanitario. Il caposala continuerà ad avere l'autorizzazione limitata al solo personale sanitario."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "Accesso al software: come si accede a Tymetric? Dov'è il login? Non trovo l'indirizzo per entrare, ho perso il link di accesso o le credenziali.",
+    "risposta": "L'accesso a Tymetric non avviene dal sito pubblico: ogni struttura ha un proprio indirizzo dedicato, comunicato al momento dell'attivazione. Se non lo conosci o non lo ricordi, la via più rapida è chiederlo al coordinatore o al referente interno che segue Tymetric nella tua struttura: è la stessa persona che gestisce gli account. In alternativa puoi scrivere a info@tymetric.com. Da questa chat non posso fornire indirizzi di accesso, credenziali né reimpostare password."
   }
 ]

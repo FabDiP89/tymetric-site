@@ -23,6 +23,11 @@ testo slide.txt
 # Vecchie immagini PNG (sostituite da WebP)
 carosello*.png
 
+# Sorgenti delle copertine del blog: sul sito vanno solo i WebP
+blog/immagini/*.png
+blog/immagini/*.jpg
+blog/immagini/*.jpeg
+
 # File di sviluppo
 home.png
 infografiche.html

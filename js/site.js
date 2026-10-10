@@ -33,10 +33,21 @@ function closeMobileMenu() {
     if (button) button.setAttribute('aria-expanded', 'false');
 }
 
+/* ===== Eventi per Google Analytics =====
+   Partono solo se l'utente ha accettato le statistiche (vedi js/consent.js).
+   In Analytics vanno segnati come «eventi chiave»: generate_lead, prenota_demo, apri_chat_mya. */
+function trackEvent(name, params) {
+    if (typeof gtag !== 'function') return;
+    var p = params || {};
+    p.pagina = window.location.pathname;
+    gtag('event', name, p);
+}
+
 /* ===== Appuntamento e modulo ===== */
 function openBooking() {
     var u = window.TYMETRIC_CONFIG.bookingUrl;
     if (!u) return;
+    trackEvent('prenota_demo', { metodo: 'calendario' });
     window.open(u, '_blank', 'noopener');
 }
 
@@ -87,7 +98,7 @@ function startChat() {
             allowFileUploads: true,
             allowedFilesMimeTypes: 'application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv',
             initialMessages: [
-                "Ciao, sono **Mya** 👋 l'assistente di Tymetric. Posso aiutarti in tre modi:\n\n💬 **Rispondere alle tue domande** e curiosità sulla pianificazione dei turni.\n\n📅 **Fissare un appuntamento** con un consulente per vedere Tymetric dal vivo.\n\n🔍 **Entrare nel dettaglio del tuo reparto**: lasciami nome, cognome ed email e ti invio un **NDA**, così potrai condividermi i tuoi dati in totale sicurezza e arriveremo insieme a una **demo personalizzata sui tuoi turni reali**.\n\nDa dove vuoi partire? 😊"
+                "Ciao, sono **Mya** 👋 l'assistente di Tymetric. Posso aiutarti in tre modi:\n\n💬 **Rispondere alle tue domande** e curiosità sulla pianificazione dei turni.\n\n📅 **Fissare un appuntamento** con un consulente per vedere Tymetric dal vivo.\n\n🔍 **Entrare nel dettaglio del tuo reparto**: lasciami nome, cognome ed email e ti invio un **NDA**, così potrai raccontarmi regole e organizzazione del reparto e arriveremo a una **demo costruita sui tuoi turni, con nomi anonimi**.\n\nDa dove vuoi partire? 😊"
             ],
             i18n: {
                 en: {
@@ -114,6 +125,7 @@ function openChat() {
     if (!modal) return;
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    if (!chatStarted) trackEvent('apri_chat_mya');
     startChat();
 }
 
@@ -154,6 +166,7 @@ function bindContactForm() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         }).then(function () {
+            trackEvent('generate_lead', { method: 'modulo' });
             if (typeof gtag === 'function') {
                 gtag('event', 'conversion', { 'send_to': 'AW-17799873404/DK6aCJr9jdEbEPyG0qdC' });
             }

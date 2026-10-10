@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Consenso cookie: Google Analytics, Google Ads e Tag Manager partono solo dopo il consenso (vedi /js/consent.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        (function () {
+            var c = { a: false, m: false };
+            try { var v = JSON.parse(localStorage.getItem('tyConsent') || 'null'); if (v && v.v === 1 && Date.now() - v.t < 15552000000) c = v; } catch (e) {}
+            function s(x) { return x ? 'granted' : 'denied'; }
+            gtag('consent', 'default', { analytics_storage: s(c.a), ad_storage: s(c.m), ad_user_data: s(c.m), ad_personalization: s(c.m), functionality_storage: 'granted', security_storage: 'granted' });
+            gtag('set', 'ads_data_redaction', true);
+        })();
+    </script>
+    <script src="/js/consent.js" defer></script>
+
+    <title>App turni per il personale sanitario | Tymetric</title>
+    <meta name="description"
+        content="L'app dei turni per medici, infermieri e OSS: turni sempre aggiornati, desiderata, cambi turno con approvazione, ferie e assenze. In italiano e in inglese.">
+    <link rel="canonical" href="https://tymetric.com/app-turni-personale.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tymetric.com/app-turni-personale.html">
+    <meta property="og:title" content="App turni per il personale sanitario">
+    <meta property="og:description" content="L'app dei turni per medici, infermieri e OSS: turni sempre aggiornati, desiderata, cambi turno con approvazione, ferie e assenze. In italiano e in inglese.">
+    <meta property="og:image" content="https://tymetric.com/im1.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="App turni per il personale sanitario">
+    <meta property="twitter:description" content="L'app dei turni per medici, infermieri e OSS: turni sempre aggiornati, desiderata, cambi turno con approvazione, ferie e assenze. In italiano e in inglese.">
+    <meta property="twitter:image" content="https://tymetric.com/im1.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tymetric.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Prodotto",
+                "item": "https://tymetric.com/prodotto.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "App turni per il personale",
+                "item": "https://tymetric.com/app-turni-personale.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "L'app costa a parte?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. L'app per gli operatori è inclusa nel canone di ogni reparto, insieme a interfaccia, motore e Mya."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Il medico deve confermare i turni dall'app?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Può inviare indicazioni prima della pubblicazione; poi riceve una notifica in app e via email, e i turni pubblicati si considerano accettati. Le modifiche successive sono tracciate."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso vedere i turni di un altro reparto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. I turni di ogni reparto li vedono solo gli operatori che vi appartengono e le figure amministrative e di coordinamento."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Uno scambio dell'ultimo minuto viene controllato?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. Lo scambio viene verificato rispetto alle regole e richiede comunque l'approvazione del coordinatore."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script src="js/site.js" defer></script>
+</head>
+
+<body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
+
+    <!-- Navigazione -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-6">
+                <a href="index.html" class="flex items-center gap-2" aria-label="Tymetric, home">
+                    <img src="favicon.png" alt="" class="h-8 w-8" width="32" height="32">
+                    <span class="text-2xl font-bold text-primary tracking-tight">tymetric</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8" aria-label="Navigazione principale">
+                    <div class="ty-dd py-3">
+                        <a href="prodotto.html" class="inline-flex items-center gap-1 text-[15px] font-bold text-primary-dark" aria-haspopup="true">
+                            Prodotto
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="ty-dd-menu">
+                            <a href="prodotto.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Panoramica</span><span class="text-[13px] text-gray-600">AI, interfaccia, motore e app</span></a>
+                            <a href="turni-medici-ospedalieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni dei medici</span><span class="text-[13px] text-gray-600">Guardie, reperibilità, competenze</span></a>
+                            <a href="turni-infermieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni degli infermieri</span><span class="text-[13px] text-gray-600">Notti eque, riposi, esigenze personali</span></a>
+                            <a href="generazione-automatica-turni.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Generazione automatica</span><span class="text-[13px] text-gray-600">Il motore e le sue regole</span></a>
+                            <a href="turni-intelligenza-artificiale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni con l'AI</span><span class="text-[13px] text-gray-600">Modalità Deep planning e Mya</span></a>
+                            <a href="app-turni-personale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">App per il personale</span><span class="text-[13px] text-gray-600">Turni, desiderata, cambi turno</span></a>
+                        </div>
+                    </div>
+                    <a href="prezzi.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Prezzi</a>
+                    <div class="ty-dd py-3">
+                        <button type="button" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Compliance
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="ty-dd-menu">
+                            <a href="gdpr.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">GDPR</span><span class="text-[13px] text-gray-600">Dati, ruoli, misure, conservazione</span></a>
+                            <a href="ai-act.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">AI Act</span><span class="text-[13px] text-gray-600">Cosa fa l'AI, chi decide, le scadenze</span></a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Blog</a>
+                    <a href="#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Prenota una demo</a>
+                </nav>
+                <button id="mobile-menu-button" type="button" class="md:hidden p-2 -mr-2 rounded-lg text-gray-900" onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Apri il menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 flex flex-col gap-1">
+                <a href="prodotto.html" class="py-2.5 text-primary-dark font-semibold">Prodotto</a>
+                <a href="turni-medici-ospedalieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni dei medici</a>
+                <a href="turni-infermieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni degli infermieri</a>
+                <a href="generazione-automatica-turni.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Generazione automatica</a>
+                <a href="turni-intelligenza-artificiale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni con l'AI</a>
+                <a href="app-turni-personale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">App per il personale</a>
+                <a href="prezzi.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prezzi</a>
+                <span class="pt-2 text-xs font-bold uppercase tracking-wider text-gray-600">Compliance</span>
+                <a href="gdpr.html" class="py-2.5 text-gray-700 hover:text-primary-dark">GDPR</a>
+                <a href="ai-act.html" class="py-2.5 text-gray-700 hover:text-primary-dark">AI Act</a>
+                <a href="blog.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Blog</a>
+                <a href="#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Prenota una demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-glow pt-20 pb-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5 items-center text-center">
+                <nav aria-label="Percorso" class="text-sm text-gray-600"><a href="index.html" class="hover:text-primary-dark">Home</a> / <a href="prodotto.html" class="hover:text-primary-dark">Prodotto</a> / <span>App turni per il personale</span></nav>
+                <h1 class="px-3.5 py-1.5 rounded-full bg-brand-100 text-primary-dark text-sm font-semibold">App turni per il personale sanitario</h1>
+                <p class="text-4xl sm:text-5xl lg:text-[56px] leading-[1.1] font-extrabold tracking-tight text-gray-900 text-balance">I turni in tasca. <span class="text-primary">Le richieste, senza messaggi sparsi.</span></p>
+                <p class="text-xl leading-relaxed text-gray-600 max-w-3xl">Con l'app di Tymetric medici, infermieri e OSS vedono i propri turni e quelli del reparto, inviano desiderata e cambi turno e chiedono ferie e formazione. Tutto arriva al coordinatore, in un posto solo.</p>
+                <div class="flex flex-wrap justify-center gap-3.5 pt-2">
+                    <a href="#contact" class="ty-btn inline-flex items-center gap-2 px-7 py-4 rounded-[10px] gradient-dark text-white text-[17px] font-semibold">Prenota una demo</a>
+                    <button type="button" onclick="openChat()" class="ty-btn inline-flex items-center gap-2 px-7 py-4 rounded-[10px] ty-cta-outline text-[17px] font-semibold"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
+                        Chiedi a Mya
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Cosa fa il personale dall'app</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Si installa sul telefono, in italiano e in inglese, ed è inclusa nel canone di ogni reparto.</p>
+                </div>
+                <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">I miei turni</h3><p class="text-[15px] leading-relaxed text-gray-600">In calendario o in lista, insieme ai turni del proprio reparto.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Desiderata</h3><p class="text-[15px] leading-relaxed text-gray-600">«Non disponibile» ed «Escludi fasce» per indicare quando non si può lavorare; su richiesta della struttura anche «Scegli fascia» per chiedere un turno preciso.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Cambi turno</h3><p class="text-[15px] leading-relaxed text-gray-600">Scambio o sola copertura: il collega accetta, il coordinatore approva, il sistema avvisa se mancano requisiti o se il cambio viola le regole.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Ferie, formazione e congressi</h3><p class="text-[15px] leading-relaxed text-gray-600">Richieste con approvazione del responsabile, che le ritrova già nel piano.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Assenze improvvise</h3><p class="text-[15px] leading-relaxed text-gray-600">Un'assenza improvvisa avvisa subito il responsabile via email.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Notifiche</h3><p class="text-[15px] leading-relaxed text-gray-600">Alla pubblicazione dei turni arriva una notifica, in app e via email.</p></li>
+                </ul>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Per il coordinatore: meno messaggi, più controllo</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Le richieste non arrivano più su fogli, chat e telefonate: arrivano tutte nello stesso posto, con le informazioni necessarie per decidere. Le modifiche dopo la pubblicazione sono gestite e tracciate in uno strumento dedicato.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Una volta pubblicati, i turni si considerano accettati: niente negoziazioni intermedie.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>I turni di un reparto li vedono solo i suoi operatori e chi lo coordina o lo amministra.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Per tutela della privacy le motivazioni sanitarie non si registrano: basta «Non dichiarata».</span></li>
+                    </ul>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <h2 class="text-center text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Domande frequenti</h2>
+                <div class="flex flex-col gap-3.5">
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">L'app costa a parte?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. L'app per gli operatori è inclusa nel canone di ogni reparto, insieme a interfaccia, motore e Mya.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Il medico deve confermare i turni dall'app?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. Può inviare indicazioni prima della pubblicazione; poi riceve una notifica in app e via email, e i turni pubblicati si considerano accettati. Le modifiche successive sono tracciate.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Posso vedere i turni di un altro reparto?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. I turni di ogni reparto li vedono solo gli operatori che vi appartengono e le figure amministrative e di coordinamento.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Uno scambio dell'ultimo minuto viene controllato?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Lo scambio viene verificato rispetto alle regole e richiede comunque l'approvazione del coordinatore.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- Approfondimenti -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6 items-center text-center">
+                <h2 class="text-2xl font-bold text-gray-900">Approfondisci</h2>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="turni-medici-ospedalieri.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni dei medici ospedalieri <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="turni-infermieri.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni degli infermieri <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="generazione-automatica-turni.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Generazione automatica dei turni <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="turni-intelligenza-artificiale.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni con l'intelligenza artificiale <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="prodotto.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Tutto il prodotto <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="prezzi.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Prezzi <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+                <p class="text-[15px] text-gray-600">Da 1.190 € l'anno, IVA esclusa, <em>primi 3 mesi in prova senza canone</em>.</p>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section id="contact" class="py-24 gradient-dark">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-7 text-center">
+                <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-white text-balance">Raccontaci il tuo reparto</h2>
+                <p class="text-xl leading-relaxed text-white max-w-2xl">Interfaccia, motore e Mya da 1.190 € l'anno, IVA esclusa, <em>primi 3 mesi in prova senza canone</em>. <a href="prezzi.html#simulatore" class="font-semibold underline">Calcola il tuo prezzo</a></p>
+                <div class="w-full bg-white rounded-2xl p-6 md:p-9 shadow-2xl">
+                    <div class="ty-cta-actions">
+                        <button type="button" onclick="openBooking()" class="ty-cta-btn gradient-dark text-white">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            Prenota una demo
+                        </button>
+                        <button type="button" onclick="openForm()" class="ty-cta-btn ty-cta-outline">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Scrivici
+                        </button>
+                        <button type="button" onclick="openChat()" class="ty-cta-btn ty-cta-outline">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
+                            Chiedi a Mya
+                        </button>
+                    </div>
+                    <p class="ty-cta-note">🔒 Conversazione riservata. I dati che ti chiederemo servono solo a inviarti l'NDA e una copia della conversazione. Consulta la <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                    <div id="ty-form-wrap" class="mt-6 pt-6 border-t border-gray-200 text-left" hidden>
+                        <form id="contact-form" class="flex flex-col gap-5">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div><label for="cf-nome" class="block text-sm font-medium text-gray-700 mb-2">Nome *</label><input id="cf-nome" type="text" name="nome" required autocomplete="given-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Mario"></div>
+                                <div><label for="cf-cognome" class="block text-sm font-medium text-gray-700 mb-2">Cognome *</label><input id="cf-cognome" type="text" name="cognome" required autocomplete="family-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Rossi"></div>
+                            </div>
+                            <div><label for="cf-email" class="block text-sm font-medium text-gray-700 mb-2">Email aziendale *</label><input id="cf-email" type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="mario.rossi@azienda.it"></div>
+                            <div><label for="cf-telefono" class="block text-sm font-medium text-gray-700 mb-2">Telefono</label><input id="cf-telefono" type="tel" name="telefono" autocomplete="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="+39 123 456 7890"></div>
+                            <div><label for="cf-messaggio" class="block text-sm font-medium text-gray-700 mb-2">Messaggio</label><textarea id="cf-messaggio" name="messaggio" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none" placeholder="Raccontaci le tue esigenze..."></textarea></div>
+                            <button type="submit" class="ty-btn w-full px-8 py-4 gradient-dark text-white text-lg font-semibold rounded-lg">Invia richiesta</button>
+                            <p class="text-sm text-gray-600">Inviando il modulo accetti la nostra <a href="privacy-policy.html" class="text-primary-dark underline">Privacy Policy</a>.</p>
+                        </form>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600">Preferisci la posta? Scrivici a <a href="mailto:info@tymetric.com" class="text-primary-dark underline">info@tymetric.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-8">
+                <div class="lg:col-span-1 flex flex-col gap-3.5">
+                    <div class="flex items-center gap-2"><img src="favicon.png" alt="" class="h-8 w-8" width="32" height="32"><span class="text-2xl font-bold text-primary-light">tymetric</span></div>
+                    <p class="text-[15px] leading-relaxed text-gray-400">Turni per la sanità: parla con i tuoi turni, l'AI lavora, tu approvi.</p>
+                </div>
+                <nav aria-label="Prodotto" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prodotto</span><a href="prodotto.html" class="text-[15px] text-gray-400 hover:text-primary-light">Panoramica</a><a href="turni-medici-ospedalieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni dei medici</a><a href="turni-infermieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni degli infermieri</a><a href="generazione-automatica-turni.html" class="text-[15px] text-gray-400 hover:text-primary-light">Generazione automatica</a><a href="turni-intelligenza-artificiale.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni con l'AI</a><a href="app-turni-personale.html" class="text-[15px] text-gray-400 hover:text-primary-light">App per il personale</a><a href="prodotto.html#struttura" class="text-[15px] text-gray-400 hover:text-primary-light">Pannello per la struttura</a></nav>
+                <nav aria-label="Prezzi" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prezzi</span><a href="prezzi.html" class="text-[15px] text-gray-400 hover:text-primary-light">Listino e simulatore</a><a href="prezzi.html#offerte" class="text-[15px] text-gray-400 hover:text-primary-light">Struttura su richiesta</a></nav>
+                <nav aria-label="Compliance" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Compliance</span><a href="gdpr.html" class="text-[15px] text-gray-400 hover:text-primary-light">GDPR</a><a href="ai-act.html" class="text-[15px] text-gray-400 hover:text-primary-light">AI Act</a></nav>
+                <nav aria-label="Azienda" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Azienda</span><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer" class="text-[15px] text-gray-400 hover:text-primary-light">Chi siamo</a><a href="blog.html" class="text-[15px] text-gray-400 hover:text-primary-light">Blog</a><a href="privacy-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Privacy policy</a><a href="cookie-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Cookie policy</a></nav>
+                <div class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Contatti</span><span class="text-[15px] leading-normal text-gray-400">Corso Unione Sovietica 341<br>Torino (TO)</span><a href="mailto:info@tymetric.com" class="text-[15px] text-gray-400 hover:text-primary-light">info@tymetric.com</a></div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-wrap justify-between gap-3 text-sm text-gray-400">
+                <span>&copy; 2026 GDP Analytics s.r.l. · P.IVA 11975840015 · Corso Unione Sovietica 341, Torino (TO)</span>
+                <span>Made in Italy</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA fissa su mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
+        <div class="ty-sticky-actions">
+            <button type="button" onclick="openBooking()" class="ty-sticky-btn gradient-dark text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                Prenota una demo
+            </button>
+            <button type="button" onclick="openChat()" class="ty-sticky-btn ty-cta-outline">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
+                Chiedi a Mya
+            </button>
+        </div>
+    </div>
+
+    <!-- Pannello di struttura: genera le caselle della vista multi reparto -->
+    <script>
+        document.querySelectorAll('[data-pattern]').forEach(function (row) {
+            var colors = { c: 'bg-primary-light', a: 'bg-amber-700', g: 'bg-gray-200' };
+            row.dataset.pattern.split('').forEach(function (ch) {
+                var cell = document.createElement('span');
+                cell.className = 'w-4 h-4 rounded ' + colors[ch];
+                row.appendChild(cell);
+            });
+        });
+    </script>
+</body>
+
+</html>

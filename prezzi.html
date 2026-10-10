@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Consenso cookie: Google Analytics, Google Ads e Tag Manager partono solo dopo il consenso (vedi /js/consent.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        (function () {
+            var c = { a: false, m: false };
+            try { var v = JSON.parse(localStorage.getItem('tyConsent') || 'null'); if (v && v.v === 1 && Date.now() - v.t < 15552000000) c = v; } catch (e) {}
+            function s(x) { return x ? 'granted' : 'denied'; }
+            gtag('consent', 'default', { analytics_storage: s(c.a), ad_storage: s(c.m), ad_user_data: s(c.m), ad_personalization: s(c.m), functionality_storage: 'granted', security_storage: 'granted' });
+            gtag('set', 'ads_data_redaction', true);
+        })();
+    </script>
+    <script src="/js/consent.js" defer></script>
+
+    <title>Prezzi del software turni: da 1.190 € l'anno | Tymetric</title>
+    <meta name="description"
+        content="Listino Tymetric: base da 20 operatori a 1.190 € l'anno, poi una tariffa per fascia fino a 100 operatori. Interfaccia e motore sempre inclusi. Listino, esempi e simulatore.">
+    <link rel="canonical" href="https://tymetric.com/prezzi.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tymetric.com/prezzi.html">
+    <meta property="og:title" content="Prezzi Tymetric: da 1.190 € l'anno, IVA esclusa">
+    <meta property="og:description" content="Base da 20 operatori a 1.190 € l'anno, poi una tariffa per fascia. Interfaccia e motore sempre inclusi.">
+    <meta property="og:image" content="https://tymetric.com/im1.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Prezzi Tymetric: da 1.190 € l'anno, IVA esclusa">
+    <meta property="twitter:description" content="Base da 20 operatori a 1.190 € l'anno, poi una tariffa per fascia. Interfaccia e motore sempre inclusi.">
+    <meta property="twitter:image" content="https://tymetric.com/im1.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tymetric.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Prezzi", "item": "https://tymetric.com/prezzi.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Tymetric",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Pianificazione dei turni per la sanità con intelligenza artificiale.",
+        "offers": {
+            "@type": "Offer",
+            "name": "Base 20 operatori",
+            "price": "1190",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "1190",
+                "priceCurrency": "EUR",
+                "unitText": "anno",
+                "valueAddedTaxIncluded": false
+            }
+        }
+    }
+    </script>
+
+    <script src="js/site.js" defer></script>
+</head>
+
+<body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
+
+    <!-- Navigazione -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-6">
+                <a href="index.html" class="flex items-center gap-2" aria-label="Tymetric, home">
+                    <img src="favicon.png" alt="" class="h-8 w-8" width="32" height="32">
+                    <span class="text-2xl font-bold text-primary tracking-tight">tymetric</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8" aria-label="Navigazione principale">
+                    <div class="ty-dd py-3">
+                        <a href="prodotto.html" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Prodotto
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="ty-dd-menu">
+                            <a href="prodotto.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Panoramica</span><span class="text-[13px] text-gray-600">AI, interfaccia, motore e app</span></a>
+                            <a href="turni-medici-ospedalieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni dei medici</span><span class="text-[13px] text-gray-600">Guardie, reperibilità, competenze</span></a>
+                            <a href="turni-infermieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni degli infermieri</span><span class="text-[13px] text-gray-600">Notti eque, riposi, esigenze personali</span></a>
+                            <a href="generazione-automatica-turni.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Generazione automatica</span><span class="text-[13px] text-gray-600">Il motore e le sue regole</span></a>
+                            <a href="turni-intelligenza-artificiale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni con l'AI</span><span class="text-[13px] text-gray-600">Modalità Deep planning e Mya</span></a>
+                            <a href="app-turni-personale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">App per il personale</span><span class="text-[13px] text-gray-600">Turni, desiderata, cambi turno</span></a>
+                        </div>
+                    </div>
+                    <a href="prezzi.html" aria-current="page" class="text-[15px] font-bold text-primary-dark">Prezzi</a>
+                    <div class="ty-dd py-3">
+                        <button type="button" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Compliance
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="ty-dd-menu">
+                            <a href="gdpr.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">GDPR</span><span class="text-[13px] text-gray-600">Dati, ruoli, misure, conservazione</span></a>
+                            <a href="ai-act.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">AI Act</span><span class="text-[13px] text-gray-600">Cosa fa l'AI, chi decide, le scadenze</span></a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Blog</a>
+                    <a href="#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Prenota una demo</a>
+                </nav>
+                <button id="mobile-menu-button" type="button" class="md:hidden p-2 -mr-2 rounded-lg text-gray-900" onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Apri il menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 flex flex-col gap-1">
+                <a href="prodotto.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prodotto</a>
+                <a href="turni-medici-ospedalieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni dei medici</a>
+                <a href="turni-infermieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni degli infermieri</a>
+                <a href="generazione-automatica-turni.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Generazione automatica</a>
+                <a href="turni-intelligenza-artificiale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni con l'AI</a>
+                <a href="app-turni-personale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">App per il personale</a>
+                <a href="prezzi.html" class="py-2.5 text-primary-dark font-semibold">Prezzi</a>
+                <span class="pt-2 text-xs font-bold uppercase tracking-wider text-gray-600">Compliance</span>
+                <a href="gdpr.html" class="py-2.5 text-gray-700 hover:text-primary-dark">GDPR</a>
+                <a href="ai-act.html" class="py-2.5 text-gray-700 hover:text-primary-dark">AI Act</a>
+                <a href="blog.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Blog</a>
+                <a href="#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Prenota una demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-glow pt-16 pb-16 md:pt-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-4 items-center text-center">
+                <span class="px-3.5 py-1.5 rounded-full bg-brand-100 text-primary-dark text-sm font-semibold">Prezzi</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-[56px] leading-[1.1] font-extrabold tracking-tight text-gray-900 max-w-4xl text-balance">Tutte le funzioni di interfaccia e motore, <span class="text-primary">sempre incluse.</span></h1>
+                <p class="text-xl leading-relaxed text-gray-600 max-w-2xl">Canone annuo, IVA esclusa.</p>
+            </div>
+        </section>
+
+        <!-- Listino -->
+        <section id="listino" class="py-20 bg-white scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-12 items-start">
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Il listino</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">La base copre i primi 20 operatori. Ogni operatore oltre la base paga la tariffa della propria fascia: più operatori aggiungi, meno costa ciascuno.</p>
+                    <div class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">Cresci quando serve</span><span class="text-[15px] leading-relaxed text-gray-600">Gli operatori aggiunti durante l'anno si pagano pro rata fino al rinnovo.</span></div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="overflow-x-auto bg-white border border-gray-200 rounded-[14px]">
+                        <table class="w-full min-w-[520px] text-base">
+                            <caption class="sr-only">Listino per fasce di operatori, prezzi IVA esclusa</caption>
+                            <thead><tr class="bg-gray-50"><th scope="col" class="text-left px-5 py-3.5 text-[13px] font-bold text-gray-600">Fascia</th><th scope="col" class="text-right px-5 py-3.5 text-[13px] font-bold text-gray-600">Operatori</th><th scope="col" class="text-right px-5 py-3.5 text-[13px] font-bold text-gray-600">€ per operatore al mese</th><th scope="col" class="text-right px-5 py-3.5 text-[13px] font-bold text-gray-600">€ per operatore all'anno</th></tr></thead>
+                            <tbody>
+                                <tr class="border-t border-gray-200 bg-brand-150"><th scope="row" class="text-left px-5 py-3.5 font-bold text-gray-900">Base</th><td class="px-5 py-3.5 text-right text-gray-700">1–20</td><td class="px-5 py-3.5 text-right text-gray-700">—</td><td class="px-5 py-3.5 text-right font-semibold text-gray-900">1.190 € in tutto</td></tr>
+                                <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Fascia 1</th><td class="px-5 py-3.5 text-right text-gray-700">21–40</td><td class="px-5 py-3.5 text-right text-gray-700">4,50 €</td><td class="px-5 py-3.5 text-right font-semibold text-gray-900">54 €</td></tr>
+                                <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Fascia 2</th><td class="px-5 py-3.5 text-right text-gray-700">41–60</td><td class="px-5 py-3.5 text-right text-gray-700">4,00 €</td><td class="px-5 py-3.5 text-right font-semibold text-gray-900">48 €</td></tr>
+                                <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Fascia 3</th><td class="px-5 py-3.5 text-right text-gray-700">61–80</td><td class="px-5 py-3.5 text-right text-gray-700">3,50 €</td><td class="px-5 py-3.5 text-right font-semibold text-gray-900">42 €</td></tr>
+                                <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Fascia 4</th><td class="px-5 py-3.5 text-right text-gray-700">81–100</td><td class="px-5 py-3.5 text-right text-gray-700">3,00 €</td><td class="px-5 py-3.5 text-right font-semibold text-gray-900">36 €</td></tr>
+                                <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Oltre 100 o intera struttura</th><td class="px-5 py-3.5 text-right text-gray-700">—</td><td class="px-5 py-3.5 text-right text-gray-700">—</td><td class="px-5 py-3.5 text-right font-semibold text-gray-900">su richiesta</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="overflow-x-auto bg-white border border-gray-200 rounded-[14px]">
+                        <table class="w-full min-w-[420px] text-[15px]">
+                            <caption class="text-left px-5 pt-4 pb-1 text-base font-bold text-gray-900">Esempi</caption>
+                            <thead><tr><th scope="col" class="text-left px-5 py-3 text-[13px] font-bold text-gray-600 border-b border-gray-200">Operatori</th><th scope="col" class="text-right px-5 py-3 text-[13px] font-bold text-gray-600 border-b border-gray-200">€ l'anno</th><th scope="col" class="text-right px-5 py-3 text-[13px] font-bold text-gray-600 border-b border-gray-200">€ per operatore al mese</th></tr></thead>
+                            <tbody>
+                                <tr class=""><th scope="row" class="text-left px-5 py-3 font-semibold text-gray-900">20</th><td class="px-5 py-3 text-right font-semibold text-gray-900">1.190</td><td class="px-5 py-3 text-right text-gray-700">4,96</td></tr>
+                                <tr class="border-t border-gray-100"><th scope="row" class="text-left px-5 py-3 font-semibold text-gray-900">30</th><td class="px-5 py-3 text-right font-semibold text-gray-900">1.730</td><td class="px-5 py-3 text-right text-gray-700">4,81</td></tr>
+                                <tr class="border-t border-gray-100"><th scope="row" class="text-left px-5 py-3 font-semibold text-gray-900">45</th><td class="px-5 py-3 text-right font-semibold text-gray-900">2.510</td><td class="px-5 py-3 text-right text-gray-700">4,65</td></tr>
+                                <tr class="border-t border-gray-100"><th scope="row" class="text-left px-5 py-3 font-semibold text-gray-900">60</th><td class="px-5 py-3 text-right font-semibold text-gray-900">3.230</td><td class="px-5 py-3 text-right text-gray-700">4,49</td></tr>
+                                <tr class="border-t border-gray-100"><th scope="row" class="text-left px-5 py-3 font-semibold text-gray-900">83</th><td class="px-5 py-3 text-right font-semibold text-gray-900">4.178</td><td class="px-5 py-3 text-right text-gray-700">4,19</td></tr>
+                                <tr class="border-t border-gray-100"><th scope="row" class="text-left px-5 py-3 font-semibold text-gray-900">100</th><td class="px-5 py-3 text-right font-semibold text-gray-900">4.790</td><td class="px-5 py-3 text-right text-gray-700">3,99</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reparto e struttura -->
+        <section id="offerte" class="py-20 bg-gray-50 scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-6">
+                <div class="border-2 border-primary rounded-[20px] p-9 flex flex-col gap-4 bg-white">
+                    <div class="flex flex-col gap-1"><span class="text-sm font-bold uppercase tracking-wider text-primary-dark">Reparti fino a 100 operatori</span><span class="text-[26px] font-bold text-gray-900">Listino pubblico</span></div>
+                    <p class="text-base leading-relaxed text-gray-600">Una base da 20 operatori e una tariffa per fascia oltre la base.</p>
+                    <ul class="flex flex-col gap-2.5">
+                        <li class="flex gap-3 text-base leading-normal text-gray-700"><svg class="w-[22px] h-[22px] text-primary shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>Tutte le funzioni di interfaccia e motore: regole, scambi, sostituzioni, statistiche, export e invio dei turni</li>
+                        <li class="flex gap-3 text-base leading-normal text-gray-700"><svg class="w-[22px] h-[22px] text-primary shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>App per gli operatori e Mya inclusi</li>
+                        <li class="flex gap-3 text-base leading-normal text-gray-700"><svg class="w-[22px] h-[22px] text-primary shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>Primi 3 mesi in prova senza canone</li>
+                    </ul>
+                    <div class="mt-auto flex flex-col gap-1">
+                        <span class="text-[34px] font-extrabold tracking-tight text-primary-dark">Da 1.190 € <span class="text-base font-semibold text-gray-900">l'anno, IVA esclusa</span></span>
+                        <span class="text-[15px] text-gray-600">La base copre i primi 20 operatori e vale anche per i reparti più piccoli. Ogni operatore oltre la base costa meno, fino a 3,00 € al mese.</span>
+                    </div>
+                </div>
+                <div class="rounded-[20px] p-9 flex flex-col gap-4 gradient-night text-white">
+                    <div class="flex flex-col gap-1"><span class="text-sm font-bold uppercase tracking-wider text-primary-light">Struttura e oltre 100 operatori</span><span class="text-[26px] font-bold">Su richiesta</span></div>
+                    <p class="text-base leading-relaxed text-gray-200">Tutto il listino, più il pannello di amministrazione per chi governa più reparti.</p>
+                    <ul class="flex flex-col gap-2.5">
+                        <li class="flex gap-3 text-base leading-normal text-gray-100"><svg class="w-[22px] h-[22px] text-primary-light shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path></svg>Vista multi reparto, copertura su tutto il personale, report di struttura</li>
+                        <li class="flex gap-3 text-base leading-normal text-gray-100"><svg class="w-[22px] h-[22px] text-primary-light shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path></svg>Personale tra reparti e competenze in un catalogo unico</li>
+                        <li class="flex gap-3 text-base leading-normal text-gray-100"><svg class="w-[22px] h-[22px] text-primary-light shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path></svg>Integrazioni con i sistemi del personale e delle presenze, SSO, più sedi, livelli di servizio dedicati</li>
+                        <li class="flex gap-3 text-base leading-normal text-gray-100"><svg class="w-[22px] h-[22px] text-primary-light shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path></svg>Possibilità di progetto pilota</li>
+                        <li class="flex gap-3 text-base leading-normal text-gray-100"><svg class="w-[22px] h-[22px] text-primary-light shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path></svg>Installazione in locale presso la struttura (esclusa la modalità Deep planning)</li>
+                    </ul>
+                    <a href="#contact" class="ty-btn mt-auto self-start inline-flex items-center gap-2 px-6 py-3.5 rounded-[10px] bg-white text-primary-dark text-base font-bold">Contattaci</a>
+                </div>
+                <div class="lg:col-span-2 flex flex-wrap items-center justify-between gap-4 px-7 py-5 rounded-2xl border-2 border-dashed border-amber-700 bg-amber-50">
+                    <div class="flex-[1_1_520px] min-w-0 flex flex-col gap-1">
+                        <span class="text-lg font-bold text-gray-900">Deep planning si aggiunge su richiesta</span>
+                        <span class="text-[15px] leading-normal text-amber-900">La modalità Deep planning, che pianifica il mese con te, non è inclusa nel listino: la valutiamo caso per caso, per ogni struttura, con fatturazione separata. Mya, per tutto il resto, è sempre inclusa.</span>
+                    </div>
+                    <a href="prodotto.html#deep" class="inline-flex items-center gap-1.5 text-base font-semibold text-primary-dark hover:text-primary">Cos'è Deep planning <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulatore -->
+        <section id="simulatore" class="py-20 bg-white scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 items-center text-center">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Simulatore</h2>
+                    <p class="text-lg leading-relaxed text-gray-600 max-w-2xl">Inserisci il numero di operatori del tuo reparto e vedi quanto costa con il listino.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-2">
+                    <div class="p-8 md:p-10 flex flex-col gap-5 lg:border-r border-gray-200">
+                        <div class="flex flex-col gap-1.5">
+                            <label for="ty-ops" class="text-[22px] font-bold text-gray-900">Quanti operatori pianifichi?</label>
+                            <p class="text-[15px] leading-normal text-gray-600">Una stima del canone annuo, calcolata sul listino.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3.5">
+                            <button type="button" id="ty-dec" class="w-12 h-12 rounded-xl border-2 border-primary bg-white text-primary-dark text-2xl font-bold flex items-center justify-center hover:bg-brand-150" aria-label="Un operatore in meno">−</button>
+                            <input id="ty-ops" class="ty-num w-[140px] h-16 border-2 border-gray-300 rounded-xl text-center text-4xl font-extrabold text-gray-900 focus:outline-none focus:border-primary" type="number" inputmode="numeric" min="1" max="9999" value="45">
+                            <button type="button" id="ty-inc" class="w-12 h-12 rounded-xl border-2 border-primary bg-white text-primary-dark text-2xl font-bold flex items-center justify-center hover:bg-brand-150" aria-label="Un operatore in più">+</button>
+                            <span class="text-base text-gray-600">operatori</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <input id="ty-range" type="range" min="20" max="101" step="1" value="45" class="w-full h-7 accent-primary" aria-label="Numero di operatori">
+                            <div class="flex justify-between text-[13px] text-gray-600"><span>20</span><span>100+</span></div>
+                            <p class="text-[13px] text-gray-600">Meno di 20 operatori? La base li copre tutti.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-sm text-gray-600">Esempi:</span>
+                            <button type="button" data-preset="20" class="min-h-[40px] px-3.5 rounded-full border border-gray-300 bg-white text-sm text-gray-700 hover:border-primary">20</button>
+                            <button type="button" data-preset="30" class="min-h-[40px] px-3.5 rounded-full border border-gray-300 bg-white text-sm text-gray-700 hover:border-primary">30</button>
+                            <button type="button" data-preset="45" class="min-h-[40px] px-3.5 rounded-full border border-gray-300 bg-white text-sm text-gray-700 hover:border-primary">45</button>
+                            <button type="button" data-preset="60" class="min-h-[40px] px-3.5 rounded-full border border-gray-300 bg-white text-sm text-gray-700 hover:border-primary">60</button>
+                            <button type="button" data-preset="83" class="min-h-[40px] px-3.5 rounded-full border border-gray-300 bg-white text-sm text-gray-700 hover:border-primary">83</button>
+                            <button type="button" data-preset="100" class="min-h-[40px] px-3.5 rounded-full border border-gray-300 bg-white text-sm text-gray-700 hover:border-primary">100</button>
+                        </div>
+                    </div>
+
+                    <div class="p-8 md:p-10 bg-gray-50 flex flex-col justify-center" aria-live="polite">
+                        <div id="calc-result" class="flex flex-col gap-5">
+                            <div class="flex flex-col gap-1">
+                                <span class="text-sm font-semibold uppercase tracking-wider text-gray-600">Per operatore al mese</span>
+                                <span id="calc-perop" class="text-5xl md:text-[56px] leading-none font-extrabold tracking-tight text-primary-dark">4,65 €</span>
+                                <span id="calc-total" class="text-xl font-bold text-gray-900">2.510 € l'anno, IVA esclusa</span>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-[14px] overflow-hidden">
+                                <ul id="calc-lines"></ul>
+                                <p class="px-4 py-3 text-sm text-brand-800 bg-brand-150">Più operatori aggiungi, meno costa ciascuno.</p>
+                            </div>
+                            <a href="#contact" class="ty-btn self-start inline-flex items-center gap-2 px-6 py-3.5 rounded-[10px] gradient-dark text-white text-base font-semibold">Prenota una demo</a>
+                        </div>
+                        <div id="calc-over" class="flex flex-col gap-4" hidden>
+                            <span class="text-sm font-semibold uppercase tracking-wider text-gray-600">Oltre 100 operatori</span>
+                            <span class="text-[32px] leading-tight font-extrabold text-gray-900">Su richiesta</span>
+                            <p class="text-base leading-relaxed text-gray-600">Per oltre 100 operatori o per l'intera struttura prepariamo un'offerta su misura, valutando integrazioni e sedi.</p>
+                            <a href="#contact" class="ty-btn self-start inline-flex items-center gap-2 px-6 py-3.5 rounded-[10px] gradient-dark text-white text-base font-semibold">Richiedi informazioni</a>
+                        </div>
+                        <p id="calc-empty" class="text-lg text-gray-600" hidden>Inserisci il numero di operatori per vedere il prezzo.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1 items-center text-center text-[15px] text-gray-600">
+                    <p>Interfaccia, motore, app per gli operatori e Mya sono inclusi in ogni configurazione.</p>
+                    <p>Prezzi annui, IVA esclusa. La configurazione iniziale è quotata a parte, solo per l'avvio di una struttura.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section id="contact" class="py-24 gradient-dark">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-7 text-center">
+                <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-white text-balance">Una struttura, o più di 100 operatori?</h2>
+                <p class="text-xl leading-relaxed text-white max-w-2xl">Raccontaci com'è organizzata: ti proponiamo condizioni e servizi su misura.</p>
+                <div class="w-full bg-white rounded-2xl p-6 md:p-9 shadow-2xl">
+                    <div class="ty-cta-actions">
+                        <button type="button" onclick="openBooking()" class="ty-cta-btn gradient-dark text-white">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            Prenota una demo
+                        </button>
+                        <button type="button" onclick="openForm()" class="ty-cta-btn ty-cta-outline">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Scrivici
+                        </button>
+                        <button type="button" onclick="openChat()" class="ty-cta-btn ty-cta-outline">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
+                            Chiedi a Mya
+                        </button>
+                    </div>
+                    <p class="ty-cta-note">🔒 Conversazione riservata. I dati che ti chiederemo servono solo a inviarti l'NDA e una copia della conversazione. Consulta la <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                    <div id="ty-form-wrap" class="mt-6 pt-6 border-t border-gray-200 text-left" hidden>
+                        <form id="contact-form" class="flex flex-col gap-5">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div><label for="cf-nome" class="block text-sm font-medium text-gray-700 mb-2">Nome *</label><input id="cf-nome" type="text" name="nome" required autocomplete="given-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Mario"></div>
+                                <div><label for="cf-cognome" class="block text-sm font-medium text-gray-700 mb-2">Cognome *</label><input id="cf-cognome" type="text" name="cognome" required autocomplete="family-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Rossi"></div>
+                            </div>
+                            <div><label for="cf-email" class="block text-sm font-medium text-gray-700 mb-2">Email aziendale *</label><input id="cf-email" type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="mario.rossi@azienda.it"></div>
+                            <div><label for="cf-telefono" class="block text-sm font-medium text-gray-700 mb-2">Telefono</label><input id="cf-telefono" type="tel" name="telefono" autocomplete="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="+39 123 456 7890"></div>
+                            <div><label for="cf-messaggio" class="block text-sm font-medium text-gray-700 mb-2">Messaggio</label><textarea id="cf-messaggio" name="messaggio" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none" placeholder="Quanti operatori, quanti reparti, quali sedi..."></textarea></div>
+                            <button type="submit" class="ty-btn w-full px-8 py-4 gradient-dark text-white text-lg font-semibold rounded-lg">Invia richiesta</button>
+                            <p class="text-sm text-gray-600">Inviando il modulo accetti la nostra <a href="privacy-policy.html" class="text-primary-dark underline">Privacy Policy</a>.</p>
+                        </form>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600">Preferisci la posta? Scrivici a <a href="mailto:info@tymetric.com" class="text-primary-dark underline">info@tymetric.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-8">
+                <div class="lg:col-span-1 flex flex-col gap-3.5">
+                    <div class="flex items-center gap-2"><img src="favicon.png" alt="" class="h-8 w-8" width="32" height="32"><span class="text-2xl font-bold text-primary-light">tymetric</span></div>
+                    <p class="text-[15px] leading-relaxed text-gray-400">Turni per la sanità: parla con i tuoi turni, l'AI lavora, tu approvi.</p>
+                </div>
+                <nav aria-label="Prodotto" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prodotto</span><a href="prodotto.html" class="text-[15px] text-gray-400 hover:text-primary-light">Panoramica</a><a href="turni-medici-ospedalieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni dei medici</a><a href="turni-infermieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni degli infermieri</a><a href="generazione-automatica-turni.html" class="text-[15px] text-gray-400 hover:text-primary-light">Generazione automatica</a><a href="turni-intelligenza-artificiale.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni con l'AI</a><a href="app-turni-personale.html" class="text-[15px] text-gray-400 hover:text-primary-light">App per il personale</a><a href="prodotto.html#struttura" class="text-[15px] text-gray-400 hover:text-primary-light">Pannello per la struttura</a></nav>
+                <nav aria-label="Prezzi" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prezzi</span><a href="prezzi.html" class="text-[15px] text-gray-400 hover:text-primary-light">Listino e simulatore</a><a href="prezzi.html#offerte" class="text-[15px] text-gray-400 hover:text-primary-light">Struttura su richiesta</a></nav>
+                <nav aria-label="Compliance" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Compliance</span><a href="gdpr.html" class="text-[15px] text-gray-400 hover:text-primary-light">GDPR</a><a href="ai-act.html" class="text-[15px] text-gray-400 hover:text-primary-light">AI Act</a></nav>
+                <nav aria-label="Azienda" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Azienda</span><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer" class="text-[15px] text-gray-400 hover:text-primary-light">Chi siamo</a><a href="blog.html" class="text-[15px] text-gray-400 hover:text-primary-light">Blog</a><a href="privacy-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Privacy policy</a><a href="cookie-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Cookie policy</a></nav>
+                <div class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Contatti</span><span class="text-[15px] leading-normal text-gray-400">Corso Unione Sovietica 341<br>Torino (TO)</span><a href="mailto:info@tymetric.com" class="text-[15px] text-gray-400 hover:text-primary-light">info@tymetric.com</a></div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-wrap justify-between gap-3 text-sm text-gray-400">
+                <span>&copy; 2026 GDP Analytics s.r.l. · P.IVA 11975840015 · Corso Unione Sovietica 341, Torino (TO)</span>
+                <span>Made in Italy</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA fissa su mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
+        <div class="ty-sticky-actions">
+            <button type="button" onclick="openBooking()" class="ty-sticky-btn gradient-dark text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                Prenota una demo
+            </button>
+            <button type="button" onclick="openChat()" class="ty-sticky-btn ty-cta-outline">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
+                Chiedi a Mya
+            </button>
+        </div>
+    </div>
+
+    <!-- Calcolatore prezzi: base 20 operatori + tariffa per fascia -->
+    <script>
+        (function () {
+            var BASE = { ops: 20, price: 1190 };
+            var FASCE = [
+                { da: 21, a: 40, annuo: 54 },
+                { da: 41, a: 60, annuo: 48 },
+                { da: 61, a: 80, annuo: 42 },
+                { da: 81, a: 100, annuo: 36 }
+            ];
+            var MAX = 100;
+
+            var input = document.getElementById('ty-ops');
+            var range = document.getElementById('ty-range');
+            var boxResult = document.getElementById('calc-result');
+            var boxOver = document.getElementById('calc-over');
+            var boxEmpty = document.getElementById('calc-empty');
+
+            function fmt(x) {
+                return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            }
+
+            function calcola(n) {
+                n = Math.max(n, BASE.ops);
+                var righe = [{ label: 'Base', detail: BASE.ops + ' operatori', price: BASE.price }];
+                FASCE.forEach(function (f) {
+                    var quanti = Math.min(n, f.a) - f.da + 1;
+                    if (quanti > 0) {
+                        righe.push({
+                            label: f.da + '°–' + Math.min(n, f.a) + '° operatore',
+                            detail: quanti + ' × ' + f.annuo + ' €',
+                            price: quanti * f.annuo
+                        });
+                    }
+                });
+                var totale = righe.reduce(function (s, r) { return s + r.price; }, 0);
+                return { n: n, totale: totale, perMese: Math.round(totale / n / 12 * 100) / 100, righe: righe };
+            }
+            window.tyCalcolaPrezzo = calcola;
+
+            function show(box) {
+                [boxResult, boxOver, boxEmpty].forEach(function (b) { b.hidden = (b !== box); });
+            }
+
+            function render() {
+                var n = parseInt(input.value, 10);
+                if (isNaN(n) || n < 1) {
+                    show(boxEmpty);
+                    return;
+                }
+                range.value = Math.min(Math.max(n, 20), 101);
+                if (n > MAX) {
+                    show(boxOver);
+                    return;
+                }
+                show(boxResult);
+                var r = calcola(n);
+                document.getElementById('calc-perop').textContent = r.perMese.toFixed(2).replace('.', ',') + ' €';
+                document.getElementById('calc-total').textContent = fmt(r.totale) + " € l'anno, IVA esclusa";
+                document.getElementById('calc-lines').innerHTML = r.righe.map(function (line) {
+                    return '<li class="flex justify-between items-center gap-3 px-4 py-3.5 border-b border-gray-100">' +
+                        '<span class="flex flex-col gap-0.5"><span class="text-base font-semibold text-gray-900">' + line.label + '</span>' +
+                        '<span class="text-sm text-gray-600">' + line.detail + '</span></span>' +
+                        '<span class="text-base font-semibold text-gray-900">' + fmt(line.price) + ' €</span></li>';
+                }).join('');
+            }
+
+            function setN(v) {
+                input.value = v;
+                render();
+            }
+
+            input.addEventListener('input', render);
+            range.addEventListener('input', function () { setN(range.value); });
+            document.getElementById('ty-inc').addEventListener('click', function () {
+                var n = parseInt(input.value, 10);
+                setN(isNaN(n) ? 20 : n + 1);
+            });
+            document.getElementById('ty-dec').addEventListener('click', function () {
+                var n = parseInt(input.value, 10);
+                setN(isNaN(n) || n <= 1 ? 1 : n - 1);
+            });
+            document.querySelectorAll('[data-preset]').forEach(function (btn) {
+                btn.addEventListener('click', function () { setN(btn.getAttribute('data-preset')); });
+            });
+
+            render();
+        })();
+    </script>
+</body>
+
+</html>

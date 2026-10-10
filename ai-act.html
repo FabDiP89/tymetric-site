@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Consenso cookie: Google Analytics, Google Ads e Tag Manager partono solo dopo il consenso (vedi /js/consent.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        (function () {
+            var c = { a: false, m: false };
+            try { var v = JSON.parse(localStorage.getItem('tyConsent') || 'null'); if (v && v.v === 1 && Date.now() - v.t < 15552000000) c = v; } catch (e) {}
+            function s(x) { return x ? 'granted' : 'denied'; }
+            gtag('consent', 'default', { analytics_storage: s(c.a), ad_storage: s(c.m), ad_user_data: s(c.m), ad_personalization: s(c.m), functionality_storage: 'granted', security_storage: 'granted' });
+            gtag('set', 'ads_data_redaction', true);
+        })();
+    </script>
+    <script src="/js/consent.js" defer></script>
+
+    <title>AI Act: dove c'è AI, chi decide, le scadenze | Tymetric</title>
+    <meta name="description"
+        content="Come Tymetric si prepara all'AI Act: le funzioni AI, la supervisione del coordinatore, i ruoli di fornitore e deployer, il calendario aggiornato e cosa prepariamo per il 2 dicembre 2027.">
+    <link rel="canonical" href="https://tymetric.com/ai-act.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tymetric.com/ai-act.html">
+    <meta property="og:title" content="Tymetric e AI Act: dove c'è AI, chi decide, le scadenze">
+    <meta property="og:description" content="Funzioni AI, supervisione umana, ruoli di fornitore e deployer e calendario dell'AI Act.">
+    <meta property="og:image" content="https://tymetric.com/im1.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Tymetric e AI Act: dove c'è AI, chi decide, le scadenze">
+    <meta property="twitter:description" content="Funzioni AI, supervisione umana, ruoli di fornitore e deployer e calendario dell'AI Act.">
+    <meta property="twitter:image" content="https://tymetric.com/im1.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tymetric.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Compliance" },
+            { "@type": "ListItem", "position": 3, "name": "AI Act", "item": "https://tymetric.com/ai-act.html" }
+        ]
+    }
+    </script>
+
+    <script src="js/site.js" defer></script>
+</head>
+
+<body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
+
+    <!-- Navigazione -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-6">
+                <a href="index.html" class="flex items-center gap-2" aria-label="Tymetric, home">
+                    <img src="favicon.png" alt="" class="h-8 w-8" width="32" height="32">
+                    <span class="text-2xl font-bold text-primary tracking-tight">tymetric</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8" aria-label="Navigazione principale">
+                    <div class="ty-dd py-3">
+                        <a href="prodotto.html" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Prodotto
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="ty-dd-menu">
+                            <a href="prodotto.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Panoramica</span><span class="text-[13px] text-gray-600">AI, interfaccia, motore e app</span></a>
+                            <a href="turni-medici-ospedalieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni dei medici</span><span class="text-[13px] text-gray-600">Guardie, reperibilità, competenze</span></a>
+                            <a href="turni-infermieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni degli infermieri</span><span class="text-[13px] text-gray-600">Notti eque, riposi, esigenze personali</span></a>
+                            <a href="generazione-automatica-turni.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Generazione automatica</span><span class="text-[13px] text-gray-600">Il motore e le sue regole</span></a>
+                            <a href="turni-intelligenza-artificiale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni con l'AI</span><span class="text-[13px] text-gray-600">Modalità Deep planning e Mya</span></a>
+                            <a href="app-turni-personale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">App per il personale</span><span class="text-[13px] text-gray-600">Turni, desiderata, cambi turno</span></a>
+                        </div>
+                    </div>
+                    <a href="prezzi.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Prezzi</a>
+                    <div class="ty-dd py-3">
+                        <button type="button" class="inline-flex items-center gap-1 text-[15px] font-bold text-primary-dark" aria-haspopup="true">
+                            Compliance
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="ty-dd-menu">
+                            <a href="gdpr.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">GDPR</span><span class="text-[13px] text-gray-600">Dati, ruoli, misure, conservazione</span></a>
+                            <a href="ai-act.html" aria-current="page" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">AI Act</span><span class="text-[13px] text-gray-600">Cosa fa l'AI, chi decide, le scadenze</span></a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Blog</a>
+                    <a href="#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Prenota una demo</a>
+                </nav>
+                <button id="mobile-menu-button" type="button" class="md:hidden p-2 -mr-2 rounded-lg text-gray-900" onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Apri il menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 flex flex-col gap-1">
+                <a href="prodotto.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prodotto</a>
+                <a href="turni-medici-ospedalieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni dei medici</a>
+                <a href="turni-infermieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni degli infermieri</a>
+                <a href="generazione-automatica-turni.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Generazione automatica</a>
+                <a href="turni-intelligenza-artificiale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni con l'AI</a>
+                <a href="app-turni-personale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">App per il personale</a>
+                <a href="prezzi.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prezzi</a>
+                <span class="pt-2 text-xs font-bold uppercase tracking-wider text-gray-600">Compliance</span>
+                <a href="gdpr.html" class="py-2.5 text-gray-700 hover:text-primary-dark">GDPR</a>
+                <a href="ai-act.html" class="py-2.5 text-primary-dark font-semibold">AI Act</a>
+                <a href="blog.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Blog</a>
+                <a href="#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Prenota una demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Intestazione -->
+        <section class="gradient-night text-white pt-14 pb-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6">
+                <nav aria-label="Percorso" class="flex gap-2 text-sm text-gray-300"><a href="index.html" class="hover:text-white">Home</a><span aria-hidden="true">/</span><span>Compliance</span><span aria-hidden="true">/</span><span class="text-white font-semibold" aria-current="page">AI Act</span></nav>
+                <nav aria-label="Sezioni compliance" class="self-start flex gap-1.5 p-1.5 rounded-xl bg-white/10">
+                    <a href="gdpr.html" class="px-5 py-2.5 rounded-lg text-white text-[15px] font-semibold hover:bg-white/10">GDPR</a>
+                    <a href="ai-act.html" aria-current="page" class="px-5 py-2.5 rounded-lg bg-white text-primary-dark text-[15px] font-bold">AI Act</a>
+                </nav>
+                <h1 class="text-4xl lg:text-[52px] leading-[1.12] font-extrabold tracking-tight max-w-5xl text-balance">Dove c'è AI in Tymetric, chi decide e come ci prepariamo all'AI Act</h1>
+                <p class="text-[19px] leading-relaxed text-gray-300 max-w-3xl">Il regolamento europeo sull'intelligenza artificiale assegna obblighi diversi a chi fornisce un sistema e a chi lo usa. Qui trovate i nostri, i vostri e le date, con le fonti ufficiali.</p>
+                <span class="text-sm text-gray-400">Calendario verificato a ottobre 2026</span>
+            </div>
+        </section>
+
+        <!-- Corpo -->
+        <section class="pt-16 pb-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[240px_1fr] gap-12 items-start">
+                <nav aria-label="In questa pagina" class="lg:sticky lg:top-24 flex flex-col gap-0.5 p-4 border border-gray-200 rounded-[14px] bg-gray-50">
+                    <span class="px-3 pt-1 pb-2 text-xs font-bold uppercase tracking-wider text-gray-600">In questa pagina</span>
+                    <a href="#funzioni" class="block px-3 py-2 rounded-lg text-[15px] text-gray-700 hover:bg-brand-150 hover:text-primary-dark">Dove c'è AI</a>
+                    <a href="#supervisione" class="block px-3 py-2 rounded-lg text-[15px] text-gray-700 hover:bg-brand-150 hover:text-primary-dark">Chi decide</a>
+                    <a href="#ruoli" class="block px-3 py-2 rounded-lg text-[15px] text-gray-700 hover:bg-brand-150 hover:text-primary-dark">Fornitore e deployer</a>
+                    <a href="#scadenze" class="block px-3 py-2 rounded-lg text-[15px] text-gray-700 hover:bg-brand-150 hover:text-primary-dark">Le scadenze</a>
+                    <a href="#prepariamo" class="block px-3 py-2 rounded-lg text-[15px] text-gray-700 hover:bg-brand-150 hover:text-primary-dark">Cosa prepariamo</a>
+                    <a href="#fonti" class="block px-3 py-2 rounded-lg text-[15px] text-gray-700 hover:bg-brand-150 hover:text-primary-dark">Fonti</a>
+                </nav>
+
+                <div class="min-w-0 flex flex-col gap-[72px]">
+                    <!-- Funzioni -->
+                    <section id="funzioni" class="scroll-mt-24 flex flex-col gap-6" aria-labelledby="h-funzioni">
+                        <div class="flex flex-col gap-2.5">
+                            <h2 id="h-funzioni" class="text-[32px] leading-tight font-bold text-gray-900">Dove c'è AI, e cosa fa</h2>
+                            <p class="text-[17px] leading-relaxed text-gray-600">Consultare, proporre un'operazione e proporre un piano sono usi diversi: li descriviamo uno per uno.</p>
+                        </div>
+                        <div class="overflow-x-auto border border-gray-200 rounded-[14px]">
+                            <table class="w-full min-w-[680px] text-[15px] leading-normal">
+                                <thead><tr class="bg-gray-50"><th scope="col" class="text-left px-5 py-3.5 text-[13px] font-bold text-gray-600 w-[26%]">Funzione</th><th scope="col" class="text-left px-5 py-3.5 text-[13px] font-bold text-gray-600 w-[36%]">Cosa fa</th><th scope="col" class="text-left px-5 py-3.5 text-[13px] font-bold text-gray-600">Chi decide</th></tr></thead>
+                                <tbody>
+                                    <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Mya, domande</th><td class="px-5 py-3.5 text-gray-700">Risponde su dati del reparto e funzionamento del sistema</td><td class="px-5 py-3.5 text-gray-700">Nessuna decisione: non modifica il piano</td></tr>
+                                    <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Mya, operazioni</th><td class="px-5 py-3.5 text-gray-700">Prepara assegnazioni, scambi, turni fissati, rigenerazioni, modifiche al fabbisogno</td><td class="px-5 py-3.5 text-gray-700">Il coordinatore, da un'anteprima</td></tr>
+                                    <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Deep planning</th><td class="px-5 py-3.5 text-gray-700">Propone il piano del mese dopo aver fatto le domande che servono. Se un'operazione viola un vincolo, lo segnala e chiede l'autorizzazione in chat</td><td class="px-5 py-3.5 text-gray-700">Entra in pianificazione solo dopo l'approvazione</td></tr>
+                                    <tr class="border-t border-gray-200"><th scope="row" class="text-left px-5 py-3.5 font-semibold text-gray-900">Motore di pianificazione</th><td class="px-5 py-3.5 text-gray-700">Propone la turnazione con le regole e i pesi impostati dal reparto</td><td class="px-5 py-3.5 text-gray-700">Il coordinatore fissa, corregge, rigenera e pubblica</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Supervisione -->
+                    <section id="supervisione" class="scroll-mt-24 flex flex-col gap-6" aria-labelledby="h-supervisione">
+                        <h2 id="h-supervisione" class="text-[32px] leading-tight font-bold text-gray-900">Chi decide: il coordinatore, nel merito</h2>
+                        <ul class="grid sm:grid-cols-2 gap-4">
+                            <li class="p-5 rounded-[14px] bg-gray-50 flex flex-col gap-2"><span class="text-[17px] font-bold text-gray-900">Anteprima prima di ogni azione</span><span class="text-[15px] leading-relaxed text-gray-600">Mya mostra cosa cambierà. Si conferma, si corregge o si respinge.</span></li>
+                            <li class="p-5 rounded-[14px] bg-gray-50 flex flex-col gap-2"><span class="text-[17px] font-bold text-gray-900">Spiegazioni verificabili</span><span class="text-[15px] leading-relaxed text-gray-600">Candidati e riposi dicono il loro motivo con le regole del reparto, non con testo generato.</span></li>
+                            <li class="p-5 rounded-[14px] bg-gray-50 flex flex-col gap-2"><span class="text-[17px] font-bold text-gray-900">Decisioni protette</span><span class="text-[15px] leading-relaxed text-gray-600">I turni fissati dal coordinatore restano dove sono: il motore pianifica intorno.</span></li>
+                            <li class="p-5 rounded-[14px] bg-gray-50 flex flex-col gap-2"><span class="text-[17px] font-bold text-gray-900">Ogni modifica ha un autore</span><span class="text-[15px] leading-relaxed text-gray-600">Lo storico registra chi ha pubblicato o modificato ogni turno, quando e con quale contenuto.</span></li>
+                        </ul>
+                        <p class="px-5 py-4 rounded-xl bg-brand-50 border border-brand-200 text-[15px] leading-relaxed text-brand-800">Una conferma con un clic non basta: la supervisione deve essere sostanziale. Per questo diamo al coordinatore vincoli, motivi e modifiche, non un pulsante «approva tutto».</p>
+                    </section>
+
+                    <!-- Ruoli -->
+                    <section id="ruoli" class="scroll-mt-24 flex flex-col gap-6" aria-labelledby="h-ruoli">
+                        <div class="flex flex-col gap-2.5">
+                            <h2 id="h-ruoli" class="text-[32px] leading-tight font-bold text-gray-900">Fornitore e deployer</h2>
+                            <p class="text-[17px] leading-relaxed text-gray-600">Sono ruoli diversi da quelli del GDPR: essere responsabile del trattamento non esclude essere fornitore del sistema AI.</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div class="p-7 rounded-2xl border-2 border-primary flex flex-col gap-3.5">
+                                <div class="flex flex-col gap-0.5"><span class="text-[13px] font-bold uppercase tracking-wider text-primary-dark">Fornitore</span><span class="text-[21px] font-bold text-gray-900">Tymetric</span></div>
+                                <p class="text-[15px] leading-relaxed text-gray-600">Immette il sistema sul mercato con il proprio nome, anche se integra un modello di terzi. Per un sistema ad alto rischio:</p>
+                                <ul class="list-disc pl-5 flex flex-col gap-1.5 text-[15px] leading-normal text-gray-700"><li>gestione dei rischi e della qualità</li><li>documentazione tecnica e tracciabilità</li><li>supervisione umana progettata nel prodotto</li><li>valutazione di conformità, dichiarazione UE, marcatura CE, registrazione</li><li>monitoraggio dopo l'immissione sul mercato</li></ul>
+                            </div>
+                            <div class="p-7 rounded-2xl border-2 border-gray-900 flex flex-col gap-3.5">
+                                <div class="flex flex-col gap-0.5"><span class="text-[13px] font-bold uppercase tracking-wider text-gray-600">Deployer</span><span class="text-[21px] font-bold text-gray-900">La struttura sanitaria</span></div>
+                                <p class="text-[15px] leading-relaxed text-gray-600">Usa il sistema sotto la propria autorità. Per un sistema ad alto rischio:</p>
+                                <ul class="list-disc pl-5 flex flex-col gap-1.5 text-[15px] leading-normal text-gray-700"><li>supervisione affidata a persone competenti</li><li>uso secondo le istruzioni e monitoraggio</li><li>informazione dei lavoratori e dei loro rappresentanti</li><li>log sotto il proprio controllo conservati per almeno sei mesi</li><li>per gli enti pubblici, la valutazione d'impatto sui diritti fondamentali (FRIA)</li></ul>
+                            </div>
+                        </div>
+                        <p class="text-[15px] leading-relaxed text-gray-600">Le garanzie del modello o del cloud non rendono conforme l'applicazione: la conformità di Tymetric è responsabilità nostra.</p>
+                    </section>
+
+                    <!-- Scadenze -->
+                    <section id="scadenze" class="scroll-mt-24 flex flex-col gap-6" aria-labelledby="h-scadenze">
+                        <div class="flex flex-col gap-2.5">
+                            <h2 id="h-scadenze" class="text-[32px] leading-tight font-bold text-gray-900">Le scadenze</h2>
+                            <p class="text-[17px] leading-relaxed text-gray-600">Calendario aggiornato dall'AI Omnibus, in vigore dal 27 luglio 2026.</p>
+                        </div>
+                        <ol class="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                            <li class="border-t-4 border-primary-dark pt-4 px-1 flex flex-col gap-1.5"><span class="text-[13px] font-bold text-primary-dark">IN VIGORE</span><span class="text-lg font-bold text-gray-900">2 febbraio 2025</span><span class="text-sm leading-normal text-gray-600">Pratiche vietate e alfabetizzazione AI</span></li>
+                            <li class="border-t-4 border-primary-dark pt-4 px-1 flex flex-col gap-1.5"><span class="text-[13px] font-bold text-primary-dark">IN VIGORE</span><span class="text-lg font-bold text-gray-900">2 agosto 2025</span><span class="text-sm leading-normal text-gray-600">Modelli di AI per finalità generali</span></li>
+                            <li class="border-t-4 border-primary-dark pt-4 px-1 flex flex-col gap-1.5"><span class="text-[13px] font-bold text-primary-dark">IN VIGORE</span><span class="text-lg font-bold text-gray-900">2 agosto 2026</span><span class="text-sm leading-normal text-gray-600">Applicazione generale e regole di trasparenza</span></li>
+                            <li class="border-t-4 border-amber-500 pt-4 px-3 pb-4 rounded-b-xl bg-amber-50 flex flex-col gap-1.5"><span class="text-[13px] font-bold text-amber-800">PROSSIMA</span><span class="text-lg font-bold text-gray-900">2 dicembre 2027</span><span class="text-sm leading-normal text-gray-600">Alto rischio dell'Allegato III, incluso il lavoro</span></li>
+                            <li class="border-t-4 border-dashed border-gray-400 pt-4 px-1 flex flex-col gap-1.5"><span class="text-[13px] font-bold text-gray-600">PIÙ AVANTI</span><span class="text-lg font-bold text-gray-900">2 agosto 2028</span><span class="text-sm leading-normal text-gray-600">Alto rischio nei prodotti regolamentati (Allegato I)</span></li>
+                        </ol>
+                        <p class="text-[15px] leading-relaxed text-gray-600">Il GDPR si applica già: le date dell'AI Act non sospendono gli obblighi sulla protezione dei dati. <a href="gdpr.html" class="text-primary-dark underline hover:text-primary">Vai alla pagina GDPR</a></p>
+                    </section>
+
+                    <!-- Cosa prepariamo -->
+                    <section id="prepariamo" class="scroll-mt-24 flex flex-col gap-6 p-8 md:p-10 rounded-[20px] bg-brand-50 border border-brand-200" aria-labelledby="h-prepariamo">
+                        <div class="flex flex-col gap-2.5">
+                            <h2 id="h-prepariamo" class="text-[32px] leading-tight font-bold text-gray-900">Cosa prepariamo per il 2 dicembre 2027</h2>
+                            <p class="text-[17px] leading-relaxed text-gray-700">E cosa vi consegniamo per fare la vostra parte.</p>
+                        </div>
+                        <ul class="grid sm:grid-cols-2 gap-3">
+                            <li class="p-4 rounded-xl bg-white border border-gray-200 flex flex-col gap-1"><span class="text-base font-bold text-gray-900">Dossier AI</span><span class="text-sm leading-normal text-gray-600">Uso previsto, limiti, verifiche, supervisione</span></li>
+                            <li class="p-4 rounded-xl bg-white border border-gray-200 flex flex-col gap-1"><span class="text-base font-bold text-gray-900">Istruzioni per l'uso</span><span class="text-sm leading-normal text-gray-600">Per i coordinatori che supervisionano le proposte</span></li>
+                            <li class="p-4 rounded-xl bg-white border border-gray-200 flex flex-col gap-1"><span class="text-base font-bold text-gray-900">Supporto alla FRIA</span><span class="text-sm leading-normal text-gray-600">Può integrare o richiamare parti della DPIA</span></li>
+                            <li class="p-4 rounded-xl bg-white border border-gray-200 flex flex-col gap-1"><span class="text-base font-bold text-gray-900">Informazioni per i lavoratori</span><span class="text-sm leading-normal text-gray-600">Cosa fa il sistema e come contestare una decisione</span></li>
+                        </ul>
+                        <a href="#contact" class="ty-btn self-start inline-flex items-center gap-2 px-6 py-3.5 rounded-[10px] gradient-dark text-white text-base font-semibold">Parliamone con il vostro DPO</a>
+                    </section>
+
+                    <!-- Fonti -->
+                    <section id="fonti" class="scroll-mt-24 flex flex-col gap-4 pt-8 border-t border-gray-200" aria-labelledby="h-fonti">
+                        <h2 id="h-fonti" class="text-[22px] font-bold text-gray-900">Fonti</h2>
+                        <ul class="list-disc pl-5 grid md:grid-cols-2 gap-x-8 gap-y-2 text-[15px] leading-normal">
+                            <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3" target="_blank" rel="noopener noreferrer" class="text-primary-dark underline hover:text-primary">AI Act: Allegato III</a></li>
+                            <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6" target="_blank" rel="noopener noreferrer" class="text-primary-dark underline hover:text-primary">AI Act: articolo 6</a></li>
+                            <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-16" target="_blank" rel="noopener noreferrer" class="text-primary-dark underline hover:text-primary">AI Act: articolo 16, obblighi del fornitore</a></li>
+                            <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-26" target="_blank" rel="noopener noreferrer" class="text-primary-dark underline hover:text-primary">AI Act: articolo 26, obblighi del deployer</a></li>
+                            <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-27" target="_blank" rel="noopener noreferrer" class="text-primary-dark underline hover:text-primary">AI Act: articolo 27, FRIA</a></li>
+                            <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener noreferrer" class="text-primary-dark underline hover:text-primary">Commissione europea: AI Act e calendario</a></li>
+                            <li><a href="https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en" target="_blank" rel="noopener noreferrer" class="text-primary-dark underline hover:text-primary">Commissione: decisioni automatizzate</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section id="contact" class="py-24 gradient-dark">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-7 text-center">
+                <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-white text-balance">Prepariamo insieme l'AI Act</h2>
+                <p class="text-xl leading-relaxed text-white max-w-2xl">Un incontro con DPO, ufficio legale e chi segue le relazioni sindacali.</p>
+                <div class="w-full bg-white rounded-2xl p-6 md:p-9 shadow-2xl">
+                    <div class="ty-cta-actions">
+                        <button type="button" onclick="openBooking()" class="ty-cta-btn gradient-dark text-white">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            Prenota una demo
+                        </button>
+                        <button type="button" onclick="openForm()" class="ty-cta-btn ty-cta-outline">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Scrivici
+                        </button>
+                        <button type="button" onclick="openChat()" class="ty-cta-btn ty-cta-outline">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
+                            Chiedi a Mya
+                        </button>
+                    </div>
+                    <p class="ty-cta-note">🔒 Conversazione riservata. I dati che ti chiederemo servono solo a inviarti l'NDA e una copia della conversazione. Consulta la <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                    <div id="ty-form-wrap" class="mt-6 pt-6 border-t border-gray-200 text-left" hidden>
+                        <form id="contact-form" class="flex flex-col gap-5">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div><label for="cf-nome" class="block text-sm font-medium text-gray-700 mb-2">Nome *</label><input id="cf-nome" type="text" name="nome" required autocomplete="given-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Mario"></div>
+                                <div><label for="cf-cognome" class="block text-sm font-medium text-gray-700 mb-2">Cognome *</label><input id="cf-cognome" type="text" name="cognome" required autocomplete="family-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Rossi"></div>
+                            </div>
+                            <div><label for="cf-email" class="block text-sm font-medium text-gray-700 mb-2">Email aziendale *</label><input id="cf-email" type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="mario.rossi@azienda.it"></div>
+                            <div><label for="cf-telefono" class="block text-sm font-medium text-gray-700 mb-2">Telefono</label><input id="cf-telefono" type="tel" name="telefono" autocomplete="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="+39 123 456 7890"></div>
+                            <div><label for="cf-messaggio" class="block text-sm font-medium text-gray-700 mb-2">Messaggio</label><textarea id="cf-messaggio" name="messaggio" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none" placeholder="Raccontaci le tue esigenze..."></textarea></div>
+                            <button type="submit" class="ty-btn w-full px-8 py-4 gradient-dark text-white text-lg font-semibold rounded-lg">Invia richiesta</button>
+                            <p class="text-sm text-gray-600">Inviando il modulo accetti la nostra <a href="privacy-policy.html" class="text-primary-dark underline">Privacy Policy</a>.</p>
+                        </form>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600">Preferisci la posta? Scrivici a <a href="mailto:info@tymetric.com" class="text-primary-dark underline">info@tymetric.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-8">
+                <div class="lg:col-span-1 flex flex-col gap-3.5">
+                    <div class="flex items-center gap-2"><img src="favicon.png" alt="" class="h-8 w-8" width="32" height="32"><span class="text-2xl font-bold text-primary-light">tymetric</span></div>
+                    <p class="text-[15px] leading-relaxed text-gray-400">Turni per la sanità: parla con i tuoi turni, l'AI lavora, tu approvi.</p>
+                </div>
+                <nav aria-label="Prodotto" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prodotto</span><a href="prodotto.html" class="text-[15px] text-gray-400 hover:text-primary-light">Panoramica</a><a href="turni-medici-ospedalieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni dei medici</a><a href="turni-infermieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni degli infermieri</a><a href="generazione-automatica-turni.html" class="text-[15px] text-gray-400 hover:text-primary-light">Generazione automatica</a><a href="turni-intelligenza-artificiale.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni con l'AI</a><a href="app-turni-personale.html" class="text-[15px] text-gray-400 hover:text-primary-light">App per il personale</a><a href="prodotto.html#struttura" class="text-[15px] text-gray-400 hover:text-primary-light">Pannello per la struttura</a></nav>
+                <nav aria-label="Prezzi" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prezzi</span><a href="prezzi.html" class="text-[15px] text-gray-400 hover:text-primary-light">Listino e simulatore</a><a href="prezzi.html#offerte" class="text-[15px] text-gray-400 hover:text-primary-light">Struttura su richiesta</a></nav>
+                <nav aria-label="Compliance" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Compliance</span><a href="gdpr.html" class="text-[15px] text-gray-400 hover:text-primary-light">GDPR</a><a href="ai-act.html" class="text-[15px] text-gray-400 hover:text-primary-light">AI Act</a></nav>
+                <nav aria-label="Azienda" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Azienda</span><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer" class="text-[15px] text-gray-400 hover:text-primary-light">Chi siamo</a><a href="blog.html" class="text-[15px] text-gray-400 hover:text-primary-light">Blog</a><a href="privacy-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Privacy policy</a><a href="cookie-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Cookie policy</a></nav>
+                <div class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Contatti</span><span class="text-[15px] leading-normal text-gray-400">Corso Unione Sovietica 341<br>Torino (TO)</span><a href="mailto:info@tymetric.com" class="text-[15px] text-gray-400 hover:text-primary-light">info@tymetric.com</a></div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-wrap justify-between gap-3 text-sm text-gray-400">
+                <span>&copy; 2026 GDP Analytics s.r.l. · P.IVA 11975840015 · Corso Unione Sovietica 341, Torino (TO)</span>
+                <span>Made in Italy</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA fissa su mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
+        <div class="ty-sticky-actions">
+            <button type="button" onclick="openBooking()" class="ty-sticky-btn gradient-dark text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                Prenota una demo
+            </button>
+            <button type="button" onclick="openChat()" class="ty-sticky-btn ty-cta-outline">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
+                Chiedi a Mya
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -27,7 +27,12 @@ Sito web ufficiale per Tymetric - Software di pianificazione turni con AI per il
 
 ```
 tymetric-site/
-├── index.html                          # Pagina principale
+├── index.html                          # Home: AI, Deep planning, interfaccia e motore, offerta
+├── prodotto.html                       # Prodotto: AI, interfaccia, motore, app, add-on struttura
+├── prezzi.html                         # Listino, calcolatore, struttura su richiesta
+├── gdpr.html                           # Compliance: GDPR
+├── ai-act.html                         # Compliance: AI Act
+├── js/site.js                          # Menu, cookie, modulo, appuntamento, chat Mya (tutte le nuove pagine)
 ├── blog.html                           # Lista articoli blog
 ├── cookie-policy.html                  # Cookie Policy
 ├── privacy-policy.html                 # Privacy Policy

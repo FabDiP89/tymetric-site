@@ -137,7 +137,7 @@
   {
     "categoria": "ORGANIZZAZIONE E LOGICHE DELL'ALGORITMO",
     "domanda": "Il primario vuole pianificare da solo i suoi giorni di presenza o i suoi congressi prima che io lanci l'algoritmo for il resto del comparto. Come gestisco questa priorità?",
-    "risposta": "Il coordinatore può inserire o bloccare preventivamente i turni e le disponibilità del primario direttamente sul pannello operativo. L'algoritmo, lavorando in modalità iterativa, prenderà queste pianificazioni manuali come punti fermi e immodificabili, adattando automaticamente la turnazione dei colleghi rimanenti intorno a esse."
+    "risposta": "Nel motore nessuno ha la precedenza: primario e colleghi hanno lo stesso peso. Le esigenze del primario si esprimono con limiti personali (disponibilità per fascia e giorno, congressi registrati come assenze, tetti di guardie o notti). Se un turno è già deciso, il coordinatore può fissarlo a mano sul pannello operativo: l'algoritmo, lavorando in modalità iterativa, lo tratta come punto fermo e adatta il resto della turnazione."
   },
   {
     "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
@@ -166,13 +166,13 @@
   },
   {
     "categoria": "COMMERCIALE, COSTI E PROGETTI PILOTA",
-    "domanda": "È possibile attivare un progetto pilota di prova? Come funziona la formazione iniziale?",
-    "risposta": "Sì, offriamo la possibilità di attivare un progetto pilota su una macchina dedicata in cloud per utilizzare il software in maniera totalmente gratuita per i primi 3 mesi. L'unico investimento richiesto in anticipo riguarda la sessione di formazione iniziale (della durata di circa 4-6 ore) indispensabile per allineare i dati del reparto e configurare le anagrafiche contrattuali."
+    "domanda": "Posso provare Tymetric prima di acquistarlo? Come funziona la formazione iniziale?",
+    "risposta": "Sì: i primi 3 mesi sono in prova senza canone per ogni reparto. Per le strutture che vogliono partire con più reparti c'è inoltre la possibilità di concordare un progetto pilota. La formazione iniziale dura circa 4-6 ore ed è indispensabile per allineare i dati del reparto e configurare le anagrafiche contrattuali."
   },
   {
     "categoria": "COMMERCIALE, COSTI E PROGETTI PILOTA",
     "domanda": "Quali sono i costi delle licenze e del canone per l'utilizzo di Tymetric?",
-    "risposta": "I primi 3 mesi di utilizzo sono completamente gratuiti in modalità progetto pilota. Per quanto riguarda le licenze e il canone successivo, il pricing dipendente da molteplici variabili della struttura (come il numero di professionisti, il tipo di personale medico o di comparto, la complessità delle unità operative e le integrazioni richieste). L'assistente virtuale non è autorizzato a fornire dettagli commerciali o preventivi economici; vi invitiamo a prendere appuntamento con un nostro consulente per una sessione dimostrativa e un'analisi dei costi su misura."
+    "risposta": "Il listino è pubblico, canone annuo IVA esclusa. La base copre i primi 20 operatori a 1.190 € l'anno. Ogni operatore oltre la base paga la tariffa della propria fascia: dal 21° al 40° operatore 4,50 € al mese (54 € l'anno), dal 41° al 60° 4,00 € (48 €), dal 61° all'80° 3,50 € (42 €), dall'81° al 100° 3,00 € (36 €). Più operatori si aggiungono, meno costa ciascuno. Alcuni esempi: 30 operatori 1.730 € l'anno, 45 operatori 2.510 €, 60 operatori 3.230 €, 100 operatori 4.790 €. Gli operatori aggiunti durante l'anno si pagano pro rata fino al rinnovo. Sono sempre incluse tutte le funzioni di interfaccia e motore, l'app per gli operatori e Mya. La modalità Deep planning non è nel listino: si valuta caso per caso, con fatturazione separata. I primi 3 mesi sono in prova senza canone. La configurazione iniziale è quotata a parte solo per l'avvio di una struttura. Oltre 100 operatori, o per l'intera struttura, il prezzo si definisce su richiesta. Per un calcolo immediato c'è il simulatore su tymetric.com/prezzi.html; per preventivi personalizzati l'assistente virtuale rimanda a un consulente."
   },
   {
     "categoria": "VARIE",
@@ -217,7 +217,7 @@
   {
     "categoria": "VARIE",
     "domanda": "Visibilità tra reparti (Chirurgia#1 e Chirurgia#2): Sono di Chirurgia#1, posso vedere le turnazioni di Chirurgia#2 per capire se posso usare medici in emergenza?",
-    "risposta": "Tymetric è pensato a compartimenti stagni con un sistema autorizzativo. Se fanno capo allo stesso coordinatore, entrambi i team vedono i turni di tutti. Se i coordinatori sono diversi, nessuno può interferire con l'altro. L'autorizzazione alla visualizzazione dei turni è comunque configurabile sia sull'app operatore che coordinatore."
+    "risposta": "No. I turni di ogni reparto li vedono solo gli operatori che vi appartengono e le figure amministrative e di coordinamento (coordinatori e amministrazione)."
   },
   {
     "categoria": "VARIE",
@@ -238,5 +238,40 @@
     "categoria": "VARIE",
     "domanda": "Accesso al software: come si accede a Tymetric? Dov'è il login? Non trovo l'indirizzo per entrare, ho perso il link di accesso o le credenziali.",
     "risposta": "L'accesso a Tymetric non avviene dal sito pubblico: ogni struttura ha un proprio indirizzo dedicato, comunicato al momento dell'attivazione. Se non lo conosci o non lo ricordi, la via più rapida è chiederlo al coordinatore o al referente interno che segue Tymetric nella tua struttura: è la stessa persona che gestisce gli account. In alternativa puoi scrivere a info@tymetric.com. Da questa chat non posso fornire indirizzi di accesso, credenziali né reimpostare password."
+  },
+  {
+    "categoria": "PRODOTTO E AI",
+    "domanda": "Cos'è la modalità Deep planning? Come funziona la pianificazione del mese con l'AI?",
+    "risposta": "La modalità Deep planning pianifica il mese intero insieme al coordinatore. Il coordinatore racconta il mese con parole sue (chi fa i cicli, chi ha un'esigenza particolare, quali eccezioni concede, anche allegando le indicazioni del primario); chiede solo quando serve, simula e rivede il piano settimana per settimana e produce un resoconto con coperture, eccezioni usate, anomalie rimaste e cosa riportare nel gestionale. Nel calendario non cambia nulla finché il coordinatore non approva. Il riposo dopo la notte, i turni già pubblicati e le assenze restano protetti, salvo eccezioni scritte dal coordinatore. Deep planning si attiva su richiesta, per ogni struttura, con fatturazione separata."
+  },
+  {
+    "categoria": "PRODOTTO E AI",
+    "domanda": "Cosa fa Mya dentro l'applicazione? È l'AI a decidere i turni?",
+    "risposta": "Nell'applicazione Mya risponde alle domande sui dati del reparto e sul funzionamento del sistema, e può preparare operazioni sul piano (assegnazioni, scambi, turni fissati, rigenerazioni, modifiche al fabbisogno). Ogni azione passa da un'anteprima e dalla conferma del coordinatore. Non decide l'AI: propone e prepara, il coordinatore approva, corregge o respinge. Ogni modifica ha un autore nello storico. Mya dentro l'app è un servizio distinto da Mya sul sito. Il motore di pianificazione non viola mai i vincoli e rispetta le preferenze; nella modalità Deep planning, invece, se un'operazione viola un vincolo Mya lo segnala e chiede l'autorizzazione del coordinatore in chat."
+  },
+  {
+    "categoria": "COMPLIANCE E NORMATIVA",
+    "domanda": "Quale intelligenza artificiale usate e dove vengono elaborati i dati? Vengono usati per addestrare i modelli?",
+    "risposta": "L'AI di Tymetric usa sempre modelli di frontiera, tramite Amazon Bedrock, e l'elaborazione è configurata nell'Unione europea. I dati non vengono usati per addestrare i modelli e il servizio non conserva prompt e risposte (zero retention); le conversazioni restano in Tymetric, per reparto e sessione. Per i dettagli su ruoli, misure, conservazione e documenti per il DPO c'è la pagina tymetric.com/gdpr.html; sul calendario dell'AI Act, tymetric.com/ai-act.html."
+  },
+  {
+    "categoria": "COMPLIANCE E NORMATIVA",
+    "domanda": "Chi è il titolare e chi il responsabile del trattamento? Fornite documenti per il DPO?",
+    "risposta": "La struttura sanitaria è titolare del trattamento; Tymetric (GDP Analytics s.r.l.) è responsabile ai sensi dell'art. 28 GDPR e tratta i dati su istruzione della struttura; Amazon Web Services è sub-responsabile per le funzioni AI. Prima dell'attivazione si completa con la struttura un fascicolo per il DPO (accordo art. 28, mappa dei trattamenti, fornitori e AWS, matrice di accesso, matrice di conservazione, procedure operative, supporto alla DPIA). Maggiori informazioni su tymetric.com/gdpr.html; per un incontro con il DPO si può prenotare un appuntamento."
+  },
+  {
+    "categoria": "COMPLIANCE E NORMATIVA",
+    "domanda": "Dove è ospitata l'applicazione? Si può installare in locale?",
+    "risposta": "L'applicazione è ospitata nell'Unione europea. Su richiesta la struttura può installarla in locale, presso di sé. L'unica parte che non può essere installata in locale è la modalità Deep planning, che usa Amazon Bedrock."
+  },
+  {
+    "categoria": "COMMERCIALE, COSTI E PROGETTI PILOTA",
+    "domanda": "Chi usa già Tymetric? Avete referenze?",
+    "risposta": "Tymetric è già in uso in reparti ospedalieri italiani e siamo stati selezionati per esporre all'AIIC 2026 di Torino. Per riservatezza non citiamo pubblicamente i nomi delle strutture."
+  },
+  {
+    "categoria": "VARIE",
+    "domanda": "La demo viene fatta sui dati reali del mio reparto?",
+    "risposta": "No. Le demo si fanno su dati anonimizzati, in un ambiente dimostrativo, mai sul personale reale. Per costruire una demo vicina al tuo reparto basta raccontare regole e organizzazione, con nomi di fantasia."
   }
 ]

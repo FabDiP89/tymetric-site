@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PM6KM6HZ');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google Analytics GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFYFCYZ4Z6"></script>
+    <!-- Consenso cookie: Google Analytics, Google Ads e Tag Manager partono solo dopo il consenso (vedi /js/consent.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QFYFCYZ4Z6');
+        (function () {
+            var c = { a: false, m: false };
+            try { var v = JSON.parse(localStorage.getItem('tyConsent') || 'null'); if (v && v.v === 1 && Date.now() - v.t < 15552000000) c = v; } catch (e) {}
+            function s(x) { return x ? 'granted' : 'denied'; }
+            gtag('consent', 'default', { analytics_storage: s(c.a), ad_storage: s(c.m), ad_user_data: s(c.m), ad_personalization: s(c.m), functionality_storage: 'granted', security_storage: 'granted' });
+            gtag('set', 'ads_data_redaction', true);
+        })();
     </script>
+    <script src="/js/consent.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,10 +38,6 @@
     </style>
 </head>
 <body class="font-sans antialiased">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM6KM6HZ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
@@ -54,9 +47,9 @@
                     <a href="./" class="text-2xl font-bold text-primary">Tymetric</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="./#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
-                    <a href="./#solutions" class="text-gray-700 hover:text-primary transition-colors">Soluzioni</a>
-                    <a href="./#screenshots" class="text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                    <a href="./prodotto.html" class="text-gray-700 hover:text-primary transition-colors">Prodotto</a>
+                    <a href="./prezzi.html" class="text-gray-700 hover:text-primary transition-colors">Prezzi</a>
+                    <a href="./gdpr.html" class="text-gray-700 hover:text-primary transition-colors">Compliance</a>
                     <a href="./#contact" class="px-6 py-2 gradient-primary text-white rounded-lg hover:shadow-lg transition-all">
                         Richiedi Informazioni
                     </a>
@@ -225,7 +218,7 @@
 
                     <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Assistente virtuale "Mya"</h2>
                     <p class="text-gray-700 leading-relaxed mb-6">
-                        Sul sito è disponibile un assistente conversazionale denominato <strong>Mya</strong>, che risponde a domande sul prodotto e, su iniziativa dell'utente, raccoglie le informazioni necessarie a predisporre una dimostrazione personalizzata.
+                        Sul sito è disponibile un assistente conversazionale denominato <strong>Mya</strong> (Mya sul sito, distinta da Mya nell'applicazione Tymetric, per la quale il titolare dei dati è la struttura cliente), che risponde a domande sul prodotto e, su iniziativa dell'utente, raccoglie le informazioni necessarie a predisporre una dimostrazione personalizzata.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-6">
                         <strong>Dati trattati.</strong> Il contenuto dei messaggi scambiati; i dati di contatto che l'utente sceglie volontariamente di fornire (nome, cognome, indirizzo email); le informazioni sull'organizzazione del reparto eventualmente comunicate; un identificativo tecnico di sessione. Se l'utente carica volontariamente un file contenente turni od organici, i dati in esso contenuti sono trattati esclusivamente per predisporre la dimostrazione richiesta.

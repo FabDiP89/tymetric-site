@@ -92,7 +92,7 @@
   {
     "categoria": "EQUITÀ E PREFERENZE",
     "domanda": "Come vengono gestiti i desiderata e le preferenze dei professionisti? È possibile chiedere un turno specifico 'al positivo'?",
-    "risposta": "I desiderata sono gestiti nativamente tramite l'app del professionista 'al negativo' (espressi come fasce orarie o date in cui si richiede di NON lavorare), poiché è la modalità che garantisce una distribuzione più equa e la copertura dei vincoli e dei weekend. Di default, le preferenze 'al positivo' (es. richiedere la mattina in una data specifica) non sono active per evitare l'impossibilità di bilanciare i carichi di lavoro, ma la piaggaforma è flessibile e può essere configurata o personalizzata su richiesta della struttura."
+    "risposta": "Dall'app ogni professionista può indicare, per ogni data, in quale fascia lavorare («Scegli fascia») o in quale non lavorare («Escludi fasce», «Non disponibile»). Il coordinatore approva le richieste singolarmente o in blocco; una volta approvata, la scelta della fascia diventa un turno. Se una richiesta non è ancora approvata, il motore prova comunque ad assecondarla; lo stesso vale per le assenze non tutelate."
   },
   {
     "categoria": "COMPLIANCE E NORMATIVA",
@@ -141,8 +141,8 @@
   },
   {
     "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
-    "domanda": "Come gestisce il sistema il dimensionamento delle sale operatorie/ambulatori e l'assegnazione delle figure Senior?",
-    "risposta": "Per ciascuna sala è possibile definire nel dettaglio il fabbisogno di personale (ruolo, competenze richieste e livello di seniority) differenziandolo per ogni giorno della settimana e fascia oraria. Se una sala è chiusa o in manutenzione, il fabbisogno si azzera di default. Il sistema integra la figura del 'senior', permettendo di specificare non solo il numero di persone necessarie in una sala, ma quante di queste debbano obbligatoriamente possedere una seniority elevata."
+    "domanda": "Come gestisce il sistema il fabbisogno di personale di sale e ambulatori e l'assegnazione delle figure senior? Gestite anche la programmazione degli interventi?",
+    "risposta": "Per ciascuna unità operativa (reparto, sala, ambulatorio) si definisce il fabbisogno di personale: ruolo, competenze richieste e quota di senior, per ogni giorno della settimana e fascia oraria. Se un'unità è chiusa, il fabbisogno si azzera. Tymetric pianifica il personale: non gestisce la programmazione di appuntamenti, interventi o sterilizzazione."
   },
   {
     "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
@@ -152,7 +152,7 @@
   {
     "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
     "domanda": "Tymetric gestisce sia il personale dipendente strutturato sia i liberi professionisti (P.IVA)?",
-    "risposta": "Sì, la piattaforma gestisce nativamente e contemporaneamente sia il personale dipendente soggetto alle regole e ai controlli del CCNL Sanità, sia i professionisti in regime di Libera Professione (LP / P.IVA), adattando i vincoli e i calcoli delle ore in base alla natura giuridica del contratto."
+    "risposta": "Sì. La piattaforma gestisce insieme il personale dipendente soggetto al CCNL Sanità, i professionisti a partita IVA e, su richiesta, altri tipi di contratto, adattando vincoli e calcolo delle ore alla natura del contratto. È possibile grazie al nostro modello matematico, la constraint factory, che trasforma le regole in vincoli e dialoga direttamente con il solver."
   },
   {
     "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
@@ -273,5 +273,15 @@
     "categoria": "VARIE",
     "domanda": "La demo viene fatta sui dati reali del mio reparto?",
     "risposta": "No. Le demo si fanno su dati anonimizzati, in un ambiente dimostrativo, mai sul personale reale. Per costruire una demo vicina al tuo reparto basta raccontare regole e organizzazione, con nomi di fantasia."
+  },
+  {
+    "categoria": "COMPLIANCE E NORMATIVA",
+    "domanda": "Quali limiti del CCNL sono già impostati nel motore?",
+    "risposta": "Si applicano da soli secondo il contratto della persona: per il Comparto al massimo 7 reperibilità al mese; per la Dirigenza al massimo 5 guardie notturne e 10 reperibilità al mese, e non più di 12 servizi tra guardie e reperibilità. Sono già impostati anche lo smonto dopo la notte e il calendario con festività nazionali e patrono della sede. Il reparto aggiunge le proprie regole."
+  },
+  {
+    "categoria": "ORGANIZZAZIONE E LOGICHE DELL'ALGORITMO",
+    "domanda": "Come si impostano le regole del reparto? E come garantisce l'equità nel tempo?",
+    "risposta": "Le regole si impostano dall'interfaccia con un percorso guidato (valore, turni a cui si applica, persone a cui vale) e si rileggono come frasi in italiano; si accendono o si spengono per singola pianificazione. Il motore gestisce anche turni abbinati, turni compatibili nella stessa giornata e cicli di continuità. Per l'equità conosce un anno di turni pubblicati: notti, festivi e reperibilità si bilanciano sull'anno, settimana per settimana. Ogni riposo assegnato indica il suo motivo e per ogni turno da coprire si vede chi può farlo e perché gli altri no."
   }
 ]

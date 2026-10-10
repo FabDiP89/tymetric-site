@@ -102,6 +102,22 @@
                     "@type": "Answer",
                     "text": "Sì. Le regole rigide valgono per il motore e per l'AI. Nella modalità Deep planning, se un'operazione viola un vincolo, Mya lo segnala e chiede la tua autorizzazione in chat."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Le regole del reparto vanno programmate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Si impostano dall'interfaccia con un percorso guidato e si rileggono come frasi in italiano. Il nostro modello matematico, la constraint factory, le trasforma in vincoli per il solver che genera il piano."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come garantisce l'equità nel tempo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il motore conosce un anno di turni pubblicati: notti, festivi e reperibilità si bilanciano sull'anno, e l'equilibrio si vede settimana per settimana, non solo a fine mese."
+                }
             }
         ]
     }
@@ -189,11 +205,34 @@
             </div>
         </section>
 
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Il puzzle di ogni mese</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">È l'ultima settimana del mese. Davanti a un foglio con trenta colonne e una ventina di nomi bisogna coprire mattine, pomeriggi, notti e guardie, ricordandosi chi ha fatto tre festivi di fila, chi rientra da un congresso, che il venerdì notte e la domenica mattina vanno alla stessa persona, che l'ambulatorio del martedì ha bisogno di una certa competenza. Senza mai togliere a nessuno le sue ore di riposo.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">Ogni casella che si sposta ne muove altre dieci. Ci vogliono giorni, e alla fine resta il dubbio: era la scelta più giusta? Il motore di Tymetric nasce per togliere quel peso, ragionando sul reparto come chi ci lavora da anni.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Le regole le imposti con un percorso guidato. Le rileggi come frasi.</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Ogni regola si imposta dall'interfaccia, passo dopo passo: il valore, i turni a cui si applica, le persone a cui vale. Quando vuoi verificarla, la ritrovi scritta in italiano, come la diresti a un collega.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">Le regole si sommano senza programmare nulla: una per tutto il reparto, una solo per la Dirigenza, una per una sola persona, una valida solo nei festivi o solo per la libera professione. E se una regola vale solo per un mese, la accendi o la spegni per quella pianificazione.</p>
+                    <ul class="flex flex-col gap-2.5">
+                        <li class="px-4 py-3.5 rounded-xl bg-brand-50 border border-brand-200 text-[15px] leading-snug text-brand-800">«Massimo 4 guardie pomeridiane al mese, al più 2 per metà mese.»</li>
+                        <li class="px-4 py-3.5 rounded-xl bg-brand-50 border border-brand-200 text-[15px] leading-snug text-brand-800">«Almeno 3 giorni tra due notti di guardia.»</li>
+                        <li class="px-4 py-3.5 rounded-xl bg-brand-50 border border-brand-200 text-[15px] leading-snug text-brand-800">«Entro 5 giorni da un festivo lavorato, un giorno di riposo.»</li>
+                        <li class="px-4 py-3.5 rounded-xl bg-brand-50 border border-brand-200 text-[15px] leading-snug text-brand-800">«Non più di 2 notti di fila, solo per questi tre professionisti.»</li>
+                    </ul>
+                    <p class="text-[15px] leading-relaxed text-gray-600">Dietro le quinte c'è il nostro modello matematico, la <strong>constraint factory</strong>: trasforma ogni regola del reparto in un vincolo e dialoga direttamente con il solver che genera il piano.</p>
+            </div>
+        </section>
+
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
                 <div class="flex flex-col gap-3 max-w-3xl">
                     <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">10 regole rigide: il motore non le viola mai</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Ogni regola si legge come una frase. Scegli il valore, a quali turni si applica e a chi: tutto il reparto, Comparto o Dirigenza, un gruppo o una sola persona.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">Le regole di base del motore. Per ognuna scegli il valore, a quali turni si applica e a chi: tutto il reparto, Comparto o Dirigenza, un gruppo o una sola persona.</p>
                 </div>
                 <ul class="grid md:grid-cols-2 gap-5">
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">1 · Giorni consecutivi</h3><p class="text-[15px] leading-relaxed text-gray-600">Da 7 a 12, contando anche reperibilità, smonto e storico.</p></li>
@@ -212,9 +251,24 @@
         <section class="py-20 bg-gray-50">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
                     <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Già impostato, senza configurare nulla</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Lo smonto dopo la notte, il calendario con le festività e il patrono della sede, i limiti del CCNL di Comparto e Dirigenza su guardie e reperibilità. Per ogni pianificazione una regola si accende o si spegne, e una persona può avere un limite diverso mese per mese.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">Lo smonto dopo la notte e il calendario con le festività nazionali e il patrono della sede. E i limiti del CCNL su guardie e reperibilità, applicati a ciascuno secondo il suo contratto: per il Comparto al massimo 7 reperibilità al mese; per la Dirigenza al massimo 5 guardie notturne e 10 reperibilità al mese, e non più di 12 servizi tra guardie e reperibilità. Per ogni pianificazione una regola si accende o si spegne, e una persona può avere un limite diverso mese per mese.</p>
             </div>
         </section>
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">I turni non sono caselle isolate</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Un reparto vero è fatto di relazioni tra turni. Il motore le conosce.</p>
+                </div>
+                <ul class="grid md:grid-cols-2 gap-5">
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Turni abbinati</h3><p class="text-[15px] leading-relaxed text-gray-600">La guardia del venerdì notte e quella della domenica alla stessa persona: lo dici una volta, con «entrambi o nessuno» oppure «se fai questo, fai anche quello», nello stesso giorno o a giorni di distanza. Il motore decide la coppia insieme.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Turni compatibili</h3><p class="text-[15px] leading-relaxed text-gray-600">Reparto al mattino e guardietta al pomeriggio: il reparto dichiara quali turni possono convivere nella stessa giornata. E se c'è un'altra persona disponibile, il motore preferisce distribuire il carico.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Natura dei turni</h3><p class="text-[15px] leading-relaxed text-gray-600">Ordinario, guardia, reperibilità, libera professione, aggiornamento e ricerca hanno effetti diversi su ore, limiti e regole. La reperibilità può essere esclusiva o sommabile a un turno che finisce prima: lo decide il reparto.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Cicli di continuità</h3><p class="text-[15px] leading-relaxed text-gray-600">Per l'ambulatorio o la sala che ha bisogno di una persona di riferimento: il motore trova un titolare per il ciclo e lo fa passare a chi non lo fa da più tempo. Riparte da solo dai turni pubblicati del mese prima.</p></li>
+                </ul>
+            </div>
+        </section>
+
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
                 <div class="flex flex-col gap-3 max-w-3xl">
@@ -231,7 +285,20 @@
                 </ul>
             </div>
         </section>
-        <section class="py-20 bg-gray-50">
+         <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Equità con un anno di memoria</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Il motore conosce un anno di turni pubblicati. Chi ha fatto tante notti in estate viene alleggerito in autunno; quando arriva Pasqua, sa già chi ha lavorato a Capodanno.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">E pianifica giorno per giorno guardando anche quello che verrà, così l'equilibrio si vede settimana per settimana e non solo nel totale di fine mese: niente «dieci giorni d'inferno» compensati più avanti.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Notti, festivi e reperibilità distribuiti sull'anno, senza due festivi di seguito alla stessa persona.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Ore vicine al contratto, recupero dei riposi arretrati e straordinario contenuto, dentro l'indice di stress.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Le richieste e le assenze ancora da approvare pesano già nelle scelte del motore, che prova ad assecondarle: così il coordinatore può approvarle senza riscrivere il piano.</span></li>
+                    </ul>
+            </div>
+        </section>
+
+       <section class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
                 <div class="flex flex-col gap-3 max-w-3xl">
                     <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Coperture: quando il personale non basta</h2>
@@ -243,7 +310,39 @@
                 </ul>
             </div>
         </section>
-        <section class="py-20 bg-white">
+         <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Un motore che si spiega</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">La differenza tra uno strumento di cui fidarsi e una scatola nera sono le spiegazioni.</p>
+                </div>
+                <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Chi può coprire, e perché gli altri no</h3><p class="text-[15px] leading-relaxed text-gray-600">Per ogni turno da coprire vedi le persone idonee in ordine, e per chi non può il motivo: un'assenza, una competenza, il riposo minimo, i giorni consecutivi, una regola del reparto.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Ogni riposo dice perché</h3><p class="text-[15px] leading-relaxed text-gray-600">Riposo settimanale, troppi giorni consecutivi, festività, alternanza del weekend, recupero dopo un festivo, richiesta della persona.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Rigeneri solo quello che vuoi</h3><p class="text-[15px] leading-relaxed text-gray-600">Fissi i turni da tenere e rigeneri solo una settimana o un periodo: il resto resta com'è e fa da contesto.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Dal numero al turno</h3><p class="text-[15px] leading-relaxed text-gray-600">Copertura, carichi, stress e conformità: da ogni numero delle statistiche risali alla persona e al turno che lo genera.</p></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Centinaia di turni, pochi clic</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Un mese di reparto sono centinaia di turni. Motore e interfaccia lavorano insieme per gestirli tutti.</p>
+                </div>
+                <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Filtri su nove dimensioni</h3><p class="text-[15px] leading-relaxed text-gray-600">Persona, unità operativa, fascia, tipo di turno, ruolo, team, turni fissati o flessibili, origine (manuale, automatica, da richiesta), giorno della settimana.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Azioni in blocco</h3><p class="text-[15px] leading-relaxed text-gray-600">Con i filtri e le date isoli i turni che ti interessano e li blocchi, sblocchi o elimini insieme. Prima di confermare vedi quanti turni stai toccando.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Assegnazioni massive</h3><p class="text-[15px] leading-relaxed text-gray-600">Un congresso di tre giorni per cinque persone, l'ambulatorio del martedì per tre mesi: date, persone e azione, poi un'anteprima che separa i casi compatibili da quelli no.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Prova prima di approvare</h3><p class="text-[15px] leading-relaxed text-gray-600">Un'assenza in attesa si applica in simulazione per vederne l'effetto sul piano, prima di decidere.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Contatori su misura</h3><p class="text-[15px] leading-relaxed text-gray-600">Conteggi a scelta, con gli stessi filtri delle regole, confrontati con il periodo precedente.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Export Excel</h3><p class="text-[15px] leading-relaxed text-gray-600">Per unità operativa o per persona, con la configurazione che si salva per i mesi successivi.</p></li>
+                </ul>
+            </div>
+        </section>
+
+       <section class="py-20 bg-white">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8">
                 <div class="flex flex-col gap-3">
                     <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Il coordinatore resta al comando</h2>
@@ -257,7 +356,21 @@
                 </ol>
             </div>
         </section>
-        <!-- FAQ -->
+         <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <span class="text-sm font-bold uppercase tracking-[0.08em] text-primary-dark">Novità</span>
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Il piano ferie che guarda avanti</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Quando valuti ferie, congressi o formazione, vedi subito l'effetto sulla copertura: l'aiuto arriva quando la decisione si prende, non a piano già fatto.</p>
+                </div>
+                <ul class="grid md:grid-cols-2 gap-5">
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Con queste ferie, il 14 novembre resta una sola persona abilitata alla guardia notturna.»</h3><p class="text-[15px] leading-relaxed text-gray-600">La copertura di tutto il periodo, letta prima di approvare.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«7 medici con un massimo di 3 notti ne coprono al più 21: il mese ne chiede 30.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Il buco si vede sulle regole del reparto, prima di generare il piano.</p></li>
+                </ul>
+            </div>
+        </section>
+
+       <!-- FAQ -->
         <section class="py-24 bg-gray-50">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
                 <h2 class="text-center text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Domande frequenti</h2>
@@ -277,6 +390,14 @@
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Le regole valgono anche per l'intelligenza artificiale?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
                         <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Le regole rigide valgono per il motore e per l'AI. Nella modalità Deep planning, se un'operazione viola un vincolo, Mya lo segnala e chiede la tua autorizzazione in chat.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Le regole del reparto vanno programmate?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. Si impostano dall'interfaccia con un percorso guidato e si rileggono come frasi in italiano. Il nostro modello matematico, la constraint factory, le trasforma in vincoli per il solver che genera il piano.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Come garantisce l'equità nel tempo?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Il motore conosce un anno di turni pubblicati: notti, festivi e reperibilità si bilanciano sull'anno, e l'equilibrio si vede settimana per settimana, non solo a fine mese.</p>
                     </details>
                 </div>
             </div>
@@ -372,17 +493,6 @@
         </div>
     </div>
 
-    <!-- Pannello di struttura: genera le caselle della vista multi reparto -->
-    <script>
-        document.querySelectorAll('[data-pattern]').forEach(function (row) {
-            var colors = { c: 'bg-primary-light', a: 'bg-amber-700', g: 'bg-gray-200' };
-            row.dataset.pattern.split('').forEach(function (ch) {
-                var cell = document.createElement('span');
-                cell.className = 'w-4 h-4 rounded ' + colors[ch];
-                row.appendChild(cell);
-            });
-        });
-    </script>
 </body>
 
 </html>

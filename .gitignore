@@ -53,3 +53,6 @@ Presentazione*
 *.key
 venv/
 *.code-workspace
+
+# Analisi interne (GEO, audit)
+GEO_*.md

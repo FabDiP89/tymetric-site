@@ -197,9 +197,9 @@
                 </div>
                 <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">I miei turni</h3><p class="text-[15px] leading-relaxed text-gray-600">In calendario o in lista, insieme ai turni del proprio reparto.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Desiderata</h3><p class="text-[15px] leading-relaxed text-gray-600">«Non disponibile» ed «Escludi fasce» per indicare quando non si può lavorare; su richiesta della struttura anche «Scegli fascia» per chiedere un turno preciso.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Desiderata</h3><p class="text-[15px] leading-relaxed text-gray-600">Per ogni data si sceglie in quale fascia lavorare (Scegli fascia) o in quale non lavorare (Escludi fasce, Non disponibile). Se il coordinatore non la approva subito, il motore prova comunque ad assecondarla.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Cambi turno</h3><p class="text-[15px] leading-relaxed text-gray-600">Scambio o sola copertura: il collega accetta, il coordinatore approva, il sistema avvisa se mancano requisiti o se il cambio viola le regole.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Ferie, formazione e congressi</h3><p class="text-[15px] leading-relaxed text-gray-600">Richieste con approvazione del responsabile, che le ritrova già nel piano.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Ferie, formazione e congressi</h3><p class="text-[15px] leading-relaxed text-gray-600">Richieste con approvazione del responsabile, che le ritrova già nel piano. Le assenze non tutelate ancora in attesa pesano comunque nelle scelte del motore.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Assenze improvvise</h3><p class="text-[15px] leading-relaxed text-gray-600">Un'assenza improvvisa avvisa subito il responsabile via email.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Notifiche</h3><p class="text-[15px] leading-relaxed text-gray-600">Alla pubblicazione dei turni arriva una notifica, in app e via email.</p></li>
                 </ul>
@@ -331,17 +331,6 @@
         </div>
     </div>
 
-    <!-- Pannello di struttura: genera le caselle della vista multi reparto -->
-    <script>
-        document.querySelectorAll('[data-pattern]').forEach(function (row) {
-            var colors = { c: 'bg-primary-light', a: 'bg-amber-700', g: 'bg-gray-200' };
-            row.dataset.pattern.split('').forEach(function (ch) {
-                var cell = document.createElement('span');
-                cell.className = 'w-4 h-4 rounded ' + colors[ch];
-                row.appendChild(cell);
-            });
-        });
-    </script>
 </body>
 
 </html>

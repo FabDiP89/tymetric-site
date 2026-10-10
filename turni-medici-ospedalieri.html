@@ -102,6 +102,14 @@
                     "@type": "Answer",
                     "text": "No. I turni fissati o modificati dal responsabile sono un punto fermo: il motore ottimizza tutto il resto intorno a loro."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali limiti del contratto sono già impostati per i medici?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Per la Dirigenza al massimo 5 guardie notturne e 10 reperibilità al mese, e non più di 12 servizi tra guardie e reperibilità. Si applicano da soli a chi ha quel contratto; il reparto aggiunge le sue regole."
+                }
             }
         ]
     }
@@ -179,7 +187,7 @@
                 <nav aria-label="Percorso" class="text-sm text-gray-600"><a href="index.html" class="hover:text-primary-dark">Home</a> / <a href="prodotto.html" class="hover:text-primary-dark">Prodotto</a> / <span>Turni dei medici ospedalieri</span></nav>
                 <h1 class="px-3.5 py-1.5 rounded-full bg-brand-100 text-primary-dark text-sm font-semibold">Software per la gestione dei turni dei medici ospedalieri</h1>
                 <p class="text-4xl sm:text-5xl lg:text-[56px] leading-[1.1] font-extrabold tracking-tight text-gray-900 text-balance">Guardie, reperibilità e sale coperte. <span class="text-primary">Con il medico giusto.</span></p>
-                <p class="text-xl leading-relaxed text-gray-600 max-w-3xl">Tymetric pianifica i turni dei medici con le regole del reparto e i limiti del CCNL della Dirigenza su guardie e reperibilità già impostati. Competenze, seniority e impegni fuori reparto entrano nel piano; il responsabile approva.</p>
+                <p class="text-xl leading-relaxed text-gray-600 max-w-3xl">Tymetric pianifica i turni dei medici con le regole del reparto e i limiti del CCNL della Dirigenza su guardie e reperibilità già impostati, per dipendenti, partite IVA e altri contratti. Competenze, seniority e impegni fuori reparto entrano nel piano; il responsabile approva.</p>
                 <div class="flex flex-wrap justify-center gap-3.5 pt-2">
                     <a href="#contact" class="ty-btn inline-flex items-center gap-2 px-7 py-4 rounded-[10px] gradient-dark text-white text-[17px] font-semibold">Prenota una demo</a>
                     <button type="button" onclick="openChat()" class="ty-btn inline-flex items-center gap-2 px-7 py-4 rounded-[10px] ty-cta-outline text-[17px] font-semibold"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
@@ -196,11 +204,11 @@
                     <p class="text-lg leading-relaxed text-gray-600">Ogni medico ha un ruolo, delle competenze e degli impegni che non stanno in reparto. Il piano li tiene insieme.</p>
                 </div>
                 <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Guardie e reperibilità</h3><p class="text-[15px] leading-relaxed text-gray-600">Distinte dall'attività ordinaria, con i limiti contrattuali già impostati. In più le regole del reparto: «massimo 2 guardie al mese, al massimo 1 per metà mese», «almeno 3 giorni tra due notti di guardia».</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Guardie e reperibilità</h3><p class="text-[15px] leading-relaxed text-gray-600">Distinte dall'attività ordinaria, con i limiti del CCNL della Dirigenza già impostati: al massimo 5 guardie notturne e 10 reperibilità al mese, e non più di 12 servizi tra guardie e reperibilità. In più le regole del reparto: «massimo 2 guardie al mese, al massimo 1 per metà mese», «almeno 3 giorni tra due notti di guardia».</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Competenze e seniority</h3><p class="text-[15px] leading-relaxed text-gray-600">Per ogni sala, ambulatorio o unità definisci il fabbisogno per ruolo, competenze e quota di senior, giorno per giorno. Nessuno viene assegnato dove non è abilitato.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Libera professione e docenza</h3><p class="text-[15px] leading-relaxed text-gray-600">Ambulatorio privato il sabato, lezioni all'università il martedì: una griglia per fascia oraria e giorno spegne le disponibilità incompatibili, una volta per tutte.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Congressi e assenze</h3><p class="text-[15px] leading-relaxed text-gray-600">Il congresso si registra come assenza e il motore pianifica intorno. Se arriva a pianificazione iniziata, il responsabile riceve la notifica nello strumento di pianificazione.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Dipendenti e liberi professionisti</h3><p class="text-[15px] leading-relaxed text-gray-600">Medici dipendenti e a partita IVA nello stesso piano: vincoli e calcolo delle ore seguono la natura del contratto.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Dipendenti e liberi professionisti</h3><p class="text-[15px] leading-relaxed text-gray-600">Medici dipendenti, a partita IVA e, su richiesta, altri tipi di contratto nello stesso piano. Vincoli e calcolo delle ore seguono la natura del contratto, grazie al nostro modello matematico, la constraint factory, che dialoga direttamente con il solver.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Turni lunghi sotto controllo</h3><p class="text-[15px] leading-relaxed text-gray-600">Per le guardie da 12 ore puoi limitare il numero nel mese e imporre giorni di distanza tra un'assegnazione e l'altra, per il reparto o per la singola persona.</p></li>
                 </ul>
             </div>
@@ -244,6 +252,10 @@
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Se modifico a mano un turno, il motore lo cancella al ricalcolo?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
                         <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. I turni fissati o modificati dal responsabile sono un punto fermo: il motore ottimizza tutto il resto intorno a loro.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Quali limiti del contratto sono già impostati per i medici?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Per la Dirigenza al massimo 5 guardie notturne e 10 reperibilità al mese, e non più di 12 servizi tra guardie e reperibilità. Si applicano da soli a chi ha quel contratto; il reparto aggiunge le sue regole.</p>
                     </details>
                 </div>
             </div>
@@ -339,17 +351,6 @@
         </div>
     </div>
 
-    <!-- Pannello di struttura: genera le caselle della vista multi reparto -->
-    <script>
-        document.querySelectorAll('[data-pattern]').forEach(function (row) {
-            var colors = { c: 'bg-primary-light', a: 'bg-amber-700', g: 'bg-gray-200' };
-            row.dataset.pattern.split('').forEach(function (ch) {
-                var cell = document.createElement('span');
-                cell.className = 'w-4 h-4 rounded ' + colors[ch];
-                row.appendChild(cell);
-            });
-        });
-    </script>
 </body>
 
 </html>

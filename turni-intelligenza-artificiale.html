@@ -357,17 +357,6 @@
         </div>
     </div>
 
-    <!-- Pannello di struttura: genera le caselle della vista multi reparto -->
-    <script>
-        document.querySelectorAll('[data-pattern]').forEach(function (row) {
-            var colors = { c: 'bg-primary-light', a: 'bg-amber-700', g: 'bg-gray-200' };
-            row.dataset.pattern.split('').forEach(function (ch) {
-                var cell = document.createElement('span');
-                cell.className = 'w-4 h-4 rounded ' + colors[ch];
-                row.appendChild(cell);
-            });
-        });
-    </script>
 </body>
 
 </html>

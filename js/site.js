@@ -140,8 +140,24 @@ function closeChat() {
 function bindContactForm() {
     var contactForm = document.getElementById('contact-form');
     if (!contactForm) return;
+    var formReadyAt = Date.now();
+    var showSuccess = function () {
+        contactForm.innerHTML =
+            '<div class="text-center py-8">' +
+            '<svg class="w-16 h-16 text-primary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' +
+            '<h4 class="text-2xl font-bold text-gray-900 mb-2">Richiesta inviata</h4>' +
+            '<p class="text-gray-600">Ti contatteremo al più presto.</p>' +
+            '</div>';
+    };
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
+        // Antispam: un bot compila il campo nascosto o invia in pochi secondi.
+        // Gli mostriamo l'esito positivo, ma non inviamo nulla.
+        var trap = contactForm.querySelector('[name="sito_web"]');
+        if ((trap && trap.value) || Date.now() - formReadyAt < 4000) {
+            showSuccess();
+            return;
+        }
         var submitBtn = contactForm.querySelector('button[type="submit"]');
         var originalText = submitBtn.textContent;
         submitBtn.textContent = 'Invio in corso...';
@@ -151,12 +167,16 @@ function bindContactForm() {
             var el = contactForm.querySelector('[name="' + name + '"]');
             return el ? el.value : '';
         };
+        // «Come ci hai conosciuto?» e la pagina vanno in testa al messaggio,
+        // così compaiono nel foglio senza modificare lo script di raccolta.
+        var fonte = field('provenienza') || 'non indicata';
         var formData = {
             nome: field('nome'),
             cognome: field('cognome'),
             email: field('email'),
             telefono: field('telefono'),
-            messaggio: field('messaggio'),
+            messaggio: '[Ci ha conosciuto tramite: ' + fonte + ' · Pagina: ' + window.location.pathname + ']\n' + field('messaggio'),
+            provenienza: fonte,
             pagina: window.location.pathname
         };
 
@@ -166,16 +186,11 @@ function bindContactForm() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         }).then(function () {
-            trackEvent('generate_lead', { method: 'modulo' });
+            trackEvent('generate_lead', { method: 'modulo', fonte: fonte });
             if (typeof gtag === 'function') {
                 gtag('event', 'conversion', { 'send_to': 'AW-17799873404/DK6aCJr9jdEbEPyG0qdC' });
             }
-            contactForm.innerHTML =
-                '<div class="text-center py-8">' +
-                '<svg class="w-16 h-16 text-primary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' +
-                '<h4 class="text-2xl font-bold text-gray-900 mb-2">Richiesta inviata</h4>' +
-                '<p class="text-gray-600">Ti contatteremo al più presto.</p>' +
-                '</div>';
+            showSuccess();
         }).catch(function () {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;

@@ -7,7 +7,7 @@
   {
     "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
     "domanda": "Allattamento: Una collega in allattamento ha diritto a 2 ore di permesso giornaliero. Come lo imposto nel sistema per evitare che venga assegnata a turni incompatibili?",
-    "risposta": "Per ogni operatore è disponibile una griglia che permette di \"accendere\" o \"spegnere\" la disponibilità per ogni singola combinazione tra le fasce orarie operative del reparto e i giorni della settimana. In questo caso basta disabilitare tutti i turni non compatibili. Se invece la compatibilità viene meno anche per certe unità operative (es: gestione emergenze reparto) si possono impostare dei vincoli personalizzabili in sede di pianificazione."
+    "risposta": "Per ogni operatore è disponibile una griglia che permette di \"accendere\" o \"spegnere\" la disponibilità per ogni singola combinazione tra le fasce orarie operative del reparto e i giorni della settimana. In questo caso basta disabilitare tutti i turni non compatibili. Se invece la compatibilità viene meno anche per certe attività (es: gestione emergenze reparto) si possono impostare dei vincoli personalizzabili in sede di pianificazione."
   },
   {
     "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
@@ -17,7 +17,7 @@
   {
     "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
     "domanda": "Personale senior/età: Un medico over 60 ha richiesto riduzione dei notturni per motivi di salute. Posso impostare un tetto massimo mensile di notti solo per lui?",
-    "risposta": "Tramite il sistema personalizzabile dei parametri è possibile limitare sia il numero di assegnazioni mensile (sia per fascia oraria che per unità operative) sia prevedere un minimo di giorni che devono intercorrere tra due assegnazioni consecutive all'attività che si vuole limitare (sia questa dipendente dalla fascia oraria, dall'unità operativa o da entrambe)."
+    "risposta": "Tramite il sistema personalizzabile dei parametri è possibile limitare sia il numero di assegnazioni mensile (sia per fascia oraria che per attività) sia prevedere un minimo di giorni che devono intercorrere tra due assegnazioni consecutive all'attività che si vuole limitare (sia questa dipendente dalla fascia oraria, dall'attività o da entrambe)."
   },
   {
     "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
@@ -26,8 +26,8 @@
   },
   {
     "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
-    "domanda": "Come vengono gestiti i turni misti da 8 ore e 12 ore all'interno dello stesso reparto o tra unità diverse?",
-    "risposta": "Ci sono due modalità. Se i turni da 8h e 12h afferiscono a unità operative diverse (es. reparto a 12h e ambulatorio a 8h), si utilizza la matrice delle disponibilità per attivare le fasce orarie corrette sul profilo di ciascun professionista. Se invece lo stesso turno da 12h deve essere 'spezzato' (es. due da 6h, o un 8+4) a seconda delle preferenze, si creano turni distinti e si imposta un vincolo all'algoritmo che impone l'accoppiamento obbligatorio di quelle frazioni orarie per determinate persone."
+    "domanda": "Come vengono gestiti i turni misti da 8 ore e 12 ore all'interno dello stesso reparto o tra attività diverse?",
+    "risposta": "Ci sono due modalità. Se i turni da 8h e 12h afferiscono ad attività diverse (es. reparto a 12h e ambulatorio a 8h), si utilizza la matrice delle disponibilità per attivare le fasce orarie corrette sul profilo di ciascun professionista. Se invece lo stesso turno da 12h deve essere 'spezzato' (es. due da 6h, o un 8+4) a seconda delle preferenze, si creano turni distinti e si imposta un vincolo all'algoritmo che impone l'accoppiamento obbligatorio di quelle frazioni orarie per determinate persone."
   },
   {
     "categoria": "VINCOLI PERSONALI E CONDIZIONI SPECIALI",
@@ -62,7 +62,7 @@
   {
     "categoria": "ATTIVITÀ EXTRA-OSPEDALIERE",
     "domanda": "Guardie mediche esterne: Ho infermieri che fanno guardie mediche fuori dall'ospedale. Come traccio queste attività per evitare violazioni dei riposi obbligatori (11 ore)?",
-    "risposta": "Tutte le unità operative dove il personale in turno può essere dislocato devono essere presenti nell'anagrafica, in questo caso usufruiranno dello stesso trattamento, compresi i controlli. Non è importante che l'unità operativa sia all'interno della struttura ospedaliera."
+    "risposta": "Tutte le attività in cui il personale in turno può essere impiegato devono essere presenti nell'anagrafica, in questo caso usufruiranno dello stesso trattamento, compresi i controlli. Non è importante che l'attività si svolga all'interno della struttura ospedaliera."
   },
   {
     "categoria": "ATTIVITÀ EXTRA-OSPEDALIERE",
@@ -107,7 +107,7 @@
   {
     "categoria": "COMPLIANCE E NORMATIVA",
     "domanda": "Notturni consecutivi: Quanti notturni consecutivi permette il sistema prima di bloccarmi? È configurabile (es. max 3 notti di fila)?",
-    "risposta": "Non solo è configurabile per tutte le fasce orarie e per tutte le unità operative, ma il caso dei turni notturni è previsto dal CCNL, quindi è già insito nel sistema, per quanto completamente personalizzabile."
+    "risposta": "Non solo è configurabile per tutte le fasce orarie e per tutte le attività, ma il caso dei turni notturni è previsto dal CCNL, quindi è già insito nel sistema, per quanto completamente personalizzabile."
   },
   {
     "categoria": "COMPLIANCE E NORMATIVA",
@@ -142,7 +142,7 @@
   {
     "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
     "domanda": "Come gestisce il sistema il fabbisogno di personale di sale e ambulatori e l'assegnazione delle figure senior? Gestite anche la programmazione degli interventi?",
-    "risposta": "Per ciascuna unità operativa (reparto, sala, ambulatorio) si definisce il fabbisogno di personale: ruolo, competenze richieste e quota di senior, per ogni giorno della settimana e fascia oraria. Se un'unità è chiusa, il fabbisogno si azzera. Tymetric pianifica il personale: non gestisce la programmazione di appuntamenti, interventi o sterilizzazione."
+    "risposta": "Per ciascuna attività (reparto, sala, ambulatorio) si definisce il fabbisogno di personale: ruolo, competenze richieste e quota di senior, per ogni giorno della settimana e fascia oraria. Se un'attività è chiusa, il fabbisogno si azzera. Tymetric pianifica il personale: non gestisce la programmazione di appuntamenti, interventi o sterilizzazione."
   },
   {
     "categoria": "GESTIONE REPARTI E COMPLESSITÀ OSPEDALIERA",
@@ -202,12 +202,12 @@
   {
     "categoria": "VARIE",
     "domanda": "Turni di guardia faticosi (es. 12 ore): Anche se non previsto da CCNL, preferiamo non assegnarne 2 consecutivi e limitare il numero sul mese. È possibile prevederlo nell'algoritmo?",
-    "risposta": "Nel pannello impostazioni è possibile inserire i vincoli personalizzati: si può sia limitare il numero di assegnazioni sull'arco del mese, sia prevedere un certo numero di giorni che devono intercorrere tra un'assegnazione e l'altra. Questi vincoli possono essere impostati sia per il reparto che per la singola persona (per unità operativa, fascia oraria o entrambe)."
+    "risposta": "Nel pannello impostazioni è possibile inserire i vincoli personalizzati: si può sia limitare il numero di assegnazioni sull'arco del mese, sia prevedere un certo numero di giorni che devono intercorrere tra un'assegnazione e l'altra. Questi vincoli possono essere impostati sia per il reparto che per la singola persona (per attività, fascia oraria o entrambe)."
   },
   {
     "categoria": "VARIE",
     "domanda": "Sala in manutenzione: Ho una sala in manutenzione in un giorno specifico, come evito che venga messo personale in turno?",
-    "risposta": "Per ciascuna unità operativa è possibile determinare il fabbisogno di personale sia per ruolo che per competenze per ciascuna fascia oraria. Se il ciclo è settimanale, si inserisce il fabbisogno zero di default. Se fa riferimento a una data specifica, si modifica il fabbisogno direttamente nel tool di pianificazione lasciando una nota sul tesserino dedicato."
+    "risposta": "Per ciascuna attività è possibile determinare il fabbisogno di personale sia per ruolo che per competenze per ciascuna fascia oraria. Se il ciclo è settimanale, si inserisce il fabbisogno zero di default. Se fa riferimento a una data specifica, si modifica il fabbisogno direttamente nel tool di pianificazione lasciando una nota sul tesserino dedicato."
   },
   {
     "categoria": "VARIE",

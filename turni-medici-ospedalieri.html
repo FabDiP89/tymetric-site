@@ -76,7 +76,7 @@
                 "name": "Posso limitare le guardie da 12 ore, anche se il contratto non lo prevede?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sì. Puoi limitare il numero di assegnazioni nel mese e imporre un numero minimo di giorni tra un'assegnazione e l'altra, per tutto il reparto o per la singola persona, per unità operativa, fascia oraria o entrambe."
+                    "text": "Sì. Puoi limitare il numero di assegnazioni nel mese e imporre un numero minimo di giorni tra un'assegnazione e l'altra, per tutto il reparto o per la singola persona, per attività, fascia oraria o entrambe."
                 }
             },
             {
@@ -92,7 +92,7 @@
                 "name": "Come garantisco sempre un medico con una competenza specifica?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Assegni la competenza ai medici abilitati e la inserisci come requisito nel fabbisogno della sala o dell'unità: il motore incastra i turni in modo da coprirla, e i controlli escludono chi non è abilitato."
+                    "text": "Assegni la competenza ai medici abilitati e la inserisci come requisito nel fabbisogno dell'attività, per esempio una sala o un ambulatorio: il motore incastra i turni in modo da coprirla, e i controlli escludono chi non è abilitato."
                 }
             },
             {
@@ -204,8 +204,8 @@
                     <p class="text-lg leading-relaxed text-gray-600">Ogni medico ha un ruolo, delle competenze e degli impegni che non stanno in reparto. Il piano li tiene insieme.</p>
                 </div>
                 <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Guardie e reperibilità</h3><p class="text-[15px] leading-relaxed text-gray-600">Distinte dall'attività ordinaria, con i limiti del CCNL della Dirigenza già impostati: al massimo 5 guardie notturne e 10 reperibilità al mese, e non più di 12 servizi tra guardie e reperibilità. In più le regole del reparto: «massimo 2 guardie al mese, al massimo 1 per metà mese», «almeno 3 giorni tra due notti di guardia».</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Competenze e seniority</h3><p class="text-[15px] leading-relaxed text-gray-600">Per ogni sala, ambulatorio o unità definisci il fabbisogno per ruolo, competenze e quota di senior, giorno per giorno. Nessuno viene assegnato dove non è abilitato.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Guardie e reperibilità</h3><p class="text-[15px] leading-relaxed text-gray-600">Distinte dai turni ordinari, con i limiti del CCNL della Dirigenza già impostati: al massimo 5 guardie notturne e 10 reperibilità al mese, e non più di 12 servizi tra guardie e reperibilità. In più le regole del reparto: «massimo 2 guardie al mese, al massimo 1 per metà mese», «almeno 3 giorni tra due notti di guardia».</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Competenze e seniority</h3><p class="text-[15px] leading-relaxed text-gray-600">Per ogni attività, per esempio una sala o un ambulatorio, definisci il fabbisogno per ruolo, competenze e quota di senior, giorno per giorno. Nessuno viene assegnato dove non è abilitato.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Libera professione e docenza</h3><p class="text-[15px] leading-relaxed text-gray-600">Ambulatorio privato il sabato, lezioni all'università il martedì: una griglia per fascia oraria e giorno spegne le disponibilità incompatibili, una volta per tutte.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Congressi e assenze</h3><p class="text-[15px] leading-relaxed text-gray-600">Il congresso si registra come assenza e il motore pianifica intorno. Se arriva a pianificazione iniziata, il responsabile riceve la notifica nello strumento di pianificazione.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Dipendenti e liberi professionisti</h3><p class="text-[15px] leading-relaxed text-gray-600">Medici dipendenti, a partita IVA e, su richiesta, altri tipi di contratto nello stesso piano. Vincoli e calcolo delle ore seguono la natura del contratto, grazie al nostro modello matematico, la constraint factory, che dialoga direttamente con il solver.</p></li>
@@ -239,7 +239,7 @@
                 <div class="flex flex-col gap-3.5">
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Posso limitare le guardie da 12 ore, anche se il contratto non lo prevede?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
-                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Puoi limitare il numero di assegnazioni nel mese e imporre un numero minimo di giorni tra un'assegnazione e l'altra, per tutto il reparto o per la singola persona, per unità operativa, fascia oraria o entrambe.</p>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Puoi limitare il numero di assegnazioni nel mese e imporre un numero minimo di giorni tra un'assegnazione e l'altra, per tutto il reparto o per la singola persona, per attività, fascia oraria o entrambe.</p>
                     </details>
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Gestisce anche i medici a partita IVA?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
@@ -247,7 +247,7 @@
                     </details>
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Come garantisco sempre un medico con una competenza specifica?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
-                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Assegni la competenza ai medici abilitati e la inserisci come requisito nel fabbisogno della sala o dell'unità: il motore incastra i turni in modo da coprirla, e i controlli escludono chi non è abilitato.</p>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Assegni la competenza ai medici abilitati e la inserisci come requisito nel fabbisogno dell'attività, per esempio una sala o un ambulatorio: il motore incastra i turni in modo da coprirla, e i controlli escludono chi non è abilitato.</p>
                     </details>
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Se modifico a mano un turno, il motore lo cancella al ricalcolo?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>

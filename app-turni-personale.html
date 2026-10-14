@@ -102,6 +102,22 @@
                     "@type": "Answer",
                     "text": "Sì. Lo scambio viene verificato rispetto alle regole e richiede comunque l'approvazione del coordinatore."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "In che lingue è disponibile l'app?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In italiano e in inglese."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Una richiesta di ferie ancora in attesa conta già nel piano?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. Il motore cerca già di lasciare liberi quei giorni, e il coordinatore può applicarla in simulazione per vederne l'effetto prima di approvarla o respingerla."
+                }
             }
         ]
     }
@@ -193,13 +209,13 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
                 <div class="flex flex-col gap-3 max-w-3xl">
                     <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Cosa fa il personale dall'app</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Si installa sul telefono, in italiano e in inglese, ed è inclusa nel canone di ogni reparto.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">L'app si installa sul telefono, parla italiano e inglese ed è compresa nel canone di ogni reparto.</p>
                 </div>
                 <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">I miei turni</h3><p class="text-[15px] leading-relaxed text-gray-600">In calendario o in lista, insieme ai turni del proprio reparto.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">I miei turni</h3><p class="text-[15px] leading-relaxed text-gray-600">Ognuno vede i propri turni, come calendario o come elenco, e quelli dei colleghi di reparto.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Desiderata</h3><p class="text-[15px] leading-relaxed text-gray-600">Per ogni data si sceglie in quale fascia lavorare (Scegli fascia) o in quale non lavorare (Escludi fasce, Non disponibile). Se il coordinatore non la approva subito, il motore prova comunque ad assecondarla.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Cambi turno</h3><p class="text-[15px] leading-relaxed text-gray-600">Scambio o sola copertura: il collega accetta, il coordinatore approva, il sistema avvisa se mancano requisiti o se il cambio viola le regole.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Ferie, formazione e congressi</h3><p class="text-[15px] leading-relaxed text-gray-600">Richieste con approvazione del responsabile, che le ritrova già nel piano. Le assenze non tutelate ancora in attesa pesano comunque nelle scelte del motore.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Cambi turno</h3><p class="text-[15px] leading-relaxed text-gray-600">Uno scambio con un collega, oppure solo una copertura: il percorso, passo per passo, è qui sotto.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Ferie, formazione e congressi</h3><p class="text-[15px] leading-relaxed text-gray-600">Si chiedono dall'app e arrivano al responsabile; come entrano nel piano lo trovi qui sotto.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Assenze improvvise</h3><p class="text-[15px] leading-relaxed text-gray-600">Un'assenza improvvisa avvisa subito il responsabile via email.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Notifiche</h3><p class="text-[15px] leading-relaxed text-gray-600">Alla pubblicazione dei turni arriva una notifica, in app e via email.</p></li>
                 </ul>
@@ -212,8 +228,50 @@
                     <ul class="flex flex-col gap-3">
                         <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Una volta pubblicati, i turni si considerano accettati: niente negoziazioni intermedie.</span></li>
                         <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>I turni di un reparto li vedono solo i suoi operatori e chi lo coordina o lo amministra.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Per tutela della privacy le motivazioni sanitarie non si registrano: basta «Non dichiarata».</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Il motivo sanitario di un'assenza non si registra: a tutela della privacy, l'assenza può restare «Non dichiarata».</span></li>
                     </ul>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8">
+                <div class="flex flex-col gap-3">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Una richiesta di ferie, dal telefono al piano</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Ferie, congressi e formazione seguono sempre lo stesso percorso, visibile a chi chiede e a chi decide.</p>
+                </div>
+                <ol class="flex flex-col gap-6">
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">1</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">La chiede dal telefono</span><span class="text-base leading-relaxed text-gray-600">L'operatore sceglie il tipo di assenza e le date. Niente moduli di carta né messaggi.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">2</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Il motore ne tiene già conto</span><span class="text-base leading-relaxed text-gray-600">Finché la richiesta è in attesa, il motore cerca di lasciare liberi quei giorni: approvarla non vorrà dire riscrivere il piano.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">3</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Il coordinatore la valuta</span><span class="text-base leading-relaxed text-gray-600">Prima di decidere può applicarla in simulazione e vedere cosa cambia nel piano.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">4</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">La griglia la mostra</span><span class="text-base leading-relaxed text-gray-600">Approvata, compare sulle celle di quei giorni, con lo stato: rispettata o no.</span></span></li>
+                </ol>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8">
+                <div class="flex flex-col gap-3">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Un cambio turno in quattro passaggi</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Gli scambi tra colleghi non passano più da accordi a voce da ricordare.</p>
+                </div>
+                <ol class="flex flex-col gap-6">
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">1</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">La proposta</span><span class="text-base leading-relaxed text-gray-600">Chi vuole cambiare propone uno scambio a un collega, oppure chiede solo che qualcuno lo copra.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">2</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Il collega risponde</span><span class="text-base leading-relaxed text-gray-600">La proposta arriva al collega, che la accetta dall'app.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">3</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Il controllo</span><span class="text-base leading-relaxed text-gray-600">Il sistema verifica requisiti e regole, e avvisa se qualcosa non torna.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">4</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">L'approvazione</span><span class="text-base leading-relaxed text-gray-600">Il coordinatore approva e il piano si aggiorna.</span></span></li>
+                </ol>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Dal lato del coordinatore</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">L'app del personale e lo strumento del coordinatore lavorano sugli stessi dati.</p>
+                </div>
+                <ul class="grid md:grid-cols-2 gap-5">
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Approvazioni anche in blocco</h3><p class="text-[15px] leading-relaxed text-gray-600">Le desiderata si approvano una per una o tutte insieme.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Modifiche dopo la pubblicazione</h3><p class="text-[15px] leading-relaxed text-gray-600">Si fanno in una sessione dedicata, con annullamento passo per passo.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Scambi e trasferimenti suggeriti</h3><p class="text-[15px] leading-relaxed text-gray-600">Per coprire un buco il sistema propone scambi e trasferimenti, ordinati per qualità.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Storico di ogni modifica</h3><p class="text-[15px] leading-relaxed text-gray-600">Chi ha cambiato cosa, e quando: resta tutto tracciato.</p></li>
+                </ul>
             </div>
         </section>
         <!-- FAQ -->
@@ -236,6 +294,14 @@
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Uno scambio dell'ultimo minuto viene controllato?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
                         <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Lo scambio viene verificato rispetto alle regole e richiede comunque l'approvazione del coordinatore.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">In che lingue è disponibile l'app?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">In italiano e in inglese.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Una richiesta di ferie ancora in attesa conta già nel piano?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Il motore cerca già di lasciare liberi quei giorni, e il coordinatore può applicarla in simulazione per vederne l'effetto prima di approvarla o respingerla.</p>
                     </details>
                 </div>
             </div>

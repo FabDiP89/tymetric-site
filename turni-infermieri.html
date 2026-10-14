@@ -92,7 +92,7 @@
                 "name": "Uno scambio di turno tra colleghi viene controllato?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sì. Lo scambio viene verificato rispetto alle regole e passa comunque dall'approvazione del coordinatore."
+                    "text": "Sì: il cambio viene confrontato con le regole del reparto e del contratto, e il coordinatore deve comunque approvarlo."
                 }
             },
             {
@@ -101,6 +101,14 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Sì. Per esempio, se il contratto consente fino a 7 pronte disponibilità al mese, puoi imporne al massimo 4 a un collega con esigenze familiari."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Tymetric gestisce la turnazione in quinta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. Per ogni persona si imposta la turnazione (libera, in quinta o in sesta) e il motore privilegia le sequenze naturali di quel ciclo, insieme alle regole del reparto."
                 }
             }
         ]
@@ -193,15 +201,15 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
                 <div class="flex flex-col gap-3 max-w-3xl">
                     <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Le regole che contano per chi fa i turni</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Quello che vale sempre lo imposti una volta, con i valori del tuo reparto.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">Le regole che valgono tutto l'anno le imposti una volta, con i numeri del tuo reparto.</p>
                 </div>
                 <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Notti</h3><p class="text-[15px] leading-relaxed text-gray-600">Massimo di notti per mese, metà mese o settimana, notti consecutive e distanza minima tra due notti. I limiti previsti dal CCNL sono già impostati e restano personalizzabili.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Riposi</h3><p class="text-[15px] leading-relaxed text-gray-600">Da 11 a 18 ore tra due turni, lo smonto dopo la notte già impostato, un riposo entro N giorni da un weekend, un festivo o un prefestivo lavorato. La domenica lavorata si recupera entro la settimana successiva.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Riposi</h3><p class="text-[15px] leading-relaxed text-gray-600">Tra due turni, le ore di riposo che sceglie il reparto, da 11 a 18. Lo smonto dopo la notte è già impostato, e chi ha lavorato nel fine settimana, in un festivo o in un prefestivo ha un riposo entro i giorni che stabilisci. La domenica lavorata si recupera entro la settimana successiva.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Weekend e festivi</h3><p class="text-[15px] leading-relaxed text-gray-600">Mai due weekend di fila, mai due domeniche di fila. Le statistiche su weekend, festivi e prefestivi sono sempre visibili mentre pianifichi.</p></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Equità</h3><p class="text-[15px] leading-relaxed text-gray-600">Tra le preferenze del motore: equità sulle fasce orarie, festività e un indice di stress che misura il carico di lavoro (notti, weekend, giorni consecutivi) per distribuirlo meglio.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Turni da 8 e da 12 ore</h3><p class="text-[15px] leading-relaxed text-gray-600">Nello stesso reparto o tra attività diverse: le fasce giuste si attivano persona per persona, e i turni spezzati si accoppiano con una regola.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Pronta disponibilità</h3><p class="text-[15px] leading-relaxed text-gray-600">Il limite del CCNL di Comparto, al massimo 7 reperibilità al mese, è già impostato. Per un collega con esigenze familiari puoi fissare un tetto più basso, solo per lui.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Turni di 8 o di 12 ore</h3><p class="text-[15px] leading-relaxed text-gray-600">Possono convivere nello stesso reparto o in attività diverse: per ogni persona si attivano le fasce adatte, e una regola tiene insieme i turni spezzati.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Pronta disponibilità</h3><p class="text-[15px] leading-relaxed text-gray-600">Il tetto di 7 reperibilità al mese previsto dal CCNL di Comparto è già impostato. Per un collega con esigenze familiari puoi fissarne uno più basso, solo per quella persona.</p></li>
                 </ul>
             </div>
         </section>
@@ -226,11 +234,23 @@
                     <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Le richieste arrivano dall'app</h2>
                     <p class="text-lg leading-relaxed text-gray-600">Desiderata, cambi turno, ferie e formazione partono dal telefono dell'infermiere e arrivano al coordinatore, senza messaggi sparsi.</p>
                     <ul class="flex flex-col gap-3">
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Desiderata: per ogni data si sceglie in quale fascia lavorare o in quale non lavorare. Se il coordinatore non la approva subito, il motore prova comunque ad assecondarla; lo stesso vale per le assenze non tutelate.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Cambi turno: il collega accetta, il coordinatore approva, il sistema avvisa se mancano requisiti o se lo scambio viola il CCNL.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Un'assenza improvvisa avvisa il responsabile via email. Le motivazioni sanitarie non si registrano: basta «Non dichiarata».</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Desiderata: giorno per giorno, l'infermiere indica la fascia in cui vuole lavorare o quelle da evitare. Anche prima dell'approvazione il motore cerca di rispettarle, e fa lo stesso con le assenze non tutelate.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Cambi turno: servono il sì del collega e quello del coordinatore; se mancano i requisiti o lo scambio viola il CCNL, il sistema lo segnala.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Se qualcuno non può presentarsi, lo segnala dall'app e il responsabile riceve subito un'email. Il motivo non va indicato: l'assenza può restare «Non dichiarata».</span></li>
                     </ul>
                     <p class="text-[15px] leading-relaxed text-gray-600">Più dettagli nella pagina <a href="app-turni-personale.html" class="text-primary-dark underline">App turni per il personale</a>.</p>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Turni in quinta e in sesta</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Molti reparti lavorano con la turnazione in quinta, un ciclo di cinque giorni: mattina, pomeriggio, notte, smonto e riposo. Altri preferiscono la sesta, o turnazioni libere. In Tymetric la turnazione si imposta persona per persona: libera, in quinta o in sesta.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">Il motore conosce le sequenze naturali della quinta e della sesta e le privilegia, con il peso che sceglie il reparto. Sono preferenze, non vincoli rigidi: se il mese richiede un'eccezione, il motore si adatta invece di fermarsi.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>I riposi settimanali seguono i giorni del contratto: quelli che una settimana non permette di dare passano alla successiva.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Le ore settimanali hanno un tetto legato al monte ore del contratto, e le assenze contano nelle ore.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Il part-time si esprime con ore e giorni, e il motore ne tiene conto in tetti e obiettivi.</span></li>
+                    </ul>
             </div>
         </section>
         <!-- FAQ -->
@@ -248,11 +268,15 @@
                     </details>
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Uno scambio di turno tra colleghi viene controllato?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
-                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Lo scambio viene verificato rispetto alle regole e passa comunque dall'approvazione del coordinatore.</p>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì: il cambio viene confrontato con le regole del reparto e del contratto, e il coordinatore deve comunque approvarlo.</p>
                     </details>
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Posso fissare un limite di pronta disponibilità diverso per una sola persona?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
                         <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Per esempio, se il contratto consente fino a 7 pronte disponibilità al mese, puoi imporne al massimo 4 a un collega con esigenze familiari.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Tymetric gestisce la turnazione in quinta?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Per ogni persona si imposta la turnazione (libera, in quinta o in sesta) e il motore privilegia le sequenze naturali di quel ciclo, insieme alle regole del reparto.</p>
                     </details>
                 </div>
             </div>

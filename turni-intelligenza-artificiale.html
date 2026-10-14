@@ -73,18 +73,34 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "È l'AI a decidere i turni?",
+                "name": "Posso usare ChatGPT per fare i turni del reparto?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "No. L'AI propone e prepara, ma nel calendario non cambia nulla finché il coordinatore non approva. Le operazioni che violano un vincolo richiedono la sua autorizzazione esplicita."
+                    "text": "Per una bozza sì, ma va verificata a mano: un chatbot generico non conosce le regole del reparto, non controlla i vincoli e non gestisce richieste e cambi turno. In più, i dati del personale sono dati personali e il loro trattamento va regolato con chi li riceve. Tymetric usa l'AI per capire le richieste e il motore per far rispettare le regole."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Devo configurare ogni eccezione come una regola?",
+                "name": "Mya può cambiare i turni da sola?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "No. Le regole che valgono sempre si impostano una volta; le eccezioni del mese si scrivono all'AI con parole tue, e il resoconto te le elenca."
+                    "text": "No. Mya prepara le operazioni e te le mostra in anteprima: nel calendario cambia qualcosa solo dopo la tua conferma, e ogni modifica resta nello storico con il suo autore."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Che differenza c'è tra Mya e la modalità Deep planning?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Mya ti affianca ogni giorno su singole operazioni: un'assegnazione, uno scambio, un cambio di fabbisogno. La modalità Deep planning prende in carico il mese intero, dal racconto iniziale al resoconto da approvare."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso allegare le indicazioni del primario?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì, nella modalità Deep planning: file Word, Excel o di testo. Nell'uso quotidiano Mya lavora sui dati già presenti in Tymetric."
                 }
             },
             {
@@ -92,7 +108,7 @@
                 "name": "Dove vengono elaborati i dati?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "L'elaborazione è configurata nell'Unione europea. Il modello non conserva i dati e non li usa per addestrarsi; le conversazioni restano in Tymetric, per reparto e sessione."
+                    "text": "Nell'Unione europea, dove l'elaborazione è configurata. I dati del reparto non restano al modello di AI e non servono ad addestrarlo; le conversazioni sono salvate in Tymetric, per reparto e per sessione."
                 }
             },
             {
@@ -100,7 +116,7 @@
                 "name": "Mya e la modalità Deep planning sono incluse nel prezzo?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Mya è inclusa in ogni reparto. La modalità Deep planning si valuta caso per caso, per ogni struttura, con fatturazione separata."
+                    "text": "Mya sì, in ogni reparto. La modalità Deep planning è un servizio a parte, quotato per struttura: i dettagli sono nella pagina Prezzi."
                 }
             }
         ]
@@ -179,7 +195,7 @@
                 <nav aria-label="Percorso" class="text-sm text-gray-600"><a href="index.html" class="hover:text-primary-dark">Home</a> / <a href="prodotto.html" class="hover:text-primary-dark">Prodotto</a> / <span>Turni con l'intelligenza artificiale</span></nav>
                 <h1 class="px-3.5 py-1.5 rounded-full bg-brand-100 text-primary-dark text-sm font-semibold">Gestione dei turni con l'intelligenza artificiale</h1>
                 <p class="text-4xl sm:text-5xl lg:text-[56px] leading-[1.1] font-extrabold tracking-tight text-gray-900 text-balance">Le eccezioni le racconti. <span class="text-primary">L'AI le mette nel piano.</span></p>
-                <p class="text-xl leading-relaxed text-gray-600 max-w-3xl">Ogni mese ha richieste che nessuna regola prevede. Con Tymetric le scrivi come le diresti a un collega: la modalità Deep planning prepara il piano del mese e Mya ti aiuta ogni giorno. Nel calendario non cambia nulla senza il tuo ok.</p>
+                <p class="text-xl leading-relaxed text-gray-600 max-w-3xl">L'intelligenza artificiale di Tymetric capisce quello che chiedi a parole e lo trasforma in operazioni sul piano turni. Le regole del reparto le fa rispettare il motore; l'ultima parola resta sempre al coordinatore.</p>
                 <div class="flex flex-wrap justify-center gap-3.5 pt-2">
                     <a href="#contact" class="ty-btn inline-flex items-center gap-2 px-7 py-4 rounded-[10px] gradient-dark text-white text-[17px] font-semibold">Prenota una demo</a>
                     <button type="button" onclick="openChat()" class="ty-btn inline-flex items-center gap-2 px-7 py-4 rounded-[10px] ty-cta-outline text-[17px] font-semibold"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 3v-3z"></path></svg>
@@ -190,56 +206,71 @@
         </section>
 
         <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
-                <div class="flex flex-col gap-3 max-w-3xl">
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Cosa puoi chiedere all'AI</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Le regole stabili stanno nelle impostazioni del reparto. All'AI racconti quello che vale solo questo mese; nella modalità Deep planning puoi anche allegare un file Word o Excel con le indicazioni del primario.</p>
-                </div>
-                <ul class="grid md:grid-cols-2 gap-5">
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Rossi non fa notti la settimana del trasloco.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Un'eccezione personale, valida solo per quei giorni.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Bianchi e Verdi non vanno in ferie insieme ad agosto.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Un vincolo tra persone, senza creare una regola permanente.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«A dicembre il primario vuole un senior in più il sabato.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Un cambio di fabbisogno limitato a un mese.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Sposta il congresso di Ferri, il resto non si tocca.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Una correzione che cambia solo quei giorni.</p></li>
-                </ul>
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">L'AI capisce, il motore garantisce le regole</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Un modello linguistico capisce molto bene una richiesta scritta in italiano, anche informale o incompleta. Non è fatto invece per contare le notti di venti persone o per verificare il riposo minimo su un mese intero: in questi calcoli può sbagliare senza accorgersene.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">Per questo in Tymetric i compiti sono divisi. L'AI interpreta e prepara; i turni li calcola il motore di pianificazione, con la constraint factory, il nostro modello matematico che traduce le regole del reparto in vincoli per il solver.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Mya</strong> trasforma la richiesta in un'operazione: assegnare, scambiare, fissare, rigenerare, cambiare il fabbisogno.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Il motore</strong> costruisce i turni rispettando le regole rigide del reparto e i limiti CCNL già impostati.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Il coordinatore</strong> vede l'anteprima e decide: senza la sua conferma il calendario resta com'è.</span></li>
+                    </ul>
             </div>
         </section>
         <section class="py-20 bg-gray-50">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8">
-                <div class="flex flex-col gap-3">
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">La modalità Deep planning: il mese intero</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Deep planning pianifica il mese insieme al coordinatore e lavora da solo fino al resoconto.</p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Cosa puoi chiedere a Mya, ogni giorno</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Mya è inclusa in ogni reparto e lavora sui dati che sono già in Tymetric: la richiesta si scrive in chat, l'operazione arriva in anteprima.</p>
                 </div>
-                <ol class="flex flex-col gap-6">
-                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">1</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Racconti</span><span class="text-base leading-relaxed text-gray-600">Il mese a parole tue: chi fa i cicli, chi ha un'esigenza particolare, quali eccezioni concedi.</span></span></li>
-                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">2</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Chiede solo quando serve</span><span class="text-base leading-relaxed text-gray-600">Prima controlla i dati. Se un'indicazione non torna con il calendario, te lo dice prima di toccare un turno.</span></span></li>
-                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">3</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Simula e rifinisce</span><span class="text-base leading-relaxed text-gray-600">Lavora sul mese intero, settimana per settimana, e sistema sui turni quello che il motore non sa esprimere come regola.</span></span></li>
-                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">4</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Approvi</span><span class="text-base leading-relaxed text-gray-600">Il resoconto elenca coperture, eccezioni usate, anomalie rimaste e cosa riportare nel gestionale. Nel calendario non cambia nulla finché non approvi.</span></span></li>
-                </ol>
+                <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Metti Galli sulla notte del 14.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Prepara l'assegnazione e te la mostra prima di applicarla.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Scambia Rossi e Bianchi di giovedì.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Prepara lo scambio e ti fa vedere cosa cambia per entrambi.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Blocca le guardie già decise e rigenera il resto.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Fissa i turni da tenere e ricalcola solo la parte che resta.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Il 18 serve un infermiere in più al pomeriggio.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Cambia il fabbisogno di quel giorno, pronto per essere ricalcolato.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Quante notti ha fatto Bianchi questo mese?»</h3><p class="text-[15px] leading-relaxed text-gray-600">Legge statistiche e contatori del reparto e risponde in chiaro.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Come si imposta la rotazione tra le attività?»</h3><p class="text-[15px] leading-relaxed text-gray-600">Spiega come funziona il sistema, da qualsiasi schermata.</p></li>
+                </ul>
             </div>
         </section>
         <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
-                <div class="flex flex-col gap-3 max-w-3xl">
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Mya, ogni giorno</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Per il resto del mese c'è Mya, l'assistente AI inclusa in ogni reparto.</p>
-                </div>
-                <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Risponde</h3><p class="text-[15px] leading-relaxed text-gray-600">Sui dati del reparto e su come funziona il sistema, ovunque nell'app.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Agisce sul piano</h3><p class="text-[15px] leading-relaxed text-gray-600">Assegna, scambia, fissa, rigenera e cambia il fabbisogno in linguaggio naturale, sempre con un'anteprima da confermare.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Anche sui turni pubblicati</h3><p class="text-[15px] leading-relaxed text-gray-600">Prepara le modifiche nella sessione di modifica. Le conversazioni restano salvate per reparto e sessione.</p></li>
-                </ul>
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">La modalità Deep planning: il mese intero in una conversazione</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Quando c'è da costruire tutto il mese, la modalità Deep planning lavora dall'inizio alla fine. Racconti il mese come lo spiegheresti in riunione e, se serve, alleghi un file Word, Excel o di testo, per esempio le indicazioni del primario.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">Un esempio: «A dicembre Neri e Costa sono a un congresso dal 9 all'11, l'ambulatorio chiude dal 24 al 26 e ogni sabato serve un senior in più». Prima di toccare il calendario, la modalità Deep planning controlla i dati e ti chiede quello che non torna. Poi simula il mese, lo rivede una settimana alla volta e ti consegna un resoconto: le coperture, le eccezioni concesse, le anomalie che restano e quello che va riportato nel gestionale.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Le regole rigide valgono anche qui: se per esaudire una richiesta bisogna superarne una, Mya te lo dice e aspetta la tua autorizzazione in chat.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Se chiedi una correzione, cambia solo quello che hai chiesto: il resto del piano resta dov'è.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>La proposta entra nella pianificazione solo dopo la tua approvazione.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>È un servizio a parte: si attiva su richiesta, struttura per struttura, e si fattura separatamente.</span></li>
+                    </ul>
             </div>
         </section>
         <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Perché non basta un chatbot generico</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Un assistente generico come ChatGPT può aiutare a scrivere una bozza di turni. Per un reparto vero, però, mancano quattro cose.</p>
+                </div>
+                <ul class="grid md:grid-cols-2 gap-5">
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Non conosce il reparto</h3><p class="text-[15px] leading-relaxed text-gray-600">Persone, contratti, competenze e regole vanno rispiegati a ogni conversazione. In Tymetric sono già nel sistema e valgono per ogni richiesta.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Non verifica i vincoli</h3><p class="text-[15px] leading-relaxed text-gray-600">Un modello linguistico scrive turni plausibili, ma non garantisce il riposo minimo né il conteggio delle notti. In Tymetric le regole le fa rispettare il motore.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Il piano resta un testo</h3><p class="text-[15px] leading-relaxed text-gray-600">Niente app per il personale, niente richieste né cambi turno, niente storico delle modifiche: il risultato va ricopiato a mano.</p></li>
+                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">I dati del personale</h3><p class="text-[15px] leading-relaxed text-gray-600">Nomi, assenze e contratti sono dati personali: per affidarli a un servizio esterno la struttura deve regolare il trattamento con chi li riceve. Con Tymetric è previsto, e l'elaborazione è configurata nell'Unione europea.</p></li>
+                </ul>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Chi decide: sempre il coordinatore</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">L'AI propone e prepara; il coordinatore approva, corregge o respinge. Il motore non viola mai i vincoli. Nella modalità Deep planning, se un'operazione viola un vincolo, Mya lo segnala e chiede la tua autorizzazione in chat. Ogni modifica ha un autore nello storico.</p>
+                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Chi decide e dove passano i dati</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">L'AI propone e prepara; il coordinatore approva, corregge o scarta. Ogni modifica entra nello storico con il suo autore, così è sempre chiaro chi ha deciso cosa.</p>
                     <ul class="flex flex-col gap-3">
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Elaborazione configurata nell'Unione europea, con modelli di frontiera.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Il modello non conserva i dati del reparto e non li usa per addestrarsi.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>L'applicazione può essere installata in locale presso la struttura; la modalità Deep planning no, perché lavora sul cloud.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Usiamo modelli di frontiera, con elaborazione configurata nell'Unione europea.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Nessun dato resta al modello di AI, né viene usato per addestrarlo.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Le conversazioni restano in Tymetric, salvate per reparto e per sessione.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>L'applicazione può essere installata in locale presso la struttura; fa eccezione la modalità Deep planning, che lavora in cloud.</span></li>
                     </ul>
-                    <p class="text-[15px] leading-relaxed text-gray-600">Ruoli, dati e scadenze sono spiegati nelle pagine <a href="gdpr.html" class="text-primary-dark underline">GDPR</a> e <a href="ai-act.html" class="text-primary-dark underline">AI Act</a>. Mya è inclusa in ogni reparto; la modalità Deep planning si attiva su richiesta, per ogni struttura, con fatturazione separata.</p>
+                    <p class="text-[15px] leading-relaxed text-gray-600">Ruoli, misure e documenti per il DPO sono nella pagina <a href="gdpr.html" class="text-primary-dark underline">GDPR</a>; le scadenze europee sull'intelligenza artificiale nella pagina <a href="ai-act.html" class="text-primary-dark underline">AI Act</a>.</p>
             </div>
         </section>
         <!-- FAQ -->
@@ -248,20 +279,28 @@
                 <h2 class="text-center text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Domande frequenti</h2>
                 <div class="flex flex-col gap-3.5">
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
-                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">È l'AI a decidere i turni?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
-                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. L'AI propone e prepara, ma nel calendario non cambia nulla finché il coordinatore non approva. Le operazioni che violano un vincolo richiedono la sua autorizzazione esplicita.</p>
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Posso usare ChatGPT per fare i turni del reparto?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Per una bozza sì, ma va verificata a mano: un chatbot generico non conosce le regole del reparto, non controlla i vincoli e non gestisce richieste e cambi turno. In più, i dati del personale sono dati personali e il loro trattamento va regolato con chi li riceve. Tymetric usa l'AI per capire le richieste e il motore per far rispettare le regole.</p>
                     </details>
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
-                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Devo configurare ogni eccezione come una regola?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
-                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. Le regole che valgono sempre si impostano una volta; le eccezioni del mese si scrivono all'AI con parole tue, e il resoconto te le elenca.</p>
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Mya può cambiare i turni da sola?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. Mya prepara le operazioni e te le mostra in anteprima: nel calendario cambia qualcosa solo dopo la tua conferma, e ogni modifica resta nello storico con il suo autore.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Che differenza c'è tra Mya e la modalità Deep planning?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Mya ti affianca ogni giorno su singole operazioni: un'assegnazione, uno scambio, un cambio di fabbisogno. La modalità Deep planning prende in carico il mese intero, dal racconto iniziale al resoconto da approvare.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Posso allegare le indicazioni del primario?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì, nella modalità Deep planning: file Word, Excel o di testo. Nell'uso quotidiano Mya lavora sui dati già presenti in Tymetric.</p>
                     </details>
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Dove vengono elaborati i dati?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
-                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">L'elaborazione è configurata nell'Unione europea. Il modello non conserva i dati e non li usa per addestrarsi; le conversazioni restano in Tymetric, per reparto e sessione.</p>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Nell'Unione europea, dove l'elaborazione è configurata. I dati del reparto non restano al modello di AI e non servono ad addestrarlo; le conversazioni sono salvate in Tymetric, per reparto e per sessione.</p>
                     </details>
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Mya e la modalità Deep planning sono incluse nel prezzo?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
-                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Mya è inclusa in ogni reparto. La modalità Deep planning si valuta caso per caso, per ogni struttura, con fatturazione separata.</p>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Mya sì, in ogni reparto. La modalità Deep planning è un servizio a parte, quotato per struttura: i dettagli sono nella pagina <a href="prezzi.html" class="text-primary-dark underline">Prezzi</a>.</p>
                     </details>
                 </div>
             </div>

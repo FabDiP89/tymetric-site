@@ -74,6 +74,79 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Cosa è incluso nel canone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tutte le funzioni di interfaccia e motore (regole, scambi, sostituzioni, statistiche, export e invio dei turni), l'app per gli operatori e Mya, l'assistente AI. Il pannello per chi governa più reparti e la modalità Deep planning si aggiungono su richiesta."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto costa un reparto di 30 operatori?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "1.730 € l'anno, IVA esclusa: 1.190 € per la base, che copre i primi 20 operatori, più 10 operatori della fascia 1 a 54 € l'anno ciascuno. Il simulatore calcola qualsiasi altro numero."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "C'è un periodo di prova?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì: per i reparti fino a 100 operatori i primi 3 mesi sono in prova, senza canone. Per una struttura si può valutare un progetto pilota."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Cosa succede se il reparto cresce durante l'anno?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gli operatori aggiunti si pagano pro rata fino al rinnovo, alla tariffa della fascia in cui ricadono."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ci sono costi di avvio?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La configurazione iniziale è quotata a parte solo per l'avvio di una struttura: per attivare un singolo reparto non è prevista."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto costa la modalità Deep planning?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non è nel listino: si valuta caso per caso, per ogni struttura, con fatturazione separata. Mya, per tutto il resto, è sempre inclusa."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "I prezzi comprendono l'IVA?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No: sono canoni annui, IVA esclusa."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "E oltre 100 operatori?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Per oltre 100 operatori, o per l'intera struttura, prepariamo un'offerta su misura, che può comprendere il pannello di amministrazione per più reparti e l'installazione in locale."
+                }
+            }
+        ]
+    }
+    </script>
+
     <script src="js/site.js" defer></script>
 </head>
 
@@ -154,7 +227,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-12 items-start">
                 <div class="flex flex-col gap-4">
                     <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Il listino</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">La base copre i primi 20 operatori. Ogni operatore oltre la base paga la tariffa della propria fascia: più operatori aggiungi, meno costa ciascuno.</p>
+                    <p class="text-lg leading-relaxed text-gray-600">La base copre i primi 20 operatori. Oltre la base, ogni operatore costa quanto la fascia in cui ricade: più operatori aggiungi, meno costa ciascuno.</p>
                     <div class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">Cresci quando serve</span><span class="text-[15px] leading-relaxed text-gray-600">Gli operatori aggiunti durante l'anno si pagano pro rata fino al rinnovo.</span></div>
                 </div>
                 <div class="flex flex-col gap-6">
@@ -288,6 +361,47 @@
                 <div class="flex flex-col gap-1 items-center text-center text-[15px] text-gray-600">
                     <p>Interfaccia, motore, app per gli operatori e Mya sono inclusi in ogni configurazione.</p>
                     <p>Prezzi annui, IVA esclusa. La configurazione iniziale è quotata a parte, solo per l'avvio di una struttura.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="domande" class="py-24 bg-gray-50 scroll-mt-16">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <h2 class="text-center text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Domande frequenti</h2>
+                <div class="flex flex-col gap-3.5">
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Cosa è incluso nel canone?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Tutte le funzioni di interfaccia e motore (regole, scambi, sostituzioni, statistiche, export e invio dei turni), l'app per gli operatori e Mya, l'assistente AI. Il pannello per chi governa più reparti e la modalità Deep planning si aggiungono su richiesta.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Quanto costa un reparto di 30 operatori?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">1.730 € l'anno, IVA esclusa: 1.190 € per la base, che copre i primi 20 operatori, più 10 operatori della fascia 1 a 54 € l'anno ciascuno. Il simulatore calcola qualsiasi altro numero.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">C'è un periodo di prova?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì: per i reparti fino a 100 operatori i primi 3 mesi sono in prova, senza canone. Per una struttura si può valutare un progetto pilota.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Cosa succede se il reparto cresce durante l'anno?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Gli operatori aggiunti si pagano pro rata fino al rinnovo, alla tariffa della fascia in cui ricadono.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Ci sono costi di avvio?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">La configurazione iniziale è quotata a parte solo per l'avvio di una struttura: per attivare un singolo reparto non è prevista.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Quanto costa la modalità Deep planning?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Non è nel listino: si valuta caso per caso, per ogni struttura, con fatturazione separata. Mya, per tutto il resto, è sempre inclusa.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">I prezzi comprendono l'IVA?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No: sono canoni annui, IVA esclusa.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">E oltre 100 operatori?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Per oltre 100 operatori, o per l'intera struttura, prepariamo un'offerta su misura, che può comprendere il pannello di amministrazione per più reparti e l'installazione in locale.</p>
+                    </details>
                 </div>
             </div>
         </section>

@@ -311,48 +311,16 @@
                 <div class="flex flex-col gap-3.5 max-w-3xl">
                     <span class="self-start px-3 py-1 rounded-full bg-primary-dark text-white text-[13px] font-bold uppercase tracking-wider">Deep planning</span>
                     <h2 class="text-3xl lg:text-[46px] leading-[1.12] font-extrabold tracking-tight text-gray-900 text-balance">Il mese intero, pianificato con te dall'AI</h2>
-                    <p class="text-xl leading-relaxed text-gray-600">Scrivi il mese con le tue parole: chi fa i cicli, chi ha un'esigenza particolare, quali eccezioni concedi. La modalità Deep planning ti fa le domande che servono, ti mostra il piano e lavora da solo fino al resoconto.</p>
-                </div>
-                <div class="grid lg:grid-cols-2 gap-14 items-center">
-                    <ol class="flex flex-col gap-6">
-                        <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">1</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Racconti</span><span class="text-base leading-relaxed text-gray-600">Il mese come lo spiegheresti a un collega, anche allegando le indicazioni del primario.</span></span></li>
-                        <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">2</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Chiede solo quando serve</span><span class="text-base leading-relaxed text-gray-600">Prima controlla i dati. Se un'indicazione non torna con il calendario, te lo dice prima di toccare un turno.</span></span></li>
-                        <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">3</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Simula e rifinisce</span><span class="text-base leading-relaxed text-gray-600">Lavora sul mese intero, settimana per settimana. Quello che il motore non sa esprimere come regola, lo sistema direttamente sui turni.</span></span></li>
-                        <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full bg-gray-900 text-white text-lg font-extrabold flex items-center justify-center">4</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Approvi</span><span class="text-base leading-relaxed text-gray-600">Il resoconto elenca coperture, eccezioni usate, anomalie rimaste e cosa riportare nel gestionale. Nel calendario non cambia nulla finché non approvi tu.</span></span></li>
-                    </ol>
-                    <div class="flex flex-col gap-4" aria-label="Esempio di conversazione con Deep planning">
-                        <div class="bg-white border border-gray-200 rounded-[18px] shadow-2xl overflow-hidden">
-                            <div class="bg-gray-900 text-white px-5 py-3.5 flex justify-between items-center gap-3"><span class="text-[15px] font-bold">Deep planning</span><span class="text-[13px] text-gray-300">Novembre · Medicina generale</span></div>
-                            <div class="p-5 flex flex-col gap-3.5 bg-gray-50">
-                                <p class="self-end max-w-[88%] bg-primary-dark text-white px-3.5 py-3 rounded-[14px] rounded-br text-[15px] leading-normal">Ferri è a congresso dal 12 al 14. Rossi e Conti fanno il ciclo della guardia del venerdì. A Galli concedo due notti di fila a fine mese.</p>
-                                <div class="self-start max-w-[92%] bg-white border border-gray-200 text-gray-900 p-3.5 rounded-[14px] rounded-bl text-[15px] leading-normal flex flex-col gap-3">
-                                    <p>Prima di partire: Galli ha già 2 notti a novembre e il reparto ne consente al massimo 3. Con altre due arriva a 4. Applico l'eccezione solo per lei?</p>
-                                    <div class="flex flex-wrap gap-2" aria-hidden="true">
-                                        <span class="inline-flex items-center min-h-[44px] px-4 rounded-lg bg-primary-dark text-white text-sm font-semibold">Sì, solo per Galli</span>
-                                        <span class="inline-flex items-center min-h-[44px] px-4 rounded-lg border border-gray-300 bg-white text-gray-700 text-sm font-semibold">No, una notte sola</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white border border-gray-200 rounded-[18px] shadow-lg p-5 flex flex-col gap-3.5">
-                            <div class="flex justify-between items-baseline gap-3"><span class="text-[17px] font-bold text-gray-900">Resoconto</span><span class="text-[13px] text-gray-600">In attesa della tua approvazione</span></div>
-                            <ul class="grid sm:grid-cols-2 gap-2.5">
-                                <li class="px-3.5 py-3 rounded-[10px] bg-gray-50 flex flex-col gap-0.5"><span class="text-sm font-bold text-gray-900">Coperture</span><span class="text-[13px] leading-snug text-gray-600">Turni coperti e scoperti, giorno per giorno</span></li>
-                                <li class="px-3.5 py-3 rounded-[10px] bg-gray-50 flex flex-col gap-0.5"><span class="text-sm font-bold text-gray-900">Eccezioni usate</span><span class="text-[13px] leading-snug text-gray-600">Galli: 4 notti a novembre</span></li>
-                                <li class="px-3.5 py-3 rounded-[10px] bg-gray-50 flex flex-col gap-0.5"><span class="text-sm font-bold text-gray-900">Anomalie rimaste</span><span class="text-[13px] leading-snug text-gray-600">Quello che non è riuscito a sistemare</span></li>
-                                <li class="px-3.5 py-3 rounded-[10px] bg-gray-50 flex flex-col gap-0.5"><span class="text-sm font-bold text-gray-900">Da riportare nel gestionale</span><span class="text-[13px] leading-snug text-gray-600">Scostamenti da passare all'amministrazione</span></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p class="text-xl leading-relaxed text-gray-600">Racconti il mese come a un collega: congressi, cicli, esigenze particolari, eccezioni da concedere. La modalità Deep planning fa le domande che servono, prepara il piano e ti consegna un resoconto da approvare.</p>
                 </div>
                 <ul class="grid md:grid-cols-3 gap-4">
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">Un vincolo violato lo autorizzi tu</span><span class="text-[15px] leading-relaxed text-gray-600">Il motore non viola mai i vincoli. Nella modalità Deep planning, Mya può fare ciò che fa il coordinatore: se un'operazione viola un vincolo, te lo segnala e chiede la tua autorizzazione in chat.</span></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">Le correzioni toccano solo ciò che chiedi</span><span class="text-[15px] leading-relaxed text-gray-600">«Sposta il congresso, il resto non si tocca»: cambiano solo quei giorni.</span></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">Un resoconto prima di decidere</span><span class="text-[15px] leading-relaxed text-gray-600">Coperture, eccezioni concesse e anomalie rimaste, messe in fila prima che tu approvi.</span></li>
                     <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">I dati restano protetti</span><span class="text-[15px] leading-relaxed text-gray-600">Elaborazione nell'Unione europea, nessuna conservazione presso il modello, nessun addestramento sui dati del reparto.</span></li>
                 </ul>
                 <div class="flex flex-wrap items-center justify-between gap-4">
                     <span class="text-[15px] text-gray-600">Deep planning si attiva su richiesta, con fatturazione separata.</span>
-                    <a href="prodotto.html#ai" class="inline-flex items-center gap-1.5 text-base font-semibold text-primary-dark hover:text-primary">Come funziona l'AI in Tymetric <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="turni-intelligenza-artificiale.html" class="inline-flex items-center gap-1.5 text-base font-semibold text-primary-dark hover:text-primary">Come funziona l'AI in Tymetric <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
                 </div>
             </div>
         </section>
@@ -424,7 +392,7 @@
                             <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">10 regole rigide</dt><dd class="text-[15px] leading-relaxed text-gray-600">Giorni consecutivi, riposi, turni accoppiati, weekend alternati e le altre: il motore non le viola mai e rispetta le preferenze.</dd></div>
                             <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Oltre 100 criteri di preferenza</dt><dd class="text-[15px] leading-relaxed text-gray-600">Raccolti in 6 opzioni che regola il responsabile, più la priorità delle coperture.</dd></div>
                             <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Pensato per la sanità italiana</dt><dd class="text-[15px] leading-relaxed text-gray-600">Guardie, reperibilità, libera professione e ricerca distinte; limiti CCNL già impostati.</dd></div>
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Copre il massimo</dt><dd class="text-[15px] leading-relaxed text-gray-600">Se il personale non basta, il piano esce lo stesso e mostra cosa manca.</dd></div>
+                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Copre il massimo</dt><dd class="text-[15px] leading-relaxed text-gray-600">Quando mancano persone, il piano esce comunque e ti indica dove.</dd></div>
                         </dl>
                     </div>
                 </div>

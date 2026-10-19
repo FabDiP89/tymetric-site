@@ -262,7 +262,7 @@
   {
     "categoria": "COMPLIANCE E NORMATIVA",
     "domanda": "Dove è ospitata l'applicazione? Si può installare in locale?",
-    "risposta": "L'applicazione è ospitata nell'Unione europea. Su richiesta la struttura può installarla in locale, presso di sé. L'unica parte che non può essere installata in locale è la modalità Deep planning, che usa Amazon Bedrock."
+    "risposta": "L'applicazione è ospitata nell'Unione europea. Su richiesta la struttura può installarla in locale, presso di sé. Mya e la modalità Deep planning usano Amazon Bedrock: come attivarle si concorda per ogni installazione."
   },
   {
     "categoria": "COMMERCIALE, COSTI E PROGETTI PILOTA",

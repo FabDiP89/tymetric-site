@@ -60,7 +60,7 @@
         .poc .link:hover { text-decoration: underline; }
 
         /* Apertura: claim centrato, colore come atmosfera */
-        .poc-hero { position: relative; overflow: hidden; padding: 72px 0 0; text-align: center;
+        .poc-hero { position: relative; padding: 72px 0 0; text-align: center;
             background: radial-gradient(55% 60% at 50% -5%, rgba(82, 214, 205, .40) 0%, rgba(82, 214, 205, 0) 70%),
                         radial-gradient(35% 45% at 15% 45%, rgba(8, 151, 156, .12) 0%, rgba(8, 151, 156, 0) 70%),
                         radial-gradient(35% 45% at 85% 50%, rgba(82, 214, 205, .16) 0%, rgba(82, 214, 205, 0) 70%), #fff; }
@@ -79,22 +79,44 @@
         .poc-tabs { margin: 44px auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
         .poc-tabs button { font: inherit; font-size: 15px; font-weight: 600; color: var(--ty-dark); background: rgba(255, 255, 255, .7); border: 1px solid rgba(8, 151, 156, .25); border-radius: 999px; padding: 9px 16px; cursor: pointer; transition: background .2s ease, color .2s ease; }
         .poc-tabs button[aria-selected="true"] { background: var(--ty-dark); color: #fff; border-color: var(--ty-dark); }
-        .poc-shot { position: relative; margin: 22px auto 0; max-width: 1180px; padding: 0 20px; }
-        .poc-shot .frame { border-radius: 18px 18px 0 0; border: 1px solid rgba(0, 109, 117, .18); border-bottom: 0; background: #fff; box-shadow: 0 -2px 0 rgba(255,255,255,.6) inset, 0 30px 80px rgba(0, 109, 117, .18); overflow: hidden; aspect-ratio: 1730 / 1152; }
+        .poc-shot { position: relative; z-index: 2; margin: 22px auto -170px; max-width: 1180px; padding: 0 20px; }
+        .poc-shot .frame { border-radius: 18px; border: 1px solid rgba(0, 109, 117, .22); background: #fff; box-shadow: 0 40px 90px rgba(0, 20, 22, .35); overflow: hidden; aspect-ratio: 1730 / 1152; }
         .poc-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: opacity .35s ease; }
         .poc-shot img[hidden] { display: none; }
         .poc-shot .frame.fading img { opacity: 0; }
 
-        /* Tre passi, senza schede */
-        .poc-steps { padding: 88px 0 72px; border-bottom: 1px solid var(--line); }
-        .poc-steps ol { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-        .poc-steps li { padding-top: 18px; border-top: 2px solid var(--ty); }
-        .poc-steps .n { font-size: 13px; font-weight: 700; color: var(--ty-dark); letter-spacing: .1em; }
-        .poc-steps h3 { margin: 10px 0 8px; font-size: 21px; font-weight: 700; letter-spacing: -.01em; }
-        .poc-steps p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--ink-2); }
+        /* Sezioni scure: Mya e la parte AI */
+        .dark { color: #fff; background: radial-gradient(60% 45% at 50% 0%, rgba(8, 151, 156, .45) 0%, rgba(8, 151, 156, 0) 70%), #0f2426; }
+        .dark h2, .dark h3 { color: #fff; }
+        .dark .eyebrow { color: var(--ty-light); }
+        .dark .lead { color: #c9dadb; }
+        .dark .link { color: var(--ty-light); }
+
+        /* Come funziona: cinque capacità e tre colonne */
+        .poc-how { padding: 240px 0 96px; }
+        .poc-how .intro { text-align: center; max-width: 760px; margin: 0 auto; }
+        .poc-how .feat { list-style: none; margin: 52px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; text-align: center; }
+        .poc-how .feat li { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+        .poc-how .feat svg { width: 24px; height: 24px; color: var(--ty-light); }
+        .poc-how .feat b { font-size: 16px; font-weight: 600; }
+        .poc-how .feat span { font-size: 14px; line-height: 1.45; color: #b8c9ca; max-width: 220px; }
+        .poc-how .cols { margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .poc-how .card { background: #fff; color: var(--ink); border-radius: 20px; padding: 32px; display: flex; flex-direction: column; }
+        .poc-how .card h3 { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); }
+        .poc-how .card .what { margin: 6px 0 0; font-size: 15px; color: var(--ink-3); }
+        .poc-how .card ul { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px; flex: 1; }
+        .poc-how .card li { position: relative; padding-left: 20px; font-size: 16px; line-height: 1.45; color: var(--ink-2); }
+        .poc-how .card li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: var(--ty); }
+        .poc-how .card .more { margin-top: 28px; color: var(--ty-dark); }
+        .poc-how .card.mya { background: var(--ty-dark); color: #fff; }
+        .poc-how .card.mya h3, .poc-how .card.mya li { color: #fff; }
+        .poc-how .card.mya .what { color: #cfeeec; }
+        .poc-how .card.mya li::before { background: var(--ty-light); }
+        .poc-how .card.mya .more { color: #fff; }
+        .poc-how .tag { align-self: flex-start; margin-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: rgba(255, 255, 255, .16); color: #fff; }
 
         /* Mya: testo a sinistra, chat animata a destra */
-        .poc-mya { padding: 96px 0; }
+        .poc-mya { padding: 104px 0; }
         .poc-mya .grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; }
         .poc-mya ul { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
         .poc-mya li { padding-left: 28px; position: relative; font-size: 17px; line-height: 1.5; color: var(--ink-2); }
@@ -132,23 +154,45 @@
         .poc-chat .foot { display: flex; justify-content: space-between; align-items: center; padding: 10px 18px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-3); background: #fff; }
         .poc-chat .foot button { font: inherit; font-size: 13px; font-weight: 600; color: var(--ty-dark); background: none; border: 0; cursor: pointer; }
 
-        /* Motore e interfaccia */
-        .poc-engine { padding: 96px 0; background: var(--wash); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-        .poc-engine .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; }
-        .poc-engine .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 32px; }
-        .poc-engine h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; }
-        .poc-engine ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.5; color: var(--ink-2); }
-        .poc-engine li { padding-left: 16px; position: relative; }
-        .poc-engine li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--ty); }
-        .poc-engine .pic { border-radius: 16px; overflow: hidden; border: 1px solid rgba(0, 109, 117, .18); box-shadow: 0 24px 60px rgba(0, 109, 117, .16); }
-        .poc-engine .pic img { display: block; width: 100%; height: auto; }
+        .poc-mya.dark li { color: #d7e4e5; }
+        .poc-mya.dark li b { color: #fff; }
+        .poc-mya.dark li::before { border-color: var(--ty-light); }
+        .poc-mya.dark .deep { border-top-color: rgba(255, 255, 255, .18); }
+        .poc-mya.dark .deep h3 { color: #fff; }
+        .poc-mya.dark .deep p { color: #c9dadb; }
+        .poc-mya.dark .note { color: #b8c9ca; }
 
-        /* Prezzo in una riga */
-        .poc-price { padding: 56px 0; }
-        .poc-price .row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; padding: 28px 32px; border: 1px solid var(--line); border-radius: 16px; }
-        .poc-price .big { font-size: 34px; font-weight: 800; letter-spacing: -.02em; color: var(--ty-dark); }
-        .poc-price .big small { font-size: 16px; font-weight: 500; color: var(--ink-2); letter-spacing: 0; margin-left: 8px; }
-        .poc-price p { margin: 4px 0 0; font-size: 15px; color: var(--ink-2); }
+        /* Motore e lavoro a mano: solo testo, in grande */
+        .poc-engine { padding: 104px 0; background: #fff; }
+        .poc-engine .top { max-width: 820px; }
+        .poc-engine .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; }
+        .poc-engine h3 { margin: 0; padding-bottom: 16px; border-bottom: 2px solid var(--ty); font-size: 26px; font-weight: 700; letter-spacing: -.01em; }
+        .poc-engine dl { margin: 0; padding: 0; }
+        .poc-engine dt { margin-top: 26px; font-size: 20px; font-weight: 700; color: var(--ink); letter-spacing: -.01em; }
+        .poc-engine dd { margin: 6px 0 0; font-size: 17px; line-height: 1.55; color: var(--ink-2); }
+
+        /* Offerta: cosa è incluso e cosa si aggiunge */
+        .poc-offer { padding: 96px 0; background: #fff; border-top: 1px solid var(--line); }
+        .poc-offer .intro { text-align: center; max-width: 720px; margin: 0 auto; }
+        .poc-offer .grid { margin-top: 44px; display: grid; grid-template-columns: 1.65fr 1fr; gap: 24px; }
+        .poc-offer .base { border: 2px solid var(--ty); border-radius: 20px; padding: 32px; display: flex; flex-direction: column; }
+        .poc-offer .who { font-size: 14px; color: var(--ink-3); margin-top: 4px; }
+        .poc-offer .base h3 { margin: 18px 0 0; font-size: 28px; font-weight: 700; letter-spacing: -.01em; }
+        .poc-offer .chips { margin: 22px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+        .poc-offer .chips li { padding: 9px 14px; border-radius: 999px; background: var(--wash); border: 1px solid #cdeeeb; font-size: 15px; font-weight: 600; color: var(--ty-dark); }
+        .poc-offer .foot { margin-top: auto; padding-top: 24px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; font-size: 16px; color: var(--ink-2); }
+        .poc-offer .stack { display: flex; flex-direction: column; gap: 24px; }
+        .poc-offer .add { border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+        .poc-offer .add .eyebrow { font-size: 12px; }
+        .poc-offer .add h3 { margin: 6px 0 0; font-size: 22px; font-weight: 700; letter-spacing: -.01em; }
+        .poc-offer .add p { margin: 0; font-size: 15px; line-height: 1.5; }
+        .poc-offer .add small { margin-top: auto; padding-top: 10px; font-size: 14px; }
+        .poc-offer .add.mya { background: #0f2426; color: #fff; }
+        .poc-offer .add.mya .eyebrow { color: var(--ty-light); }
+        .poc-offer .add.mya h3 { color: #fff; }
+        .poc-offer .add.mya p, .poc-offer .add.mya small { color: #c9dadb; }
+        .poc-offer .add.site { background: var(--wash); border: 1.5px dashed var(--ty); }
+        .poc-offer .add.site p, .poc-offer .add.site small { color: var(--ink-2); }
 
         /* Modulo */
         .poc-contact { padding: 96px 0; background: linear-gradient(180deg, #fff 0%, var(--wash) 100%); border-top: 1px solid var(--line); }
@@ -181,9 +225,10 @@
         @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } .poc-chat .msg, .poc-chat dl div, .poc-chat .acts { transition: none; } }
 
         @media (max-width: 900px) {
-            .poc-mya .grid, .poc-engine .grid, .poc-more .grid { grid-template-columns: 1fr; gap: 40px; }
-            .poc-steps ol { grid-template-columns: 1fr; gap: 28px; }
-            .poc-engine .cols { grid-template-columns: 1fr; }
+            .poc-mya .grid, .poc-more .grid, .poc-offer .grid { grid-template-columns: 1fr; gap: 32px; }
+            .poc-how .feat { grid-template-columns: repeat(2, 1fr); }
+            .poc-how .cols { grid-template-columns: 1fr; }
+            .poc-engine .cols { grid-template-columns: 1fr; gap: 40px; }
         }
         @media (max-width: 640px) {
             .poc-hero { padding-top: 48px; }
@@ -192,7 +237,11 @@
             .poc-hero .go .cta { width: 100%; }
             .poc-tabs { gap: 6px; }
             .poc-tabs button { font-size: 14px; padding: 8px 12px; }
-            .poc-mya, .poc-engine, .poc-contact, .poc-more, .poc-faq { padding: 64px 0; }
+            .poc-mya, .poc-engine, .poc-contact, .poc-more, .poc-faq, .poc-offer { padding: 64px 0; }
+            .poc-shot { margin-bottom: -90px; }
+            .poc-how { padding-top: 150px; }
+            .poc-how .feat { grid-template-columns: 1fr; gap: 20px; }
+            .poc-how .card { padding: 24px; }
             .poc-contact .card { padding: 20px; }
             .poc-price .row { padding: 22px; }
             .poc-chat .body { min-height: 320px; }
@@ -291,20 +340,97 @@
         </section>
 
         <!-- Come funziona -->
-        <section class="poc-steps">
-            <div class="wrap rv">
-                <span class="eyebrow">Come funziona</span>
-                <h2 style="margin-top:10px;max-width:760px">Tre passaggi, dal reparto al piano pubblicato.</h2>
-                <ol>
-                    <li><span class="n">01</span><h3>Imposti le regole una volta</h3><p>Riposi, notti, weekend, competenze per attività: 10 regole rigide con i valori del tuo reparto, con un percorso guidato. I limiti del CCNL sono già pronti.</p></li>
-                    <li><span class="n">02</span><h3>Chiedi le eccezioni del mese</h3><p>Un congresso, un'indicazione del primario, un collega da tutelare: lo chiedi a Mya come a un collega, senza configurare nulla in più.</p></li>
-                    <li><span class="n">03</span><h3>Approvi e pubblichi</h3><p>Il motore genera il piano rispettando ogni regola e ti mostra cosa resta scoperto. Tu approvi; i turni arrivano al personale sull'app.</p></li>
-                </ol>
+        <section class="poc-how dark">
+            <div class="wrap">
+                <div class="intro rv">
+                    <span class="eyebrow">Come funziona</span>
+                    <h2 style="margin-top:12px">Fatto per come si lavora in reparto.</h2>
+                </div>
+                <ul class="feat rv">
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.6 2a9.6 9.6 0 11-19.2 0 9.6 9.6 0 0119.2 0z"></path></svg><b>Rispetto del CCNL</b><span>Limiti su guardie e reperibilità già impostati, per Comparto e Dirigenza</span></li>
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19h16M7 15V9m5 6V5m5 10v-4"></path></svg><b>Indici di carico</b><span>Ore, notti, festivi e riposi, persona per persona</span></li>
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8M8 11h5m-7 9l3-3h9a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v14z"></path></svg><b>Desiderata</b><span>Richieste dal telefono, già nel piano prima dell'approvazione</span></li>
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 3v3m8-3v3M4 9h16M5 5h14a1 1 0 011 1v13a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1zm4 9l2 2 4-4"></path></svg><b>Assenze non tutelate</b><span>Il motore le asseconda anche mentre sono in attesa</span></li>
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><b>Equità su un anno</b><span>Notti, festivi e weekend distribuiti con dodici mesi di memoria</span></li>
+                </ul>
+                <div class="cols rv">
+                    <article class="card">
+                        <h3>Piattaforma</h3>
+                        <p class="what">Lo strumento del coordinatore e l'app del personale</p>
+                        <ul>
+                            <li>Viste per persona o per attività</li>
+                            <li>Assegnazioni massive e azioni in blocco</li>
+                            <li>Turni fissati e rigenerazione parziale</li>
+                            <li>Anomalie in evidenza prima di pubblicare</li>
+                            <li>Statistiche, cruscotti ed export Excel</li>
+                            <li>App per gli operatori: desiderata, cambi turno, assenze</li>
+                        </ul>
+                        <a href="prodotto.html" class="link more">Scopri la piattaforma →</a>
+                    </article>
+                    <article class="card">
+                        <h3>Motore</h3>
+                        <p class="what">Genera il piano nel rispetto delle regole</p>
+                        <ul>
+                            <li>10 classi di regole rigide, con i valori del reparto</li>
+                            <li>Oltre 100 criteri di preferenza, in 6 opzioni</li>
+                            <li>Competenze e seniority per ogni attività</li>
+                            <li>Cicli, turni accoppiati e turni compatibili</li>
+                            <li>Limiti CCNL già impostati</li>
+                            <li>Turni scoperti segnalati, non nascosti</li>
+                        </ul>
+                        <a href="generazione-automatica-turni.html" class="link more">Come funziona il motore →</a>
+                    </article>
+                    <article class="card mya">
+                        <span class="tag">Si aggiunge su richiesta</span>
+                        <h3>Mya</h3>
+                        <p class="what">L'assistente AI integrato</p>
+                        <ul>
+                            <li>Risponde sui dati del reparto, da qualsiasi schermata</li>
+                            <li>Prepara assegnazioni, scambi e rigenerazioni</li>
+                            <li>Anteprima e conferma per ogni operazione</li>
+                            <li>Modalità Deep planning: il mese intero, con resoconto</li>
+                            <li>Dati elaborati nell'Unione europea</li>
+                        </ul>
+                        <a href="turni-intelligenza-artificiale.html" class="link more">Come funziona Mya →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Motore e lavoro a mano -->
+        <section class="poc-engine">
+            <div class="wrap">
+                <div class="top rv">
+                    <span class="eyebrow">Generazione automatica dei turni</span>
+                    <h2 style="margin-top:12px">Quando generi il piano, le regole tengono. Quando lavori a mano, vai veloce.</h2>
+                    <p class="lead" style="margin-top:18px">Il motore costruisce i turni di medici, infermieri e OSS rispettando le regole rigide del reparto, e tra le persone idonee sceglie con oltre 100 criteri di preferenza. Il piano generato è un punto di partenza che rifinisci tu.</p>
+                </div>
+                <div class="cols rv">
+                    <div>
+                        <h3>Il motore</h3>
+                        <dl>
+                            <dt>10 classi di regole rigide, mai violate</dt><dd>Riposi, notti, weekend, giorni consecutivi, competenze per attività: ogni regola ha il valore del tuo reparto e si rilegge come una frase.</dd>
+                            <dt>Limiti CCNL già impostati</dt><dd>Guardie e reperibilità di Comparto e Dirigenza, applicati da soli a chi ha quel contratto.</dd>
+                            <dt>Equità con un anno di memoria</dt><dd>Chi ha fatto molte notti o festivi nei mesi scorsi viene alleggerito in quelli successivi.</dd>
+                            <dt>Turni scoperti segnalati, non nascosti</dt><dd>Se le persone non bastano, il piano esce comunque e ti dice dove manca qualcuno.</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <h3>Quando lavori a mano</h3>
+                        <dl>
+                            <dt>Viste su misura</dt><dd>Per persona o per attività, in tre densità, con desiderata e assenze evidenziate sulla griglia.</dd>
+                            <dt>Azioni in blocco e turni fissati</dt><dd>Selezioni decine di turni e li blocchi, sblocchi o elimini in un colpo; il motore pianifica intorno a ciò che hai deciso.</dd>
+                            <dt>Candidati suggeriti per ogni turno</dt><dd>Chi può coprirlo, ordinato per idoneità, e per gli altri il motivo.</dd>
+                            <dt>Anomalie in evidenza prima di pubblicare</dt><dd>Riposo minimo, monte ore, giorni consecutivi: da ogni numero risali al turno che lo genera.</dd>
+                        </dl>
+                    </div>
+                </div>
+                <p class="rv" style="margin-top:44px"><a href="generazione-automatica-turni.html" class="link">Come funziona il motore, nel dettaglio →</a></p>
             </div>
         </section>
 
         <!-- Mya -->
-        <section class="poc-mya">
+        <section class="poc-mya dark">
             <div class="wrap grid">
                 <div class="rv">
                     <span class="eyebrow">L'assistente AI di Tymetric</span>
@@ -345,32 +471,40 @@
             </div>
         </section>
 
-        <!-- Motore e interfaccia -->
-        <section class="poc-engine">
-            <div class="wrap grid">
-                <div class="rv">
-                    <span class="eyebrow">Generazione automatica dei turni</span>
-                    <h2 style="margin-top:10px">Quando generi il piano, le regole tengono.</h2>
-                    <p class="lead" style="margin-top:16px">Il motore costruisce i turni di medici, infermieri e OSS rispettando le regole rigide del reparto, e tra le persone idonee sceglie con oltre 100 criteri di preferenza.</p>
-                    <div class="cols">
-                        <div><h3>Il motore</h3><ul><li>10 regole rigide, mai violate</li><li>Limiti CCNL su guardie e reperibilità già impostati</li><li>Equità su notti, festivi e weekend, con un anno di memoria</li><li>Turni scoperti segnalati, non nascosti</li></ul></div>
-                        <div><h3>Quando lavori a mano</h3><ul><li>Viste per persona o per attività</li><li>Azioni in blocco e turni fissati</li><li>Candidati suggeriti per ogni turno</li><li>Anomalie in evidenza prima di pubblicare</li></ul></div>
-                    </div>
-                    <p style="margin-top:28px"><a href="generazione-automatica-turni.html" class="link">Come funziona il motore →</a></p>
+        <!-- Offerta -->
+        <section class="poc-offer">
+            <div class="wrap">
+                <div class="intro rv">
+                    <span class="eyebrow">Cosa è incluso</span>
+                    <h2 style="margin-top:12px">Parti dal reparto. Aggiungi ciò che ti serve.</h2>
+                    <p class="lead" style="margin-top:14px">Interfaccia, motore e app sono inclusi per ogni reparto. Mya, l'assistente AI, e il pannello per la struttura si aggiungono.</p>
                 </div>
-                <div class="rv pic"><img src="carosello4.webp" alt="Statistiche di una persona nella griglia dei turni di Tymetric" width="1730" height="1152" loading="lazy"></div>
-            </div>
-        </section>
-
-        <!-- Prezzo -->
-        <section class="poc-price">
-            <div class="wrap rv">
-                <div class="row">
-                    <div>
-                        <div class="big">Da 1.190 € <small>l'anno, IVA esclusa</small></div>
-                        <p>La base copre i primi 20 operatori; oltre, ogni operatore costa meno. Primi 3 mesi in prova senza canone. Mya si aggiunge su richiesta.</p>
+                <div class="grid rv">
+                    <article class="base">
+                        <span class="eyebrow">Per il reparto · incluso</span>
+                        <span class="who">Coordinatori, team e operatori</span>
+                        <h3>Il turno del reparto, dalla regola alla pubblicazione</h3>
+                        <ul class="chips">
+                            <li>Viste su misura</li><li>Assegnazioni in pochi clic</li><li>Azioni in blocco</li><li>Avvisi e anomalie</li>
+                            <li>10 classi di regole rigide</li><li>oltre 100 criteri di preferenza</li><li>Limiti CCNL</li><li>App per gli operatori</li>
+                            <li>Richieste e cambi turno</li><li>Statistiche e cruscotti</li><li>Export Excel</li>
+                        </ul>
+                        <div class="foot"><span><b>Da 1.190 € l'anno,</b> IVA esclusa, <em>primi 3 mesi in prova senza canone</em>.</span><a href="prezzi.html#simulatore" class="link">Calcola il prezzo →</a></div>
+                    </article>
+                    <div class="stack">
+                        <article class="add mya">
+                            <span class="eyebrow">+ Mya, l'assistente AI</span>
+                            <h3>L'AI integrata in Tymetric</h3>
+                            <p>Risponde, prepara le operazioni e, con la modalità Deep planning, pianifica il mese con te.</p>
+                            <small>Su richiesta</small>
+                        </article>
+                        <article class="add site">
+                            <span class="eyebrow">+ Per la struttura</span>
+                            <h3>Il pannello di amministrazione</h3>
+                            <p>Vista multi reparto, copertura su tutto il personale, report di struttura.</p>
+                            <small>Su richiesta</small>
+                        </article>
                     </div>
-                    <a href="prezzi.html#simulatore" class="cta">Calcola il prezzo</a>
                 </div>
             </div>
         </section>
@@ -378,8 +512,7 @@
         <!-- Contatti -->
         <section id="contact" class="poc-contact">
             <div class="wrap-n" style="text-align:center">
-                <span class="eyebrow">Richiedi informazioni</span>
-                <h2 style="margin-top:10px">Ti rispondiamo noi, senza impegno.</h2>
+                <h2>Richiedi informazioni</h2>
                 <p class="lead" style="margin-top:14px">Lasciaci i tuoi contatti: ti ricontattiamo per rispondere alle tue domande e, se vuoi, mostrarti Tymetric in una demo.</p>
                 <div class="card" style="text-align:left">
                         <form id="contact-form" class="flex flex-col gap-5">

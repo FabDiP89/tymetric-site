@@ -145,7 +145,7 @@
             '<button type="button" class="tyc-main" data-tyc="accept">Accetta</button>' +
             '</div>' +
             '<div class="tyc-prefs">' +
-            '<label><input type="checkbox" checked disabled> <span><strong>Tecnici</strong> <span class="tyc-muted">— sempre attivi: ricordano questa scelta e mantengono aperta la chat con Mya.</span></span></label>' +
+            '<label><input type="checkbox" checked disabled> <span><strong>Tecnici</strong> <span class="tyc-muted">— sempre attivi: ricordano questa scelta.</span></span></label>' +
             '<label><input type="checkbox" id="tyc-a"' + (cur.a ? ' checked' : '') + '> <span><strong>Statistiche</strong> <span class="tyc-muted">— Google Analytics: quante persone visitano il sito e quali pagine leggono, in forma aggregata.</span></span></label>' +
             '<label><input type="checkbox" id="tyc-m"' + (cur.m ? ' checked' : '') + '> <span><strong>Marketing</strong> <span class="tyc-muted">— Google Ads: misurano se le nostre campagne portano richieste di contatto.</span></span></label>' +
             '<div class="tyc-btns"><button type="button" class="tyc-main" data-tyc="save">Salva le scelte</button></div>' +

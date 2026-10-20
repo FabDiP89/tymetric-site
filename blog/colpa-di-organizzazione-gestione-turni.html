@@ -166,114 +166,85 @@
             color: #6b7280;
         }
     </style>
+    <script src="../js/site.js" defer></script>
 </head>
 
-<body class="font-sans antialiased">
-
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+<body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
+    <!-- Navigazione -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <a href="../" class="flex items-center">
-                        <img src="../favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
-                        <span class="text-2xl font-bold text-primary">tymetric</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="../prodotto.html" class="text-gray-700 hover:text-primary transition-colors">Prodotto</a>
-                    <a href="../prezzi.html" class="text-gray-700 hover:text-primary transition-colors">Prezzi</a>
-                    <a href="../gdpr.html" class="text-gray-700 hover:text-primary transition-colors">Compliance</a>
-                    <a href="../#contact"
-                        class="px-6 py-2 gradient-primary text-white rounded-lg hover:shadow-lg transition-all">
-                        Richiedi Informazioni
-                    </a>
-                </div>
-                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+            <div class="flex items-center justify-between h-16 gap-6">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Tymetric, home">
+                    <img src="../favicon.png" alt="" class="h-8 w-8" width="32" height="32">
+                    <span class="text-2xl font-bold text-primary tracking-tight">tymetric</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8" aria-label="Navigazione principale">
+                    <div class="ty-dd py-3">
+                        <a href="../prodotto.html" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Prodotto
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="ty-dd-menu">
+                            <a href="../prodotto.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Panoramica</span><span class="text-[13px] text-gray-600">AI, interfaccia, motore e app</span></a>
+                            <a href="../turni-medici-ospedalieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni dei medici</span><span class="text-[13px] text-gray-600">Guardie, reperibilità, competenze</span></a>
+                            <a href="../turni-infermieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni degli infermieri</span><span class="text-[13px] text-gray-600">Notti eque, riposi, esigenze personali</span></a>
+                            <a href="../generazione-automatica-turni.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Generazione automatica</span><span class="text-[13px] text-gray-600">Il motore e le sue regole</span></a>
+                            <a href="../turni-intelligenza-artificiale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni con l'AI</span><span class="text-[13px] text-gray-600">Mya, l'assistente AI integrato</span></a>
+                            <a href="../app-turni-personale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">App per il personale</span><span class="text-[13px] text-gray-600">Turni, desiderata, cambi turno</span></a>
+                        </div>
+                    </div>
+                    <a href="../prezzi.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Prezzi</a>
+                    <div class="ty-dd py-3">
+                        <button type="button" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Compliance
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="ty-dd-menu">
+                            <a href="../gdpr.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">GDPR</span><span class="text-[13px] text-gray-600">Dati, ruoli, misure, conservazione</span></a>
+                            <a href="../ai-act.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">AI Act</span><span class="text-[13px] text-gray-600">Cosa fa l'AI, chi decide, le scadenze</span></a>
+                        </div>
+                    </div>
+                    <a href="../blog.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Blog</a>
+                    <a href="../#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Richiedi informazioni</a>
+                </nav>
+                <button id="mobile-menu-button" type="button" class="md:hidden p-2 -mr-2 rounded-lg text-gray-900" onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Apri il menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </div>
-
-        <!-- Mobile menu -->
-        <div id="mobile-menu"
-            class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
-            <div class="px-4 py-4 space-y-3">
-                <a href="../prodotto.html" class="block text-gray-700 hover:text-primary transition-colors">Prodotto</a>
-                <a href="../prezzi.html" class="block text-gray-700 hover:text-primary transition-colors">Prezzi</a>
-                <a href="../gdpr.html" class="block text-gray-700 hover:text-primary transition-colors">Compliance</a>
-                <a href="../#contact"
-                    class="block px-6 py-2 gradient-primary text-white rounded-lg text-center hover:shadow-lg transition-all">
-                    Richiedi Informazioni
-                </a>
+        <div id="mobile-menu" class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 flex flex-col gap-1">
+                <a href="../prodotto.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prodotto</a>
+                <a href="../turni-medici-ospedalieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni dei medici</a>
+                <a href="../turni-infermieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni degli infermieri</a>
+                <a href="../generazione-automatica-turni.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Generazione automatica</a>
+                <a href="../turni-intelligenza-artificiale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni con l'AI</a>
+                <a href="../app-turni-personale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">App per il personale</a>
+                <a href="../prezzi.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prezzi</a>
+                <span class="pt-2 text-xs font-bold uppercase tracking-wider text-gray-600">Compliance</span>
+                <a href="../gdpr.html" class="py-2.5 text-gray-700 hover:text-primary-dark">GDPR</a>
+                <a href="../ai-act.html" class="py-2.5 text-gray-700 hover:text-primary-dark">AI Act</a>
+                <a href="../blog.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Blog</a>
+                <a href="../#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Richiedi informazioni</a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Article Header -->
-    <section class="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-gray-50 to-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Breadcrumb -->
-            <nav class="mb-8">
-                <ol class="flex items-center space-x-2 text-sm text-gray-500">
-                    <li><a href="../" class="hover:text-primary transition-colors">Home</a></li>
-                    <li><span class="mx-2">/</span></li>
-                    <li><a href="../#blog" class="hover:text-primary transition-colors">Blog</a></li>
-                    <li><span class="mx-2">/</span></li>
-                    <li class="text-gray-900">Articolo</li>
-                </ol>
-            </nav>
-
-            <!-- Category Badge -->
-            <div class="mb-4">
-                <span class="inline-block bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-semibold">
-                    RISK MANAGEMENT
-                </span>
+    <main class="ty-page">
+        <!-- Intestazione dell'articolo -->
+        <section class="ty-hero ty-hero--sub ty-post-head">
+            <div class="ty-wrap-n">
+                <nav aria-label="Percorso" class="ty-crumbs"><a href="../">Home</a> / <a href="../blog.html">Blog</a> / <span>Articolo</span></nav>
+                <span class="ty-eyebrow" style="margin-top:22px">RISK MANAGEMENT</span>
+                <h1 class="ty-claim">La "Colpa di Organizzazione": Perché Risparmiare sulla Gestione dei Turni è il Rischio Più Alto per le Strutture Sanitarie</h1>
+                <p class="ty-sub">L'era in cui la responsabilità medica ricadeva quasi esclusivamente sul singolo operatore è tramontata. Con l'avvento della Legge 24/2017 (Gelli-Bianco), il focus dei giudici si è decisamente spostato dal letto del paziente alla scrivania dell'amministrazione.</p>
+                <p class="ty-meta">30 Novembre 2025 · 7 min di lettura</p>
             </div>
-
-            <!-- Title -->
-            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                La "Colpa di Organizzazione": Perché Risparmiare sulla Gestione dei Turni è il Rischio Più Alto per le Strutture Sanitarie
-            </h1>
-
-            <!-- Subtitle -->
-            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                L'era in cui la responsabilità medica ricadeva quasi esclusivamente sul singolo operatore è tramontata. Con l'avvento della Legge 24/2017 (Gelli-Bianco), il focus dei giudici si è decisamente spostato dal letto del paziente alla scrivania dell'amministrazione.
-            </p>
-
-            <!-- Meta -->
-            <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500 border-t border-b border-gray-200 py-4">
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                        </path>
-                    </svg>
-                    <span>30 Novembre 2025</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span>7 min di lettura</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hero Image -->
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-8">
-        <div class="rounded-2xl overflow-hidden shadow-xl">
-            <img src="immagini/colpa-organizzazione.webp" alt="La Colpa di Organizzazione nella gestione dei turni sanitari" class="w-full object-cover" style="aspect-ratio: 16/9;" width="1152" height="896">
-        </div>
-    </div>
+            <div class="ty-post-figure"><img src="immagini/colpa-organizzazione.webp" alt="La Colpa di Organizzazione nella gestione dei turni sanitari" width="1920" height="1072"></div>
+        </section>
 
     <!-- Article Content -->
-    <article class="py-12">
+    <article class="ty-post">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="prose max-w-none">
 
@@ -405,173 +376,57 @@
         </div>
     </article>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="gradient-primary rounded-2xl p-8 md:p-12 text-center text-white">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4">
-                    Proteggi la tua struttura dalla "Colpa di Organizzazione"
-                </h3>
-                <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-                    Tymetric ti fornisce la tracciabilità e la compliance automatica necessarie per dimostrare la "diligenza organizzativa" richiesta dalla giurisprudenza.
-                </p>
-                <a href="../#contact"
-                    class="inline-block px-8 py-4 bg-white text-primary text-lg font-semibold rounded-lg hover:shadow-xl transition-all transform hover:scale-105">
-                    Richiedi Informazioni
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Related Articles -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-2xl font-bold text-gray-900 mb-8">Articoli Correlati</h3>
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Article 1 -->
-                <a href="stress-lavoro-correlato-cassazione.html" class="group">
-                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
-                        <div class="h-32 bg-gray-200 relative overflow-hidden">
-                            <img src="immagini/stress-cassazione.webp" alt="Stress lavoro-correlato: la Cassazione cambia le regole" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-red-700 opacity-10 group-hover:opacity-20 transition-all"></div>
-                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-red-600 shadow-sm">
-                                LEGAL & COMPLIANCE
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                                Stress lavoro-correlato: la Cassazione cambia le regole
-                            </h4>
-                        </div>
-                    </div>
-                </a>
-                <!-- Article 2 -->
-                <a href="turni-massacranti-responsabilita-medica.html" class="group">
-                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
-                        <div class="h-32 bg-gray-200 relative overflow-hidden">
-                            <img src="immagini/turni-massacranti.webp" alt="Turni Massacranti e Responsabilità Medica" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-br from-amber-500 to-amber-700 opacity-10 group-hover:opacity-20 transition-all"></div>
-                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-amber-600 shadow-sm">
-                                DIRITTO SANITARIO
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                                Turni Massacranti e Responsabilità Medica
-                            </h4>
-                        </div>
-                    </div>
-                </a>
-                <!-- Article 6 - Assenteismo -->
-                <a href="assenteismo-stress-turnazione.html" class="group">
-                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
-                        <div class="h-32 bg-gray-200 relative overflow-hidden">
-                            <img src="immagini/assenteismo.webp" alt="Assenteismo e Stress da Turnazione" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 opacity-10 group-hover:opacity-20 transition-all"></div>
-                            <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-orange-600 shadow-sm">
-                                STRATEGIC RESEARCH
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                                Assenteismo e Stress da Turnazione
-                            </h4>
-                        </div>
-                    </div>
-                </a>
+        <!-- Richiesta di informazioni -->
+        <section class="ty-dark ty-post-cta">
+            <div class="ty-wrap-n ty-reveal">
+                <span class="ty-eyebrow">Tymetric</span>
+                <h2 style="margin-top:10px">Proteggi la tua struttura dalla "Colpa di Organizzazione"</h2>
+                <p class="ty-lead">Tymetric ti fornisce la tracciabilità e la compliance automatica necessarie per dimostrare la "diligenza organizzativa" richiesta dalla giurisprudenza.</p>
+                <a href="../#contact" class="ty-action">Richiedi informazioni</a>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Continua a leggere -->
+        <section class="ty-more">
+            <div class="ty-wrap-n">
+                <span class="ty-eyebrow">Continua a leggere</span>
+                <ul>
+                    <li><a href="stress-lavoro-correlato-cassazione.html"><b>Stress lavoro-correlato: la Cassazione cambia le regole. Perché il datore di lavoro ora rischia di più.</b><span>LEGAL & COMPLIANCE</span></a></li>
+                    <li><a href="turni-massacranti-responsabilita-medica.html"><b>Turni Massacranti e Responsabilità Medica: Quando la Carenza di Organico Diventa la Tua Migliore Difesa</b><span>DIRITTO SANITARIO</span></a></li>
+                    <li><a href="assenteismo-stress-turnazione.html"><b>Analisi Sistemica della Correlazione tra Stress da Turnazione, Architettura Organizzativa e Tassi di Assenteismo nel Personale Sanitario</b><span>STRATEGIC RESEARCH</span></a></li>
+                </ul>
+                <a href="../blog.html" class="ty-link ty-all">Tutti gli articoli →</a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <img src="../favicon.png" alt="Tymetric Logo" class="h-8 w-8 mr-2">
-                        <h4 class="text-2xl font-bold text-primary">tymetric</h4>
-                    </div>
-                    <p class="text-gray-400">
-                        La soluzione AI per la pianificazione intelligente dei turni di lavoro.
-                    </p>
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-8">
+                <div class="lg:col-span-1 flex flex-col gap-3.5">
+                    <div class="flex items-center gap-2"><img src="../favicon.png" alt="" class="h-8 w-8" width="32" height="32"><span class="text-2xl font-bold text-primary-light">tymetric</span></div>
+                    <p class="text-[15px] leading-relaxed text-gray-400">Turni per la sanità: genera il piano con una frase.</p>
                 </div>
-
-                <div>
-                    <h5 class="font-semibold mb-4">Prodotto</h5>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="../prodotto.html" class="hover:text-primary transition-colors">Prodotto</a></li>
-                        <li><a href="../prezzi.html" class="hover:text-primary transition-colors">Prezzi</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h5 class="font-semibold mb-4">Azienda</h5>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer"
-                                class="hover:text-primary transition-colors">Chi siamo</a></li>
-                        <li><a href="../privacy-policy.html" class="hover:text-primary transition-colors">Privacy
-                                Policy</a></li>
-                        <li><a href="../cookie-policy.html" class="hover:text-primary transition-colors">Cookie Policy</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h5 class="font-semibold mb-4">Contatti</h5>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span>Corso Unione Sovietica 341<br>Torino (TO)</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                            <a href="mailto:info@tymetric.com"
-                                class="hover:text-primary transition-colors">info@tymetric.com</a>
-                        </li>
-                    </ul>
-                </div>
+                <nav aria-label="Prodotto" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prodotto</span><a href="../prodotto.html" class="text-[15px] text-gray-400 hover:text-primary-light">Panoramica</a><a href="../turni-medici-ospedalieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni dei medici</a><a href="../turni-infermieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni degli infermieri</a><a href="../generazione-automatica-turni.html" class="text-[15px] text-gray-400 hover:text-primary-light">Generazione automatica</a><a href="../turni-intelligenza-artificiale.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni con l'AI</a><a href="../app-turni-personale.html" class="text-[15px] text-gray-400 hover:text-primary-light">App per il personale</a><a href="../prodotto.html#struttura" class="text-[15px] text-gray-400 hover:text-primary-light">Pannello per la struttura</a></nav>
+                <nav aria-label="Prezzi" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prezzi</span><a href="../prezzi.html" class="text-[15px] text-gray-400 hover:text-primary-light">Listino e simulatore</a><a href="../prezzi.html#offerte" class="text-[15px] text-gray-400 hover:text-primary-light">Struttura su richiesta</a></nav>
+                <nav aria-label="Compliance" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Compliance</span><a href="../gdpr.html" class="text-[15px] text-gray-400 hover:text-primary-light">GDPR</a><a href="../ai-act.html" class="text-[15px] text-gray-400 hover:text-primary-light">AI Act</a></nav>
+                <nav aria-label="Azienda" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Azienda</span><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer" class="text-[15px] text-gray-400 hover:text-primary-light">Chi siamo</a><a href="../blog.html" class="text-[15px] text-gray-400 hover:text-primary-light">Blog</a><a href="../privacy-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Privacy policy</a><a href="../cookie-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Cookie policy</a></nav>
+                <div class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Contatti</span><span class="text-[15px] leading-normal text-gray-400">Corso Unione Sovietica 341<br>Torino (TO)</span><a href="mailto:info@tymetric.com" class="text-[15px] text-gray-400 hover:text-primary-light">info@tymetric.com</a></div>
             </div>
-
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 GDP Analytics s.r.l. - P.IVA 11975840015 - Corso Unione Sovietica 341, Torino (TO) - All
-                    Rights Reserved.</p>
+            <div class="border-t border-gray-800 pt-6 flex flex-wrap justify-between gap-3 text-sm text-gray-400">
+                <span>&copy; 2026 GDP Analytics s.r.l. · P.IVA 11975840015 · Corso Unione Sovietica 341, Torino (TO)</span>
+                <span>Made in Italy</span>
             </div>
         </div>
     </footer>
 
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('max-h-0')) {
-                menu.classList.remove('max-h-0', 'opacity-0');
-                menu.classList.add('max-h-96', 'opacity-100');
-            } else {
-                menu.classList.add('max-h-0', 'opacity-0');
-                menu.classList.remove('max-h-96', 'opacity-100');
-            }
-        }
-
-        // Chiudi il menu mobile quando si clicca su un link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                const menu = document.getElementById('mobile-menu');
-                menu.classList.add('max-h-0', 'opacity-0');
-                menu.classList.remove('max-h-96', 'opacity-100');
-            });
-        });
-    </script>
+    <!-- CTA fissa su mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
+        <div class="ty-sticky-actions">
+            <a href="../#contact" class="ty-sticky-btn gradient-dark text-white">Richiedi informazioni</a>
+        </div>
+    </div>
 </body>
-
 </html>

@@ -80,7 +80,7 @@
         .poc-tabs button { font: inherit; font-size: 15px; font-weight: 600; color: var(--ty-dark); background: rgba(255, 255, 255, .7); border: 1px solid rgba(8, 151, 156, .25); border-radius: 999px; padding: 9px 16px; cursor: pointer; transition: background .2s ease, color .2s ease; }
         .poc-tabs button[aria-selected="true"] { background: var(--ty-dark); color: #fff; border-color: var(--ty-dark); }
         .poc-shot { position: relative; z-index: 2; margin: 22px auto -170px; max-width: 1180px; padding: 0 20px; }
-        .poc-shot .frame { border-radius: 18px; border: 1px solid rgba(0, 109, 117, .22); background: #fff; box-shadow: 0 40px 90px rgba(0, 20, 22, .35); overflow: hidden; aspect-ratio: 1730 / 1152; }
+        .poc-shot .frame { border-radius: 18px; border: 1px solid rgba(0, 109, 117, .22); background: #fff; box-shadow: 0 40px 90px rgba(0, 50, 54, .38); overflow: hidden; aspect-ratio: 1730 / 1152; }
         .poc-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: opacity .35s ease; }
         .poc-shot img[hidden] { display: none; }
         .poc-shot .frame.fading img { opacity: 0; }
@@ -92,14 +92,17 @@
         .dark .lead { color: #c9dadb; }
         .dark .link { color: var(--ty-light); }
 
-        /* Come funziona: cinque capacità e tre colonne */
+        /* Come funziona: ciano come sfondo, scuro per icone e Mya */
+        .cyan { color: #fff; background: radial-gradient(60% 45% at 50% 0%, rgba(82, 214, 205, .55) 0%, rgba(82, 214, 205, 0) 70%), var(--ty); }
         .poc-how { padding: 240px 0 96px; }
+        .poc-how .eyebrow { color: #0f2426; }
+        .poc-how h2 { color: #fff; }
         .poc-how .intro { text-align: center; max-width: 760px; margin: 0 auto; }
         .poc-how .feat { list-style: none; margin: 52px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; text-align: center; }
         .poc-how .feat li { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-        .poc-how .feat svg { width: 24px; height: 24px; color: var(--ty-light); }
-        .poc-how .feat b { font-size: 16px; font-weight: 600; }
-        .poc-how .feat span { font-size: 14px; line-height: 1.45; color: #b8c9ca; max-width: 220px; }
+        .poc-how .feat svg { width: 26px; height: 26px; color: #0f2426; }
+        .poc-how .feat b { font-size: 16px; font-weight: 700; color: #0f2426; }
+        .poc-how .feat span { font-size: 14px; line-height: 1.45; color: #143638; max-width: 220px; }
         .poc-how .cols { margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         .poc-how .card { background: #fff; color: var(--ink); border-radius: 20px; padding: 32px; display: flex; flex-direction: column; }
         .poc-how .card h3 { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); }
@@ -108,11 +111,11 @@
         .poc-how .card li { position: relative; padding-left: 20px; font-size: 16px; line-height: 1.45; color: var(--ink-2); }
         .poc-how .card li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: var(--ty); }
         .poc-how .card .more { margin-top: 28px; color: var(--ty-dark); }
-        .poc-how .card.mya { background: var(--ty-dark); color: #fff; }
+        .poc-how .card.mya { background: #0f2426; color: #fff; }
         .poc-how .card.mya h3, .poc-how .card.mya li { color: #fff; }
-        .poc-how .card.mya .what { color: #cfeeec; }
+        .poc-how .card.mya .what { color: #b8c9ca; }
         .poc-how .card.mya li::before { background: var(--ty-light); }
-        .poc-how .card.mya .more { color: #fff; }
+        .poc-how .card.mya .more { color: var(--ty-light); }
         .poc-how .tag { align-self: flex-start; margin-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: rgba(255, 255, 255, .16); color: #fff; }
 
         /* Mya: testo a sinistra, chat animata a destra */
@@ -340,7 +343,7 @@
         </section>
 
         <!-- Come funziona -->
-        <section class="poc-how dark">
+        <section class="poc-how cyan">
             <div class="wrap">
                 <div class="intro rv">
                     <span class="eyebrow">Come funziona</span>

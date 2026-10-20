@@ -163,7 +163,7 @@
                         </div>
                     </div>
                     <a href="blog.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Blog</a>
-                    <a href="#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Prenota una demo</a>
+                    <a href="#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Richiedi informazioni</a>
                 </nav>
                 <button id="mobile-menu-button" type="button" class="md:hidden p-2 -mr-2 rounded-lg text-gray-900" onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Apri il menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -183,22 +183,24 @@
                 <a href="gdpr.html" class="py-2.5 text-gray-700 hover:text-primary-dark">GDPR</a>
                 <a href="ai-act.html" class="py-2.5 text-gray-700 hover:text-primary-dark">AI Act</a>
                 <a href="blog.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Blog</a>
-                <a href="#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Prenota una demo</a>
+                <a href="#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Richiedi informazioni</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main class="ty-page">
         <!-- Hero -->
-        <section class="hero-glow pt-20 pb-16">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5 items-center text-center">
-                <nav aria-label="Percorso" class="text-sm text-gray-600"><a href="index.html" class="hover:text-primary-dark">Home</a> / <a href="prodotto.html" class="hover:text-primary-dark">Prodotto</a> / <span>Turni con l'intelligenza artificiale</span></nav>
-                <h1 class="px-3.5 py-1.5 rounded-full bg-brand-100 text-primary-dark text-sm font-semibold">Gestione dei turni con l'intelligenza artificiale</h1>
-                <p class="text-4xl sm:text-5xl lg:text-[56px] leading-[1.1] font-extrabold tracking-tight text-gray-900 text-balance">Le eccezioni le racconti. <span class="text-primary">L'AI le mette nel piano.</span></p>
-                <p class="text-xl leading-relaxed text-gray-600 max-w-3xl">Mya, l'assistente AI integrato in Tymetric, capisce quello che chiedi e lo trasforma in operazioni sul piano turni. Le regole del reparto le fa rispettare il motore; l'ultima parola resta sempre al coordinatore.</p>
-                <div class="flex flex-wrap justify-center gap-3.5 pt-2">
-                    <a href="#contact" class="ty-btn inline-flex items-center gap-2 px-7 py-4 rounded-[10px] gradient-dark text-white text-[17px] font-semibold">Prenota una demo</a>
-                </div>
+        <section class="ty-hero ty-hero--sub">
+            <div class="ty-wrap">
+                <nav aria-label="Percorso" class="ty-crumbs"><a href="index.html">Home</a> / <a href="prodotto.html">Prodotto</a> / <span>Turni con l'intelligenza artificiale</span></nav>
+                <h1>Gestione dei turni con l'intelligenza artificiale</h1>
+                <p class="ty-claim">Le eccezioni le racconti. <em>L'AI le mette nel piano.</em></p>
+                <p class="ty-sub">Mya, l'assistente AI integrato in Tymetric, capisce quello che chiedi e lo trasforma in operazioni sul piano turni. Le regole del reparto le fa rispettare il motore; l'ultima parola resta sempre al coordinatore.</p>
+                <form class="ty-go" id="ty-go" novalidate>
+                    <label for="ty-go-email" class="sr-only">La tua email</label>
+                    <input id="ty-go-email" type="email" placeholder="La tua email" autocomplete="email">
+                    <button type="submit" class="ty-action">Richiedi informazioni</button>
+                </form>
             </div>
         </section>
 
@@ -319,11 +321,11 @@
         </section>
 
         <!-- Contatti -->
-        <section id="contact" class="py-24 gradient-dark">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-7 text-center">
-                <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-white text-balance">Richiedi informazioni</h2>
-                <p class="text-xl leading-relaxed text-white max-w-2xl">Interfaccia, motore e app da 1.190 € l'anno, IVA esclusa, <em>primi 3 mesi in prova senza canone</em>. <a href="prezzi.html#simulatore" class="font-semibold underline">Calcola il tuo prezzo</a></p>
-                <div class="w-full bg-white rounded-2xl p-6 md:p-9 shadow-2xl">
+        <section id="contact" class="ty-contact">
+            <div class="ty-wrap-n" style="text-align:center">
+                <h2>Richiedi informazioni</h2>
+                <p class="ty-lead" style="margin-top:14px">Interfaccia, motore e app da 1.190 € l'anno, IVA esclusa, <em>primi 3 mesi in prova senza canone</em>. <a href="prezzi.html#simulatore" class="ty-link">Calcola il tuo prezzo</a></p>
+                <div class="ty-form-card">
                     <div id="ty-form-wrap" class="text-left">
                         <form id="contact-form" class="flex flex-col gap-5">
                             <div class="grid md:grid-cols-2 gap-4">
@@ -339,8 +341,8 @@
                             <p class="text-sm text-gray-600">Inviando il modulo accetti la nostra <a href="privacy-policy.html" class="text-primary-dark underline">Privacy Policy</a>.</p>
                         </form>
                     </div>
-                    <p class="mt-4 text-sm text-gray-600">Preferisci la posta? Scrivici a <a href="mailto:info@tymetric.com" class="text-primary-dark underline">info@tymetric.com</a></p>
                 </div>
+                <p class="ty-mail">Preferisci la posta? Scrivici a <a href="mailto:info@tymetric.com" class="ty-link">info@tymetric.com</a></p>
             </div>
         </section>
     </main>
@@ -369,7 +371,7 @@
     <!-- CTA fissa su mobile -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
         <div class="ty-sticky-actions">
-            <a href="#contact" class="ty-sticky-btn gradient-dark text-white">Prenota una demo</a>
+            <a href="#contact" class="ty-sticky-btn gradient-dark text-white">Richiedi informazioni</a>
         </div>
     </div>
 

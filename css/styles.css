@@ -3549,18 +3549,18 @@ details.ty-faq[open] .ty-chev {
 .ty-feat b { font-size: 16px; font-weight: 700; color: #0f2426; }
 .ty-feat span { font-size: 14px; line-height: 1.45; color: #143638; max-width: 220px; }
 .ty-how .ty-cols { margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.ty-card { background: #fff; color: #111827; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; }
-.ty-card h3 { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -.01em; color: #111827; }
+.ty-tile { background: #fff; color: #111827; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; }
+.ty-tile h3 { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -.01em; color: #111827; }
 .ty-what { margin: 6px 0 0; font-size: 15px; color: #6b7280; }
-.ty-card ul { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px; flex: 1; }
-.ty-card li { position: relative; padding-left: 20px; font-size: 16px; line-height: 1.45; color: #374151; }
-.ty-card li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: #08979c; }
+.ty-tile ul { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px; flex: 1; }
+.ty-tile li { position: relative; padding-left: 20px; font-size: 16px; line-height: 1.45; color: #374151; }
+.ty-tile li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: #08979c; }
 .ty-more-link { margin-top: 28px; color: #006d75; }
-.ty-card-mya { background: #0f2426; color: #fff; }
-.ty-card-mya h3, .ty-card-mya li { color: #fff; }
-.ty-card-mya .ty-what { color: #b8c9ca; }
-.ty-card-mya li::before { background: #52d6cd; }
-.ty-card-mya .ty-more-link { color: #52d6cd; }
+.ty-tile-mya { background: #0f2426; color: #fff; }
+.ty-tile-mya h3, .ty-tile-mya li { color: #fff; }
+.ty-tile-mya .ty-what { color: #b8c9ca; }
+.ty-tile-mya li::before { background: #52d6cd; }
+.ty-tile-mya .ty-more-link { color: #52d6cd; }
 .ty-tag { align-self: flex-start; margin-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: rgba(255, 255, 255, .16); color: #fff; }
 
 /* Motore e lavoro a mano: solo testo, in grande */
@@ -3666,6 +3666,14 @@ details.ty-faq[open] .ty-chev {
 .ty-pills { display: flex; gap: 10px; }
 .ty-pills a { padding: 10px 16px; border: 1px solid #d1d5db; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 15px; color: #006d75; }
 
+/* Aperture delle altre pagine */
+.ty-hero--sub { padding-bottom: 72px; }
+.ty-hero--sub .ty-claim, .ty-hero h1.ty-claim { font-size: clamp(36px, 5.2vw, 64px); line-height: 1.06; letter-spacing: -.03em; font-weight: 800; color: #111827; margin-top: 14px; }
+.ty-crumbs { font-size: 14px; color: #6b7280; }
+.ty-crumbs a { color: inherit; text-decoration: none; }
+.ty-crumbs a:hover { color: #006d75; }
+.ty-hero .ty-eyebrow { display: block; }
+
 /* Comparsa al passaggio */
 .ty-reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
 .ty-reveal.is-in { opacity: 1; transform: none; }
@@ -3691,7 +3699,7 @@ details.ty-faq[open] .ty-chev {
   .ty-shot { margin-bottom: -90px; }
   .ty-how { padding-top: 150px; }
   .ty-feat { grid-template-columns: 1fr; gap: 20px; }
-  .ty-card { padding: 24px; }
+  .ty-tile { padding: 24px; }
   .ty-mya, .ty-engine, .ty-contact, .ty-more, .ty-faqs, .ty-offer { padding: 64px 0; }
   .ty-form-card { padding: 20px; }
   .ty-talk-body { min-height: 320px; }

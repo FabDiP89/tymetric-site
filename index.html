@@ -134,7 +134,6 @@
 </head>
 
 <body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
-
     <!-- Navigazione -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,7 +169,7 @@
                         </div>
                     </div>
                     <a href="blog.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Blog</a>
-                    <a href="#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Prenota una demo</a>
+                    <a href="#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Richiedi informazioni</a>
                 </nav>
                 <button id="mobile-menu-button" type="button" class="md:hidden p-2 -mr-2 rounded-lg text-gray-900" onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Apri il menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -190,317 +189,267 @@
                 <a href="gdpr.html" class="py-2.5 text-gray-700 hover:text-primary-dark">GDPR</a>
                 <a href="ai-act.html" class="py-2.5 text-gray-700 hover:text-primary-dark">AI Act</a>
                 <a href="blog.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Blog</a>
-                <a href="#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Prenota una demo</a>
+                <a href="#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Richiedi informazioni</a>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero -->
-        <section class="hero-glow pt-16 pb-14 md:pt-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
-                <div class="flex flex-col gap-6">
-                    <h1 class="self-start px-3.5 py-1.5 rounded-full bg-brand-100 text-primary-dark text-sm font-semibold">Software per la gestione dei turni ospedalieri con l'intelligenza artificiale</h1>
-                    <p class="text-4xl sm:text-5xl lg:text-[64px] leading-[1.06] font-extrabold tracking-tight text-gray-900 text-balance">Genera il piano turni <span class="text-primary">con una frase.</span></p>
-                    <p class="text-xl leading-relaxed text-gray-600 max-w-xl text-pretty">Le regole del reparto le imposti una volta. Per il mese basta chiedere, eccezioni comprese: un congresso, un'indicazione del primario. Tymetric genera il piano con i turni di medici, infermieri e OSS e te lo mostra prima di toccare il calendario.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="ty-btn inline-flex items-center gap-2 px-7 py-4 rounded-[10px] gradient-dark text-white text-[17px] font-semibold">Prenota una demo</a>
-                    </div>
-                </div>
-                <div class="relative pb-24">
-                    <div class="absolute inset-[6%] gradient-primary opacity-20 blur-3xl rounded-full" aria-hidden="true"></div>
-                    <img src="im1.webp" alt="Griglia mensile dei turni di un reparto in Tymetric" width="1730" height="1152" class="relative w-full h-auto rounded-2xl border-4 border-primary-light shadow-2xl">
-                    <div class="absolute left-4 bottom-0 w-[min(400px,88%)] bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden" aria-label="Esempio di conversazione con Deep planning">
-                        <div class="bg-gray-900 text-white px-4 py-2.5 flex justify-between items-center gap-3"><span class="text-sm font-bold">Deep planning</span><span class="text-xs text-gray-300">Novembre · Medicina generale</span></div>
-                        <div class="p-3.5 flex flex-col gap-2.5 bg-gray-50">
-                            <p class="self-end max-w-[90%] bg-primary-dark text-white px-3 py-2.5 rounded-xl rounded-br text-sm leading-snug">Ferri è a congresso dal 12 al 14. A Galli concedo due notti di fila a fine mese.</p>
-                            <p class="self-start max-w-[94%] bg-white border border-gray-200 text-gray-900 px-3 py-2.5 rounded-xl rounded-bl text-sm leading-snug">Galli arriverebbe a 4 notti, una oltre il massimo del reparto. Applico l'eccezione solo per lei?</p>
-                        </div>
-                    </div>
+    <main class="ty-page">
+        <!-- Apertura -->
+        <section class="ty-hero">
+            <div class="ty-wrap">
+                <a href="https://www.convegnonazionaleaiic.it/tymetric-piattaforma-ai-per-la-gestione-turnistica-e-la-mappatura-delle-competenze-nel-settore-sanitario/" target="_blank" rel="noopener noreferrer" class="ty-trust">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15l-3.5 2 .9-4L6 9.8l4.1-.4L12 5.6l1.9 3.8 4.1.4-3.4 3.2.9 4z"></path></svg>
+                    Selezionati per il Convegno Nazionale AIIC 2026
+                </a>
+                <h1>Software per la gestione dei turni ospedalieri con l'intelligenza artificiale</h1>
+                <p class="ty-claim">Genera il piano turni <em>con una frase.</em></p>
+                <p class="ty-sub">Le regole del reparto le imposti una volta. Per il mese basta chiederlo a Mya, l'assistente AI di Tymetric, eccezioni comprese: un congresso, un'indicazione del primario. Il piano con i turni di medici, infermieri e OSS ti arriva da approvare prima di toccare il calendario.</p>
+                <form class="ty-go" id="ty-go" novalidate>
+                    <label for="ty-go-email" class="sr-only">La tua email</label>
+                    <input id="ty-go-email" type="email" placeholder="La tua email" autocomplete="email">
+                    <button type="submit" class="ty-action">Richiedi informazioni</button>
+                </form>
+                <p class="ty-fine"><b>Da 1.190 € l'anno</b>, IVA esclusa · primi 3 mesi in prova senza canone · dati elaborati nell'Unione europea</p>
+                <div class="ty-tabs" role="tablist" aria-label="Schermate del prodotto">
+                    <button type="button" role="tab" aria-selected="true" data-shot="im1.webp">Griglia dei turni</button>
+                    <button type="button" role="tab" aria-selected="false" data-shot="carosello3.webp">Dettaglio del turno</button>
+                    <button type="button" role="tab" aria-selected="false" data-shot="carosello1.webp">Operatori</button>
+                    <button type="button" role="tab" aria-selected="false" data-shot="carosello2.webp">Competenze</button>
                 </div>
             </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-                <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <li class="p-5 bg-white border border-gray-200 rounded-[14px] flex gap-3.5 items-start">
-                        <span class="w-10 h-10 rounded-[10px] bg-brand-100 text-primary-dark flex items-center justify-center shrink-0"><svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg></span>
-                        <span class="flex flex-col gap-0.5"><span class="text-[17px] font-bold text-gray-900">AI di frontiera</span><span class="text-sm text-gray-600 leading-normal">sempre modelli di frontiera, per assicurare il miglior risultato</span></span>
-                    </li>
-                    <li class="p-5 bg-white border border-gray-200 rounded-[14px] flex gap-3.5 items-start">
-                        <span class="w-10 h-10 rounded-[10px] bg-brand-100 text-primary-dark flex items-center justify-center shrink-0"><svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
-                        <span class="flex flex-col gap-0.5"><span class="text-[17px] font-bold text-gray-900">Dati nell'Unione europea</span><span class="text-sm text-gray-600 leading-normal">elaborati in UE; il modello non li conserva né li usa per addestrarsi</span></span>
-                    </li>
-                    <li class="p-5 bg-white border border-gray-200 rounded-[14px] flex gap-3.5 items-start">
-                        <span class="w-10 h-10 rounded-[10px] bg-brand-100 text-primary-dark flex items-center justify-center shrink-0"><svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg></span>
-                        <span class="flex flex-col gap-0.5"><span class="text-[17px] font-bold text-gray-900">Regole sempre rispettate</span><span class="text-sm text-gray-600 leading-normal">le eccezioni le autorizzi tu</span></span>
-                    </li>
-                    <li class="p-5 bg-white border border-gray-200 rounded-[14px] flex gap-3.5 items-start">
-                        <span class="w-10 h-10 rounded-[10px] bg-brand-100 text-primary-dark flex items-center justify-center shrink-0"><svg class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></span>
-                        <span class="flex flex-col gap-0.5"><span class="text-[17px] font-bold text-gray-900">Approvi tu</span><span class="text-sm text-gray-600 leading-normal">nel calendario non cambia nulla senza il tuo ok</span></span>
-                    </li>
+            <div class="ty-shot">
+                <div class="ty-frame"><img id="ty-shot" src="im1.webp" alt="Griglia mensile dei turni di un reparto in Tymetric" width="1730" height="1152"></div>
+            </div>
+        </section>
+
+        <!-- Come funziona -->
+        <section class="ty-how ty-cyan">
+            <div class="ty-wrap">
+                <div class="ty-intro ty-reveal">
+                    <span class="ty-eyebrow">Come funziona</span>
+                    <h2 style="margin-top:12px">Fatto per come si lavora in reparto.</h2>
+                </div>
+                <ul class="ty-feat ty-reveal">
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.6 2a9.6 9.6 0 11-19.2 0 9.6 9.6 0 0119.2 0z"></path></svg><b>Rispetto del CCNL</b><span>Limiti su guardie e reperibilità già impostati, per Comparto e Dirigenza</span></li>
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19h16M7 15V9m5 6V5m5 10v-4"></path></svg><b>Indici di carico</b><span>Ore, notti, festivi e riposi, persona per persona</span></li>
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8M8 11h5m-7 9l3-3h9a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v14z"></path></svg><b>Desiderata</b><span>Richieste dal telefono, già nel piano prima dell'approvazione</span></li>
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 3v3m8-3v3M4 9h16M5 5h14a1 1 0 011 1v13a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1zm4 9l2 2 4-4"></path></svg><b>Assenze non tutelate</b><span>Il motore le asseconda anche mentre sono in attesa</span></li>
+                    <li><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><b>Equità su un anno</b><span>Notti, festivi e weekend distribuiti con dodici mesi di memoria</span></li>
                 </ul>
+                <div class="ty-cols ty-reveal">
+                    <article class="ty-card">
+                        <h3>Piattaforma</h3>
+                        <p class="ty-what">Lo strumento del coordinatore e l'app del personale</p>
+                        <ul>
+                            <li>Viste per persona o per attività</li>
+                            <li>Assegnazioni massive e azioni in blocco</li>
+                            <li>Turni fissati e rigenerazione parziale</li>
+                            <li>Anomalie in evidenza prima di pubblicare</li>
+                            <li>Statistiche, cruscotti ed export Excel</li>
+                            <li>App per gli operatori: desiderata, cambi turno, assenze</li>
+                        </ul>
+                        <a href="prodotto.html" class="ty-link ty-more-link">Scopri la piattaforma →</a>
+                    </article>
+                    <article class="ty-card">
+                        <h3>Motore</h3>
+                        <p class="ty-what">Genera il piano nel rispetto delle regole</p>
+                        <ul>
+                            <li>10 classi di regole rigide, con i valori del reparto</li>
+                            <li>Oltre 100 criteri di preferenza, in 6 opzioni</li>
+                            <li>Competenze e seniority per ogni attività</li>
+                            <li>Cicli, turni accoppiati e turni compatibili</li>
+                            <li>Limiti CCNL già impostati</li>
+                            <li>Turni scoperti segnalati, non nascosti</li>
+                        </ul>
+                        <a href="generazione-automatica-turni.html" class="ty-link ty-more-link">Come funziona il motore →</a>
+                    </article>
+                    <article class="ty-card ty-card-mya">
+                        <span class="ty-tag">Si aggiunge su richiesta</span>
+                        <h3>Mya</h3>
+                        <p class="ty-what">L'assistente AI integrato</p>
+                        <ul>
+                            <li>Risponde sui dati del reparto, da qualsiasi schermata</li>
+                            <li>Prepara assegnazioni, scambi e rigenerazioni</li>
+                            <li>Anteprima e conferma per ogni operazione</li>
+                            <li>Modalità Deep planning: il mese intero, con resoconto</li>
+                            <li>Dati elaborati nell'Unione europea</li>
+                        </ul>
+                        <a href="turni-intelligenza-artificiale.html" class="ty-link ty-more-link">Come funziona Mya →</a>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- Riconoscimento AIIC -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-10 items-center p-8 md:p-10 rounded-3xl border border-gray-200 bg-gray-50 shadow-sm">
-                    <a href="poster-aiic-2026.webp" target="_blank" rel="noopener" class="block rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-white" aria-label="Apri il poster di Tymetric esposto all'AIIC 2026">
-                        <img src="poster-aiic-2026-anteprima.webp" alt="Il poster di Tymetric esposto all'AIIC 2026 di Torino" class="w-full h-auto" width="900" height="490" loading="lazy">
-                    </a>
-                    <div class="flex flex-col gap-4">
-                        <span class="self-start px-3.5 py-1.5 rounded-full bg-brand-100 text-primary-dark text-sm font-semibold">Convegno Nazionale AIIC 2026</span>
-                        <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Selezionati per il Convegno Nazionale AIIC 2026</h2>
-                        <p class="text-lg leading-relaxed text-gray-600">Tymetric è stato selezionato tra i progetti degli AIIC Awards 2026 – Challenge e presentato al Convegno Nazionale dell'Associazione Italiana Ingegneri Clinici, alle OGR di Torino dal 10 al 13 giugno 2026.</p>
-                        <ul class="flex flex-col gap-3">
-                            <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Già in uso in reparti ospedalieri italiani</span></li>
-                            <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span>Pensato per tutte le figure professionali sanitarie: medici, infermieri, OSS</span></li>
-                        </ul>
-                        <div class="flex flex-wrap gap-6"><a href="https://www.convegnonazionaleaiic.it/tymetric-piattaforma-ai-per-la-gestione-turnistica-e-la-mappatura-delle-competenze-nel-settore-sanitario/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-base font-semibold text-primary-dark hover:text-primary">Leggi la scheda sul sito del Convegno <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a><a href="poster-aiic-2026.webp" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-base font-semibold text-primary-dark hover:text-primary">Vedi il poster <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a></div>
+        <!-- Motore e lavoro a mano -->
+        <section class="ty-engine">
+            <div class="ty-wrap">
+                <div class="ty-top ty-reveal">
+                    <span class="ty-eyebrow">Generazione automatica dei turni</span>
+                    <h2 style="margin-top:12px">Quando generi il piano, le regole tengono. Quando lavori a mano, vai veloce.</h2>
+                    <p class="ty-lead" style="margin-top:18px">Il motore costruisce i turni di medici, infermieri e OSS rispettando le regole rigide del reparto, e tra le persone idonee sceglie con oltre 100 criteri di preferenza. Il piano generato è un punto di partenza che rifinisci tu.</p>
+                </div>
+                <div class="ty-cols ty-reveal">
+                    <div>
+                        <h3>Il motore</h3>
+                        <dl>
+                            <dt>10 classi di regole rigide, mai violate</dt><dd>Riposi, notti, weekend, giorni consecutivi, competenze per attività: ogni regola ha il valore del tuo reparto e si rilegge come una frase.</dd>
+                            <dt>Limiti CCNL già impostati</dt><dd>Guardie e reperibilità di Comparto e Dirigenza, applicati da soli a chi ha quel contratto.</dd>
+                            <dt>Equità con un anno di memoria</dt><dd>Chi ha fatto molte notti o festivi nei mesi scorsi viene alleggerito in quelli successivi.</dd>
+                            <dt>Turni scoperti segnalati, non nascosti</dt><dd>Se le persone non bastano, il piano esce comunque e ti dice dove manca qualcuno.</dd>
+                        </dl>
+                        <p class="ty-cta-link"><a href="generazione-automatica-turni.html" class="ty-link">Come funziona il motore, nel dettaglio →</a></p>
+                    </div>
+                    <div>
+                        <h3>Quando lavori a mano</h3>
+                        <dl>
+                            <dt>Viste su misura</dt><dd>Per persona o per attività, in tre densità, con desiderata e assenze evidenziate sulla griglia.</dd>
+                            <dt>Azioni in blocco e turni fissati</dt><dd>Selezioni decine di turni e li blocchi, sblocchi o elimini in un colpo; il motore pianifica intorno a ciò che hai deciso.</dd>
+                            <dt>Candidati suggeriti per ogni turno</dt><dd>Chi può coprirlo, ordinato per idoneità, e per gli altri il motivo.</dd>
+                            <dt>Anomalie in evidenza prima di pubblicare</dt><dd>Riposo minimo, monte ore, giorni consecutivi: da ogni numero risali al turno che lo genera.</dd>
+                        </dl>
+                        <p class="ty-cta-link"><a href="prodotto.html" class="ty-link">La piattaforma, nel dettaglio →</a></p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Il cambio di passo -->
-        <section class="gradient-ai text-white py-24 lg:py-28">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-14">
-                <div class="flex flex-col gap-4 items-center text-center">
-                    <span class="text-sm font-bold uppercase tracking-[0.1em] text-primary-light">Il cambio di passo</span>
-                    <h2 class="text-4xl lg:text-[52px] leading-[1.1] font-extrabold tracking-tight max-w-4xl text-balance">Le regole le configuri una volta. Le eccezioni le racconti.</h2>
-                    <p class="text-xl leading-relaxed text-gray-300 max-w-3xl text-pretty">Finora ogni eccezione diventava una regola in più da configurare, o un turno da sistemare a mano. Con Tymetric quello che vale sempre lo gestisci dalle impostazioni; quello che vale questo mese lo chiedi a Mya.</p>
-                </div>
-                <div class="flex flex-wrap items-stretch gap-5">
-                    <div class="flex-[1_1_420px] min-w-0 p-9 rounded-[20px] bg-white/5 border border-white/15 flex flex-col gap-5">
-                        <div class="flex flex-col gap-1"><span class="text-[13px] font-bold uppercase tracking-[0.08em] text-primary-light">Al motore</span><span class="text-2xl font-bold">Ciò che vale sempre</span></div>
-                        <ul class="flex flex-wrap gap-2.5">
-                            <li class="px-3.5 py-2.5 rounded-[10px] bg-primary-light/10 border border-primary-light/30 text-[#d7f6f3] text-[15px] font-medium">Massimo 3 notti al mese</li>
-                            <li class="px-3.5 py-2.5 rounded-[10px] bg-primary-light/10 border border-primary-light/30 text-[#d7f6f3] text-[15px] font-medium">11 ore di riposo tra due turni</li>
-                            <li class="px-3.5 py-2.5 rounded-[10px] bg-primary-light/10 border border-primary-light/30 text-[#d7f6f3] text-[15px] font-medium">Weekend alternati</li>
-                            <li class="px-3.5 py-2.5 rounded-[10px] bg-primary-light/10 border border-primary-light/30 text-[#d7f6f3] text-[15px] font-medium">Competenze richieste per attività</li>
-                            <li class="px-3.5 py-2.5 rounded-[10px] bg-primary-light/10 border border-primary-light/30 text-[#d7f6f3] text-[15px] font-medium">Limiti CCNL</li>
-                            <li class="px-3.5 py-2.5 rounded-[10px] bg-primary-light/10 border border-primary-light/30 text-[#d7f6f3] text-[15px] font-medium">Equità sulle notti</li>
-                        </ul>
-                        <p class="mt-auto text-[15px] leading-relaxed text-gray-300">10 regole rigide e oltre 100 criteri di preferenza, impostati una volta con un percorso guidato e rileggibili come frasi. Il responsabile non li regola uno per uno: gestisce 6 opzioni. Con un anno di memoria per l'equità.</p>
-                    </div>
-                    <div class="flex items-center justify-center w-full lg:w-auto" aria-hidden="true">
-                        <span class="w-[52px] h-[52px] rounded-full bg-primary-light text-gray-900 flex items-center justify-center"><svg class="w-[26px] h-[26px]" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path></svg></span>
-                    </div>
-                    <div class="flex-[1_1_420px] min-w-0 p-9 rounded-[20px] bg-white text-gray-900 flex flex-col gap-4">
-                        <div class="flex flex-col gap-1"><span class="text-[13px] font-bold uppercase tracking-[0.08em] text-primary-dark">A Mya</span><span class="text-2xl font-bold">Ciò che vale questo mese</span></div>
-                        <div class="flex flex-col gap-2.5">
-                            <p class="self-start max-w-[92%] px-4 py-3 rounded-[14px] rounded-bl bg-brand-50 border border-brand-200 text-base leading-snug text-brand-800">«Rossi non fa notti la settimana del trasloco.»</p>
-                            <p class="self-end max-w-[92%] px-4 py-3 rounded-[14px] rounded-br bg-brand-50 border border-brand-200 text-base leading-snug text-brand-800">«Bianchi e Verdi non vanno in ferie insieme ad agosto.»</p>
-                            <p class="self-start max-w-[92%] px-4 py-3 rounded-[14px] rounded-bl bg-brand-50 border border-brand-200 text-base leading-snug text-brand-800">«A dicembre il primario vuole un senior in più il sabato.»</p>
-                            <p class="self-end max-w-[92%] px-4 py-3 rounded-[14px] rounded-br bg-brand-50 border border-brand-200 text-base leading-snug text-brand-800">«Sposta il congresso di Ferri, il resto non si tocca.»</p>
-                        </div>
-                        <p class="mt-auto text-[15px] leading-relaxed text-gray-600">Niente configurazione in più: lo chiedi a Mya, che lo capisce e lo applica al piano.</p>
-                    </div>
-                </div>
-                <p class="text-center text-xl font-semibold">Regole ed eccezioni, in un solo piano.</p>
             </div>
         </section>
 
         <!-- Mya -->
-        <section class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-14">
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div class="flex flex-col gap-6">
-                    <span class="text-sm font-bold uppercase tracking-[0.08em] text-primary-dark">L'assistente AI di Tymetric</span>
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Mya, l'assistente AI integrato</h2>
-                    <p class="text-xl leading-relaxed text-gray-600">Mya ti affianca in tutta l'applicazione: risponde, prepara le operazioni e le applica solo quando le confermi. Nel pannello operativo ha in più la modalità Deep planning, che pianifica con te il mese intero.</p>
-                    <ul class="flex flex-col gap-4">
-                        <li class="flex gap-3.5 items-start"><svg class="w-[22px] h-[22px] text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span class="flex flex-col gap-0.5"><span class="text-[17px] font-semibold text-gray-900">Lavora sul piano, in linguaggio naturale</span><span class="text-base leading-normal text-gray-600">Assegna, scambia, fissa, rigenera, cambia il fabbisogno, legge statistiche e contatori.</span></span></li>
-                        <li class="flex gap-3.5 items-start"><svg class="w-[22px] h-[22px] text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span class="flex flex-col gap-0.5"><span class="text-[17px] font-semibold text-gray-900">Risponde su tutto</span><span class="text-base leading-normal text-gray-600">Sui dati del reparto e su come funziona il sistema, ovunque nell'app.</span></span></li>
-                        <li class="flex gap-3.5 items-start"><svg class="w-[22px] h-[22px] text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span class="flex flex-col gap-0.5"><span class="text-[17px] font-semibold text-gray-900">Anche sui turni pubblicati</span><span class="text-base leading-normal text-gray-600">Prepara le modifiche nella sessione di modifica, sempre con anteprima.</span></span></li>
+        <section class="ty-mya ty-dark">
+            <div class="ty-wrap ty-grid">
+                <div class="ty-reveal">
+                    <span class="ty-eyebrow">L'assistente AI di Tymetric</span>
+                    <h2 style="margin-top:10px">Mya lavora sul piano. <br>Tu confermi.</h2>
+                    <p class="ty-lead" style="margin-top:16px">Mya ti affianca in tutta l'applicazione: risponde sui dati del reparto, prepara le operazioni e le applica solo quando le confermi.</p>
+                    <ul>
+                        <li><b>Lavora sul piano, in linguaggio naturale.</b> Assegna, scambia, fissa, rigenera, cambia il fabbisogno, legge statistiche e contatori.</li>
+                        <li><b>Risponde su tutto.</b> Sui dati del reparto e su come funziona il sistema, da qualsiasi schermata.</li>
+                        <li><b>Anche sui turni pubblicati.</b> Prepara le modifiche nella sessione dedicata, sempre con anteprima.</li>
                     </ul>
+                    <div class="ty-deep">
+                        <span class="ty-eyebrow">Modalità Deep planning</span>
+                        <h3>Il mese intero, pianificato con te</h3>
+                        <p>Nel pannello operativo racconti il mese come a un collega: congressi, cicli, esigenze particolari, eccezioni da concedere. Mya fa le domande che servono, prepara il piano e ti consegna un resoconto da approvare. Se per esaudire una richiesta bisogna superare una regola, te lo dice e aspetta la tua autorizzazione.</p>
+                    </div>
+                    <p class="ty-note">Mya si aggiunge al canone su richiesta. <a href="turni-intelligenza-artificiale.html" class="ty-link">Come funziona Mya →</a></p>
                 </div>
-                <div class="flex justify-center" aria-label="Esempio di richiesta a Mya">
-                    <div class="w-full max-w-[480px] bg-white rounded-[18px] shadow-2xl overflow-hidden border border-gray-200">
-                        <div class="gradient-dark text-white px-5 py-4 flex flex-col gap-0.5"><span class="text-base font-bold">Mya</span><span class="text-[13px] text-white/90">Pianificazione di dicembre · Medicina generale</span></div>
-                        <div class="p-5 flex flex-col gap-3.5 bg-gray-50">
-                            <p class="self-end max-w-[82%] bg-primary-dark text-white px-3.5 py-3 rounded-[14px] rounded-br text-[15px] leading-normal">Dai il riposo a tutto il team B nei festivi di dicembre.</p>
-                            <div class="self-start max-w-[92%] bg-white border border-gray-200 text-gray-900 p-3.5 rounded-[14px] rounded-bl text-[15px] leading-normal flex flex-col gap-3">
+                <div class="ty-reveal">
+                    <div class="ty-talk" id="ty-talk" aria-label="Esempio animato di una richiesta a Mya">
+                        <div class="ty-talk-head"><b>Mya</b><span>Pianificazione di dicembre · Medicina generale</span></div>
+                        <div class="ty-talk-body">
+                            <p class="ty-msg ty-me" data-step="1"><span class="ty-typed" data-text="Dai il riposo a tutto il team B nei festivi di dicembre."></span></p>
+                            <div class="ty-typing" data-step="2"><i></i><i></i><i></i></div>
+                            <div class="ty-msg ty-from-mya" data-step="3">
                                 <p>Ho preparato l'assegnazione. Prima di applicarla, ecco cosa cambia:</p>
-                                <dl class="border border-[#d1f2ef] bg-brand-50 rounded-[10px] p-3 flex flex-col gap-2 text-sm">
-                                    <div class="flex justify-between gap-3"><dt class="text-gray-700">Persone del team B</dt><dd class="font-bold text-gray-900">tutte</dd></div>
-                                    <div class="flex justify-between gap-3"><dt class="text-gray-700">Date</dt><dd class="font-bold text-gray-900">8, 25, 26 dicembre</dd></div>
-                                    <div class="flex justify-between gap-3"><dt class="text-gray-700">Turni già fissati</dt><dd class="font-bold text-gray-900">non si toccano</dd></div>
+                                <dl>
+                                    <div data-step="4"><dt>Persone del team B</dt><dd>tutte</dd></div>
+                                    <div data-step="5"><dt>Date</dt><dd>8, 25, 26 dicembre</dd></div>
+                                    <div data-step="6"><dt>Turni già fissati</dt><dd>non si toccano</dd></div>
                                 </dl>
-                                <div class="flex gap-2" aria-hidden="true">
-                                    <span class="flex-1 inline-flex items-center justify-center min-h-[44px] rounded-lg bg-primary-dark text-white text-[15px] font-semibold">Conferma</span>
-                                    <span class="flex-1 inline-flex items-center justify-center min-h-[44px] rounded-lg border border-gray-300 bg-white text-gray-700 text-[15px] font-semibold">Rivedi</span>
-                                </div>
+                                <div class="ty-acts" data-step="7" aria-hidden="true"><span class="ty-ok">Conferma</span><span class="ty-no">Rivedi</span></div>
                             </div>
+                            <p class="ty-msg ty-done" data-step="8">✓ Applicato. 12 turni aggiornati, nessuna regola violata.</p>
                         </div>
+                        <div class="ty-talk-foot"><span>Esempio su dati di fantasia</span><button type="button" id="ty-talk-replay">Rivedi l'esempio</button></div>
                     </div>
-                </div>
-            </div>
-            <div class="flex flex-col gap-6 pt-8 border-t border-gray-200">
-                <div class="flex flex-col gap-3 max-w-3xl">
-                    <span class="self-start px-3 py-1 rounded-full bg-primary-dark text-white text-[13px] font-bold uppercase tracking-wider">Modalità Deep planning</span>
-                    <h3 class="text-[28px] leading-tight font-bold text-gray-900 text-balance">Il mese intero, pianificato con te</h3>
-                    <p class="text-lg leading-relaxed text-gray-600">Nel pannello operativo racconti il mese come a un collega: congressi, cicli, esigenze particolari, eccezioni da concedere. Mya fa le domande che servono, prepara il piano e ti consegna un resoconto da approvare.</p>
-                </div>
-                <ul class="grid md:grid-cols-3 gap-4">
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">Un vincolo violato lo autorizzi tu</span><span class="text-[15px] leading-relaxed text-gray-600">Il motore non viola mai i vincoli. Nella modalità Deep planning, Mya può fare ciò che fa il coordinatore: se un'operazione viola un vincolo, te lo segnala e chiede la tua autorizzazione in chat.</span></li>
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">Un resoconto prima di decidere</span><span class="text-[15px] leading-relaxed text-gray-600">Coperture, eccezioni concesse e anomalie rimaste, messe in fila prima che tu approvi.</span></li>
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><span class="text-lg font-bold text-gray-900">I dati restano protetti</span><span class="text-[15px] leading-relaxed text-gray-600">Elaborazione nell'Unione europea, nessuna conservazione presso il modello, nessun addestramento sui dati del reparto.</span></li>
-                </ul>
-                <div class="flex flex-wrap items-center justify-between gap-4">
-                    <span class="text-[15px] text-gray-600">Mya, con la modalità Deep planning, si aggiunge al canone su richiesta.</span>
-                    <a href="turni-intelligenza-artificiale.html" class="inline-flex items-center gap-1.5 text-base font-semibold text-primary-dark hover:text-primary">Come funziona Mya <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- Interfaccia e motore -->
-        <section class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
-                <div class="flex flex-col gap-3.5 items-center text-center">
-                    <span class="text-sm font-bold uppercase tracking-[0.08em] text-primary-dark">Generazione automatica dei turni</span>
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 max-w-4xl text-balance">Quando lavori a mano, vai veloce. Quando generi il piano, le regole tengono.</h2>
-                    <p class="text-xl leading-relaxed text-gray-600 max-w-3xl">Un'interfaccia veloce per il lavoro a mano e un motore che applica le regole del reparto.</p>
-                </div>
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 rounded-[20px] p-8 md:p-10 flex flex-col gap-6">
-                        <div class="flex items-center gap-3.5">
-                            <span class="w-12 h-12 rounded-xl gradient-primary text-white flex items-center justify-center shrink-0"><svg class="w-[26px] h-[26px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg></span>
-                            <h3 class="text-[26px] font-bold text-gray-900">L'interfaccia</h3>
-                        </div>
-                        <dl class="flex flex-col gap-4">
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Viste su misura</dt><dd class="text-[15px] leading-relaxed text-gray-600">Per persona o per attività, tre densità, colori e nomi come preferisci.</dd></div>
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Assegnazioni in pochi clic</dt><dd class="text-[15px] leading-relaxed text-gray-600">Percorso guidato e candidati suggeriti per ogni turno da coprire, con il motivo di chi non può.</dd></div>
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Decine di turni insieme</dt><dd class="text-[15px] leading-relaxed text-gray-600">Blocchi, sblocchi, elimini o assegni a molte persone in un colpo, con anteprima.</dd></div>
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Avvisi che guidano</dt><dd class="text-[15px] leading-relaxed text-gray-600">Competenze, disponibilità e impegni del giorno controllati prima di salvare.</dd></div>
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Anomalie in evidenza</dt><dd class="text-[15px] leading-relaxed text-gray-600">Violazioni e scoperture si vedono prima di pubblicare e portano al turno che le genera.</dd></div>
-                        </dl>
-                    </div>
-                    <div class="bg-gray-50 rounded-[20px] p-8 md:p-10 flex flex-col gap-6">
-                        <div class="flex items-center gap-3.5">
-                            <span class="w-12 h-12 rounded-xl gradient-primary text-white flex items-center justify-center shrink-0"><svg class="w-[26px] h-[26px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg></span>
-                            <h3 class="text-[26px] font-bold text-gray-900">Il motore</h3>
-                        </div>
-                        <dl class="flex flex-col gap-4">
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">10 regole rigide</dt><dd class="text-[15px] leading-relaxed text-gray-600">Giorni consecutivi, riposi, turni accoppiati, weekend alternati e le altre: il motore non le viola mai e rispetta le preferenze.</dd></div>
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Oltre 100 criteri di preferenza</dt><dd class="text-[15px] leading-relaxed text-gray-600">Raccolti in 6 opzioni che regola il responsabile, più la priorità delle coperture.</dd></div>
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Pensato per la sanità italiana</dt><dd class="text-[15px] leading-relaxed text-gray-600">Guardie, reperibilità, libera professione e ricerca distinte; limiti CCNL già impostati.</dd></div>
-                            <div class="flex flex-col gap-1"><dt class="text-[17px] font-bold text-gray-900">Copre il massimo</dt><dd class="text-[15px] leading-relaxed text-gray-600">Quando mancano persone, il piano esce comunque e ti indica dove.</dd></div>
-                        </dl>
-                    </div>
-                </div>
-                <div class="flex justify-center">
-                    <a href="prodotto.html" class="ty-btn inline-flex items-center gap-2 px-6 py-3.5 rounded-[10px] bg-white border-2 border-primary text-primary-dark text-[17px] font-semibold">Scopri il prodotto <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
                 </div>
             </div>
         </section>
 
         <!-- Offerta -->
-        <section class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
-                <div class="flex flex-col gap-3.5 items-center text-center">
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Parti dal reparto. Aggiungi ciò che ti serve.</h2>
-                    <p class="text-xl leading-relaxed text-gray-600 max-w-3xl">Interfaccia, motore e app sono inclusi per ogni reparto. Mya, l'assistente AI, e il pannello per la struttura si aggiungono.</p>
+        <section class="ty-offer">
+            <div class="ty-wrap">
+                <div class="ty-intro ty-reveal">
+                    <span class="ty-eyebrow">Cosa è incluso</span>
+                    <h2 style="margin-top:12px">Parti dal reparto. Aggiungi ciò che ti serve.</h2>
+                    <p class="ty-lead" style="margin-top:14px">Interfaccia, motore e app sono inclusi per ogni reparto. Mya, l'assistente AI, e il pannello per la struttura si aggiungono.</p>
                 </div>
-                <div class="grid lg:grid-cols-3 gap-5">
-                    <article class="lg:col-span-2 bg-white border-2 border-primary rounded-[20px] p-8 md:p-10 flex flex-col gap-6">
-                        <div class="flex flex-col gap-0.5"><span class="text-sm font-bold uppercase tracking-wider text-primary-dark">Per il reparto · incluso</span><span class="text-[15px] text-gray-600">Coordinatori, team e operatori</span></div>
-                        <h3 class="text-[28px] leading-tight font-bold text-gray-900">Il turno del reparto, dalla regola alla pubblicazione</h3>
-                        <ul class="flex flex-wrap gap-2.5">
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">Viste su misura</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">Assegnazioni in pochi clic</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">Azioni in blocco</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">Avvisi e anomalie</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">10 regole rigide</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">oltre 100 criteri di preferenza</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">Limiti CCNL</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">App per gli operatori</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">Richieste e cambi turno</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">Statistiche e cruscotti</li>
-                            <li class="px-3.5 py-2 rounded-full bg-brand-150 border border-brand-200 text-[15px] font-medium text-brand-800">Export Excel</li>
+                <div class="ty-grid ty-reveal">
+                    <article class="ty-base">
+                        <span class="ty-eyebrow">Per il reparto · incluso</span>
+                        <span class="ty-who">Coordinatori, team e operatori</span>
+                        <h3>Il turno del reparto, dalla regola alla pubblicazione</h3>
+                        <ul class="ty-chips">
+                            <li>Viste su misura</li><li>Assegnazioni in pochi clic</li><li>Azioni in blocco</li><li>Avvisi e anomalie</li>
+                            <li>10 classi di regole rigide</li><li>oltre 100 criteri di preferenza</li><li>Limiti CCNL</li><li>App per gli operatori</li>
+                            <li>Richieste e cambi turno</li><li>Statistiche e cruscotti</li><li>Export Excel</li>
                         </ul>
-                        <div class="mt-auto pt-5 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3">
-                            <span class="text-[15px] text-gray-700"><strong class="text-gray-900">Da 1.190 € l'anno,</strong> IVA esclusa, <em>primi 3 mesi in prova senza canone</em>.</span>
-                            <a href="prezzi.html#simulatore" class="inline-flex items-center gap-1.5 text-base font-semibold text-primary-dark hover:text-primary">Calcola il prezzo <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
-                        </div>
+                        <div class="ty-offer-foot"><span><b>Da 1.190 € l'anno,</b> IVA esclusa, <em>primi 3 mesi in prova senza canone</em>.</span><a href="prezzi.html#simulatore" class="ty-link">Calcola il prezzo →</a></div>
                     </article>
-                    <div class="flex flex-col gap-5">
-                        <article class="flex-1 bg-gray-900 text-white rounded-[20px] p-8 flex flex-col gap-3.5">
-                            <span class="text-sm font-bold uppercase tracking-wider text-primary-light">+ Mya, l'assistente AI</span>
-                            <h3 class="text-[22px] leading-snug font-bold">L'AI integrata in Tymetric</h3>
-                            <p class="text-[15px] leading-relaxed text-gray-300">Risponde, prepara le operazioni e, con la modalità Deep planning, pianifica il mese con te.</p>
-                            <span class="mt-auto text-sm text-gray-300">Su richiesta</span>
+                    <div class="ty-stack">
+                        <article class="ty-add ty-add-mya">
+                            <span class="ty-eyebrow">+ Mya, l'assistente AI</span>
+                            <h3>L'AI integrata in Tymetric</h3>
+                            <p>Risponde, prepara le operazioni e, con la modalità Deep planning, pianifica il mese con te.</p>
+                            <small>Su richiesta</small>
                         </article>
-                        <article class="flex-1 bg-brand-50 border-2 border-dashed border-primary rounded-[20px] p-8 flex flex-col gap-3.5">
-                            <span class="text-sm font-bold uppercase tracking-wider text-primary-dark">+ Per la struttura</span>
-                            <h3 class="text-[22px] leading-snug font-bold text-gray-900">Il pannello di amministrazione</h3>
-                            <p class="text-[15px] leading-relaxed text-gray-700">Vista multi reparto, copertura su tutto il personale, report di struttura.</p>
-                            <span class="mt-auto text-sm text-gray-700">Su richiesta</span>
+                        <article class="ty-add ty-add-site">
+                            <span class="ty-eyebrow">+ Per la struttura</span>
+                            <h3>Il pannello di amministrazione</h3>
+                            <p>Vista multi reparto, copertura su tutto il personale, report di struttura.</p>
+                            <small>Su richiesta</small>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Approfondimenti per ruolo e funzione -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6 items-center text-center">
-                <h2 class="text-2xl font-bold text-gray-900">Approfondisci per ruolo e per funzione</h2>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <a href="turni-medici-ospedalieri.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni dei medici ospedalieri <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
-                    <a href="turni-infermieri.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni degli infermieri <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
-                    <a href="generazione-automatica-turni.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Generazione automatica dei turni <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
-                    <a href="turni-intelligenza-artificiale.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni con l'intelligenza artificiale <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
-                    <a href="app-turni-personale.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">App turni per il personale <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+        <!-- Contatti -->
+        <section id="contact" class="ty-contact">
+            <div class="ty-wrap-n" style="text-align:center">
+                <h2>Richiedi informazioni</h2>
+                <p class="ty-lead" style="margin-top:14px">Lasciaci i tuoi contatti: ti ricontattiamo per rispondere alle tue domande e, se vuoi, mostrarti Tymetric in una demo.</p>
+                <div class="ty-form-card">
+                        <form id="contact-form" class="flex flex-col gap-5">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div><label for="cf-nome" class="block text-sm font-medium text-gray-700 mb-2">Nome *</label><input id="cf-nome" type="text" name="nome" required autocomplete="given-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Mario"></div>
+                                <div><label for="cf-cognome" class="block text-sm font-medium text-gray-700 mb-2">Cognome *</label><input id="cf-cognome" type="text" name="cognome" required autocomplete="family-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Rossi"></div>
+                            </div>
+                            <div><label for="cf-email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label><input id="cf-email" type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="mario.rossi@email.it"></div>
+                            <div><label for="cf-telefono" class="block text-sm font-medium text-gray-700 mb-2">Telefono</label><input id="cf-telefono" type="tel" name="telefono" autocomplete="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="+39 123 456 7890"></div>
+                            <div><label for="cf-fonte" class="block text-sm font-medium text-gray-700 mb-2">Come ci hai conosciuto?</label><select id="cf-fonte" name="provenienza" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white"><option value="">Preferisco non dirlo</option><option>Ricerca su Google</option><option>ChatGPT</option><option>Claude</option><option>Altro assistente AI (Gemini, Perplexity, Copilot…)</option><option>LinkedIn</option><option>Passaparola o colleghi</option><option>Evento o convegno</option><option>Altro</option></select></div>
+                            <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label for="cf-sito">Sito web</label><input id="cf-sito" type="text" name="sito_web" tabindex="-1" autocomplete="off"></div>
+                            <div><label for="cf-messaggio" class="block text-sm font-medium text-gray-700 mb-2">Messaggio</label><textarea id="cf-messaggio" name="messaggio" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none" placeholder="Raccontaci le tue esigenze..."></textarea></div>
+                            <button type="submit" class="ty-btn w-full px-8 py-4 gradient-dark text-white text-lg font-semibold rounded-lg">Invia richiesta</button>
+                            <p class="text-sm text-gray-600">Inviando il modulo accetti la nostra <a href="privacy-policy.html" class="text-primary-dark underline">Privacy Policy</a>.</p>
+                        </form>
                 </div>
+                <p class="ty-mail">Preferisci la posta? Scrivici a <a href="mailto:info@tymetric.com" class="ty-link">info@tymetric.com</a></p>
             </div>
         </section>
 
-        <!-- Blog -->
-        <section class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
-                <div class="flex flex-wrap items-end justify-between gap-4">
-                    <div class="flex flex-col gap-2.5">
-                        <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Dal blog</h2>
-                        <p class="text-lg text-gray-600">Dati verificati e guide pratiche su turni, CCNL e organizzazione sanitaria.</p>
-                    </div>
-                    <a href="blog.html" class="inline-flex items-center gap-1.5 text-base font-semibold text-primary-dark hover:text-primary">Tutti gli articoli <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+        <!-- Per ruolo e blog -->
+        <section class="ty-more">
+            <div class="ty-wrap ty-grid">
+                <div class="ty-reveal">
+                    <span class="ty-eyebrow">Per il tuo reparto</span>
+                    <h2 style="margin-top:10px">Approfondisci per ruolo e per funzione</h2>
+                    <ul>
+                        <li><a href="turni-medici-ospedalieri.html"><b>Turni dei medici ospedalieri</b><span>guardie, reperibilità</span></a></li>
+                        <li><a href="turni-infermieri.html"><b>Turni degli infermieri</b><span>notti, riposi, quinta</span></a></li>
+                        <li><a href="generazione-automatica-turni.html"><b>Generazione automatica</b><span>il motore</span></a></li>
+                        <li><a href="turni-intelligenza-artificiale.html"><b>Turni con l'AI</b><span>Mya</span></a></li>
+                        <li><a href="app-turni-personale.html"><b>App per il personale</b><span>richieste, cambi turno</span></a></li>
+                    </ul>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="blog/carenza-infermieri-italia-quanti-mancano.html" class="ty-card bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col">
-                        <img src="blog/immagini/carenza-infermieri-2026.webp" alt="" class="w-full h-[200px] object-cover" loading="lazy">
-                        <span class="p-6 flex flex-col gap-2.5">
-                            <span class="text-sm text-gray-600">23 settembre 2026 · Dati</span>
-                            <span class="text-xl leading-snug font-bold text-gray-900">Carenza di infermieri in Italia: quanti ne mancano davvero</span>
-                            <span class="text-[15px] leading-relaxed text-gray-600">Le Regioni chiedono di formare 25.479 infermieri, gli atenei offrono 20.672 posti e le domande non li hanno coperti.</span>
-                        </span>
-                    </a>
-                    <a href="blog/turni-ccnl-sanita-guida-riposi-notti-ore.html" class="ty-card bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col">
-                        <img src="blog/immagini/guida-ccnl-turni.webp" alt="" class="w-full h-[200px] object-cover" loading="lazy">
-                        <span class="p-6 flex flex-col gap-2.5">
-                            <span class="text-sm text-gray-600">4 settembre 2026 · Guida</span>
-                            <span class="text-xl leading-snug font-bold text-gray-900">Turni e CCNL Sanità: riposi, notti e ore massime</span>
-                            <span class="text-[15px] leading-relaxed text-gray-600">36 ore, riposo di 11 ore, 48 ore medie su 6 mesi, lavoro notturno, pronta disponibilità. Con gli errori più diffusi.</span>
-                        </span>
-                    </a>
-                    <a href="blog/lavoro-usurante-infermieri-notti-turni.html" class="ty-card bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col">
-                        <img src="blog/immagini/lavoro-notturno-infermieri.webp" alt="" class="w-full h-[200px] object-cover" loading="lazy">
-                        <span class="p-6 flex flex-col gap-2.5">
-                            <span class="text-sm text-gray-600">24 agosto 2026 · Guida</span>
-                            <span class="text-xl leading-snug font-bold text-gray-900">Lavoro gravoso e usurante per gli infermieri: contano le notti</span>
-                            <span class="text-[15px] leading-relaxed text-gray-600">Per gli infermieri la legge guarda le notti effettivamente lavorate: soglie, norme e perché il piano turni c'entra.</span>
-                        </span>
-                    </a>
+                <div class="ty-reveal">
+                    <span class="ty-eyebrow">Dal blog</span>
+                    <h2 style="margin-top:10px">Regole, contratti e turni, spiegati</h2>
+                    <ul>
+                        <li><a href="blog/turni-ccnl-sanita-guida-riposi-notti-ore.html"><b>Turni e CCNL Sanità: riposi, notti e ore massime, la guida pratica</b><span>Guida</span></a></li>
+                        <li><a href="blog/lavoro-usurante-infermieri-notti-turni.html"><b>Lavoro gravoso e usurante per gli infermieri: contano le notti</b><span>Analisi</span></a></li>
+                        <li><a href="blog/carenza-infermieri-italia-quanti-mancano.html"><b>Carenza di infermieri in Italia: quanti ne mancano davvero</b><span>Dati</span></a></li>
+                    </ul>
+                    <a href="blog.html" class="ty-link ty-all">Tutti gli articoli →</a>
                 </div>
             </div>
         </section>
 
         <!-- FAQ -->
-        <section class="py-24 bg-gray-50">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
-                <h2 class="text-center text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Domande frequenti</h2>
-                <div class="flex flex-col gap-3.5">
+        <section class="ty-faqs">
+            <div class="ty-wrap-n">
+                <h2 style="text-align:center">Domande frequenti</h2>
+                <div class="flex flex-col gap-3.5" style="margin-top:32px">
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Devo configurare ogni eccezione?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
                         <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. Le regole che valgono sempre si impostano una volta. Le eccezioni del mese le chiedi a Mya, nella modalità Deep planning, come a un collega: le capisce, le applica al piano e te le elenca nel resoconto.</p>
@@ -529,43 +478,14 @@
             </div>
         </section>
 
-        <!-- Contatti -->
-        <section id="contact" class="py-24 gradient-dark">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-7 text-center">
-                <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-white text-balance">Richiedi informazioni</h2>
-                <p class="text-xl leading-relaxed text-white max-w-2xl">Lasciaci i tuoi contatti: ti ricontattiamo per rispondere alle tue domande e, se vuoi, mostrarti Tymetric in una demo.</p>
-                <div class="w-full bg-white rounded-2xl p-6 md:p-9 shadow-2xl">
-                    <div id="ty-form-wrap" class="text-left">
-                        <form id="contact-form" class="flex flex-col gap-5">
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div><label for="cf-nome" class="block text-sm font-medium text-gray-700 mb-2">Nome *</label><input id="cf-nome" type="text" name="nome" required autocomplete="given-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Mario"></div>
-                                <div><label for="cf-cognome" class="block text-sm font-medium text-gray-700 mb-2">Cognome *</label><input id="cf-cognome" type="text" name="cognome" required autocomplete="family-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Rossi"></div>
-                            </div>
-                            <div><label for="cf-email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label><input id="cf-email" type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="mario.rossi@email.it"></div>
-                            <div><label for="cf-telefono" class="block text-sm font-medium text-gray-700 mb-2">Telefono</label><input id="cf-telefono" type="tel" name="telefono" autocomplete="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="+39 123 456 7890"></div>
-                            <div><label for="cf-fonte" class="block text-sm font-medium text-gray-700 mb-2">Come ci hai conosciuto?</label><select id="cf-fonte" name="provenienza" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white"><option value="">Preferisco non dirlo</option><option>Ricerca su Google</option><option>ChatGPT</option><option>Claude</option><option>Altro assistente AI (Gemini, Perplexity, Copilot…)</option><option>LinkedIn</option><option>Passaparola o colleghi</option><option>Evento o convegno</option><option>Altro</option></select></div>
-                            <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label for="cf-sito">Sito web</label><input id="cf-sito" type="text" name="sito_web" tabindex="-1" autocomplete="off"></div>
-                            <div><label for="cf-messaggio" class="block text-sm font-medium text-gray-700 mb-2">Messaggio</label><textarea id="cf-messaggio" name="messaggio" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none" placeholder="Raccontaci le tue esigenze..."></textarea></div>
-                            <button type="submit" class="ty-btn w-full px-8 py-4 gradient-dark text-white text-lg font-semibold rounded-lg">Invia richiesta</button>
-                            <p class="text-sm text-gray-600">Inviando il modulo accetti la nostra <a href="privacy-policy.html" class="text-primary-dark underline">Privacy Policy</a>.</p>
-                        </form>
-                    </div>
-                    <p class="mt-4 text-sm text-gray-600">Preferisci la posta? Scrivici a <a href="mailto:info@tymetric.com" class="text-primary-dark underline">info@tymetric.com</a></p>
-                </div>
-            </div>
-        </section>
         <!-- Compliance -->
-        <section class="py-12 bg-white border-t border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ty-band">
-                <div class="flex flex-col gap-2 max-w-3xl">
-                    <span class="text-sm font-bold uppercase tracking-[0.08em] text-primary-dark">Compliance</span>
-                    <h2 class="text-2xl font-bold text-gray-900">Le risposte per il vostro DPO</h2>
-                    <p class="text-base leading-relaxed text-gray-600">Dati elaborati nell'Unione europea, ruoli GDPR chiari e il calendario dell'AI Act, con le fonti ufficiali.</p>
+        <section class="ty-strip">
+            <div class="ty-wrap ty-row">
+                <div>
+                    <span class="ty-eyebrow">Compliance</span>
+                    <p><b>Le risposte per il vostro DPO.</b> Dati elaborati nell'Unione europea, ruoli GDPR chiari e il calendario dell'AI Act, con le fonti ufficiali.</p>
                 </div>
-                <div class="flex flex-wrap gap-3">
-                    <a href="gdpr.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">GDPR <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
-                    <a href="ai-act.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">AI Act <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
-                </div>
+                <div class="ty-pills"><a href="gdpr.html">GDPR →</a><a href="ai-act.html">AI Act →</a></div>
             </div>
         </section>
     </main>
@@ -594,9 +514,8 @@
     <!-- CTA fissa su mobile -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
         <div class="ty-sticky-actions">
-            <a href="#contact" class="ty-sticky-btn gradient-dark text-white">Prenota una demo</a>
+            <a href="#contact" class="ty-sticky-btn gradient-dark text-white">Richiedi informazioni</a>
         </div>
     </div>
 </body>
-
 </html>

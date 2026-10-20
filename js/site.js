@@ -140,4 +140,96 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     bindContactForm();
+    initHomeV2();
 });
+
+/* ===== Home v2: comparsa delle sezioni, schermate del prodotto, email dall'apertura, esempio di Mya ===== */
+function initHomeV2() {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Le sezioni compaiono quando entrano nello schermo
+    var rv = document.querySelectorAll('.ty-reveal');
+    if ('IntersectionObserver' in window && !reduce) {
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        rv.forEach(function (el) { io.observe(el); });
+    } else {
+        rv.forEach(function (el) { el.classList.add('is-in'); });
+    }
+
+    // Schermate del prodotto nell'apertura
+    var shot = document.getElementById('ty-shot');
+    if (shot) {
+        var frame = shot.parentNode;
+        document.querySelectorAll('.ty-tabs button').forEach(function (b) {
+            b.addEventListener('click', function () {
+                document.querySelectorAll('.ty-tabs button').forEach(function (x) { x.setAttribute('aria-selected', 'false'); });
+                b.setAttribute('aria-selected', 'true');
+                frame.classList.add('is-fading');
+                setTimeout(function () {
+                    shot.src = b.getAttribute('data-shot');
+                    shot.alt = b.textContent.trim() + ' in Tymetric';
+                    frame.classList.remove('is-fading');
+                }, 180);
+            });
+        });
+    }
+
+    // L'email scritta nell'apertura precompila il modulo
+    var go = document.getElementById('ty-go');
+    if (go) {
+        go.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var v = document.getElementById('ty-go-email').value.trim();
+            var target = document.getElementById('cf-email');
+            if (v && target) target.value = v;
+            var contact = document.getElementById('contact');
+            if (contact) contact.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+            setTimeout(function () { var f = document.getElementById('cf-nome'); if (f) f.focus({ preventScroll: true }); }, 500);
+        });
+    }
+
+    // L'esempio di conversazione con Mya compare a passi
+    var chat = document.getElementById('ty-talk');
+    if (!chat) return;
+    var timers = [];
+    function step(n) { return chat.querySelector('[data-step="' + n + '"]'); }
+    function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        chat.querySelectorAll('[data-step]').forEach(function (el) { el.classList.remove('is-on'); });
+        chat.querySelector('.ty-ok').classList.remove('is-pressed');
+        chat.querySelector('.ty-typed').textContent = '';
+    }
+    function at(ms, fn) { timers.push(setTimeout(fn, ms)); }
+    function play() {
+        reset();
+        var typed = chat.querySelector('.ty-typed'), text = typed.getAttribute('data-text');
+        if (reduce) {
+            typed.textContent = text;
+            chat.querySelectorAll('[data-step]').forEach(function (el) { if (el.getAttribute('data-step') !== '2') el.classList.add('is-on'); });
+            return;
+        }
+        at(300, function () { step(1).classList.add('is-on'); });
+        for (var i = 1; i <= text.length; i++) {
+            (function (n) { at(350 + n * 28, function () { typed.textContent = text.slice(0, n); }); })(i);
+        }
+        var t = 350 + text.length * 28;
+        at(t + 300, function () { step(2).classList.add('is-on'); });
+        at(t + 1500, function () { step(2).classList.remove('is-on'); step(3).classList.add('is-on'); });
+        at(t + 2000, function () { step(4).classList.add('is-on'); });
+        at(t + 2350, function () { step(5).classList.add('is-on'); });
+        at(t + 2700, function () { step(6).classList.add('is-on'); });
+        at(t + 3200, function () { step(7).classList.add('is-on'); });
+        at(t + 4400, function () { chat.querySelector('.ty-ok').classList.add('is-pressed'); });
+        at(t + 4900, function () { step(8).classList.add('is-on'); });
+    }
+    var replay = document.getElementById('ty-talk-replay');
+    if (replay) replay.addEventListener('click', play);
+    if ('IntersectionObserver' in window) {
+        var seen = false;
+        new IntersectionObserver(function (es) { if (!seen && es[0].isIntersecting) { seen = true; play(); } }, { threshold: 0.4 }).observe(chat);
+    } else {
+        play();
+    }
+}

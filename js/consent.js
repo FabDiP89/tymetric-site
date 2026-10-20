@@ -107,7 +107,9 @@
         '#ty-consent input[type=checkbox]{width:18px;height:18px;margin-top:3px;accent-color:#14b8a6}' +
         '#ty-consent .tyc-muted{color:#94a3b8;font-size:14px}' +
         '#ty-consent button:focus-visible,#ty-consent a:focus-visible,#ty-consent input:focus-visible{outline:3px solid #5eead4;outline-offset:2px}' +
-        '@media (max-width:640px){#ty-consent .tyc-btns{width:100%;display:grid;grid-template-columns:1fr 1fr}#ty-consent .tyc-btns .tyc-link{grid-column:1/-1;order:3}#ty-consent .tyc-prefs .tyc-btns{grid-template-columns:1fr}}';
+        '@media (max-width:640px){#ty-consent{font-size:13.5px;line-height:1.4}#ty-consent .tyc-in{padding:12px 14px;gap:10px}#ty-consent .tyc-long{display:none}' +
+        '#ty-consent .tyc-btns{width:100%;display:grid;grid-template-columns:auto 1fr 1fr;gap:8px}#ty-consent button{min-width:0;padding:9px 10px}' +
+        '#ty-consent .tyc-btns .tyc-link{padding:9px 4px}#ty-consent .tyc-prefs .tyc-btns{grid-template-columns:1fr}}';
 
     function el(html) {
         var d = document.createElement('div');
@@ -138,7 +140,7 @@
             '<div id="ty-consent" role="dialog" aria-live="polite" aria-label="Scelta sui cookie">' +
             '<div class="tyc-in">' +
             '<p>Usiamo cookie tecnici e, solo con il tuo consenso, cookie di statistica (Google Analytics) e di marketing (Google Ads). ' +
-            'Puoi cambiare idea in ogni momento da «Gestisci cookie» in fondo alla pagina. <a href="/cookie-policy.html">Cookie policy</a></p>' +
+            '<span class="tyc-long">Puoi cambiare idea in ogni momento da «Gestisci cookie» in fondo alla pagina. </span><a href="/cookie-policy.html">Cookie policy</a></p>' +
             '<div class="tyc-btns">' +
             '<button type="button" class="tyc-link" data-tyc="prefs" aria-expanded="false">Personalizza</button>' +
             '<button type="button" class="tyc-main" data-tyc="reject">Rifiuta</button>' +

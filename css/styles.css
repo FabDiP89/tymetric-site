@@ -3474,3 +3474,19 @@ details.ty-faq[open] .ty-chev {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* ===== Fascia orizzontale (testo a sinistra, link a destra) ===== */
+
+.ty-band {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ty-band {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

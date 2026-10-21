@@ -3497,7 +3497,8 @@ details.ty-faq[open] .ty-chev {
 .ty-page { color: #111827; }
 .ty-wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
 .ty-wrap-n { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-.ty-page h2 { font-size: clamp(28px, 3.4vw, 42px); line-height: 1.12; letter-spacing: -.02em; font-weight: 700; color: #111827; text-wrap: balance; }
+/* Specificità zero: le classi già presenti sugli h2 delle altre pagine vincono, e il colore si eredita dalla sezione */
+:where(.ty-page) h2 { font-size: clamp(28px, 3.4vw, 42px); line-height: 1.12; letter-spacing: -.02em; font-weight: 700; text-wrap: balance; }
 .ty-lead { font-size: 19px; line-height: 1.55; color: #374151; }
 .ty-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #006d75; }
 .ty-action { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: 14px 24px; border-radius: 10px; font-weight: 600; font-size: 16px; background: #006d75; color: #fff; border: 0; cursor: pointer; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
@@ -3513,6 +3514,11 @@ details.ty-faq[open] .ty-chev {
 .ty-dark .ty-lead { color: #c9dadb; }
 .ty-dark .ty-link { color: #52d6cd; }
 .ty-cyan { color: #fff; background: radial-gradient(60% 45% at 50% 0%, rgba(82, 214, 205, .55) 0%, rgba(82, 214, 205, 0) 70%), #08979c; }
+
+/* Stessa superficie scura e sfumata per le schede dedicate a Mya e all'AI */
+.ty-tile.ty-tile-mya, .ty-add.ty-add-mya, .ty-ai-card { background: radial-gradient(120% 85% at 50% 0%, rgba(8, 151, 156, .55) 0%, rgba(8, 151, 156, 0) 70%), #0f2426; color: #fff; }
+/* Due sezioni scure una dopo l'altra: una linea sottile le separa */
+.ty-dark + .ty-dark { border-top: 1px solid rgba(255, 255, 255, .08); }
 
 /* Apertura: claim centrato, colore come atmosfera */
 .ty-hero { position: relative; padding: 72px 0 0; text-align: center;
@@ -3556,7 +3562,7 @@ details.ty-faq[open] .ty-chev {
 .ty-tile li { position: relative; padding-left: 20px; font-size: 16px; line-height: 1.45; color: #374151; }
 .ty-tile li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: #08979c; }
 .ty-more-link { margin-top: 28px; color: #006d75; }
-.ty-tile-mya { background: #0f2426; color: #fff; }
+.ty-tile-mya { color: #fff; }
 .ty-tile-mya h3, .ty-tile-mya li { color: #fff; }
 .ty-tile-mya .ty-what { color: #b8c9ca; }
 .ty-tile-mya li::before { background: #52d6cd; }
@@ -3633,7 +3639,7 @@ details.ty-faq[open] .ty-chev {
 .ty-add h3 { margin: 6px 0 0; font-size: 22px; font-weight: 700; letter-spacing: -.01em; }
 .ty-add p { margin: 0; font-size: 15px; line-height: 1.5; }
 .ty-add small { margin-top: auto; padding-top: 10px; font-size: 14px; }
-.ty-add-mya { background: #0f2426; color: #fff; }
+.ty-add-mya { color: #fff; }
 .ty-add-mya .ty-eyebrow { color: #52d6cd; }
 .ty-add-mya h3 { color: #fff; }
 .ty-add-mya p, .ty-add-mya small { color: #c9dadb; }

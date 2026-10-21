@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Consenso cookie: Google Analytics, Google Ads e Tag Manager partono solo dopo il consenso (vedi /js/consent.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        (function () {
+            var c = { a: false, m: false };
+            try { var v = JSON.parse(localStorage.getItem('tyConsent') || 'null'); if (v && v.v === 1 && Date.now() - v.t < 15552000000) c = v; } catch (e) {}
+            function s(x) { return x ? 'granted' : 'denied'; }
+            gtag('consent', 'default', { analytics_storage: s(c.a), ad_storage: s(c.m), ad_user_data: s(c.m), ad_personalization: s(c.m), functionality_storage: 'granted', security_storage: 'granted' });
+            gtag('set', 'ads_data_redaction', true);
+        })();
+    </script>
+    <script src="/js/consent.js?v=09b12511" defer></script>
+
+    <title>Piattaforma per la gestione dei turni sanitari | Tymetric</title>
+    <meta name="description"
+        content="Griglia dei turni con 5 modalità di visualizzazione, filtri, candidati suggeriti, competenze base e senior, ferie e richieste integrate. In italiano e in inglese.">
+    <link rel="canonical" href="https://tymetric.com/piattaforma-gestione-turni.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tymetric.com/piattaforma-gestione-turni.html">
+    <meta property="og:title" content="Piattaforma per la gestione dei turni sanitari">
+    <meta property="og:description" content="Tutto il reparto in un posto solo: griglia, richieste, approvazioni, competenze, statistiche e app per il personale. Con tema scuro e inglese integrato.">
+    <meta property="og:image" content="https://tymetric.com/im1.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Piattaforma per la gestione dei turni sanitari">
+    <meta property="twitter:description" content="Tutto il reparto in un posto solo: griglia, richieste, approvazioni, competenze, statistiche e app per il personale. Con tema scuro e inglese integrato.">
+    <meta property="twitter:image" content="https://tymetric.com/im1.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/styles.css?v=09b12511" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tymetric.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Prodotto",
+                "item": "https://tymetric.com/prodotto.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Piattaforma",
+                "item": "https://tymetric.com/piattaforma-gestione-turni.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Tymetric ha un tema scuro?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. Si attiva con un clic e vale per tutta la piattaforma: utile quando pianifichi di sera o di notte, senza affaticare la vista."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "In che lingue è disponibile la piattaforma?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In italiano e in inglese. Il supporto multilingua è nativo: ogni utente sceglie la propria lingua, e l'app per il personale segue la stessa impostazione."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso filtrare la griglia per vedere solo una parte del piano?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì. Puoi combinare filtri per persona, team, ruolo, attività, fascia oraria e giorno, oltre che per tipo (turni, riposi o assenze), origine e turni fissati. Gli stessi filtri indicano su quali turni agire in blocco."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come trovo chi può coprire un turno scoperto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Con «Suggerisci candidati»: per ogni turno Tymetric elenca chi può coprirlo, dal più al meno idoneo, e per gli altri spiega perché non può."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Le competenze hanno livelli?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sì, base o senior. Per ogni attività scegli il livello minimo richiesto, e nel fabbisogno indichi quanti senior servono in ogni turno."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script src="js/site.js?v=09b12511" defer></script>
+</head>
+
+<body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
+
+    <!-- Navigazione -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-6">
+                <a href="index.html" class="flex items-center gap-2" aria-label="Tymetric, home">
+                    <img src="favicon.png" alt="" class="h-8 w-8" width="32" height="32">
+                    <span class="text-2xl font-bold text-primary tracking-tight">tymetric</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8" aria-label="Navigazione principale">
+                    <div class="ty-dd py-3">
+                        <a href="prodotto.html" class="inline-flex items-center gap-1 text-[15px] font-bold text-primary-dark" aria-haspopup="true">
+                            Prodotto
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="ty-dd-menu">
+                            <a href="prodotto.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Panoramica</span><span class="text-[13px] text-gray-600">Piattaforma, motore, Mya e app</span></a>
+                            <a href="piattaforma-gestione-turni.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Piattaforma</span><span class="text-[13px] text-gray-600">Griglia, richieste, competenze</span></a>
+                            <a href="generazione-automatica-turni.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Generazione automatica</span><span class="text-[13px] text-gray-600">Il motore e le sue regole</span></a>
+                            <a href="turni-intelligenza-artificiale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni con l'AI</span><span class="text-[13px] text-gray-600">Mya, l'assistente AI integrato</span></a>
+                            <a href="turni-medici-ospedalieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni dei medici</span><span class="text-[13px] text-gray-600">Guardie, reperibilità, competenze</span></a>
+                            <a href="turni-infermieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni degli infermieri</span><span class="text-[13px] text-gray-600">Notti eque, riposi, esigenze personali</span></a>
+                            <a href="app-turni-personale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">App per il personale</span><span class="text-[13px] text-gray-600">Turni, desiderata, cambi turno</span></a>
+                        </div>
+                    </div>
+                    <a href="prezzi.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Prezzi</a>
+                    <div class="ty-dd py-3">
+                        <button type="button" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Compliance
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="ty-dd-menu">
+                            <a href="gdpr.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">GDPR</span><span class="text-[13px] text-gray-600">Dati, ruoli, misure, conservazione</span></a>
+                            <a href="ai-act.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">AI Act</span><span class="text-[13px] text-gray-600">Cosa fa l'AI, chi decide, le scadenze</span></a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Blog</a>
+                    <a href="#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Richiedi informazioni</a>
+                </nav>
+                <button id="mobile-menu-button" type="button" class="md:hidden p-2 -mr-2 rounded-lg text-gray-900" onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Apri il menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 flex flex-col gap-1">
+                <a href="prodotto.html" class="py-2.5 text-primary-dark font-semibold">Prodotto</a>
+                <a href="piattaforma-gestione-turni.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Piattaforma</a>
+                <a href="generazione-automatica-turni.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Generazione automatica</a>
+                <a href="turni-intelligenza-artificiale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni con l'AI</a>
+                <a href="turni-medici-ospedalieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni dei medici</a>
+                <a href="turni-infermieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni degli infermieri</a>
+                <a href="app-turni-personale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">App per il personale</a>
+                <a href="prezzi.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prezzi</a>
+                <span class="pt-2 text-xs font-bold uppercase tracking-wider text-gray-600">Compliance</span>
+                <a href="gdpr.html" class="py-2.5 text-gray-700 hover:text-primary-dark">GDPR</a>
+                <a href="ai-act.html" class="py-2.5 text-gray-700 hover:text-primary-dark">AI Act</a>
+                <a href="blog.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Blog</a>
+                <a href="#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Richiedi informazioni</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="ty-page">
+        <!-- Hero -->
+        <section class="ty-hero ty-hero--sub">
+            <div class="ty-wrap">
+                <h1>Piattaforma per la gestione dei turni del personale sanitario</h1>
+                <p class="ty-claim">Tutto il reparto, <em>in un posto solo.</em></p>
+                <p class="ty-sub">Griglia dei turni, richieste del personale, approvazioni, competenze, statistiche e app: nella piattaforma di Tymetric il coordinatore costruisce, rifinisce e pubblica il piano senza passare da un foglio all'altro.</p>
+                <form class="ty-go" id="ty-go" novalidate>
+                    <label for="ty-go-email" class="sr-only">La tua email</label>
+                    <input id="ty-go-email" type="email" placeholder="La tua email" autocomplete="email">
+                    <button type="submit" class="ty-action">Richiedi informazioni</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Tutto integrato -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8">
+                <div class="flex flex-col gap-3">
+                    <span class="ty-eyebrow">Tutto integrato</span>
+                    <h2>Dalla regola alla pubblicazione, nello stesso posto</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Configurazione, richieste, pianificazione, pubblicazione e cambi lavorano sugli stessi dati: quello che succede in un punto lo vedi subito anche negli altri.</p>
+                </div>
+                <ol class="flex flex-col gap-6">
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">1</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Configuri il reparto</span><span class="text-base leading-relaxed text-gray-600">Operatori, fasce orarie, attività, competenze, fabbisogno e regole, una volta sola.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">2</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Raccogli le richieste</span><span class="text-base leading-relaxed text-gray-600">Ferie, assenze e desiderata arrivano dall'app; le approvi o le respingi dalla piattaforma.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">3</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Generi il piano</span><span class="text-base leading-relaxed text-gray-600">Su tutto il periodo o solo su una parte: i turni che hai fissato restano dove sono.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">4</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Rifinisci a mano</span><span class="text-base leading-relaxed text-gray-600">Candidati suggeriti, azioni in blocco e assegnazioni massive, con gli avvisi sotto gli occhi.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">5</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Pubblichi</span><span class="text-base leading-relaxed text-gray-600">Il piano va sui telefoni del reparto: ognuno riceve un avviso nell'app e per email.</span></span></li>
+                    <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">6</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Gestisci i cambi</span><span class="text-base leading-relaxed text-gray-600">Sessione di modifica, cambi turno, imprevisti e storico di ogni modifica.</span></span></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Il piano come serve a te -->
+        <section class="ty-engine" style="background:#f9fafb">
+            <div class="ty-wrap">
+                <div class="ty-top ty-reveal">
+                    <span class="ty-eyebrow">Visualizzazione</span>
+                    <h2 style="margin-top:12px">Il piano come serve a te, in quel momento</h2>
+                    <p class="ty-lead" style="margin-top:18px">La griglia è il posto di lavoro del coordinatore: mostra il mese intero o il dettaglio di un turno, e porta alle informazioni senza cambiare pagina.</p>
+                </div>
+                <div class="ty-cols ty-reveal">
+                    <div>
+                        <h3>Vedere</h3>
+                        <dl>
+                            <dt>5 modalità di visualizzazione</dt><dd>La vista per persona e quella per attività, più tre densità: dalla panoramica del mese al dettaglio di ogni cella.</dd>
+                            <dt>Colori e nomi come preferisci</dt><dd>I colori delle fasce si personalizzano; i nomi si mostrano per cognome, nome, iniziale, matricola o team.</dd>
+                            <dt>Le richieste sulla griglia</dt><dd>Desiderata e assenze approvate compaiono come cornici sulle celle, con lo stato: rispettate o no.</dd>
+                            <dt>Il mese prima, accanto</dt><dd>Accanto al periodo restano visibili gli ultimi giorni del mese precedente: le notti e i riposi che lo attraversano si controllano senza cambiare pagina.</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <h3>Trovare</h3>
+                        <dl>
+                            <dt>Filtri su nove dimensioni</dt><dd>Ruolo, team, attività, fascia oraria, giorno della settimana, professionista, tipo di turno, origine, turni fissati o liberi: servono a leggere il piano e a scegliere su cosa agire.</dd>
+                            <dt>La scheda di ogni persona</dt><dd>Dal nome si apre la scheda: statistiche, conteggi per fascia e per attività, anomalie, assenze.</dd>
+                            <dt>Tema scuro, per pianificare di notte</dt><dd>Con un clic la piattaforma passa al tema scuro, più riposante quando pianifichi a fine giornata.</dd>
+                            <dt>Italiano e inglese, già integrati</dt><dd>Il supporto multilingua è nativo: ogni utente sceglie la sua lingua, anche nell'app del personale.</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="ty-reveal" style="margin-top:56px"><img src="carosello5.webp" alt="Griglia dei turni di Tymetric con il tema scuro" width="1730" height="1152" loading="lazy" style="display:block;width:100%;height:auto;border-radius:18px;border:1px solid rgba(0,109,117,.22);box-shadow:0 30px 70px rgba(0,50,54,.25)"></div>
+            </div>
+        </section>
+
+        <!-- Candidati -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <span class="ty-eyebrow">Suggerisci candidati</span>
+                    <h2>Il candidato giusto, in un clic</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Per ogni turno da coprire, Tymetric ti mostra chi può prenderlo, dal più al meno idoneo. Per chi non può, ti dice anche perché: un'assenza, una competenza che manca, il riposo minimo, i giorni consecutivi, l'alternanza dei weekend, una desiderata o una regola del reparto.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Il perché di ogni riposo.</strong> Ogni riposo assegnato dice la sua ragione: una richiesta, il riposo settimanale, una festività, troppi giorni di fila, l'alternanza del weekend o il recupero dopo un festivo.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Avvisi prima di salvare.</strong> Quando modifichi un turno, la piattaforma ti segnala competenze e disponibilità che non tornano.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Anche dopo la pubblicazione.</strong> Quando si apre un buco, Tymetric suggerisce gli scambi e i trasferimenti migliori, dal più adatto in giù.</span></li>
+                    </ul>
+            </div>
+        </section>
+
+        <!-- Ferie e richieste -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <span class="ty-eyebrow">Ferie e richieste</span>
+                    <h2>Decidi sulle ferie sapendo cosa succede al piano</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Le richieste del personale non aspettano in un cassetto. Il motore ne tiene conto da subito, e tu decidi con il loro effetto davanti.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Contano già mentre sono in attesa.</strong> Il motore cerca di lasciare liberi i giorni richiesti, così approvare una richiesta non vuol dire rifare il piano.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Prova prima di approvare.</strong> Puoi simulare un'assenza ancora da approvare, guardare cosa cambia e solo dopo decidere.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Una alla volta o tutte insieme.</strong> Le desiderata si approvano singolarmente o in blocco, e la griglia segnala quelle rispettate.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Niente motivi sanitari.</strong> Per un'assenza basta «Non dichiarata»: il motivo non serve al piano e non si registra.</span></li>
+                    </ul>
+                    <p class="text-[15px] leading-relaxed text-gray-600"><strong class="text-primary-dark">Novità:</strong> mentre ragioni su ferie, congressi e corsi, la copertura dell'intero periodo si aggiorna sotto i tuoi occhi, con avvisi come «con queste ferie, il 2 gennaio nel turno di notte resta un solo infermiere senior».</p>
+            </div>
+        </section>
+
+        <!-- Competenze -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <span class="ty-eyebrow">Competenze e seniority</span>
+                    <h2>Ognuno dove sa lavorare, con il livello giusto</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Le competenze sono parte del piano, non una nota a margine: la piattaforma le registra persona per persona e il motore le rispetta in ogni assegnazione.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Livello base o senior</strong> per ogni competenza di ogni persona, con le eventuali eccezioni personali.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Requisiti per attività.</strong> Per ogni attività scegli se basta il ruolo o servono competenze, e con quale livello minimo.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Quota di senior nel fabbisogno.</strong> Il motore cerca di rispettarla senza mai lasciare scoperto un turno per ottenerla.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Ruoli e catalogo.</strong> Ruoli dalla tassonomia sanitaria di Comparto e Dirigenza, competenze aziendali e competenze specifiche del reparto.</span></li>
+                    </ul>
+            </div>
+        </section>
+
+        <!-- Molti turni insieme -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <span class="ty-eyebrow">Molti turni insieme</span>
+                    <h2>Un mese intero, poche mosse</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">In un reparto si arriva facilmente a diverse centinaia di turni al mese: la piattaforma ti fa agire su gruppi interi e ti dice sempre quanti ne stai toccando.</p>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Azioni in blocco.</strong> Con filtri e date scegli il bersaglio e blocchi, sblocchi o elimini; prima di confermare vedi il numero esatto di turni coinvolti.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Assegnazioni massive in quattro passi.</strong> Scegli le date, le persone e cosa assegnare (un riposo, un'assenza o un turno in un'attività); l'anteprima divide i casi in compatibili e no, e decidi gruppo per gruppo.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Per esempio:</strong> cinque colleghi allo stesso congresso, un'attività fissa ogni martedì per un trimestre, il riposo nei festivi per un team intero.</span></li>
+                    </ul>
+            </div>
+        </section>
+
+        <!-- Statistiche ed export -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
+                    <span class="ty-eyebrow">Numeri e tracce</span>
+                    <h2>Statistiche, export e storico</h2>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Statistiche di sessione:</strong> copertura, carico di lavoro, indice di carico, riposi e conformità, con il collegamento al turno che genera ogni numero.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Contatori su misura:</strong> scegli tu cosa contare, con i filtri delle regole, e lo confronti con il periodo prima.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Cruscotti di reparto e di persona:</strong> ore, notti, festivi, prefestivi, reperibilità, straordinari e assenze.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Export Excel</strong> per attività o per professionista, con la configurazione salvata per i mesi successivi.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Storico di ogni modifica:</strong> chi ha cambiato cosa, e quando.</span></li>
+                    </ul>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <h2 class="text-center text-3xl lg:text-[40px] leading-tight font-bold text-gray-900">Domande frequenti</h2>
+                <div class="flex flex-col gap-3.5">
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Tymetric ha un tema scuro?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Si attiva con un clic e vale per tutta la piattaforma: utile quando pianifichi di sera o di notte, senza affaticare la vista.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">In che lingue è disponibile la piattaforma?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">In italiano e in inglese. Il supporto multilingua è nativo: ogni utente sceglie la propria lingua, e l'app per il personale segue la stessa impostazione.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Posso filtrare la griglia per vedere solo una parte del piano?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì. Puoi combinare filtri per persona, team, ruolo, attività, fascia oraria e giorno, oltre che per tipo (turni, riposi o assenze), origine e turni fissati. Gli stessi filtri indicano su quali turni agire in blocco.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Come trovo chi può coprire un turno scoperto?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Con «Suggerisci candidati»: per ogni turno Tymetric elenca chi può coprirlo, dal più al meno idoneo, e per gli altri spiega perché non può.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Le competenze hanno livelli?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Sì, base o senior. Per ogni attività scegli il livello minimo richiesto, e nel fabbisogno indichi quanti senior servono in ogni turno.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- Approfondimenti -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6 items-center text-center">
+                <h2 class="text-2xl font-bold text-gray-900">Approfondisci</h2>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="app-turni-personale.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">App turni per il personale <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="generazione-automatica-turni.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Generazione automatica dei turni <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="turni-intelligenza-artificiale.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni con l'intelligenza artificiale <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="turni-medici-ospedalieri.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni dei medici ospedalieri <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="turni-infermieri.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Turni degli infermieri <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="prodotto.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Tutto il prodotto <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    <a href="prezzi.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-gray-300 bg-white text-[15px] font-semibold text-primary-dark hover:border-primary">Prezzi <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+                <p class="text-[15px] text-gray-600">Da 1.190 € l'anno, IVA esclusa, <em>primi 3 mesi in prova senza canone</em>.</p>
+            </div>
+        </section>
+
+        <!-- Contatti -->
+        <section id="contact" class="ty-contact">
+            <div class="ty-wrap-n" style="text-align:center">
+                <h2>Richiedi informazioni</h2>
+                <p class="ty-lead" style="margin-top:14px">Piattaforma, motore e app da 1.190 € l'anno, IVA esclusa, <em>primi 3 mesi in prova senza canone</em>. <a href="prezzi.html#simulatore" class="ty-link">Calcola il tuo prezzo</a></p>
+                <div class="ty-form-card">
+                    <div id="ty-form-wrap" class="text-left">
+                        <form id="contact-form" class="flex flex-col gap-5">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div><label for="cf-nome" class="block text-sm font-medium text-gray-700 mb-2">Nome *</label><input id="cf-nome" type="text" name="nome" required autocomplete="given-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Mario"></div>
+                                <div><label for="cf-cognome" class="block text-sm font-medium text-gray-700 mb-2">Cognome *</label><input id="cf-cognome" type="text" name="cognome" required autocomplete="family-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Rossi"></div>
+                            </div>
+                            <div><label for="cf-email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label><input id="cf-email" type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="mario.rossi@email.it"></div>
+                            <div><label for="cf-telefono" class="block text-sm font-medium text-gray-700 mb-2">Telefono</label><input id="cf-telefono" type="tel" name="telefono" autocomplete="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="+39 123 456 7890"></div>
+                            <div><label for="cf-fonte" class="block text-sm font-medium text-gray-700 mb-2">Come ci hai conosciuto?</label><select id="cf-fonte" name="provenienza" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none bg-white"><option value="">Preferisco non dirlo</option><option>Ricerca su Google</option><option>ChatGPT</option><option>Claude</option><option>Altro assistente AI (Gemini, Perplexity, Copilot…)</option><option>LinkedIn</option><option>Passaparola o colleghi</option><option>Evento o convegno</option><option>Altro</option></select></div>
+                            <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label for="cf-sito">Sito web</label><input id="cf-sito" type="text" name="sito_web" tabindex="-1" autocomplete="off"></div>
+                            <div><label for="cf-messaggio" class="block text-sm font-medium text-gray-700 mb-2">Messaggio</label><textarea id="cf-messaggio" name="messaggio" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none" placeholder="Raccontaci le tue esigenze..."></textarea></div>
+                            <button type="submit" class="ty-btn w-full px-8 py-4 gradient-dark text-white text-lg font-semibold rounded-lg">Invia richiesta</button>
+                            <p class="text-sm text-gray-600">Inviando il modulo accetti la nostra <a href="privacy-policy.html" class="text-primary-dark underline">Privacy Policy</a>.</p>
+                        </form>
+                    </div>
+                </div>
+                <p class="ty-mail">Preferisci la posta? Scrivici a <a href="mailto:info@tymetric.com" class="ty-link">info@tymetric.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-8">
+                <div class="lg:col-span-1 flex flex-col gap-3.5">
+                    <div class="flex items-center gap-2"><img src="favicon.png" alt="" class="h-8 w-8" width="32" height="32"><span class="text-2xl font-bold text-primary-light">tymetric</span></div>
+                    <p class="text-[15px] leading-relaxed text-gray-400">Turni per la sanità: genera il piano con una frase.</p>
+                </div>
+                <nav aria-label="Prodotto" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prodotto</span><a href="prodotto.html" class="text-[15px] text-gray-400 hover:text-primary-light">Panoramica</a><a href="piattaforma-gestione-turni.html" class="text-[15px] text-gray-400 hover:text-primary-light">Piattaforma</a><a href="generazione-automatica-turni.html" class="text-[15px] text-gray-400 hover:text-primary-light">Generazione automatica</a><a href="turni-intelligenza-artificiale.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni con l'AI</a><a href="turni-medici-ospedalieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni dei medici</a><a href="turni-infermieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni degli infermieri</a><a href="app-turni-personale.html" class="text-[15px] text-gray-400 hover:text-primary-light">App per il personale</a><a href="prodotto.html#struttura" class="text-[15px] text-gray-400 hover:text-primary-light">Pannello per la struttura</a></nav>
+                <nav aria-label="Prezzi" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prezzi</span><a href="prezzi.html" class="text-[15px] text-gray-400 hover:text-primary-light">Listino e simulatore</a><a href="prezzi.html#offerte" class="text-[15px] text-gray-400 hover:text-primary-light">Struttura su richiesta</a></nav>
+                <nav aria-label="Compliance" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Compliance</span><a href="gdpr.html" class="text-[15px] text-gray-400 hover:text-primary-light">GDPR</a><a href="ai-act.html" class="text-[15px] text-gray-400 hover:text-primary-light">AI Act</a></nav>
+                <nav aria-label="Azienda" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Azienda</span><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer" class="text-[15px] text-gray-400 hover:text-primary-light">Chi siamo</a><a href="blog.html" class="text-[15px] text-gray-400 hover:text-primary-light">Blog</a><a href="privacy-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Privacy policy</a><a href="cookie-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Cookie policy</a></nav>
+                <div class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Contatti</span><span class="text-[15px] leading-normal text-gray-400">Corso Unione Sovietica 341<br>Torino (TO)</span><a href="mailto:info@tymetric.com" class="text-[15px] text-gray-400 hover:text-primary-light">info@tymetric.com</a></div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-wrap justify-between gap-3 text-sm text-gray-400">
+                <span>&copy; 2026 GDP Analytics s.r.l. · P.IVA 11975840015 · Corso Unione Sovietica 341, Torino (TO)</span>
+                <span>Made in Italy</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA fissa su mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
+        <div class="ty-sticky-actions">
+            <a href="#contact" class="ty-sticky-btn gradient-dark text-white">Richiedi informazioni</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -17,7 +17,7 @@
             gtag('set', 'ads_data_redaction', true);
         })();
     </script>
-    <script src="/js/consent.js?v=09b12511" defer></script>
+    <script src="/js/consent.js?v=4e31b262" defer></script>
 
     <title>Generazione automatica dei turni sanitari | Tymetric</title>
     <meta name="description"
@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="css/styles.css?v=09b12511" rel="stylesheet">
+    <link href="css/styles.css?v=4e31b262" rel="stylesheet">
 
     <script type="application/ld+json">
     {
@@ -118,12 +118,20 @@
                     "@type": "Answer",
                     "text": "Il motore conosce un anno di turni pubblicati: notti, festivi e reperibilità si bilanciano sull'anno, e l'equilibrio si vede settimana per settimana, non solo a fine mese."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Come aiuta Tymetric a decidere sulle ferie?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Con l'analisi delle assenze: per ogni richiesta in attesa, un algoritmo proprietario simula il mese molte volte e misura quanto è sicuro approvarla e quanto pesa sulle altre richieste. Il risultato è una confidenza statistica, e la decisione resta al coordinatore."
+                }
             }
         ]
     }
     </script>
 
-    <script src="js/site.js?v=09b12511" defer></script>
+    <script src="js/site.js?v=4e31b262" defer></script>
 </head>
 
 <body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
@@ -310,6 +318,51 @@
                 </ul>
             </div>
         </section>
+
+        <!-- Analisi delle assenze -->
+        <section id="assenze" class="ty-engine ty-absence scroll-mt-16">
+            <div class="ty-wrap">
+                <div class="ty-top ty-reveal">
+                    <span class="ty-eyebrow">Novità · Analisi delle assenze</span>
+                    <h2 style="margin-top:12px">Prima di dire sì a una richiesta di ferie, sai quanto rischi.</h2>
+                    <p class="ty-lead" style="margin-top:18px">Approvare le ferie di una persona sembra una decisione su pochi giorni. In realtà muove tutto il mese: chi la sostituisce di notte avrà lo smonto il giorno dopo, chi copre il pomeriggio non potrà rientrare la mattina seguente prima di 11 ore, e la catena arriva fino a colleghi che con quella richiesta non c'entrano nulla. Per questo abbiamo sviluppato un algoritmo proprietario che non si limita a contare.</p>
+                    <p class="ty-lead" style="margin-top:14px">Per ogni richiesta di ferie, congresso o formazione, l'algoritmo simula il mese molte volte, ogni volta con scelte diverse, e mette a confronto i piani che coprono meglio il reparto. Dalle assegnazioni che ricorrono in quei piani ricava due risposte.</p>
+                </div>
+                <div class="ty-cols ty-reveal">
+                    <div>
+                        <h3>Quanto è sicuro approvarla?</h3>
+                        <p class="ty-col-p">Un indice di confidenza: quanto puoi concedere quei giorni senza mettere a rischio la copertura del reparto.</p>
+                    </div>
+                    <div>
+                        <h3>Che effetto ha sulle altre richieste?</h3>
+                        <p class="ty-col-p">Quanto approvarla rende più difficile accogliere le richieste dei colleghi ancora in attesa, prima che il conflitto salti fuori a piano fatto.</p>
+                    </div>
+                </div>
+                <div class="ty-versus ty-reveal">
+                    <div class="ty-before">
+                        <h4>Un controllo turno per turno</h4>
+                        <p class="ty-big">Vede le caselle.</p>
+                        <ul>
+                            <li>Quante notti restano coperte</li>
+                            <li>Quante attività restano coperte</li>
+                            <li>Chi ha competenze e disponibilità, un giorno alla volta</li>
+                        </ul>
+                        <p class="ty-sm">Valuta ogni turno da solo, quindi non vede cosa succede tra un turno e il successivo.</p>
+                    </div>
+                    <div class="ty-after">
+                        <h4>L'analisi di Tymetric</h4>
+                        <p class="ty-big">Vede le catene.</p>
+                        <ul>
+                            <li>Lo smonto che segue ogni notte</li>
+                            <li>Le 11 ore di riposo tra un turno e l'altro</li>
+                            <li>L'effetto a catena di una sola assenza sui turni degli altri</li>
+                        </ul>
+                        <p class="ty-sm">Costruisce piani interi, quindi coglie i legami tra i turni: è lì che si nasconde il rischio di un'approvazione.</p>
+                    </div>
+                </div>
+                <p class="ty-reveal ty-note-light">I risultati sono confidenze statistiche: un aiuto a decidere, che lascia la scelta al coordinatore.</p>
+            </div>
+        </section>
          <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
                 <div class="flex flex-col gap-3 max-w-3xl">
@@ -325,22 +378,6 @@
             </div>
         </section>
 
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
-                <div class="flex flex-col gap-3 max-w-3xl">
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Centinaia di turni, pochi clic</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Un mese di reparto sono centinaia di turni. Motore e piattaforma lavorano insieme per gestirli tutti.</p>
-                </div>
-                <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Filtri su nove dimensioni</h3><p class="text-[15px] leading-relaxed text-gray-600">Persona, attività, fascia, tipo di turno, ruolo, team, turni fissati o flessibili, origine (manuale, automatica, da richiesta), giorno della settimana.</p></li>
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Azioni in blocco</h3><p class="text-[15px] leading-relaxed text-gray-600">Con i filtri e le date isoli i turni che ti interessano e li blocchi, sblocchi o elimini insieme. Prima di confermare vedi quanti turni stai toccando.</p></li>
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Assegnazioni massive</h3><p class="text-[15px] leading-relaxed text-gray-600">Un congresso di tre giorni per cinque persone, l'ambulatorio del martedì per tre mesi: date, persone e azione, poi un'anteprima che separa i casi compatibili da quelli no.</p></li>
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Prova prima di approvare</h3><p class="text-[15px] leading-relaxed text-gray-600">Un'assenza in attesa si applica in simulazione per vederne l'effetto sul piano, prima di decidere.</p></li>
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Contatori su misura</h3><p class="text-[15px] leading-relaxed text-gray-600">Conteggi a scelta, con gli stessi filtri delle regole, confrontati con il periodo precedente.</p></li>
-                    <li class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Export Excel</h3><p class="text-[15px] leading-relaxed text-gray-600">Per attività o per persona, con la configurazione che si salva per i mesi successivi.</p></li>
-                </ul>
-            </div>
-        </section>
 
        <section class="py-20 bg-white">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8">
@@ -354,19 +391,6 @@
                     <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">3</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Rifinisci</span><span class="text-base leading-relaxed text-gray-600">Assegnazioni guidate, azioni su decine di turni insieme e assegnazioni massive con anteprima. Tipicamente il motore pianifica tra il 50% e il 70% dei turni pubblicati; il resto passa dalle richieste dei colleghi e dalle scelte del responsabile.</span></span></li>
                     <li class="flex gap-4 items-start"><span class="shrink-0 w-11 h-11 rounded-full gradient-primary text-white text-lg font-extrabold flex items-center justify-center">4</span><span class="flex flex-col gap-1"><span class="text-[19px] font-bold text-gray-900">Pubblica</span><span class="text-base leading-relaxed text-gray-600">Le anomalie si vedono prima di pubblicare: riposo minimo, monte ore, giorni consecutivi, fuori disponibilità, fuori ruolo, turni scoperti.</span></span></li>
                 </ol>
-            </div>
-        </section>
-         <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
-                <div class="flex flex-col gap-3 max-w-3xl">
-                    <span class="text-sm font-bold uppercase tracking-[0.08em] text-primary-dark">Novità</span>
-                    <h2 class="text-3xl lg:text-[40px] leading-tight font-bold text-gray-900 text-balance">Il piano ferie che guarda avanti</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Quando valuti ferie, congressi o formazione, vedi subito l'effetto sulla copertura: l'aiuto arriva quando la decisione si prende, non a piano già fatto.</p>
-                </div>
-                <ul class="grid md:grid-cols-2 gap-5">
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«Con queste ferie, il 14 novembre resta una sola persona abilitata alla guardia notturna.»</h3><p class="text-[15px] leading-relaxed text-gray-600">La copertura di tutto il periodo, letta prima di approvare.</p></li>
-                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">«7 medici con un massimo di 3 notti ne coprono al più 21: il mese ne chiede 30.»</h3><p class="text-[15px] leading-relaxed text-gray-600">Il buco si vede sulle regole del reparto, prima di generare il piano.</p></li>
-                </ul>
             </div>
         </section>
 
@@ -398,6 +422,10 @@
                     <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
                         <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Come garantisce l'equità nel tempo?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
                         <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Il motore conosce un anno di turni pubblicati: notti, festivi e reperibilità si bilanciano sull'anno, e l'equilibrio si vede settimana per settimana, non solo a fine mese.</p>
+                    </details>
+                    <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Come aiuta Tymetric a decidere sulle ferie?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                        <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Con l'analisi delle assenze: per ogni richiesta in attesa, un algoritmo proprietario simula il mese molte volte e misura quanto è sicuro approvarla e quanto pesa sulle altre richieste. Il risultato è una confidenza statistica, e la decisione resta al coordinatore.</p>
                     </details>
                 </div>
             </div>

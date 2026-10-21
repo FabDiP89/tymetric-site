@@ -17,7 +17,7 @@
             gtag('set', 'ads_data_redaction', true);
         })();
     </script>
-    <script src="/js/consent.js?v=09b12511" defer></script>
+    <script src="/js/consent.js?v=4e31b262" defer></script>
 
     <title>Piattaforma per la gestione dei turni sanitari | Tymetric</title>
     <meta name="description"
@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="css/styles.css?v=09b12511" rel="stylesheet">
+    <link href="css/styles.css?v=4e31b262" rel="stylesheet">
 
     <script type="application/ld+json">
     {
@@ -115,7 +115,7 @@
     }
     </script>
 
-    <script src="js/site.js?v=09b12511" defer></script>
+    <script src="js/site.js?v=4e31b262" defer></script>
 </head>
 
 <body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
@@ -237,7 +237,7 @@
                     <div>
                         <h3>Trovare</h3>
                         <dl>
-                            <dt>Filtri su nove dimensioni</dt><dd>Ruolo, team, attività, fascia oraria, giorno della settimana, professionista, tipo di turno, origine, turni fissati o liberi: servono a leggere il piano e a scegliere su cosa agire.</dd>
+                            <dt>Anteprima al passaggio</dt><dd>Passando sopra una cella vedi il dettaglio del turno, e con il lucchetto lo fissi senza aprirlo.</dd>
                             <dt>La scheda di ogni persona</dt><dd>Dal nome si apre la scheda: statistiche, conteggi per fascia e per attività, anomalie, assenze.</dd>
                             <dt>Tema scuro, per pianificare di notte</dt><dd>Con un clic la piattaforma passa al tema scuro, più riposante quando pianifichi a fine giornata.</dd>
                             <dt>Italiano e inglese, già integrati</dt><dd>Il supporto multilingua è nativo: ogni utente sceglie la sua lingua, anche nell'app del personale.</dd>
@@ -248,8 +248,27 @@
             </div>
         </section>
 
-        <!-- Candidati -->
+        <!-- Pannello operativo -->
         <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+                <div class="flex flex-col gap-3 max-w-3xl">
+                    <span class="ty-eyebrow">Pannello operativo</span>
+                    <h2>Centinaia di turni, pochi clic</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Un mese di reparto sono centinaia di turni. Nel pannello operativo li trovi, li blocchi, li assegni e li controlli a gruppi, vedendo sempre quanti ne stai toccando.</p>
+                </div>
+                <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Filtri su nove dimensioni</h3><p class="text-[15px] leading-relaxed text-gray-600">Persona, attività, fascia, tipo di turno, ruolo, team, turni fissati o flessibili, origine (manuale, automatica, da richiesta), giorno della settimana.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Azioni in blocco</h3><p class="text-[15px] leading-relaxed text-gray-600">Con i filtri e le date isoli i turni che ti interessano e li blocchi, sblocchi o elimini insieme. Prima di confermare vedi quanti turni stai toccando.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Assegnazioni massive</h3><p class="text-[15px] leading-relaxed text-gray-600">Un congresso di tre giorni per cinque persone, l'ambulatorio del martedì per tre mesi: date, persone e azione, poi un'anteprima che separa i casi compatibili da quelli no.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Prova prima di approvare</h3><p class="text-[15px] leading-relaxed text-gray-600">Un'assenza in attesa si applica in simulazione per vederne l'effetto sul piano, prima di decidere.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Contatori su misura</h3><p class="text-[15px] leading-relaxed text-gray-600">Conteggi a scelta, con gli stessi filtri delle regole, confrontati con il periodo precedente.</p></li>
+                    <li class="p-6 rounded-2xl bg-gray-50 flex flex-col gap-2"><h3 class="text-lg font-bold text-gray-900">Export Excel</h3><p class="text-[15px] leading-relaxed text-gray-600">Per attività o per persona, con la configurazione che si salva per i mesi successivi.</p></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Candidati -->
+        <section class="py-20 bg-gray-50">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
                     <span class="ty-eyebrow">Suggerisci candidati</span>
                     <h2>Il candidato giusto, in un clic</h2>
@@ -263,23 +282,24 @@
         </section>
 
         <!-- Ferie e richieste -->
-        <section class="py-20 bg-gray-50">
+        <section class="py-20 bg-white">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
-                    <span class="ty-eyebrow">Ferie e richieste</span>
-                    <h2>Decidi sulle ferie sapendo cosa succede al piano</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">Le richieste del personale non aspettano in un cassetto. Il motore ne tiene conto da subito, e tu decidi con il loro effetto davanti.</p>
+                    <span class="ty-eyebrow">Ferie e richieste · Novità</span>
+                    <h2>Decidi sulle ferie con due numeri davanti</h2>
+                    <p class="text-lg leading-relaxed text-gray-600">Le richieste del personale non aspettano in un cassetto: contano nel piano già mentre sono in attesa, e quando arriva il momento di decidere sai quanto rischi.</p>
                     <ul class="flex flex-col gap-3">
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Quanto è sicuro approvarla.</strong> Per ogni assenza non tutelata, un indice di confidenza ricavato da molte simulazioni del mese, che tengono conto anche dei legami tra i turni.</span></li>
+                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Quanto pesa sulle altre richieste.</strong> Vedi in anticipo se dire sì mette in difficoltà chi, tra i colleghi, aspetta ancora una risposta.</span></li>
                         <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Contano già mentre sono in attesa.</strong> Il motore cerca di lasciare liberi i giorni richiesti, così approvare una richiesta non vuol dire rifare il piano.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Prova prima di approvare.</strong> Puoi simulare un'assenza ancora da approvare, guardare cosa cambia e solo dopo decidere.</span></li>
                         <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Una alla volta o tutte insieme.</strong> Le desiderata si approvano singolarmente o in blocco, e la griglia segnala quelle rispettate.</span></li>
                         <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Niente motivi sanitari.</strong> Per un'assenza basta «Non dichiarata»: il motivo non serve al piano e non si registra.</span></li>
                     </ul>
-                    <p class="text-[15px] leading-relaxed text-gray-600"><strong class="text-primary-dark">Novità:</strong> mentre ragioni su ferie, congressi e corsi, la copertura dell'intero periodo si aggiorna sotto i tuoi occhi, con avvisi come «con queste ferie, il 2 gennaio nel turno di notte resta un solo infermiere senior».</p>
+                    <p class="text-[15px] leading-relaxed text-gray-600"><a href="generazione-automatica-turni.html#assenze" class="ty-link">Come funziona l'analisi delle assenze →</a></p>
             </div>
         </section>
 
         <!-- Competenze -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-gray-50">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
                     <span class="ty-eyebrow">Competenze e seniority</span>
                     <h2>Ognuno dove sa lavorare, con il livello giusto</h2>
@@ -293,30 +313,14 @@
             </div>
         </section>
 
-        <!-- Molti turni insieme -->
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
-                    <span class="ty-eyebrow">Molti turni insieme</span>
-                    <h2>Un mese intero, poche mosse</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">In un reparto si arriva facilmente a diverse centinaia di turni al mese: la piattaforma ti fa agire su gruppi interi e ti dice sempre quanti ne stai toccando.</p>
-                    <ul class="flex flex-col gap-3">
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Azioni in blocco.</strong> Con filtri e date scegli il bersaglio e blocchi, sblocchi o elimini; prima di confermare vedi il numero esatto di turni coinvolti.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Assegnazioni massive in quattro passi.</strong> Scegli le date, le persone e cosa assegnare (un riposo, un'assenza o un turno in un'attività); l'anteprima divide i casi in compatibili e no, e decidi gruppo per gruppo.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Per esempio:</strong> cinque colleghi allo stesso congresso, un'attività fissa ogni martedì per un trimestre, il riposo nei festivi per un team intero.</span></li>
-                    </ul>
-            </div>
-        </section>
-
         <!-- Statistiche ed export -->
         <section class="py-20 bg-white">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-5">
                     <span class="ty-eyebrow">Numeri e tracce</span>
-                    <h2>Statistiche, export e storico</h2>
+                    <h2>Statistiche, cruscotti e storico</h2>
                     <ul class="flex flex-col gap-3">
                         <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Statistiche di sessione:</strong> copertura, carico di lavoro, indice di carico, riposi e conformità, con il collegamento al turno che genera ogni numero.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Contatori su misura:</strong> scegli tu cosa contare, con i filtri delle regole, e lo confronti con il periodo prima.</span></li>
                         <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Cruscotti di reparto e di persona:</strong> ore, notti, festivi, prefestivi, reperibilità, straordinari e assenze.</span></li>
-                        <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Export Excel</strong> per attività o per professionista, con la configurazione salvata per i mesi successivi.</span></li>
                         <li class="flex gap-3 items-start text-base leading-normal text-gray-700"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span><strong>Storico di ogni modifica:</strong> chi ha cambiato cosa, e quando.</span></li>
                     </ul>
             </div>

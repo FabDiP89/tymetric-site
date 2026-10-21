@@ -3508,7 +3508,7 @@ details.ty-faq[open] .ty-chev {
 .ty-intro { text-align: center; max-width: 760px; margin: 0 auto; }
 
 /* Fondi: scuro per Mya e la parte AI, ciano per «Come funziona» */
-.ty-dark { color: #fff; background: radial-gradient(60% 45% at 50% 0%, rgba(8, 151, 156, .45) 0%, rgba(8, 151, 156, 0) 70%), #0f2426; }
+.ty-dark { color: #fff; background: linear-gradient(135deg, #0b1220 0%, #111827 55%, #003b40 100%); }
 .ty-dark h2, .ty-dark h3 { color: #fff; }
 .ty-dark .ty-eyebrow { color: #52d6cd; }
 .ty-dark .ty-lead { color: #c9dadb; }
@@ -3516,9 +3516,8 @@ details.ty-faq[open] .ty-chev {
 .ty-cyan { color: #fff; background: radial-gradient(60% 45% at 50% 0%, rgba(82, 214, 205, .55) 0%, rgba(82, 214, 205, 0) 70%), #08979c; }
 
 /* Stessa superficie scura e sfumata per le schede dedicate a Mya e all'AI */
-.ty-tile.ty-tile-mya, .ty-add.ty-add-mya, .ty-ai-card { background: radial-gradient(120% 85% at 50% 0%, rgba(8, 151, 156, .55) 0%, rgba(8, 151, 156, 0) 70%), #0f2426; color: #fff; }
-/* Due sezioni scure una dopo l'altra: una linea sottile le separa */
-.ty-dark + .ty-dark { border-top: 1px solid rgba(255, 255, 255, .08); }
+.ty-tile.ty-tile-mya, .ty-add.ty-add-mya, .ty-ai-card { background: linear-gradient(135deg, #0b1220 0%, #111827 55%, #003b40 100%); color: #fff; }
+/* Mai due sezioni scure di fila: nelle serie di sezioni sull'AI, scure le dispari e chiare le pari */
 
 /* Apertura: claim centrato, colore come atmosfera */
 .ty-hero { position: relative; padding: 72px 0 0; text-align: center;

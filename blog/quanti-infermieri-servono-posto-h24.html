@@ -184,6 +184,10 @@
         .formula strong { color: #006d75; font-size: 1.5rem; }
         .faq-list { display: flex; flex-direction: column; gap: .875rem; margin: 1.5rem 0 2.5rem; }
         .prose .faq-list p { margin-bottom: 0; }
+        @media (max-width: 640px) {
+            table.rules.fit { min-width: 0; font-size: .875rem; }
+            table.rules.fit th, table.rules.fit td { padding: .6rem .55rem; }
+        }
     </style>
     <script src="../js/site.js?v=96075c5f" defer></script>
 </head>
@@ -302,7 +306,7 @@
                 </p>
 
                 <div class="tbl-wrap">
-                <table class="rules">
+                <table class="rules fit">
                     <thead><tr><th>Passaggio</th><th>Ore</th><th>Restano</th></tr></thead>
                     <tbody>
                         <tr><td>Orario del contratto (36 ore × 52 settimane)</td><td></td><td><strong>1.872</strong></td></tr>
@@ -376,7 +380,7 @@
                 </p>
 
                 <div class="tbl-wrap">
-                <table class="rules">
+                <table class="rules fit">
                     <thead><tr><th>Turno</th><th>Infermieri</th><th>Durata</th><th>Ore al giorno</th></tr></thead>
                     <tbody>
                         <tr><td>Mattina, 7-14</td><td>3</td><td>7 ore</td><td>21</td></tr>

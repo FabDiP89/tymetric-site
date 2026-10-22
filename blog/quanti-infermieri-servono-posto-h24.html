@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Consenso cookie: Google Analytics, Google Ads e Tag Manager partono solo dopo il consenso (vedi /js/consent.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        (function () {
+            var c = { a: false, m: false };
+            try { var v = JSON.parse(localStorage.getItem('tyConsent') || 'null'); if (v && v.v === 1 && Date.now() - v.t < 15552000000) c = v; } catch (e) {}
+            function s(x) { return x ? 'granted' : 'denied'; }
+            gtag('consent', 'default', { analytics_storage: s(c.a), ad_storage: s(c.m), ad_user_data: s(c.m), ad_personalization: s(c.m), functionality_storage: 'granted', security_storage: 'granted' });
+            gtag('set', 'ads_data_redaction', true);
+        })();
+    </script>
+    <script src="/js/consent.js?v=96075c5f" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quanti infermieri servono per un posto h24? Il calcolo</title>
+    <meta name="description"
+        content="Un posto sempre coperto vale 8.760 ore l&#x27;anno, un infermiere a tempo pieno ne garantisce circa 1.450: servono 6 persone, non 5. Il calcolo con un esempio.">
+
+    <link rel="canonical" href="https://tymetric.com/blog/quanti-infermieri-servono-posto-h24.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tymetric.com/blog/quanti-infermieri-servono-posto-h24.html">
+    <meta property="og:title" content="Quanti infermieri servono per coprire un posto h24? Il calcolo, spiegato">
+    <meta property="og:description"
+        content="Il turno in quinta fa girare la ruota, ma non copre ferie e assenze. Dalle 36 ore del contratto alle 1.450 ore utili: il calcolo passo per passo.">
+    <meta property="og:image" content="https://tymetric.com/blog/immagini/infermieri-posto-h24.webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tymetric.com/blog/quanti-infermieri-servono-posto-h24.html">
+    <meta property="twitter:title" content="Quanti infermieri servono per coprire un posto h24? Il calcolo, spiegato">
+    <meta property="twitter:description"
+        content="Il turno in quinta fa girare la ruota, ma non copre ferie e assenze. Dalle 36 ore del contratto alle 1.450 ore utili: il calcolo passo per passo.">
+    <meta property="twitter:image" content="https://tymetric.com/blog/immagini/infermieri-posto-h24.webp">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link href="../css/styles.css?v=96075c5f" rel="stylesheet">
+
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tymetric.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://tymetric.com/blog.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Quanti infermieri servono per un posto h24"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Quanti infermieri servono per coprire un posto h24? Il calcolo, spiegato",
+        "description": "Un posto sempre coperto vale 8.760 ore l'anno, un infermiere a tempo pieno ne garantisce circa 1.450: servono 6 persone, non 5. Il calcolo con un esempio.",
+        "image": "https://tymetric.com/blog/immagini/infermieri-posto-h24.webp",
+        "author": {
+            "@type": "Organization",
+            "name": "Tymetric",
+            "url": "https://tymetric.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tymetric",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tymetric.com/favicon.png"
+            }
+        },
+        "datePublished": "2026-10-22",
+        "dateModified": "2026-10-22",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://tymetric.com/blog/quanti-infermieri-servono-posto-h24.html"
+        }
+    }
+    </script>
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quante ore lavora in un anno un infermiere a tempo pieno?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il contratto prevede 36 ore a settimana, cioè 1.872 ore l'anno sulla carta. Tolte ferie e festività soppresse si scende a circa 1.650. Il metodo nazionale per il fabbisogno di personale usa 1.450 ore utili per ogni infermiere a tempo pieno, perché tiene conto anche delle assenze medie."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanti infermieri servono per coprire un posto h24?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Circa sei a tempo pieno. Le 8.760 ore di un posto sempre coperto, divise per le 1.450 ore utili di un infermiere, fanno 6,04."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Perché il turno in quinta non basta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cinque persone fanno girare la rotazione di mattina, pomeriggio, notte, smonto e riposo, ma non coprono ferie, malattie e formazione. Per un posto h24 servono circa sei persone a tempo pieno."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "I turni da 12 ore riducono il personale necessario?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Con i turni da 12 ore la rotazione gira con quattro persone, ma le ore da coprire restano 8.760 l'anno: servono sempre circa sei infermieri a tempo pieno per posto."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-primary { background: linear-gradient(135deg, #08979c 0%, #52d6cd 100%); }
+        .gradient-dark { background: linear-gradient(135deg, #006d75 0%, #08979c 100%); }
+
+        .prose h2 { color: #1f2937; font-size: 1.75rem; font-weight: 700; margin-top: 2.75rem; margin-bottom: 1rem; }
+        .prose h3 { color: #374151; font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: .75rem; }
+        .prose p { color: #4b5563; line-height: 1.8; margin-bottom: 1.25rem; }
+        .prose ul, .prose ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .prose li { color: #4b5563; line-height: 1.8; margin-bottom: .5rem; }
+        .prose strong { color: #1f2937; }
+        .prose a { color: #08979c; text-decoration: underline; }
+        .prose blockquote { border-left: 4px solid #08979c; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #6b7280; }
+
+        .box-key { background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 1rem; padding: 1.75rem 2rem; margin: 2.5rem 0; }
+        .box-key h3 { margin-top: 0; color: #006d75; }
+        .box-key ul { margin-bottom: 0; list-style: none; padding-left: 0; }
+        .box-key li { padding-left: 1.5rem; position: relative; }
+        .box-key li::before { content: "▸"; position: absolute; left: 0; color: #08979c; font-weight: 700; }
+
+        .box-warn { background: #fffbeb; border: 1px solid #fcd34d; border-radius: .75rem; padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: .95rem; }
+        .box-warn p { margin-bottom: 0; color: #78350f; }
+
+        .tbl-wrap { overflow-x: auto; margin: 2rem 0; }
+        table.rules { width: 100%; border-collapse: collapse; font-size: .93rem; min-width: 600px; }
+        table.rules th, table.rules td { border: 1px solid #e5e7eb; padding: .8rem .9rem; text-align: left; vertical-align: top; color: #4b5563; }
+        table.rules thead th { background: #f0fdfa; color: #006d75; font-weight: 700; }
+        table.rules td strong { color: #1f2937; }
+
+        .gap { display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; }
+        .gap > div { flex: 1 1 180px; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.25rem; text-align: center; background: #fff; }
+        .gap .n { font-size: 2rem; font-weight: 800; color: #006d75; line-height: 1.1; }
+        .gap .l { font-size: .9rem; color: #6b7280; margin-top: .4rem; }
+        .gap .neg .n { color: #b45309; }
+
+        .sources li { font-size: .925rem; }
+        .formula { margin: 1.75rem 0; padding: 1.25rem 1.5rem; border-radius: .875rem; background: #f0fdfa; border: 1px solid #99f6e4; font-size: 1.2rem; color: #1f2937; text-align: center; }
+        .formula strong { color: #006d75; font-size: 1.5rem; }
+        .faq-list { display: flex; flex-direction: column; gap: .875rem; margin: 1.5rem 0 2.5rem; }
+        .prose .faq-list p { margin-bottom: 0; }
+    </style>
+    <script src="../js/site.js?v=96075c5f" defer></script>
+</head>
+
+<body class="font-sans antialiased text-gray-900 bg-white pb-20 md:pb-0">
+    <!-- Navigazione -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-6">
+                <a href="../index.html" class="flex items-center gap-2" aria-label="Tymetric, home">
+                    <img src="../favicon.png" alt="" class="h-8 w-8" width="32" height="32">
+                    <span class="text-2xl font-bold text-primary tracking-tight">tymetric</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8" aria-label="Navigazione principale">
+                    <div class="ty-dd py-3">
+                        <a href="../prodotto.html" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Prodotto
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="ty-dd-menu">
+                            <a href="../prodotto.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Panoramica</span><span class="text-[13px] text-gray-600">Piattaforma, motore, Mya e app</span></a>
+                            <a href="../piattaforma-gestione-turni.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Piattaforma</span><span class="text-[13px] text-gray-600">Griglia, richieste, competenze</span></a>
+                            <a href="../generazione-automatica-turni.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Generazione automatica</span><span class="text-[13px] text-gray-600">Il motore e le sue regole</span></a>
+                            <a href="../turni-intelligenza-artificiale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni con l'AI</span><span class="text-[13px] text-gray-600">Mya, l'assistente AI integrato</span></a>
+                            <a href="../turni-medici-ospedalieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni dei medici</span><span class="text-[13px] text-gray-600">Guardie, reperibilità, competenze</span></a>
+                            <a href="../turni-infermieri.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">Turni degli infermieri</span><span class="text-[13px] text-gray-600">Notti eque, riposi, esigenze personali</span></a>
+                            <a href="../app-turni-personale.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">App per il personale</span><span class="text-[13px] text-gray-600">Turni, desiderata, cambi turno</span></a>
+                        </div>
+                    </div>
+                    <a href="../prezzi.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Prezzi</a>
+                    <div class="ty-dd py-3">
+                        <button type="button" class="inline-flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors" aria-haspopup="true">
+                            Compliance
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="ty-dd-menu">
+                            <a href="../gdpr.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">GDPR</span><span class="text-[13px] text-gray-600">Dati, ruoli, misure, conservazione</span></a>
+                            <a href="../ai-act.html" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-lg hover:bg-brand-150"><span class="text-[15px] font-semibold text-gray-900">AI Act</span><span class="text-[13px] text-gray-600">Cosa fa l'AI, chi decide, le scadenze</span></a>
+                        </div>
+                    </div>
+                    <a href="../blog.html" class="text-[15px] font-medium text-gray-700 hover:text-primary-dark transition-colors">Blog</a>
+                    <a href="../#contact" class="ty-btn px-5 py-2.5 gradient-dark text-white rounded-lg text-[15px] font-semibold">Richiedi informazioni</a>
+                </nav>
+                <button id="mobile-menu-button" type="button" class="md:hidden p-2 -mr-2 rounded-lg text-gray-900" onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Apri il menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 flex flex-col gap-1">
+                <a href="../prodotto.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prodotto</a>
+                <a href="../piattaforma-gestione-turni.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Piattaforma</a>
+                <a href="../generazione-automatica-turni.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Generazione automatica</a>
+                <a href="../turni-intelligenza-artificiale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni con l'AI</a>
+                <a href="../turni-medici-ospedalieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni dei medici</a>
+                <a href="../turni-infermieri.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">Turni degli infermieri</a>
+                <a href="../app-turni-personale.html" class="py-2 ml-4 text-[15px] text-gray-700 hover:text-primary-dark">App per il personale</a>
+                <a href="../prezzi.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Prezzi</a>
+                <span class="pt-2 text-xs font-bold uppercase tracking-wider text-gray-600">Compliance</span>
+                <a href="../gdpr.html" class="py-2.5 text-gray-700 hover:text-primary-dark">GDPR</a>
+                <a href="../ai-act.html" class="py-2.5 text-gray-700 hover:text-primary-dark">AI Act</a>
+                <a href="../blog.html" class="py-2.5 text-gray-700 hover:text-primary-dark">Blog</a>
+                <a href="../#contact" class="mt-2 px-6 py-3 gradient-dark text-white rounded-lg text-center font-semibold">Richiedi informazioni</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="ty-page">
+        <!-- Intestazione dell'articolo -->
+        <section class="ty-hero ty-hero--sub ty-post-head">
+            <div class="ty-wrap-n">
+                <span class="ty-eyebrow" style="margin-top:22px">GUIDA PRATICA</span>
+                <h1 class="ty-claim">Quanti infermieri servono per coprire un posto h24? Il calcolo, spiegato</h1>
+                <p class="ty-sub">Un posto da coprire giorno e notte vale 8.760 ore l'anno. Un infermiere a tempo pieno, tolte ferie e assenze, ne garantisce molte meno. Ecco perché servono sei persone e non le cinque del turno in quinta, con il conto fatto su un reparto.</p>
+                <p class="ty-meta">22 Ottobre 2026 · 8 min di lettura</p>
+            </div>
+            <div class="ty-post-figure"><img src="immagini/infermieri-posto-h24.webp" alt="Infografica: un posto h24 vale 8.760 ore l&#x27;anno, diviso le 1.450 ore utili di un infermiere a tempo pieno fa 6 infermieri; cinque fanno girare il turno in quinta, il sesto copre ferie e assenze" width="1920" height="1072"></div>
+        </section>
+
+    <!-- Article Content -->
+    <article class="ty-post">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose max-w-none">
+                <p class="text-lg">
+                    <strong>Per coprire un posto infermieristico 24 ore su 24, tutto l'anno, servono circa sei infermieri a tempo pieno.</strong> Non cinque, come fa pensare il turno in quinta, e nemmeno quattro, come sembra con i turni da 12 ore. Il motivo sta in un conto semplice, che però quasi nessuno scrive per intero: da una parte le ore che il reparto deve coprire, dall'altra le ore che una persona può davvero lavorare in un anno.
+                </p>
+
+                <div class="box-key">
+                    <h3>📊 I numeri in breve</h3>
+                    <ul>
+                        <li><strong>8.760</strong> ore l'anno per un posto sempre coperto (24 ore × 365 giorni)</li>
+                        <li><strong>36</strong> ore a settimana nel contratto in vigore, cioè <strong>1.872</strong> ore l'anno sulla carta</li>
+                        <li><strong>1.450</strong> ore utili per infermiere a tempo pieno nel metodo nazionale per il fabbisogno di personale (<strong>1.418</strong> nel metodo delle Regioni del 2017)</li>
+                        <li><strong>6,04</strong> infermieri a tempo pieno per ogni posto h24</li>
+                    </ul>
+                </div>
+
+                <h2>Le ore da coprire: 8.760 l'anno</h2>
+
+                <p>
+                    Il primo numero è il più facile. Un posto che deve essere sempre presidiato, giorno e notte, festivi compresi, vale <strong>24 ore per 365 giorni: 8.760 ore l'anno</strong>. Non importa come sono organizzati i turni. Con la classica divisione in mattina (7-14), pomeriggio (14-21) e notte (21-7), che vale 7 + 7 + 10 ore, o con due turni da 12, le ore da coprire restano quelle.
+                </p>
+
+                <h2>Le ore di un infermiere: dalle 36 del contratto alle 1.450 utili</h2>
+
+                <p>
+                    Il secondo numero è quello su cui si sbaglia più spesso. Il CCNL del Comparto Sanità 2022-2024, firmato in via definitiva il 27 ottobre 2025, fissa l'orario ordinario a <strong>36 ore settimanali</strong> (art. 27). Moltiplicate per 52 settimane fanno <strong>1.872 ore l'anno</strong>. Sono però ore sulla carta: una parte di quel tempo, per contratto o per legge, l'infermiere non lo passa in reparto.
+                </p>
+
+                <p>
+                    Le prime voci da togliere sono certe. Le <strong>ferie</strong> sono 28 giorni lavorativi con la settimana su cinque giorni e 32 con la settimana su sei (26 e 30 nei primi tre anni per chi è al primo impiego nella pubblica amministrazione). A queste si aggiungono <strong>4 giornate di riposo per le festività soppresse</strong> (art. 35). Poi ci sono le voci che cambiano da persona a persona e da un anno all'altro, come la malattia, i permessi della legge 104 e la formazione: per queste chi programma il personale usa una media.
+                </p>
+
+                <p>
+                    Un metodo che mostra tutti i passaggi è quello approvato nel 2017 dalla Commissione Salute della Conferenza delle Regioni e adottato, per esempio, dalla Calabria nel 2019. Parte dalle 36 ore su sei giorni:
+                </p>
+
+                <div class="tbl-wrap">
+                <table class="rules">
+                    <thead><tr><th>Passaggio</th><th>Ore</th><th>Restano</th></tr></thead>
+                    <tbody>
+                        <tr><td>Orario del contratto (36 ore × 52 settimane)</td><td></td><td><strong>1.872</strong></td></tr>
+                        <tr><td>10 festività infrasettimanali</td><td>−60</td><td>1.812</td></tr>
+                        <tr><td>Ferie e festività soppresse (32 + 4 giorni)</td><td>−216</td><td>1.596</td></tr>
+                        <tr><td>Maternità, legge 104, distacchi sindacali e cariche elettive</td><td>−50</td><td>1.546</td></tr>
+                        <tr><td>Malattia, formazione compresa</td><td>−128</td><td><strong>1.418</strong></td></tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <p>
+                    Il metodo nazionale più recente arriva a un valore molto vicino. È stato adottato in via sperimentale per gli anni 2022-2024 con il decreto dei ministeri della Salute e dell'Economia del 24 gennaio 2023, dopo l'intesa in Conferenza Stato-Regioni del 21 dicembre 2022, e indica:
+                </p>
+
+                <blockquote>
+                    "[...] per il personale del comparto (infermieri, operatori sociosanitari e altre figure professionali del comparto) il valore di 1.450 ore anno."<br>
+                    — <strong>Metodo per la determinazione del fabbisogno di personale del SSN</strong>, allegato A al decreto del 24 gennaio 2023
+                </blockquote>
+
+                <p>
+                    I festivi infrasettimanali meritano una nota. Per chi lavora a turni non sono giorni liberi in automatico: chi lavora in un festivo può chiedere, entro 30 giorni, un riposo compensativo, il pagamento come straordinario oppure l'accantonamento nella banca delle ore (art. 67 del CCNL 2022-2024). In un singolo reparto, quindi, il loro peso dipende anche dalle scelte delle persone.
+                </p>
+
+                <p>
+                    Attenzione: <strong>1.450 non è l'orario di un infermiere</strong>. È un valore medio di programmazione, che serve a fare i conti su un reparto o su un'azienda. Una singola persona, in un certo anno, può lavorare di più o di meno.
+                </p>
+
+                <div class="box-warn">
+                    <p><strong>Due errori frequenti nel conto.</strong> Il primo è aggiungere due giorni alle ferie: i 28 o 32 giorni comprendono già le due giornate della legge 937/1977. Il secondo è togliere a tutti le 150 ore per il diritto allo studio: sono un massimo individuale, concesso al massimo al 3% del personale a tempo indeterminato (art. 62 del CCNL 2019-2021).</p>
+                </div>
+
+                <h2>Il conto per un posto h24</h2>
+
+                <p>
+                    A questo punto basta una divisione:
+                </p>
+
+                <div class="formula">8.760 ore da coprire ÷ 1.450 ore utili = <strong>6,04</strong> infermieri a tempo pieno</div>
+
+                <p>
+                    Per un posto sempre coperto servono quindi <strong>circa sei infermieri a tempo pieno</strong>; con le 1.418 ore del metodo del 2017 si arriva a 6,18. La Regione Campania, nel suo metodo per il fabbisogno di personale, lo scrive in una riga a proposito della terapia intensiva: "un turno medico/infermiere equivale a 6 FTE", cioè a sei persone a tempo pieno. E anche nel mondo ideale in cui nessuno si ammala e nessuno fa formazione, con le 1.656 ore che restano togliendo solo ferie e festività soppresse, il risultato sarebbe 5,29: <strong>cinque non basterebbero comunque</strong>.
+                </p>
+
+                <p>
+                    Un dettaglio: 6,04 non vuol dire esattamente sei persone. Sei infermieri a tempo pieno valgono 6,00, quindi sono appena sotto il fabbisogno. Su un reparto intero le frazioni si sommano e si compensano tra i posti, ma il conto va sempre fatto in persone a tempo pieno, non in teste: due part-time al 50% valgono una persona.
+                </p>
+
+                <h2>Perché il turno in quinta non basta</h2>
+
+                <p>
+                    Il turno in quinta ruota su cinque giornate: <strong>mattina, pomeriggio, notte, smonto e riposo</strong>. Ogni giorno ognuna delle cinque persone si trova in una fase diversa, e così mattina, pomeriggio e notte sono sempre coperti. Cinque è il minimo per far girare la rotazione.
+                </p>
+
+                <p>
+                    Ma cinque persone non coprono le ferie, le malattie e la formazione di nessuna delle cinque. Quando una manca, la ruota si regge solo con un cambio turno, uno straordinario o un rientro: è il sesto infermiere del conto. Ed è il motivo per cui ad agosto, quando le ferie si concentrano, la rotazione salta più spesso, come succede nei <a href="carenza-medici-pronto-soccorso-agosto.html">pronto soccorso</a>.
+                </p>
+
+                <p>
+                    C'è anche un dettaglio che sorprende. Con turni da 7, 7 e 10 ore, in quinta ogni persona lavora 24 ore ogni cinque giorni, cioè <strong>33,6 ore a settimana</strong>: meno delle 36 del contratto. La differenza va recuperata in altro modo, per esempio con turni aggiuntivi.
+                </p>
+
+                <p>
+                    Con i <strong>turni da 12 ore</strong> (giorno, notte, smonto, riposo) la rotazione gira con quattro persone, ma ognuna lavorerebbe 24 ore ogni quattro giorni, cioè 42 a settimana, più delle 36 previste: servono riposi in più. Le ore da coprire, intanto, restano 8.760, quindi il fabbisogno annuo non cambia. Il CCNL fissa inoltre a 12 ore la durata massima della prestazione continuativa (art. 27). Lo schema decide come ruotano le persone; quante ne servono lo decidono le ore.
+                </p>
+
+                <h2>Un esempio: il reparto da 3-3-2</h2>
+
+                <p>
+                    Prendiamo un reparto che chiede <strong>3 infermieri al mattino, 3 al pomeriggio e 2 di notte</strong>.
+                </p>
+
+                <div class="tbl-wrap">
+                <table class="rules">
+                    <thead><tr><th>Turno</th><th>Infermieri</th><th>Durata</th><th>Ore al giorno</th></tr></thead>
+                    <tbody>
+                        <tr><td>Mattina, 7-14</td><td>3</td><td>7 ore</td><td>21</td></tr>
+                        <tr><td>Pomeriggio, 14-21</td><td>3</td><td>7 ore</td><td>21</td></tr>
+                        <tr><td>Notte, 21-7</td><td>2</td><td>10 ore</td><td>20</td></tr>
+                        <tr><td><strong>Totale</strong></td><td></td><td></td><td><strong>62</strong></td></tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <p>
+                    In un anno sono 62 × 365 = <strong>22.630 ore</strong>. Divise per le 1.450 ore utili di un infermiere a tempo pieno fanno <strong>15,61 persone</strong>; con le 1.418 ore del metodo del 2017, 15,96. In persone intere, in entrambi i casi, ne servono 16.
+                </p>
+
+                <div class="gap">
+                    <div><div class="n">22.630</div><div class="l">ore da coprire<br>in un anno</div></div>
+                    <div><div class="n">15,61</div><div class="l">infermieri a tempo pieno<br>necessari</div></div>
+                    <div class="neg"><div class="n">−1,61</div><div class="l">se in reparto<br>ce ne sono 14</div></div>
+                </div>
+
+                <p>
+                    Con 14 infermieri a tempo pieno ne mancano 1,61: in persone intere, <strong>due</strong>. Sulla carta non sembra: 14 persone per 1.872 ore fanno 26.208 ore, più delle 22.630 necessarie. Per bastare davvero, però, ognuno dei 14 dovrebbe garantire 22.630 ÷ 14 = <strong>1.616 ore utili l'anno</strong>, quasi il tetto del contratto: nessuna malattia, nessuna formazione, nessun permesso oltre alle ferie.
+                </p>
+
+                <p>
+                    Quella differenza non si vede in pianta organica, ma si sente in corsia, e di solito si copre con straordinari, cambi turno e rientri. Nel conto mancano ancora il coordinatore, che la metodologia nazionale prevede in ragione di uno ogni 30 posti letto, e le attività che non sono sulle 24 ore.
+                </p>
+
+                <h2>Da dove viene il 3-3-2</h2>
+
+                <p>
+                    Il calcolo fin qui parte da un fabbisogno per turno già deciso. Quante persone servono in ogni turno è un'altra domanda, e la metodologia nazionale la affronta partendo dai pazienti: i <strong>minuti di assistenza infermieristica per paziente al giorno</strong>, diversi per area, con i posti letto calcolati a un tasso di occupazione del 90%. In area medica, per esempio, la tabella nazionale indica una mediana di 255 minuti al giorno per paziente negli ospedali HUB e di 220 negli Spoke; per l'area medica e chirurgica, il valore minimo è fissato in modo da garantire almeno un infermiere ogni 8 pazienti.
+                </p>
+
+                <p>
+                    Non è solo una questione di organizzazione. Lo studio europeo RN4CAST, pubblicato su <em>The Lancet</em> nel 2014 su 300 ospedali di nove Paesi, ha osservato che <strong>ogni paziente in più per infermiere si associa a un aumento del 7% della probabilità di morire entro 30 giorni dal ricovero</strong>, nei pazienti operati per interventi chirurgici comuni. È uno studio osservazionale, che misura un'associazione e non un rapporto di causa, ma dice quanto pesa il numero di infermieri in turno.
+                </p>
+
+                <h2>E nelle RSA?</h2>
+
+                <p>
+                    La logica è la stessa, cambiano i valori. In molte RSA il personale è di cooperative sociali, che applicano un altro contratto: il CCNL delle cooperative sociali, scaduto a fine 2025 e in corso di rinnovo, prevede <strong>38 ore settimanali</strong>, quindi una persona a tempo pieno offre sulla carta circa il 5,6% di ore in più rispetto alle 36 della sanità pubblica. Per le cooperative, però, non esiste un valore ufficiale di ore utili come le 1.450 del SSN: il divisore va calcolato sulle assenze reali della struttura.
+                </p>
+
+                <p>
+                    Cambia anche il punto di partenza. Nelle RSA il fabbisogno lo fissano le regioni, in minuti di assistenza a settimana per ospite. La Lombardia chiede per l'accreditamento almeno <strong>901 minuti</strong> in tutto, lasciando libera la composizione dell'équipe (DGR 7/12618 del 2003). La Campania invece li fissa figura per figura: nelle unità R3 di alto livello, per esempio, <strong>216 minuti di infermiere e 540 di OSS</strong> per ogni ospite (DCA 97/2018).
+                </p>
+
+                <p>
+                    Il percorso del calcolo è lo stesso. In un modulo R3 da 20 ospiti, il massimo previsto, 216 minuti a testa fanno 4.320 minuti, cioè 72 ore di infermiere a settimana; i 540 minuti di OSS fanno 180 ore. A 38 ore settimanali sono, sulla carta, 1,9 infermieri e 4,7 OSS. A queste persone vanno poi aggiunte quelle che servono a coprire ferie e assenze, esattamente come in ospedale.
+                </p>
+
+                <h2>Il nuovo contratto cambia il conto?</h2>
+
+                <p>
+                    Per ora no. Il rinnovo 2025-2027 del Comparto Sanità è stato sottoscritto da ARAN e sindacati il 29 luglio 2026, ma è ancora un'<strong>ipotesi</strong>: al 22 ottobre 2026 il contratto in vigore resta quello 2022-2024. Nel testo dell'ipotesi l'orario resta di 36 ore settimanali e le ferie di 28 o 32 giorni, quindi il calcolo di questo articolo non cambia. L'unica differenza sulle ferie riguarda i neoassunti: se l'ipotesi diventerà definitiva, dal 2027 avranno anche loro 28 o 32 giorni invece di 26 o 30. Le regole su riposi, notti e ore massime sono nella nostra <a href="turni-ccnl-sanita-guida-riposi-notti-ore.html">guida ai turni e al CCNL Sanità</a>.
+                </p>
+
+                <h2>Il conto si fa una volta l'anno, i buchi si vedono ogni mese</h2>
+
+                <p>
+                    Il calcolo annuale dice quante persone servono. Il piano di ogni mese dice dove, quel mese, ne manca una. È lì che lavora <a href="../generazione-automatica-turni.html">Tymetric</a>: costruisce il piano nel rispetto delle regole del reparto e, quando le persone non bastano, riempie prima i turni che hai indicato come più importanti e ti mostra quelli rimasti scoperti prima di pubblicarlo. Per ogni persona vedi anche le ore lavorate rispetto al monte ore. <strong>Non crea infermieri: ti dice in anticipo dove mancheranno.</strong>
+                </p>
+
+                <h2>In sintesi</h2>
+
+                <p>
+                    Un posto h24 vale 8.760 ore l'anno. Un infermiere a tempo pieno ne garantisce in media 1.450, al netto di ferie, festività e assenze. Il rapporto fa sei persone per posto, non le cinque del turno in quinta: cinque fanno girare la rotazione, il sesto la tiene in piedi quando qualcuno manca. Un reparto che chiede 3-3-2 infermieri ha bisogno di circa 15,6 persone a tempo pieno; con 14, il buco c'è anche se sulla carta non si vede.
+                </p>
+
+                <h2>Domande frequenti</h2>
+
+                <div class="faq-list">
+                <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Quante ore lavora in un anno un infermiere a tempo pieno?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Il contratto prevede 36 ore a settimana, cioè 1.872 ore l'anno sulla carta. Tolte ferie e festività soppresse si scende a circa 1.650. Il metodo nazionale per il fabbisogno di personale usa 1.450 ore utili per ogni infermiere a tempo pieno, perché tiene conto anche delle assenze medie.</p>
+                </details>
+                <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Quanti infermieri servono per coprire un posto h24?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Circa sei a tempo pieno. Le 8.760 ore di un posto sempre coperto, divise per le 1.450 ore utili di un infermiere, fanno 6,04.</p>
+                </details>
+                <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">Perché il turno in quinta non basta?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">Cinque persone fanno girare la rotazione di mattina, pomeriggio, notte, smonto e riposo, ma non coprono ferie, malattie e formazione. Per un posto h24 servono circa sei persone a tempo pieno.</p>
+                </details>
+                <details class="ty-faq bg-white border border-gray-200 rounded-[14px] shadow-sm">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-lg font-semibold text-gray-900">I turni da 12 ore riducono il personale necessario?<svg class="ty-chev w-[22px] h-[22px] text-primary shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <p class="px-6 pb-5 text-base leading-relaxed text-gray-600">No. Con i turni da 12 ore la rotazione gira con quattro persone, ma le ore da coprire restano 8.760 l'anno: servono sempre circa sei infermieri a tempo pieno per posto.</p>
+                </details>
+                </div>
+
+                <h3>Fonti</h3>
+                <ul class="sources">
+                    <li><strong>ARAN</strong>, CCNL Comparto Sanità 2022-2024, sottoscritto il 27/10/2025: art. 27 (orario di lavoro), art. 35 (ferie e festività soppresse) e art. 67, c. 5 (attività nei festivi infrasettimanali) — <a href="https://www.aranagenzia.it/wp-content/uploads/2025/10/2025.10.27-CCNL-comparto-definitivo-3.pdf" target="_blank" rel="noopener noreferrer">aranagenzia.it</a></li>
+                    <li><strong>ARAN</strong>, CCNL Comparto Sanità 2019-2021, sottoscritto il 2/11/2022: diritto allo studio — <a href="https://www.aranagenzia.it/wp-content/uploads/2022/11/2022_11_02_COMP-SANITA_2019-2021.pdf" target="_blank" rel="noopener noreferrer">aranagenzia.it</a></li>
+                    <li><strong>ARAN</strong>, Ipotesi di CCNL Comparto Sanità 2025-2027, sottoscritta il 29/07/2026 — <a href="https://www.aranagenzia.it/novita/ipotesi-ccnl-comparto-sanita-2025-2027/" target="_blank" rel="noopener noreferrer">aranagenzia.it</a></li>
+                    <li><strong>Ministero della Salute e MEF</strong>, decreto del 24/01/2023 e allegato A, "Metodo per la determinazione del fabbisogno di personale del SSN" (par. 4.2, par. 6.1.1 e tabella 9), dopo l'intesa Stato-Regioni rep. 267/CSR del 21/12/2022 — <a href="https://www.camera.it/temiap/2024/05/24/OCD177-7234.pdf" target="_blank" rel="noopener noreferrer">testo del decreto</a> · <a href="https://www.agenas.gov.it/aree-tematiche/monitoraggio-e-valutazione/rilevazione-fabbisogno-personale-sanitario" target="_blank" rel="noopener noreferrer">agenas.gov.it</a></li>
+                    <li><strong>Regione Campania</strong>, DGR n. 190 del 19/04/2023, allegato A: metodologia per la determinazione del fabbisogno di personale degli enti del SSR (par. 2.2.4.11) — <a href="https://burc.regione.campania.it/eBurcWeb/directServlet?DOCUMENT_ID=00137976&ATTACH_ID=207262" target="_blank" rel="noopener noreferrer">burc.regione.campania.it</a></li>
+                    <li><strong>Regione Calabria</strong>, DCA n. 192 del 20/12/2019, allegato A: metodo della Commissione Salute della Conferenza delle Regioni del 20/12/2017 (tabella 2) — <a href="https://www.regione.calabria.it/wp-content/uploads/2019/12/allegato-a-al-dca-192_2019.pdf" target="_blank" rel="noopener noreferrer">regione.calabria.it</a></li>
+                    <li><strong>Aiken L.H. et al.</strong>, "Nurse staffing and education and hospital mortality in nine European countries", <em>The Lancet</em> 2014;383:1824-1830 — <a href="https://doi.org/10.1016/S0140-6736(13)62631-8" target="_blank" rel="noopener noreferrer">doi.org</a></li>
+                    <li><strong>CCNL Cooperative sociali</strong> (archivio CNEL, codice T151): art. 51 sull'orario, nel testo del rinnovo del 2019; rinnovo 2023-2025 del 26/01/2024 — <a href="https://www.cnel.it/archivio-ccnl/entra-nell-archivio/contratti-collettivi-del-settore-privato/contratti-nazionali-di-settore-vigenti-o-ultrattivi#ccnl/T151" target="_blank" rel="noopener noreferrer">cnel.it</a></li>
+                    <li><strong>Regione Lombardia</strong>, DGR n. 7/12618 del 7/04/2003, allegato A: standard di personale delle RSA (BURL n. 16 del 14/04/2003) — <a href="https://www.ats-brianza.it/images/udoss/normaspecifica/RSA/dgr_12618_7apr03%20definizione%20degli%20standard%20di%20personale%20e%20prima%20revisione%20del%20sistema%20di%20remunerazione.pdf" target="_blank" rel="noopener noreferrer">testo della delibera</a></li>
+                    <li><strong>Regione Campania</strong>, DCA n. 97 del 16/11/2018, allegato 1, parte quinta (unità R3), e DCA n. 74 del 9/10/2019 — <a href="https://burc.regione.campania.it/eBurcWeb/directServlet?DOCUMENT_ID=00117709&ATTACH_ID=176184" target="_blank" rel="noopener noreferrer">DCA 97/2018</a> · <a href="https://burc.regione.campania.it/eBurcWeb/directServlet?DOCUMENT_ID=00121845&ATTACH_ID=182138" target="_blank" rel="noopener noreferrer">DCA 74/2019</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </article>
+
+
+        <!-- Richiesta di informazioni -->
+        <section class="ty-dark ty-post-cta">
+            <div class="ty-wrap-n ty-reveal">
+                <span class="ty-eyebrow">Tymetric</span>
+                <h2 style="margin-top:10px">Dal fabbisogno al piano del mese</h2>
+                <p class="ty-lead">Tymetric genera il piano turni rispettando regole e riposi del reparto, e ti segnala in anticipo i turni che resterebbero scoperti. Te lo mostriamo con dati di esempio, senza impegno.</p>
+                <a href="../#contact" class="ty-action">Richiedi informazioni</a>
+            </div>
+        </section>
+
+        <!-- Continua a leggere -->
+        <section class="ty-more">
+            <div class="ty-wrap-n">
+                <span class="ty-eyebrow">Continua a leggere</span>
+                <ul>
+                    <li><a href="turni-ccnl-sanita-guida-riposi-notti-ore.html"><b>Turni e CCNL Sanità: riposi, notti e ore massime</b><span>GUIDA PRATICA</span></a></li>
+                    <li><a href="carenza-infermieri-italia-quanti-mancano.html"><b>Carenza di infermieri: quanti ne mancano davvero, e perché i giovani non si iscrivono più</b><span>DATI &amp; SSN</span></a></li>
+                    <li><a href="carenza-medici-pronto-soccorso-agosto.html"><b>Carenza di medici nei pronto soccorso: perché il picco arriva ad agosto</b><span>ATTUALITÀ &amp; SISTEMA SANITARIO</span></a></li>
+                </ul>
+                <a href="../blog.html" class="ty-link ty-all">Tutti gli articoli →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-8">
+                <div class="lg:col-span-1 flex flex-col gap-3.5">
+                    <div class="flex items-center gap-2"><img src="../favicon.png" alt="" class="h-8 w-8" width="32" height="32"><span class="text-2xl font-bold text-primary-light">tymetric</span></div>
+                    <p class="text-[15px] leading-relaxed text-gray-400">Turni per la sanità: genera il piano con una frase.</p>
+                </div>
+                <nav aria-label="Prodotto" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prodotto</span><a href="../prodotto.html" class="text-[15px] text-gray-400 hover:text-primary-light">Panoramica</a><a href="../piattaforma-gestione-turni.html" class="text-[15px] text-gray-400 hover:text-primary-light">Piattaforma</a><a href="../generazione-automatica-turni.html" class="text-[15px] text-gray-400 hover:text-primary-light">Generazione automatica</a><a href="../turni-intelligenza-artificiale.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni con l'AI</a><a href="../turni-medici-ospedalieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni dei medici</a><a href="../turni-infermieri.html" class="text-[15px] text-gray-400 hover:text-primary-light">Turni degli infermieri</a><a href="../app-turni-personale.html" class="text-[15px] text-gray-400 hover:text-primary-light">App per il personale</a><a href="../prodotto.html#struttura" class="text-[15px] text-gray-400 hover:text-primary-light">Pannello per la struttura</a></nav>
+                <nav aria-label="Prezzi" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Prezzi</span><a href="../prezzi.html" class="text-[15px] text-gray-400 hover:text-primary-light">Listino e simulatore</a><a href="../prezzi.html#offerte" class="text-[15px] text-gray-400 hover:text-primary-light">Struttura su richiesta</a></nav>
+                <nav aria-label="Compliance" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Compliance</span><a href="../gdpr.html" class="text-[15px] text-gray-400 hover:text-primary-light">GDPR</a><a href="../ai-act.html" class="text-[15px] text-gray-400 hover:text-primary-light">AI Act</a></nav>
+                <nav aria-label="Azienda" class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Azienda</span><a href="https://www.gdpanalytics.com" target="_blank" rel="noopener noreferrer" class="text-[15px] text-gray-400 hover:text-primary-light">Chi siamo</a><a href="../blog.html" class="text-[15px] text-gray-400 hover:text-primary-light">Blog</a><a href="../privacy-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Privacy policy</a><a href="../cookie-policy.html" class="text-[15px] text-gray-400 hover:text-primary-light">Cookie policy</a></nav>
+                <div class="flex flex-col gap-2.5"><span class="text-[15px] font-semibold">Contatti</span><span class="text-[15px] leading-normal text-gray-400">Corso Unione Sovietica 341<br>Torino (TO)</span><a href="mailto:info@tymetric.com" class="text-[15px] text-gray-400 hover:text-primary-light">info@tymetric.com</a></div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-wrap justify-between gap-3 text-sm text-gray-400">
+                <span>&copy; 2026 GDP Analytics s.r.l. · P.IVA 11975840015 · Corso Unione Sovietica 341, Torino (TO)</span>
+                <span>Made in Italy</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CTA fissa su mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-lg z-40">
+        <div class="ty-sticky-actions">
+            <a href="../#contact" class="ty-sticky-btn gradient-dark text-white">Richiedi informazioni</a>
+        </div>
+    </div>
+</body>
+</html>
